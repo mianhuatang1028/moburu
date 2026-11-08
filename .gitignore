@@ -1,0 +1,8 @@
+# WorkBuddy 项目数据（不要进网站仓库）
+.workbuddy/
+
+# WorkBuddy 发布生成的临时文件
+*.genie
+
+# 早期推广用图（非官网资源）
+generated-images/

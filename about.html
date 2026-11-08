@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于默不如 | About</title>
+  <meta name="description" content="关于默不如——把伺服电机、流体力学和《山海经》写进小说的人。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <main id="page"></main>
+  <div id="footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    (function () {
+      renderNav(); renderFooter();
+      renderAbout('page');
+      window.__render = function () { renderNav(); renderFooter(); renderAbout('page'); };
+    })();
+  </script>
+</body>
+</html>
