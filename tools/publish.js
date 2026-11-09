@@ -70,8 +70,12 @@ function translationInfo(work, c) {
     try {
       const j = JSON.parse(fs.readFileSync(fp, 'utf8'));
       const paragraphs = Array.isArray(j.paragraphs) ? j.paragraphs : [];
+      /* 神兽小传与神兽名同属译本内容；只在译本提供时才纳入，避免已有译本产生虚假修订 */
+      const payload = { title: j.title || '', paragraphs: paragraphs };
+      if (j.beast) payload.beast = j.beast;
+      if (j.bio) payload.bio = j.bio;
       out[lang] = {
-        hash: sha256(JSON.stringify({ title: j.title || '', paragraphs: paragraphs })),
+        hash: sha256(JSON.stringify(payload)),
         chars: j.chars || 0,
         paragraphs: paragraphs.length
       };
@@ -86,7 +90,9 @@ function chapterPayload(work, c, bodyHash, trHashes) {
     num: c.num,
     name: c.name || '',
     title: c.title || {},
-    bio: c.bio || {},
+    /* 章节级存证只认中文目录；其他语言的小传由各译本自己的哈希记录，
+       因此给 bio 增加新语言不会让中文正文产生无意义的修订记录 */
+    bio: (c.bio && c.bio.zh) ? { zh: c.bio.zh } : (c.bio || {}),
     excerpt: c.excerpt || {},
     content: c.content || {},
     body: bodyHash || ''

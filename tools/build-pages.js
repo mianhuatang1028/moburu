@@ -249,6 +249,9 @@ ${otherLangHtml}
       const dirAttr = rtl ? ' dir="rtl"' : ' dir="ltr"';
       const tParas = t.paragraphs || [];
       const tBody = tParas.map(x => '<p>' + esc(x).replace(/\n/g, '<br>') + '</p>').join('\n');
+      /* 神兽名与山海经小传：只在该语言译本自己提供了译文时显示，绝不回退中文 */
+      const tBeastLine = t.beast ? '<div class="beast-line">' + esc(t.beast) + '</div>\n  ' : '';
+      const tBioBox = t.bio ? '<div class="bio-box">' + esc(t.bio) + '</div>\n  ' : '';
       /* 西文 / 阿拉伯语译文必须保留词间空格，不能像中文那样压缩空白 */
       const tDesc = (tParas[0] || '').trim().replace(/\s+/g, ' ').slice(0, 180);
       const tLd = {
@@ -269,6 +272,8 @@ ${otherLangHtml}
       if (tr.firstPostedAt) tLd.datePublished = tr.firstPostedAt;
       if (tr.updatedAt) tLd.dateModified = tr.updatedAt;
       tLd.description = t.title + ' — ' + LABEL[lang] + ' / ' + tBook + ' / ' + aLabel;
+      /* 小传是「神兽即命运」的结构线索，纳入结构化摘要便于检索与 AI 理解 */
+      if (t.bio) tLd.description += ' / ' + t.bio.replace(/\s+/g, ' ').slice(0, 120);
 
       const langNav = '<div class="archive-nav lang-links"><span>' + esc(u.other) + esc(u.colon) + '</span>' +
         '<a href="' + num + '.html">' + esc(u.original) + '</a>' +
@@ -291,14 +296,14 @@ ${hreflangLinks(workId, num, langs)}<link rel="stylesheet" href="../../assets/cs
 <body class="archive-page">
 <div class="wrap reader archive">
   <p class="crumb"><a href="../../index.html">${esc(aLabel)}</a> › <a href="../../work.html?id=${esc(workId)}">${esc(tBook)}</a></p>
-  <h1 class="chapter-title">${esc(t.title)}</h1>
+  ${tBeastLine}<h1 class="chapter-title">${esc(t.title)}</h1>
   <div class="post-stamp">
     ${tr.firstPostedAt ? '<span>' + esc(u.trFirst) + esc(u.colon) + esc(stamp(tr.firstPostedAt, true)) + ' (UTC+8)</span>' : ''}
     <span>${esc(u.first)}${esc(u.colon)}${esc(stamp(firstPosted, true))} (UTC+8)</span>
     ${tr.revisions && tr.revisions.length ? '<span>' + esc(u.updated) + esc(u.colon) + esc(stamp(tr.updatedAt, true)) + '</span>' : ''}
     <span>© 2026 ${esc(aLabel)} · ${esc(u.rights)}</span>
   </div>
-  <article class="content novel-text lang-${lang}">
+  ${tBioBox}<article class="content novel-text lang-${lang}">
 ${tBody}
   </article>
   <div class="post-stamp">

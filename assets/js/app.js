@@ -371,9 +371,9 @@ function renderReader(elId) {
         ? '<span>' + esc(t("lastUpdated")) + '：' + esc(fmtStamp(pi.updatedAt || pi.firstPostedAt, true)) + '</span>' : '') +
       '<span>© ' + new Date().getFullYear() + ' ' + esc(authorDisplay()) + ' · ' + esc(t("footerRights")) + '</span></div>'
     : '';
-  /* 译文工作稿未提供山海经小传译本；非中文页面不显示中文线框，避免语言混排 */
-  var bioBox = (LANG === "zh" && c.bio && tv(c.bio))
-    ? '<div class="bio-box">' + esc(tv(c.bio)) + '</div>' : '';
+  /* 山海经神兽小传：严格取当前语言译本；该语言未译出时不回退中文，保持页面语言纯净 */
+  var bioText = (c.bio && typeof c.bio === "object") ? (c.bio[LANG] || "") : "";
+  var bioBox = bioText ? '<div class="bio-box">' + esc(bioText) + '</div>' : '';
   var transNote = (LANG !== "zh" && !hasTranslation(c, LANG) && w.fullText)
     ? '<div class="trans-note">' + esc(t("translationMissing")) + '</div>' : '';
   var archiveFile = c.num + (hasTranslation(c, LANG) ? "." + LANG : "") + ".html";

@@ -194,18 +194,26 @@ chapters/henchangsha/0.<lang>.html     ← 该语言静态存档页（脚本生�
 1. 交一份译文 Word（放在 `桌面\恨长沙过程文件\`），运行提取脚本，生成
    `chapters/<作品>/<章号>.<语言>.json`：字段 `title`（译文标题）、`paragraphs`（与中文逐段对应）、
    `chars`、`paragraphCount`、`direction`。工作稿抬头不发布。
-2. 在 `translations.json` 的 `chapters` 里把该章号的语言补上；
+2. **山海经神兽小传必须一并补译**：译本 JSON 里加 `beast`（该语言神兽名，可带读音）
+   与 `bio`（小传译文），并在 `assets/js/data.js` 对应章节补 `bio.<语言>`。
+   小传是全书结构线索，不译就等于少了一层内容；**严禁把中文小传直接搬到非中文页**。
+3. 在 `translations.json` 的 `chapters` 里把该章号的语言补上；
    在 `assets/js/data.js` 对应章节补 `title.<语言>` 与 `translations: [...]`。
-3. 跑 `node tools/publish.js` → `node tools/build-pages.js`：
+4. 跑 `node tools/publish.js` → `node tools/build-pages.js`：
    自动写入该语言的 `translations[lang].firstPostedAt`（译本首发，只写一次）、
-   生成 `0.<lang>.html`（含 `hreflang` 互链、阿拉伯语 `dir="rtl"`、Chapter JSON-LD），
-   并收进 `sitemap.xml` / `llms.txt`。
-4. 语言切换后阅读页自动 `fetch` 对应译文；**尚无译本的章节显示中文原文并给出提示**，
-   不会假装已翻译。译文工作稿未提供山海经小传译文，因此非中文页不显示中文线框小传。
-5. 全部文件一起 commit 并发布（见下）。
+   生成 `0.<lang>.html`（含 `hreflang` 互链、阿拉伯语 `dir="rtl"`、Chapter JSON-LD、
+   已补译的小传线框），并收进 `sitemap.xml` / `llms.txt`。
+   `beast` / `bio` 纳入译本 SHA-256，补译或改稿只追加该语言的修订链，首发时间不覆盖。
+5. 语言切换后阅读页自动 `fetch` 对应译文；**尚无译本的章节显示中文原文并给出提示**，
+   不会假装已翻译。小传按当前语言**严格取词、不回退中文**：未补译的语言不显示线框，
+   避免语言混排。
+6. 全部文件一起 commit 并发布（见下）。
 
 > 2026-11-09 首批：序章（`num=0`）的英 / 日 / 法 / 阿四种译本，均为 8 段，
-> 与中文定稿逐段对应；译本首发 `2026-11-09 22:57 (UTC+8)`。其余 44 章尚无译本。
+> 与中文定稿逐段对应；译本首发 `2026-11-09 22:57 (UTC+8)`。
+> 2026-11-09 晚追加日文第 1–6 章（首发 `23:55 (UTC+8)`）。
+> 2026-11-10：日文序章至第 6 章补译山海经小传并完成 5 处意义校订；
+> 首发时间全部保留，日文译本各自追加修订链。英 / 法 / 阿仍只有序章，小传待补译。
 
 ---
 
