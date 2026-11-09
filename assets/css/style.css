@@ -306,6 +306,10 @@ h2 { font-size: 26px; margin: 0 0 8px; }
 .author-head .author-tag {
   margin: 0; color: var(--gold); font-size: 15px; letter-spacing: .5px;
 }
+/* 笔名释义（各语言一句，随语言切换） */
+.author-head .author-meaning {
+  margin: 8px 0 0; color: var(--text-dim); font-size: 13px; line-height: 1.7;
+}
 /* 阿拉伯语下，头像与文字排布保持自然（文字本身已 RTL） */
 html[dir="rtl"] .author-head { flex-direction: row-reverse; }
 html[dir="rtl"] .nav .links a { margin-left: 0; margin-right: 20px; }

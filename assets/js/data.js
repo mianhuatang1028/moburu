@@ -1,7 +1,7 @@
 /* ============================================================
    默不如小说官网 · 数据层（多语言 i18n + 付费端口预留）
    说明：
-   - 全站文案走 I18N；作品/章节内容字段为多语言对象 {zh, en}。
+   - 全站文案走 I18N；作品/章节内容字段为多语言对象 {zh, en, ja, fr, ar}。
    - 新增作品：在 WORKS 追加对象即可（官网优先更新）。
    - 付费端口：作品 paywall、章节 locked 字段预留，当前默认免费，
      接入支付时只需在 reader / pricing 页对接真实收银台。
@@ -80,18 +80,18 @@ const I18N = {
     aboutContact: "联系 / 合作："
   },
   en: {
-    brand: "MOBUYU",
+    brand: "Moburu",
     nav: { home: "Home", works: "Works", about: "About", pricing: "Members" },
-    heroBadge: "MOBUYU · FICTION UNIVERSE",
-    heroH1a: "MOBUYU", heroH1b: "FICTION UNIVERSE",
+    heroBadge: "Moburu · FICTION UNIVERSE",
+    heroH1a: "Moburu", heroH1b: "FICTION UNIVERSE",
     tagline: "Founder of a biotech company, and a writer.",
     slogan: "Hardcore Tech · Classic-of-Mountains-and-Seas · Midlife Comeback",
     ctaWorks: "Browse Works",
     ctaAbout: "About the Author",
     worksTitle: "Works Catalog",
-    worksSub: "All works by MOBUYU. Official site updates first, serializing continuously.",
+    worksSub: "All works by Moburu. Official site updates first, serializing continuously.",
     pillarsTitle: "The IP Core",
-    pillarsSub: "Three keywords that define MOBUYU's storytelling.",
+    pillarsSub: "Three keywords that define Moburu's storytelling.",
     p1n: "ONE", p1t: "Hardcore Tech", p1d: "Servo motors, fluid dynamics, tooling cost — details that survive scrutiny by insiders.",
     p2n: "TWO", p2t: "Classic-of-Mountains-and-Seas", p2d: "Each chapter named after a mythical beast from the Classic of Mountains and Seas.",
     p3n: "THREE", p3t: "Midlife Comeback", p3d: "After affair, debt and rock bottom — how a tech man rebuilds himself.",
@@ -119,31 +119,31 @@ const I18N = {
     free: "Free",
     vip: "Members Only",
     pricingTitle: "Membership & Paid Reading",
-    pricingSub: "MOBUYU official site payment port (reserved). No charge occurs before launch.",
+    pricingSub: "Moburu official site payment port (reserved). No charge occurs before launch.",
     pricingNote: "Reserved plan slots below. Connect a payment gateway to enable subscription / per-chapter unlock.",
     planMonthly: "Monthly", planYearly: "Yearly", planPerChapter: "Per Chapter",
     planPriceM: "¥18 / mo", planPriceY: "¥168 / yr", planPriceC: "¥3 / ch",
     planMd: "Read all unlocked chapters", planYd: "All access + early new chapters + extras", planCd: "Unlock a single chapter",
     subscribe: "Subscribe (reserved)", unlock: "Unlock (reserved)",
-    aboutTitle: "About MOBUYU",
-    aboutBig: "MOBUYU is the founder of a biotech company and a writer. A former executive at Xiaomi, he founded the world's first live-commerce platform. Still an entrepreneur today, he enjoys writing realist fiction as well as science fiction.",
-    aboutP1: "\"Hate Changsha\" is MOBUYU's recent new work; each chapter is named after a mythical beast from the Classic of Mountains and Seas — the beast is fate.",
+    aboutTitle: "About Moburu",
+    aboutBig: "Moburu is the founder of a biotech company and a writer. A former executive at Xiaomi, he founded the world's first live-commerce platform. Still an entrepreneur today, he enjoys writing realist fiction as well as science fiction.",
+    aboutP1: "\"Lost in Changsha\" is Moburu's recent new work; each chapter is named after a mythical beast from the Classic of Mountains and Seas — the beast is fate.",
     aboutP2: "",
     aboutContact: "Contact / Collab: "
   },
   ja: {
-    brand: "MOBUYU",
+    brand: "Moburu",
     nav: { home: "ホーム", works: "作品", about: "プロフィール", pricing: "会員" },
-    heroBadge: "MOBUYU · フィクション・ユニバース",
-    heroH1a: "MOBUYU", heroH1b: "フィクション・ユニバース",
+    heroBadge: "Moburu · フィクション・ユニバース",
+    heroH1a: "Moburu", heroH1b: "フィクション・ユニバース",
     tagline: "バイオテクノロジー企業の創業者、作家。",
     slogan: "硬派な技術描写 · 山海経叙事 · 中年の逆襲",
     ctaWorks: "作品を見る",
     ctaAbout: "作者について",
     worksTitle: "作品目録",
-    worksSub: "MOBUYUの全作品。公式サイト最速更新、連載中。",
+    worksSub: "Moburuの全作品。公式サイト最速更新、連載中。",
     pillarsTitle: "IPの核心",
-    pillarsSub: "MOBUYUの物語を定義する3つのキーワード。",
+    pillarsSub: "Moburuの物語を定義する3つのキーワード。",
     p1n: "ONE", p1t: "硬派な技術描写", p1d: "サーボモーター、流体力学、金型コスト——専門家も納得のディテール。",
     p2n: "TWO", p2t: "山海経叙事", p2d: "各章が『山海経』の神獣の名で綴られ、神獣は運命の隠喩。",
     p3n: "THREE", p3t: "中年の逆襲", p3d: "不倫、借金、どん底のあと、技術者がどうやって自身を再建するか。",
@@ -171,31 +171,31 @@ const I18N = {
     free: "無料",
     vip: "会員限定",
     pricingTitle: "会員・有料読み",
-    pricingSub: "MOBUYU公式サイト決済口（予約）。正式公開前は一切課金されません。",
+    pricingSub: "Moburu公式サイト決済口（予約）。正式公開前は一切課金されません。",
     pricingNote: "以下は予約プラン枠。決済を接続後、定期購読／単話解放を有効化。",
     planMonthly: "月額会員", planYearly: "年額会員", planPerChapter: "単話解放",
     planPriceM: "¥18 / 月", planPriceY: "¥168 / 年", planPriceC: "¥3 / 話",
     planMd: "解放済み全章読み放題", planYd: "全章読み放題＋新章最速＋番外編", planCd: "単話のみ解放",
     subscribe: "登録する（予約）", unlock: "解放する（予約）",
-    aboutTitle: "MOBUYUについて",
-    aboutBig: "MOBUYUはバイオテクノロジー企業の創業者にして作家でもある。小米（シャオミ）科技の元幹部で、世界初のライブコマース・プラットフォームを立ち上げた。現在も起業を続け、リアリズムとSFを書くことを好む。",
-    aboutP1: "『恨長沙（ハイトチャンシャ）』はMOBUYUの最近の新作。全章が『山海経』の神獣で名付けられ、神獣は運命。",
+    aboutTitle: "Moburuについて",
+    aboutBig: "Moburuはバイオテクノロジー企業の創業者にして作家でもある。小米（シャオミ）科技の元幹部で、世界初のライブコマース・プラットフォームを立ち上げた。現在も起業を続け、リアリズムとSFを書くことを好む。",
+    aboutP1: "『長沙に迷う』はMoburuの最近の新作。全章が『山海経』の神獣で名付けられ、神獣は運命。",
     aboutP2: "",
     aboutContact: "連絡／協業： "
   },
   fr: {
-    brand: "MOBUYU",
+    brand: "Moburu",
     nav: { home: "Accueil", works: "Œuvres", about: "À propos", pricing: "Membres" },
-    heroBadge: "MOBUYU · UNIVERS DE FICTION",
-    heroH1a: "MOBUYU", heroH1b: "UNIVERS DE FICTION",
+    heroBadge: "Moburu · UNIVERS DE FICTION",
+    heroH1a: "Moburu", heroH1b: "UNIVERS DE FICTION",
     tagline: "Fondateur d'une entreprise de biotechnologie, et écrivain.",
     slogan: "Réalisme technique · Narration des Montagnes et Mers · Reconquête de la maturité",
     ctaWorks: "Voir les œuvres",
     ctaAbout: "À propos de l'auteur",
     worksTitle: "Catalogue des œuvres",
-    worksSub: "Toutes les œuvres de MOBUYU. Le site officiel est mis à jour en premier, en cours de publication.",
+    worksSub: "Toutes les œuvres de Moburu. Le site officiel est mis à jour en premier, en cours de publication.",
     pillarsTitle: "Le cœur de l'IP",
-    pillarsSub: "Trois mots-clés qui définissent le récit de MOBUYU.",
+    pillarsSub: "Trois mots-clés qui définissent le récit de Moburu.",
     p1n: "UN", p1t: "Réalisme technique", p1d: "Moteurs servo, dynamique des fluides, coûts d'outillage — des détails qui résistent à l'examen des initiés.",
     p2n: "DEUX", p2t: "Narration des Montagnes et Mers", p2d: "Chaque chapitre porte le nom d'une bête mythique du Classique des Montagnes et Mers.",
     p3n: "TROIS", p3t: "Reconquête de la maturité", p3d: "Après l'adultère, la dette et le point de rupture — comment un homme technique se reconstruit.",
@@ -223,31 +223,31 @@ const I18N = {
     free: "Gratuit",
     vip: "Réservé aux membres",
     pricingTitle: "Abonnement et lecture payante",
-    pricingSub: "Port de paiement du site officiel MOBUYU (réservé). Aucun prélèvement avant le lancement.",
+    pricingSub: "Port de paiement du site officiel Moburu (réservé). Aucun prélèvement avant le lancement.",
     pricingNote: "Emplacements de forfait réservés ci-dessous. Connectez une passerelle de paiement pour activer l'abonnement / le déblocage par chapitre.",
     planMonthly: "Mensuel", planYearly: "Annuel", planPerChapter: "Par chapitre",
     planPriceM: "¥18 / mois", planPriceY: "¥168 / an", planPriceC: "¥3 / chapitre",
     planMd: "Lire tous les chapitres débloqués", planYd: "Accès total + chapitres en avant-première + bonus", planCd: "Débloquer un seul chapitre",
     subscribe: "S'abonner (réservé)", unlock: "Débloquer (réservé)",
-    aboutTitle: "À propos de MOBUYU",
-    aboutBig: "MOBUYU est le fondateur d'une entreprise de biotechnologie et un écrivain. Ancien cadre de Xiaomi, il a fondé la première plateforme mondiale de live-commerce. Toujours entrepreneur aujourd'hui, il aime écrire du réalisme comme de la science-fiction.",
-    aboutP1: "« Hate Changsha » est la récente nouvelle œuvre de MOBUYU ; chaque chapitre porte le nom d'une bête mythique du Classique des Montagnes et Mers — la bête est le destin.",
+    aboutTitle: "À propos de Moburu",
+    aboutBig: "Moburu est le fondateur d'une entreprise de biotechnologie et un écrivain. Ancien cadre de Xiaomi, il a fondé la première plateforme mondiale de live-commerce. Toujours entrepreneur aujourd'hui, il aime écrire du réalisme comme de la science-fiction.",
+    aboutP1: "« Perdu à Changsha » est la récente nouvelle œuvre de Moburu ; chaque chapitre porte le nom d'une bête mythique du Classique des Montagnes et Mers — la bête est le destin.",
     aboutP2: "",
     aboutContact: "Contact / Collaboration : "
   },
   ar: {
-    brand: "MOBUYU",
+    brand: "Moburu",
     nav: { home: "الرئيسية", works: "الأعمال", about: "عن الكاتب", pricing: "الأعضاء" },
-    heroBadge: "MOBUYU · عالم الخيال",
-    heroH1a: "MOBUYU", heroH1b: "عالم الخيال",
+    heroBadge: "Moburu · عالم الخيال",
+    heroH1a: "Moburu", heroH1b: "عالم الخيال",
     tagline: "مؤسس شركة تكنولوجيا حيوية، وكاتب.",
     slogan: "واقعية تقنية · سرد «الجبال والبحار» · صعود منتصف العمر",
     ctaWorks: "تصفح الأعمال",
     ctaAbout: "عن الكاتب",
     worksTitle: "فهرس الأعمال",
-    worksSub: "جميع أعمال MOBUYU. يتم التحديث على الموقع الرسمي أولاً، بشكل متسلسل.",
+    worksSub: "جميع أعمال Moburu. يتم التحديث على الموقع الرسمي أولاً، بشكل متسلسل.",
     pillarsTitle: "جوهر العلامة",
-    pillarsSub: "ثلاث كلمات مفتاحية تحدد سرد MOBUYU.",
+    pillarsSub: "ثلاث كلمات مفتاحية تحدد سرد Moburu.",
     p1n: "واحد", p1t: "واقعية تقنية", p1d: "محركات سيرفو، ديناميكا الموائع، تكلفة القوالب — تفاصيل تصمد أمام فحص المختصين.",
     p2n: "اثنان", p2t: "سرد «الجبال والبحار»", p2d: "كل فصل يحمل اسم وحش أسطوري من كلاسيكية الجبال والبحار — الوحش هو القدر.",
     p3n: "ثلاثة", p3t: "صعود منتصف العمر", p3d: "بعد الخيانة، والديون، والقاع — كيف يعيد رجل تقني بناء نفسه.",
@@ -275,15 +275,15 @@ const I18N = {
     free: "مجاني",
     vip: "حصري للأعضاء",
     pricingTitle: "العضوية والقراءة المدفوعة",
-    pricingSub: "بوابة دفع الموقع الرسمي MOBUYU (محجوزة). لا تحدث أي رسوم قبل الإطلاق.",
+    pricingSub: "بوابة دفع الموقع الرسمي Moburu (محجوزة). لا تحدث أي رسوم قبل الإطلاق.",
     pricingNote: "خانات الباقات المحجوزة أدناه. اربط بوابة دفع لتفعيل الاشتراك / فتح الفصل.",
     planMonthly: "شهري", planYearly: "سنوي", planPerChapter: "للفصل",
     planPriceM: "¥18 / شهر", planPriceY: "¥168 / سنة", planPriceC: "¥3 / فصل",
     planMd: "اقرأ جميع الفصول المفتوحة", planYd: "وصول كامل + فصول مبكرة + إضافات", planCd: "افتح فصلًا واحدًا",
     subscribe: "اشترك (محجوز)", unlock: "افتح (محجوز)",
-    aboutTitle: "عن MOBUYU",
-    aboutBig: "MOBUYU مؤسس شركة تكنولوجيا حيوية وكاتب. مدير سابق في شركة شاومي (Xiaomi)، أسس أول منصة تجارة مباشرة عبر البث المباشر في العالم. لا يزال رائد أعمال اليوم، ويحب كتابة الواقعية والخيال العلمي.",
-    aboutP1: "« كراهية تشانغشا » هي العمل الجديد الأخير لـ MOBUYU؛ كل فصل يحمل اسم وحش أسطوري من « الجبال والبحار » — الوحش هو القدر.",
+    aboutTitle: "عن Moburu",
+    aboutBig: "Moburu مؤسس شركة تكنولوجيا حيوية وكاتب. مدير سابق في شركة شاومي (Xiaomi)، أسس أول منصة تجارة مباشرة عبر البث المباشر في العالم. لا يزال رائد أعمال اليوم، ويحب كتابة الواقعية والخيال العلمي.",
+    aboutP1: "« ضائع في تشانغشا » هو العمل الجديد الأخير لـ Moburu؛ كل فصل يحمل اسم وحش أسطوري من « الجبال والبحار » — الوحش هو القدر.",
     aboutP2: "",
     aboutContact: "اتصال / تعاون: "
   }
@@ -292,9 +292,21 @@ const I18N = {
 /* 作者 / 站点信息（多语言） */
 const SITE = {
   author: "默不如zZZ",
+  /* 笔名释义（作者 2026-11-09 拍板）：「默不如」= 不如沉默，官方英文释义 "rather silence"。
+     中文页保留中文名，非中文页用拼音 Moburu（与域名 moburu.vip 一致，勿拼成 MOBUYU）。
+     两种写法在结构化数据里都保留，便于 AI / 搜索引擎关联同一作者。 */
+  latinName: "Moburu",
+  nameMeaningOfficial: "rather silence",
+  nameMeaning: {
+    zh: "「默不如」意为「不如沉默」，拼音写作 Moburu。",
+    en: "Moburu means \u201crather silence\u201d — choosing silence over speech.",
+    ja: "「默不如（Moburu）」は「むしろ沈黙」の意。",
+    fr: "« Moburu » signifie « plutôt le silence ».",
+    ar: "يعني اسم Moburu «الصمت أفضل»، أي اختيار الصمت على الكلام."
+  },
   intro: {
     zh: "默不如，把伺服电机、流体力学和《山海经》写进小说的人。",
-    en: "MOBUYU — writes servo motors, fluid dynamics and the Classic of Mountains and Seas into fiction."
+    en: "Moburu — writes servo motors, fluid dynamics and the Classic of Mountains and Seas into fiction."
   },
   contact: {
     wechat: "",
@@ -314,7 +326,15 @@ const PLANS = [
 const WORKS = [
   {
     id: "henchangsha",
-    title: { zh: "恨长沙", en: "Hate Changsha" },
+    /* 官方书名：作者 2026-11-09 拍板，书名的「恨」是「遗憾 / 失落」，不是「憎恨」。
+       国际名固定为 Lost in Changsha，勿再回译成 Hate / كراهية 等「憎恨」义。 */
+    title: {
+      zh: "恨长沙",
+      en: "Lost in Changsha",
+      ja: "長沙に迷う",
+      fr: "Perdu à Changsha",
+      ar: "ضائع في تشانغشا"
+    },
     author: "默不如zZZ",
     category: { zh: "现实 · 人间百态 / 军工题材", en: "Realism / Military-Industry", ja: "リアル · 人間ドラマ / 軍事産業", fr: "Réalisme · Drame humain / Industrie militaire", ar: "واقعية · دراما إنسانية / صناعة عسكرية" },
     status: { zh: "连载中 · 免费", en: "Ongoing · Free", ja: "連載中 · 無料", fr: "En cours · Gratuit", ar: "مستمر · مجاني" },
@@ -395,7 +415,7 @@ const WORKS = [
             "\"Dyson's patents are nothing — plenty of domestic makers have done similar work,\" Qi Jin told Lao Zheng. \"That annular narrow-slit airflow, the Coanda surface — Dyson locked the core path. But the real challenge now is doing it cheaper, not walking their road.\"\n\n" +
             "Lao Zheng said: \"I keep the annular outlet but reroute the airflow. Ditch the centrifugal fan in the base, use a mixed-flow. Mixed-flow has lower static pressure than centrifugal, but higher flow and lower cost. The catch: mixed-flow exits axially, so it needs a turn before the annular chamber — and that turn is where we work our magic.\"\n\n" +
             "\"Dyson uses 1.3 mm. I won't go that narrow. The narrow slit stabilizes the Coanda effect, but it demands high back-pressure that mixed-flow can't sustain. I'll open it to 1.8–2.0 mm — trade a little speed for volume. Ordinary readers want strong wind, not fast wind.\"\n\n" +
-            "— excerpt from 'Hate Changsha', Ch.43 Heyu (official-first sample)"
+            "— excerpt from 'Lost in Changsha', Ch.43 Heyu (official-first sample)"
         }
       },
       { num: 44, name: "诸犍", title: { zh: "第四十四章 诸犍", en: "Ch.44 Zhujian" }, bio: { zh: "“诸犍”——《山海经·北山经》里，单张之山有兽，其状如豹，而长尾，人首而牛耳，一目，名曰诸犍。善吒，行则衔其尾。正所谓豹身长尾，人首牛耳，一目独视，行则衔尾。诸犍只有一只眼睛，看左边就顾不了右边，看前头就顾不了后头；它走路的时候，必须咬着自己的尾巴，生怕首尾不能相顾。" } }
@@ -405,7 +425,7 @@ const WORKS = [
     id: "halo",
     title: { zh: "光环", en: "Halo", ja: "光環", fr: "Halo", ar: "هالة" },
     author: "默不如zZZ",
-    category: { zh: "默不如 · 新作", en: "MOBUYU · New", ja: "MOBUYU · 新作", fr: "MOBUYU · Nouveau", ar: "MOBUYU · جديد" },
+    category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
     status: { zh: "即将上线 · 免费", en: "Coming soon · Free", ja: "近日公開 · 無料", fr: "Bientôt · Gratuit", ar: "قريباً · مجاني" },
     year: 2026,
     paywall: false,
@@ -414,12 +434,12 @@ const WORKS = [
     cover: "光",
     summary: {
       zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
-      en: "A new work by MOBUYU — official-first updates, coming soon. A new storyline in the MOBUYU fiction universe.",
-      ja: "MOBUYUの新作。公式サイト最速更新、乞うご期待。「MOBUYUフィクション・ユニバース」で新たな物語が始まる。",
-      fr: "Une nouvelle œuvre de MOBUYU — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction MOBUYU.",
-      ar: "عمل جديد من MOBUYU — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم MOBUYU الخيالي."
+      en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",
+      ja: "Moburuの新作。公式サイト最速更新、乞うご期待。「Moburuフィクション・ユニバース」で新たな物語が始まる。",
+      fr: "Une nouvelle œuvre de Moburu — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction Moburu.",
+      ar: "عمل جديد من Moburu — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم Moburu الخيالي."
     },
-    tags: { zh: ["默不如宇宙", "敬请期待"], en: ["MOBUYU Universe", "Coming Soon"], ja: ["MOBUYU宇宙", "乞うご期待"], fr: ["Univers MOBUYU", "À venir"], ar: ["عالم MOBUYU", "قريباً"] },
+    tags: { zh: ["默不如宇宙", "敬请期待"], en: ["Moburu Universe", "Coming Soon"], ja: ["Moburu宇宙", "乞うご期待"], fr: ["Univers Moburu", "À venir"], ar: ["عالم Moburu", "قريباً"] },
     chapters: [
       { num: 0, name: "序", title: { zh: "序", en: "Prologue" } }
     ]
@@ -428,7 +448,7 @@ const WORKS = [
     id: "shepherd",
     title: { zh: "牧者之歌", en: "Song of the Shepherd", ja: "羊飼いの歌", fr: "Chant du Berger", ar: "أغنية الراعي" },
     author: "默不如zZZ",
-    category: { zh: "默不如 · 新作", en: "MOBUYU · New", ja: "MOBUYU · 新作", fr: "MOBUYU · Nouveau", ar: "MOBUYU · جديد" },
+    category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
     status: { zh: "即将上线 · 免费", en: "Coming soon · Free", ja: "近日公開 · 無料", fr: "Bientôt · Gratuit", ar: "قريباً · مجاني" },
     year: 2026,
     paywall: false,
@@ -437,12 +457,12 @@ const WORKS = [
     cover: "牧",
     summary: {
       zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
-      en: "A new work by MOBUYU — official-first updates, coming soon. A new storyline in the MOBUYU fiction universe.",
-      ja: "MOBUYUの新作。公式サイト最速更新、乞うご期待。「MOBUYUフィクション・ユニバース」で新たな物語が始まる。",
-      fr: "Une nouvelle œuvre de MOBUYU — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction MOBUYU.",
-      ar: "عمل جديد من MOBUYU — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم MOBUYU الخيالي."
+      en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",
+      ja: "Moburuの新作。公式サイト最速更新、乞うご期待。「Moburuフィクション・ユニバース」で新たな物語が始まる。",
+      fr: "Une nouvelle œuvre de Moburu — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction Moburu.",
+      ar: "عمل جديد من Moburu — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم Moburu الخيالي."
     },
-    tags: { zh: ["默不如宇宙", "敬请期待"], en: ["MOBUYU Universe", "Coming Soon"], ja: ["MOBUYU宇宙", "乞うご期待"], fr: ["Univers MOBUYU", "À venir"], ar: ["عالم MOBUYU", "قريباً"] },
+    tags: { zh: ["默不如宇宙", "敬请期待"], en: ["Moburu Universe", "Coming Soon"], ja: ["Moburu宇宙", "乞うご期待"], fr: ["Univers Moburu", "À venir"], ar: ["عالم Moburu", "قريباً"] },
     chapters: [
       { num: 0, name: "序", title: { zh: "序", en: "Prologue" } }
     ]

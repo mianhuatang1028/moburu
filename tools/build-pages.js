@@ -92,7 +92,32 @@ function hreflangLinks(workId, num, langs) {
   return s;
 }
 
-const SITE = loadConst(fs.readFileSync(DATA_JS, 'utf8'), 'SITE');
+const DATA_SRC = fs.readFileSync(DATA_JS, 'utf8');
+const SITE = loadConst(DATA_SRC, 'SITE');
+const WORKS = loadConst(DATA_SRC, 'WORKS') || [];
+
+/* 书名按语言取（官方国际名见 data.js 的 WORKS[].title.en）；
+   作者笔名中文页用中文，非中文页用拼音 Moburu，两种写法都保留。 */
+function bookTitle(workId, lang) {
+  const w = WORKS.filter(x => x.id === workId)[0];
+  const t = (w && w.title) || {};
+  return t[lang] || t.zh || '';
+}
+function authorLabel(lang) {
+  return lang === 'zh' ? SITE.author : (SITE.latinName || 'Moburu');
+}
+function nameMeaning(lang) {
+  return (SITE.nameMeaning && SITE.nameMeaning[lang]) || SITE.nameMeaningOfficial || '';
+}
+function personLd(name) {
+  return {
+    '@type': 'Person',
+    'name': name || SITE.author,
+    'alternateName': SITE.latinName || 'Moburu',
+    'description': SITE.nameMeaningOfficial || 'rather silence'
+  };
+}
+
 const POST = fs.existsSync(POSTS_JSON)
   ? JSON.parse(fs.readFileSync(POSTS_JSON, 'utf8')) : { works: {} };
 
@@ -132,6 +157,8 @@ for (const workId of workDirs) {
     const readerUrl = SITE_URL + '/reader.html?work=' + workId + '&ch=' + num;
     const langs = (transMap[String(num)] || []).filter(l =>
       fs.existsSync(path.join(dir, num + '.' + l + '.json')));
+    const zhBook = bookTitle(workId, 'zh');
+    const enBook = bookTitle(workId, 'en');
 
     const ld = {
       '@context': 'https://schema.org',
@@ -139,12 +166,12 @@ for (const workId of workDirs) {
       'name': data.title,
       'headline': data.title,
       'position': num,
-      'author': { '@type': 'Person', 'name': SITE.author },
-      'copyrightHolder': { '@type': 'Person', 'name': SITE.author },
+      'author': personLd(SITE.author),
+      'copyrightHolder': personLd(SITE.author),
       'copyrightYear': 2026,
       'inLanguage': 'zh-CN',
       'url': url,
-      'isPartOf': { '@type': 'Book', 'name': idx.title, 'url': SITE_URL + '/work.html?id=' + workId },
+      'isPartOf': { '@type': 'Book', 'name': zhBook, 'alternateName': enBook, 'url': SITE_URL + '/work.html?id=' + workId },
       'wordCount': data.chars || 0
     };
     if (firstPosted) ld.datePublished = firstPosted;
@@ -198,7 +225,7 @@ ${bodyHtml}
   </div>
   <div class="archive-nav">${prev}${next}</div>
 ${otherLangHtml}
-  <p class="archive-foot">本页为作者独立官网的全文存档页，内容与 ${esc(idx.title)} 定稿一致。作品为作者个人原创，未授权任何平台独家转载。<br>© 2026 ${esc(SITE.author)} · 保留所有权利。联系 / 合作：${esc((SITE.contact && SITE.contact.email) || '')}</p>
+  <p class="archive-foot">本页为作者独立官网的全文存档页，内容与 ${esc(zhBook)} 定稿一致。作品为作者个人原创，未授权任何平台独家转载。<br>笔名释义：${esc(nameMeaning('zh'))}<br>© 2026 ${esc(SITE.author)} · 保留所有权利。联系 / 合作：${esc((SITE.contact && SITE.contact.email) || '')}</p>
 </div>
 </body>
 </html>
@@ -213,6 +240,8 @@ ${otherLangHtml}
     /* ---- 该章各语言译本存档页 ---- */
     for (const lang of langs) {
       const u = UI[lang];
+      const tBook = bookTitle(workId, lang);
+      const aLabel = authorLabel(lang);
       const t = JSON.parse(fs.readFileSync(path.join(dir, num + '.' + lang + '.json'), 'utf8'));
       const tr = ((p.translations || {})[lang]) || {};
       const tUrl = SITE_URL + '/chapters/' + workId + '/' + num + '.' + lang + '.html';
@@ -228,18 +257,18 @@ ${otherLangHtml}
         'name': t.title,
         'headline': t.title,
         'position': num,
-        'author': { '@type': 'Person', 'name': SITE.author },
-        'copyrightHolder': { '@type': 'Person', 'name': SITE.author },
+        'author': personLd(SITE.author),
+        'copyrightHolder': personLd(SITE.author),
         'copyrightYear': 2026,
         'inLanguage': HREFLANG[lang],
         'url': tUrl,
-        'isPartOf': { '@type': 'Book', 'name': idx.title, 'url': SITE_URL + '/work.html?id=' + workId },
+        'isPartOf': { '@type': 'Book', 'name': tBook, 'alternateName': enBook, 'url': SITE_URL + '/work.html?id=' + workId },
         'isBasedOn': { '@type': 'Chapter', 'name': data.title, 'inLanguage': 'zh-CN', 'url': url },
         'wordCount': t.chars || 0
       };
       if (tr.firstPostedAt) tLd.datePublished = tr.firstPostedAt;
       if (tr.updatedAt) tLd.dateModified = tr.updatedAt;
-      tLd.description = t.title + ' — ' + LABEL[lang] + ' / ' + idx.title + ' / ' + SITE.author;
+      tLd.description = t.title + ' — ' + LABEL[lang] + ' / ' + tBook + ' / ' + aLabel;
 
       const langNav = '<div class="archive-nav lang-links"><span>' + esc(u.other) + esc(u.colon) + '</span>' +
         '<a href="' + num + '.html">' + esc(u.original) + '</a>' +
@@ -251,9 +280,9 @@ ${otherLangHtml}
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(t.title)} - ${esc(idx.title)} - ${esc(SITE.author)}</title>
+<title>${esc(t.title)} - ${esc(tBook)} - ${esc(aLabel)}</title>
 <meta name="description" content="${esc(tDesc)}">
-<meta name="author" content="${esc(SITE.author)}">
+<meta name="author" content="${esc(aLabel)}">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="${tUrl}">
 ${hreflangLinks(workId, num, langs)}<link rel="stylesheet" href="../../assets/css/style.css">
@@ -261,13 +290,13 @@ ${hreflangLinks(workId, num, langs)}<link rel="stylesheet" href="../../assets/cs
 </head>
 <body class="archive-page">
 <div class="wrap reader archive">
-  <p class="crumb"><a href="../../index.html">${esc(SITE.author)}</a> › <a href="../../work.html?id=${esc(workId)}">${esc(idx.title)}</a></p>
+  <p class="crumb"><a href="../../index.html">${esc(aLabel)}</a> › <a href="../../work.html?id=${esc(workId)}">${esc(tBook)}</a></p>
   <h1 class="chapter-title">${esc(t.title)}</h1>
   <div class="post-stamp">
     ${tr.firstPostedAt ? '<span>' + esc(u.trFirst) + esc(u.colon) + esc(stamp(tr.firstPostedAt, true)) + ' (UTC+8)</span>' : ''}
     <span>${esc(u.first)}${esc(u.colon)}${esc(stamp(firstPosted, true))} (UTC+8)</span>
     ${tr.revisions && tr.revisions.length ? '<span>' + esc(u.updated) + esc(u.colon) + esc(stamp(tr.updatedAt, true)) + '</span>' : ''}
-    <span>© 2026 ${esc(SITE.author)} · ${esc(u.rights)}</span>
+    <span>© 2026 ${esc(aLabel)} · ${esc(u.rights)}</span>
   </div>
   <article class="content novel-text lang-${lang}">
 ${tBody}
@@ -278,7 +307,7 @@ ${tBody}
     <a href="${readerUrl}">${esc(u.reader)}</a>
   </div>
 ${langNav}
-  <p class="archive-foot">${esc(u.foot)}<br>© 2026 ${esc(SITE.author)} · ${esc(u.rights)}. ${esc(u.contact)}：${esc((SITE.contact && SITE.contact.email) || '')}</p>
+  <p class="archive-foot">${esc(u.foot)}<br>${esc(nameMeaning(lang))}<br>© 2026 ${esc(aLabel)} · ${esc(u.rights)}. ${esc(u.contact)}${esc(u.colon)}${esc((SITE.contact && SITE.contact.email) || '')}</p>
 </div>
 </body>
 </html>
@@ -314,12 +343,14 @@ const llm = `# 默不如 · 作者独立小说官网
 > 生物技术公司创始人、作家默不如的个人原创作品站。官网优先更新，作品均为作者本人原创，未授权任何平台独家转载。
 
 - 官网：${SITE_URL}
-- 作者：默不如（小米科技前高管，创立过全球第一家直播电商平台）
+- 作者：默不如 / ${SITE.latinName || 'Moburu'}（笔名释义 "${SITE.nameMeaningOfficial || 'rather silence'}"，意为「不如沉默」；小米科技前高管，创立过全球第一家直播电商平台）
 - 联系 / 合作：${(SITE.contact && SITE.contact.email) || ''}
 - 首发存证（每章首次公开时间与内容 SHA-256，含各语言译本）：${SITE_URL}/posts.json
 - 全文存档：不依赖 JavaScript 的静态 HTML 页面，含完整正文与版权声明
 
-## 《恨长沙》
+## 《恨长沙》 / ${bookTitle('henchangsha', 'en')}
+
+> 官方国际书名 ${bookTitle('henchangsha', 'en')}。书名中的「恨」意为「遗憾 / 失落」，不是「憎恨」。
 
 中年技术男郑智咏在体制、资本、人情与欲望的夹缝里重新拼起自己。全书以《山海经》神兽逐章命名，神兽即命运。共 ${pageCount} 章，全文约 ${(totalChars / 10000).toFixed(1)} 万字。
 

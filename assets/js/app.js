@@ -3,13 +3,13 @@
    ============================================================ */
 
 /* 当前语言（持久化到 localStorage） */
-var LANG = localStorage.getItem("mobuyu_lang") || "zh";
+var LANG = localStorage.getItem("moburu_lang") || localStorage.getItem("mobuyu_lang") || "zh";
 var MEMBER = false;        // 预留会员状态；接入支付/登录后由后端决定
 var SHOW_MEMBER = false;   // 付费入口总开关：false=全站隐藏会员/付费 UI；未来开放改 true 即可
 
 function setLang(code) {
   LANG = code;
-  localStorage.setItem("mobuyu_lang", code);
+  localStorage.setItem("moburu_lang", code);
   var langMap = { zh: "zh-CN", en: "en", ja: "ja", fr: "fr", ar: "ar" };
   document.documentElement.lang = langMap[code] || "zh-CN";
   document.documentElement.dir = (code === "ar") ? "rtl" : "ltr"; // 阿拉伯语右到左
@@ -25,6 +25,20 @@ function tv(obj) {
   if (obj.zh != null) return obj.zh;
   if (obj.en != null) return obj.en;
   return "";
+}
+
+/* 作者署名：中文页保留中文名，非中文页用拼音 Moburu（与域名一致）。
+   结构化数据里两种写法都保留，并附笔名释义 "rather silence"，便于 AI 关联同一作者。 */
+function authorDisplay() {
+  return (LANG === "zh") ? SITE.author : (SITE.latinName || "Moburu");
+}
+function personLd(name) {
+  return {
+    "@type": "Person",
+    "name": name || SITE.author,
+    "alternateName": SITE.latinName || "Moburu",
+    "description": SITE.nameMeaningOfficial || "rather silence"
+  };
 }
 
 /* 章节标题 / 神兽名：按当前语言派生，保证单语言一致（非 CJK 语言用罗马音，不掺中文） */
@@ -154,7 +168,7 @@ function renderFooter() {
     '<div class="row">' +
       '<div>' + esc(t("footerNote")) +
         ' <a class="prov-link" href="posts.json" target="_blank" rel="noopener">' + esc(t("provenance")) + '</a></div>' +
-      '<div>© ' + y + ' ' + esc(SITE.author) + ' · ' + esc(t("footerRights")) + '</div>' +
+      '<div>© ' + y + ' ' + esc(authorDisplay()) + ' · ' + esc(t("footerRights")) + '</div>' +
     '</div>';
 }
 
@@ -167,17 +181,18 @@ function injectBookJsonLd(work) {
     "@context": "https://schema.org",
     "@type": "Book",
     "name": tv(work.title),
-    "author": { "@type": "Person", "name": work.author },
-    "copyrightHolder": { "@type": "Person", "name": work.author },
+    "alternateName": work.title.en || "",     // 官方国际名 Lost in Changsha，各语言页都能被检索到
+    "author": personLd(work.author),
+    "copyrightHolder": personLd(work.author),
     "copyrightYear": new Date().getFullYear(),
     "genre": tv(work.tags),
     "description": tv(work.summary),
     "url": location.href,
     "sameAs": work.qidianUrl ? [work.qidianUrl] : [],
-    "publisher": { "@type": "Organization", "name": t("brand") + " Official" },
+    "publisher": { "@type": "Organization", "name": t("brand") + (LANG === "zh" ? " 官网" : " Official") },
     "inLanguage": langCode(),
     "bookFormat": "https://schema.org/EBook",
-    "keywords": [tv(work.title), work.author].concat(tv(work.tags)).join(",")
+    "keywords": [tv(work.title), work.title.en, work.author, SITE.latinName].concat(tv(work.tags)).join(",")
   };
   if (first) ld.datePublished = first;          // 全书最早首发时间
   if (last) ld.dateModified = last;             // 全书最后修订时间
@@ -198,8 +213,8 @@ function injectChapterJsonLd(work, c) {
     "@type": "Chapter",
     "name": chapterTitle(c),
     "position": c.num,
-    "author": { "@type": "Person", "name": work.author },
-    "copyrightHolder": { "@type": "Person", "name": work.author },
+    "author": personLd(work.author),
+    "copyrightHolder": personLd(work.author),
     "copyrightYear": new Date().getFullYear(),
     "url": location.href,
     /* 尚未翻译的章节展示的是中文原文，结构化数据的语言要如实标 zh-CN */
@@ -207,6 +222,7 @@ function injectChapterJsonLd(work, c) {
     "isPartOf": {
       "@type": "Book",
       "name": tv(work.title),
+      "alternateName": work.title.en || "",
       "url": location.href.split("?")[0].replace(/reader\.html$/, "work.html") + "?id=" + work.id
     }
   };
@@ -261,7 +277,7 @@ function renderWorkDetail(elId) {
     ? '<p class="trans-note">' + esc(t("translationProgress")) + '</p>' : '';
   var provBar = fp
     ? '<div class="provenance-bar">' + esc(t("firstPostedFull")) + '：' + esc(fmtStamp(fp, true)) +
-      ' (UTC+8) · © ' + new Date().getFullYear() + ' ' + esc(SITE.author) +
+      ' (UTC+8) · © ' + new Date().getFullYear() + ' ' + esc(authorDisplay()) +
       ' · ' + esc(t("footerRights")) +
       ' <a href="posts.json" target="_blank" rel="noopener">' + esc(t("provenance")) + '</a></div>'
     : '';
@@ -353,7 +369,7 @@ function renderReader(elId) {
       trStamp +
       ((pi.revisions && pi.revisions.length)
         ? '<span>' + esc(t("lastUpdated")) + '：' + esc(fmtStamp(pi.updatedAt || pi.firstPostedAt, true)) + '</span>' : '') +
-      '<span>© ' + new Date().getFullYear() + ' ' + esc(SITE.author) + ' · ' + esc(t("footerRights")) + '</span></div>'
+      '<span>© ' + new Date().getFullYear() + ' ' + esc(authorDisplay()) + ' · ' + esc(t("footerRights")) + '</span></div>'
     : '';
   /* 译文工作稿未提供山海经小传译本；非中文页面不显示中文线框，避免语言混排 */
   var bioBox = (LANG === "zh" && c.bio && tv(c.bio))
@@ -467,6 +483,7 @@ function renderAbout(elId) {
         '<div class="author-meta">' +
           '<h1>' + esc(t("aboutTitle")) + '</h1>' +
           '<p class="author-tag">' + esc(t("tagline")) + '</p>' +
+          '<p class="author-meaning">' + esc(tv(SITE.nameMeaning)) + '</p>' +
         '</div>' +
       '</div>' +
       paras.map(function (p) {
