@@ -226,6 +226,30 @@ chapters/henchangsha/0.<lang>.html     ← 该语言静态存档页（脚本生�
 
 ---
 
+## 六点六、静态资源版本号（每次发版必做）
+
+6 个动态页面（`index / works / work / reader / about / pricing`）引用
+`data.js` / `posts.js` / `app.js` / `style.css` 时都带 `?v=<版本号>`，例如：
+
+```html
+<script src="assets/js/data.js?v=202611092334"></script>
+```
+
+**每次发布前必须把版本号换成新的**，否则浏览器会继续用缓存的旧 `data.js` ——
+2026-11-09 就因为这个，代码里书名已改成 `Lost in Changsha`，作者刷新后仍看到
+旧的 `Hate Changsha`（带上 `?v=` 参数直接抓线上是新的，才定位到缓存）。
+
+一键脚本（自动用当前时间生成版本号，改完会复核 6 个页面的全部引用）：
+
+```bash
+python "C:\Users\麦铁坚\Desktop\恨长沙过程文件\官网_缓存版本号.py"
+```
+
+放在 `node tools/publish.js` 之后、`git add` 之前跑一次即可。加了版本号后，
+读者以后不需要 Ctrl+F5 就能看到新内容。
+
+---
+
 ## 七、首发时间戳与原创性存证
 
 目的：任何一章「最早公开发布到本站」的时间都可查、可证，用于主张原创性与版权归属。
