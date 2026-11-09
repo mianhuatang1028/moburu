@@ -388,6 +388,26 @@ html[dir="rtl"] .nav .links { order: 2; }
   margin-top: 34px; font-size: 12px;
   line-height: 1.9; color: var(--text-dim);
 }
+/* ---------- 多语言译文 ---------- */
+.trans-note {
+  margin: 14px 0 20px; padding: 10px 14px;
+  border-left: 3px solid var(--gold-dim);
+  background: rgba(255, 255, 255, .035);
+  font-size: 13px; line-height: 1.8; color: var(--text-dim);
+}
+[dir="rtl"] .trans-note { border-left: 0; border-right: 3px solid var(--gold-dim); text-align: right; }
+.ch-tr { color: var(--gold); white-space: nowrap; }
+.lang-links {
+  margin-top: 10px; font-size: 12px;
+  line-height: 2; color: var(--text-dim);
+}
+.lang-links a { color: var(--gold); border-bottom: 1px dotted var(--gold-dim); }
+/* 西文 / 阿拉伯语段落不做中文式首行缩进；日文用一字下げ */
+.novel-text.lang-en p, .novel-text.lang-fr p, .novel-text.lang-ar p { text-indent: 0; line-height: 1.95; }
+.novel-text.lang-ja p { text-indent: 1em; }
+[dir="rtl"] .novel-text p { text-align: right; }
+[dir="rtl"] .lang-links { text-align: right; }
 @media (max-width: 600px) {
   .novel-text p { font-size: 16px; line-height: 1.9; }
+  .trans-note { font-size: 12px; }
 }

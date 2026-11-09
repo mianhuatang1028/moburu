@@ -37,11 +37,31 @@ function _beastNames(c) {
             : en.replace(/^Ch\.\s*\d+\s*/i, "").trim();
   return { zh: zhName, en: enName };
 }
+/* 该章是否已发布当前语言译本（译文按章存于 chapters/<作品>/<num>.<lang>.json） */
+function hasTranslation(c, lang) {
+  var code = lang || LANG;
+  return code !== "zh" && !!(c && c.translations && c.translations.indexOf(code) >= 0);
+}
+function langLabel(code) {
+  var hit = (typeof LANGS !== "undefined" ? LANGS : []).filter(function (l) { return l.code === code; })[0];
+  return hit ? hit.label : code;
+}
+/* 有译文标题时，神兽名也从译名里派生，避免非中文页面冒出汉字 */
+function _localBeast(c) {
+  var loc = c.title && c.title[LANG];
+  if (!loc || LANG === "zh") return "";
+  var sep = loc.indexOf("：") >= 0 ? "：" : (loc.indexOf(":") >= 0 ? ":" : "");
+  return sep ? loc.split(sep).pop().trim() : "";
+}
 function beastName(c) {
+  var local = _localBeast(c);
+  if (local) return local;
   var n = _beastNames(c);
   return (LANG === "zh" || LANG === "ja") ? (n.zh || n.en) : (n.en || n.zh);
 }
 function chapterTitle(c) {
+  /* 优先用该语言译名；未翻译的章沿用原有派生规则（零回归） */
+  if (c.title && c.title[LANG]) return c.title[LANG];
   var n = _beastNames(c), num = c.num;
   if (LANG === "zh" || LANG === "ja") return (c.title && c.title.zh) || (c.title && c.title.en) || "";
   if (LANG === "en") return (c.title && c.title.en) || (c.title && c.title.zh) || "";
@@ -182,7 +202,8 @@ function injectChapterJsonLd(work, c) {
     "copyrightHolder": { "@type": "Person", "name": work.author },
     "copyrightYear": new Date().getFullYear(),
     "url": location.href,
-    "inLanguage": langCode(),
+    /* 尚未翻译的章节展示的是中文原文，结构化数据的语言要如实标 zh-CN */
+    "inLanguage": (LANG !== "zh" && !hasTranslation(c, LANG)) ? "zh-CN" : langCode(),
     "isPartOf": {
       "@type": "Book",
       "name": tv(work.title),
@@ -235,6 +256,9 @@ function renderWorkDetail(elId) {
   var tags = tv(w.tags).map(function (x) { return '<span class="tag">' + esc(x) + "</span>"; }).join("");
   var ordered = orderedChapters(w);
   var fp = workFirstPosted(w);
+  /* 译本按章交付，尚未全本翻译时明确告知读者，避免误以为页面出错 */
+  var trNotice = (LANG !== "zh" && w.fullText)
+    ? '<p class="trans-note">' + esc(t("translationProgress")) + '</p>' : '';
   var provBar = fp
     ? '<div class="provenance-bar">' + esc(t("firstPostedFull")) + '：' + esc(fmtStamp(fp, true)) +
       ' (UTC+8) · © ' + new Date().getFullYear() + ' ' + esc(SITE.author) +
@@ -259,6 +283,8 @@ function renderWorkDetail(elId) {
       ? ' · <span class="ch-stamp">' + esc(t("firstPosted")) + ' ' + esc(fmtStamp(pi.firstPostedAt)) + '</span>'
       : '';
     if (w.fullText) stamp += ' · <span class="ch-full">' + esc(t("fullTextBadge")) + '</span>';
+    if (c.translations && c.translations.length)
+      stamp += ' · <span class="ch-tr">' + esc(t("translationBadge")) + '</span>';
     return '' +
       '<a class="' + cls + '" href="' + href + '">' +
         '<div class="beast">' + esc(beastName(c)) + '</div>' +
@@ -274,6 +300,7 @@ function renderWorkDetail(elId) {
       '<h1 class="work-title">' + esc(tv(w.title)) +
         (w.officialFirst ? ' <span class="first-badge">' + esc(t("firstBadge")) + '</span>' : '') + '</h1>' +
       provBar +
+      trNotice +
       '<p class="section-sub">' + esc(tv(w.category)) + ' · ' + esc(tv(w.status)) + '</p>' +
       '<p class="work-summary">' + esc(tv(w.summary)) + '</p>' +
       '<div class="tags" style="margin:16px 0 26px">' + tags + '</div>' +
@@ -292,10 +319,11 @@ function renderWorkDetail(elId) {
 /* ---------- 章节阅读器 ---------- */
 /* 正文按章存放在 chapters/<作品>/<章号>.json，按需加载，避免全站一次下载 20 万字 */
 function chapterBodyUrl(w, c) {
-  return "chapters/" + encodeURIComponent(w.id) + "/" + c.num + ".json";
+  var suffix = hasTranslation(c, LANG) ? "." + LANG : "";
+  return "chapters/" + encodeURIComponent(w.id) + "/" + c.num + suffix + ".json";
 }
 function renderParagraphs(list) {
-  return '<div class="content novel-text">' +
+  return '<div class="content novel-text lang-' + LANG + '">' +
     (list || []).map(function (p) {
       return '<p>' + esc(p).replace(/\n/g, "<br>") + "</p>";
     }).join("") + "</div>";
@@ -313,20 +341,38 @@ function renderReader(elId) {
   injectChapterJsonLd(w, c);
   var locked = SHOW_MEMBER && c.locked && !MEMBER;
   var pi = postInfo(w, c);
+  var tr = (pi && pi.translations && hasTranslation(c, LANG)) ? pi.translations[LANG] : null;
+  var trStamp = tr
+    ? '<span>' + esc(t("translationFirst")) + '：' + esc(fmtStamp(tr.firstPostedAt, true)) + ' (UTC+8)</span>'
+    : '';
   var stampBar = pi
     ? '<div class="post-stamp"><span>' + esc(t("firstPostedFull")) + '：' +
         esc(fmtStamp(pi.firstPostedAt, true)) + ' (UTC+8)</span>' +
       (pi.bodyFirstPostedAt
         ? '<span>' + esc(t("fullTextPosted")) + '：' + esc(fmtStamp(pi.bodyFirstPostedAt, true)) + '</span>' : '') +
+      trStamp +
       ((pi.revisions && pi.revisions.length)
         ? '<span>' + esc(t("lastUpdated")) + '：' + esc(fmtStamp(pi.updatedAt || pi.firstPostedAt, true)) + '</span>' : '') +
       '<span>© ' + new Date().getFullYear() + ' ' + esc(SITE.author) + ' · ' + esc(t("footerRights")) + '</span></div>'
     : '';
-  var bioBox = (c.bio && tv(c.bio)) ? '<div class="bio-box">' + esc(tv(c.bio)) + '</div>' : '';
+  /* 译文工作稿未提供山海经小传译本；非中文页面不显示中文线框，避免语言混排 */
+  var bioBox = (LANG === "zh" && c.bio && tv(c.bio))
+    ? '<div class="bio-box">' + esc(tv(c.bio)) + '</div>' : '';
+  var transNote = (LANG !== "zh" && !hasTranslation(c, LANG) && w.fullText)
+    ? '<div class="trans-note">' + esc(t("translationMissing")) + '</div>' : '';
+  var archiveFile = c.num + (hasTranslation(c, LANG) ? "." + LANG : "") + ".html";
+  var langLinks = (c.translations && c.translations.length)
+    ? '<div class="lang-links"><span>' + esc(t("otherLanguages")) + '：</span>' +
+        '<a href="chapters/' + esc(w.id) + '/' + esc(c.num) + '.html">' + esc(t("originalVersion")) + '</a>' +
+        c.translations.map(function (l) {
+          return ' · <a href="chapters/' + esc(w.id) + '/' + esc(c.num) + '.' + esc(l) + '.html">' +
+            esc(langLabel(l)) + '</a>';
+        }).join("") + '</div>'
+    : '';
   var archive = w.fullText
-    ? '<div class="archive-link"><a href="chapters/' + esc(w.id) + '/' + esc(c.num) + '.html">' +
+    ? '<div class="archive-link"><a href="chapters/' + esc(w.id) + '/' + esc(archiveFile) + '">' +
         esc(t("archivePage")) + ' ›</a> · <a href="posts.json" target="_blank" rel="noopener">' +
-        esc(t("provenance")) + '</a></div>'
+        esc(t("provenance")) + '</a></div>' + langLinks
     : '';
   var body;
   if (locked) {
@@ -350,6 +396,7 @@ function renderReader(elId) {
       '<h1 class="chapter-title">' + esc(chapterTitle(c)) + '</h1>' +
       stampBar +
       bioBox +
+      transNote +
       body +
       archive +
     '</div>';

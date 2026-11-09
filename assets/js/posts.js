@@ -4,10 +4,10 @@ const POST_LOG = {
   "site": "moburu.vip",
   "timezone": "Asia/Shanghai (UTC+8)",
   "purpose": "记录每章内容首次公开发布到本站的时间，用于证明原创性与版权归属。",
-  "rules": "firstPostedAt 只在章节首次出现时写入、bodyFirstPostedAt 只在正文首次公开时写入，两者之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含正文哈希。",
+  "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-09T21:45:27+08:00",
+  "generatedAt": "2026-11-09T23:02:17+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -15,8 +15,8 @@ const POST_LOG = {
         "name": "鲲鹏",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "f074e438b428fcbccc5ef82035d0c24312b7468544332b1ab3d061d75d9f555b",
-        "sha256": "a1fe14e0d5d31b50007874cf62078df680db45fa4aa06fb051a3cb445df7e025",
-        "updatedAt": "2026-11-09T21:43:57+08:00",
+        "sha256": "cbae5537a495a568c798d6101702cf404f24d1ad90d7fdef4dd7273d30c6ce63",
+        "updatedAt": "2026-11-09T22:57:41+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -24,12 +24,57 @@ const POST_LOG = {
             "previousSha256": "f074e438b428fcbccc5ef82035d0c24312b7468544332b1ab3d061d75d9f555b",
             "bodySha256": "f0c444d7ec6eba49f9b7f306b69eaede437120b30bd6ef274ed4903eeba57f7e",
             "bodyChars": 1140
+          },
+          {
+            "at": "2026-11-09T22:57:41+08:00",
+            "sha256": "cbae5537a495a568c798d6101702cf404f24d1ad90d7fdef4dd7273d30c6ce63",
+            "previousSha256": "a1fe14e0d5d31b50007874cf62078df680db45fa4aa06fb051a3cb445df7e025",
+            "bodySha256": "f0c444d7ec6eba49f9b7f306b69eaede437120b30bd6ef274ed4903eeba57f7e",
+            "bodyChars": 1140
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "f0c444d7ec6eba49f9b7f306b69eaede437120b30bd6ef274ed4903eeba57f7e",
         "bodySha256": "f0c444d7ec6eba49f9b7f306b69eaede437120b30bd6ef274ed4903eeba57f7e",
-        "bodyChars": 1140
+        "bodyChars": 1140,
+        "translations": {
+          "en": {
+            "firstPostedAt": "2026-11-09T22:57:41+08:00",
+            "firstSha256": "3a3de8503f73c0ba70691cf61874f7c1de4eaea2b872076c7e6936702c71c0f5",
+            "sha256": "3a3de8503f73c0ba70691cf61874f7c1de4eaea2b872076c7e6936702c71c0f5",
+            "updatedAt": "2026-11-09T22:57:41+08:00",
+            "chars": 4619,
+            "paragraphs": 8,
+            "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-09T22:57:41+08:00",
+            "firstSha256": "8c6ad4cfa64161ccb65c83b27c4f49a3c4bacf49f98b72bab8e067c78a8f0624",
+            "sha256": "8c6ad4cfa64161ccb65c83b27c4f49a3c4bacf49f98b72bab8e067c78a8f0624",
+            "updatedAt": "2026-11-09T22:57:41+08:00",
+            "chars": 1674,
+            "paragraphs": 8,
+            "revisions": []
+          },
+          "fr": {
+            "firstPostedAt": "2026-11-09T22:57:41+08:00",
+            "firstSha256": "6f80ef1525f8bf766d6ecbc6b9d221f9721c42407c9ed93fd500afbbb0ae563d",
+            "sha256": "6f80ef1525f8bf766d6ecbc6b9d221f9721c42407c9ed93fd500afbbb0ae563d",
+            "updatedAt": "2026-11-09T22:57:41+08:00",
+            "chars": 4988,
+            "paragraphs": 8,
+            "revisions": []
+          },
+          "ar": {
+            "firstPostedAt": "2026-11-09T22:57:41+08:00",
+            "firstSha256": "9956b51e396e239582ee2983db4862ce46cd427f2086fa37b014f1d6936f93b5",
+            "sha256": "9956b51e396e239582ee2983db4862ce46cd427f2086fa37b014f1d6936f93b5",
+            "updatedAt": "2026-11-09T22:57:41+08:00",
+            "chars": 3577,
+            "paragraphs": 8,
+            "revisions": []
+          }
+        }
       },
       "1": {
         "num": 1,
@@ -50,7 +95,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "de0153558d103f7d23fb399d424d268a4db5b4ef3e128064c38d757337c0a581",
         "bodySha256": "de0153558d103f7d23fb399d424d268a4db5b4ef3e128064c38d757337c0a581",
-        "bodyChars": 3761
+        "bodyChars": 3761,
+        "translations": {}
       },
       "2": {
         "num": 2,
@@ -71,7 +117,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "5a23bd40ad26497874f6a2783a885e6d7be772bba4487b0dd2361ce9f98017b2",
         "bodySha256": "5a23bd40ad26497874f6a2783a885e6d7be772bba4487b0dd2361ce9f98017b2",
-        "bodyChars": 3585
+        "bodyChars": 3585,
+        "translations": {}
       },
       "3": {
         "num": 3,
@@ -92,7 +139,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "1d3cf25a0436ab3ffc6fdb076a82f4b39f115deddc8dca0342af8731dbac32e1",
         "bodySha256": "1d3cf25a0436ab3ffc6fdb076a82f4b39f115deddc8dca0342af8731dbac32e1",
-        "bodyChars": 2185
+        "bodyChars": 2185,
+        "translations": {}
       },
       "4": {
         "num": 4,
@@ -113,7 +161,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "9ea329d169a506ee30c249298508a927dbf21be6ce8fd7706839aa66dd25139c",
         "bodySha256": "9ea329d169a506ee30c249298508a927dbf21be6ce8fd7706839aa66dd25139c",
-        "bodyChars": 3616
+        "bodyChars": 3616,
+        "translations": {}
       },
       "5": {
         "num": 5,
@@ -134,7 +183,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "817d730eea4c2dcc88c085915fe0f99acfdcf4156709a8887731a36341f8fbb8",
         "bodySha256": "817d730eea4c2dcc88c085915fe0f99acfdcf4156709a8887731a36341f8fbb8",
-        "bodyChars": 2662
+        "bodyChars": 2662,
+        "translations": {}
       },
       "6": {
         "num": 6,
@@ -155,7 +205,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "f94a3a11a3b30a02f191c1559b1b0f1b6788126f0680f4fa3008e410ff5a983e",
         "bodySha256": "f94a3a11a3b30a02f191c1559b1b0f1b6788126f0680f4fa3008e410ff5a983e",
-        "bodyChars": 3378
+        "bodyChars": 3378,
+        "translations": {}
       },
       "7": {
         "num": 7,
@@ -176,7 +227,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "9cdb83f14a18a04c665bce7fd4776f92bfbebc00db065ef1ffa19c411b1ce6fa",
         "bodySha256": "9cdb83f14a18a04c665bce7fd4776f92bfbebc00db065ef1ffa19c411b1ce6fa",
-        "bodyChars": 4727
+        "bodyChars": 4727,
+        "translations": {}
       },
       "8": {
         "num": 8,
@@ -197,7 +249,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "c0b115a039d2b347a051433e2375894368ffdb4976825233dd5dc947ba5f8937",
         "bodySha256": "c0b115a039d2b347a051433e2375894368ffdb4976825233dd5dc947ba5f8937",
-        "bodyChars": 4724
+        "bodyChars": 4724,
+        "translations": {}
       },
       "9": {
         "num": 9,
@@ -218,7 +271,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "c5f0d7bd51d494d33cc1843becfd71af283b47f69596981e482634c3f9f4f558",
         "bodySha256": "c5f0d7bd51d494d33cc1843becfd71af283b47f69596981e482634c3f9f4f558",
-        "bodyChars": 3436
+        "bodyChars": 3436,
+        "translations": {}
       },
       "10": {
         "num": 10,
@@ -239,7 +293,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "f353dd293c82218968c2f4410c15152196fcc02550996a5aafed1f9e10c64182",
         "bodySha256": "f353dd293c82218968c2f4410c15152196fcc02550996a5aafed1f9e10c64182",
-        "bodyChars": 3942
+        "bodyChars": 3942,
+        "translations": {}
       },
       "11": {
         "num": 11,
@@ -260,7 +315,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "fed770bf67c9fca72456c33a4728a9ddac31df39408e7a2293aae4f2ea9a69c1",
         "bodySha256": "fed770bf67c9fca72456c33a4728a9ddac31df39408e7a2293aae4f2ea9a69c1",
-        "bodyChars": 2536
+        "bodyChars": 2536,
+        "translations": {}
       },
       "12": {
         "num": 12,
@@ -281,7 +337,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "431b832d4ce570a459a8d8b03282c156320fcb47c15c9f353a9699396754cda5",
         "bodySha256": "431b832d4ce570a459a8d8b03282c156320fcb47c15c9f353a9699396754cda5",
-        "bodyChars": 2910
+        "bodyChars": 2910,
+        "translations": {}
       },
       "13": {
         "num": 13,
@@ -302,7 +359,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "cf722f79564b3efd61b13f24964b1c334738a80c2f70c0df7d633fccd57542d3",
         "bodySha256": "cf722f79564b3efd61b13f24964b1c334738a80c2f70c0df7d633fccd57542d3",
-        "bodyChars": 4628
+        "bodyChars": 4628,
+        "translations": {}
       },
       "14": {
         "num": 14,
@@ -323,7 +381,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "2010a23649227a3dc070d036546dcad6be25481452c79b15daa022e0800e25f0",
         "bodySha256": "2010a23649227a3dc070d036546dcad6be25481452c79b15daa022e0800e25f0",
-        "bodyChars": 4604
+        "bodyChars": 4604,
+        "translations": {}
       },
       "15": {
         "num": 15,
@@ -344,7 +403,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "e528b34354d67890fd640b6559a6efba6b4f2b2749ec335d3a1181dfbdeea488",
         "bodySha256": "e528b34354d67890fd640b6559a6efba6b4f2b2749ec335d3a1181dfbdeea488",
-        "bodyChars": 5462
+        "bodyChars": 5462,
+        "translations": {}
       },
       "16": {
         "num": 16,
@@ -365,7 +425,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "dc10e85d7213d59b26a54531646b0b4ea94f4eb4f2992d1a271b002df646f15b",
         "bodySha256": "dc10e85d7213d59b26a54531646b0b4ea94f4eb4f2992d1a271b002df646f15b",
-        "bodyChars": 2882
+        "bodyChars": 2882,
+        "translations": {}
       },
       "17": {
         "num": 17,
@@ -386,7 +447,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "e23b71148bd1dcefe9812b9da4869eeac48f9640871a700303cd416b2efcd1fe",
         "bodySha256": "e23b71148bd1dcefe9812b9da4869eeac48f9640871a700303cd416b2efcd1fe",
-        "bodyChars": 5181
+        "bodyChars": 5181,
+        "translations": {}
       },
       "18": {
         "num": 18,
@@ -407,7 +469,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "334f9612b3205431af36dd7fad6d735cb4afbef2ac3e9804490f7a1bea635925",
         "bodySha256": "334f9612b3205431af36dd7fad6d735cb4afbef2ac3e9804490f7a1bea635925",
-        "bodyChars": 5856
+        "bodyChars": 5856,
+        "translations": {}
       },
       "19": {
         "num": 19,
@@ -428,7 +491,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "04830d9b7081ed314875815c895f859fabe20bd903b91c75aaaa6e1d853a0e57",
         "bodySha256": "04830d9b7081ed314875815c895f859fabe20bd903b91c75aaaa6e1d853a0e57",
-        "bodyChars": 4336
+        "bodyChars": 4336,
+        "translations": {}
       },
       "20": {
         "num": 20,
@@ -449,7 +513,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "584c1b3b8ec46ca8dae6dd4a79cfd5421cbfdb00b6b982cd6a3387b3b8478ea5",
         "bodySha256": "584c1b3b8ec46ca8dae6dd4a79cfd5421cbfdb00b6b982cd6a3387b3b8478ea5",
-        "bodyChars": 5687
+        "bodyChars": 5687,
+        "translations": {}
       },
       "21": {
         "num": 21,
@@ -470,7 +535,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "923089ccfe9a4bd69abbd42db3cdbfdbd3d68155899d48f5bd15024d0d537969",
         "bodySha256": "923089ccfe9a4bd69abbd42db3cdbfdbd3d68155899d48f5bd15024d0d537969",
-        "bodyChars": 4393
+        "bodyChars": 4393,
+        "translations": {}
       },
       "22": {
         "num": 22,
@@ -491,7 +557,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "9a182877f05d244cab59837d91b3a36de71d8061ce8e04ac8f70434d25bbbaf7",
         "bodySha256": "9a182877f05d244cab59837d91b3a36de71d8061ce8e04ac8f70434d25bbbaf7",
-        "bodyChars": 2323
+        "bodyChars": 2323,
+        "translations": {}
       },
       "23": {
         "num": 23,
@@ -512,7 +579,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "2a812cee79e84f05ee6b113b2e03cf05879e7c34085bb34df1f7617e1cfd640b",
         "bodySha256": "2a812cee79e84f05ee6b113b2e03cf05879e7c34085bb34df1f7617e1cfd640b",
-        "bodyChars": 2370
+        "bodyChars": 2370,
+        "translations": {}
       },
       "24": {
         "num": 24,
@@ -533,7 +601,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "bc36a47a773e0617a59a9ba8ef80cb847e7d21d692128a971d233e9e6e1571bf",
         "bodySha256": "bc36a47a773e0617a59a9ba8ef80cb847e7d21d692128a971d233e9e6e1571bf",
-        "bodyChars": 5232
+        "bodyChars": 5232,
+        "translations": {}
       },
       "25": {
         "num": 25,
@@ -554,7 +623,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "00db7ba4cd133f9342db73ad76d6437fb072b202ae8778423a7d5c890aa52a7c",
         "bodySha256": "00db7ba4cd133f9342db73ad76d6437fb072b202ae8778423a7d5c890aa52a7c",
-        "bodyChars": 6583
+        "bodyChars": 6583,
+        "translations": {}
       },
       "26": {
         "num": 26,
@@ -575,7 +645,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "9d235fcde3259d0726929cd82ef67f4e7a7e45f8ef88834d98c33c5d364b321d",
         "bodySha256": "9d235fcde3259d0726929cd82ef67f4e7a7e45f8ef88834d98c33c5d364b321d",
-        "bodyChars": 6580
+        "bodyChars": 6580,
+        "translations": {}
       },
       "27": {
         "num": 27,
@@ -596,7 +667,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "f80ac75507d613e7423299033fb6eb33f7e675d434b72f94a9ea0ca83678a01b",
         "bodySha256": "f80ac75507d613e7423299033fb6eb33f7e675d434b72f94a9ea0ca83678a01b",
-        "bodyChars": 5693
+        "bodyChars": 5693,
+        "translations": {}
       },
       "28": {
         "num": 28,
@@ -617,7 +689,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "09ad38585069e64fb772fe5d2e465077f23aca9b0590b4a8c727ce5d001ff96b",
         "bodySha256": "09ad38585069e64fb772fe5d2e465077f23aca9b0590b4a8c727ce5d001ff96b",
-        "bodyChars": 4170
+        "bodyChars": 4170,
+        "translations": {}
       },
       "29": {
         "num": 29,
@@ -638,7 +711,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "e452a749e32e1111989703c68f69daa19f4f2760f667e37a6983d7885d801dd6",
         "bodySha256": "e452a749e32e1111989703c68f69daa19f4f2760f667e37a6983d7885d801dd6",
-        "bodyChars": 5557
+        "bodyChars": 5557,
+        "translations": {}
       },
       "30": {
         "num": 30,
@@ -659,7 +733,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "05dfaeeb5cb8301cfc838fc1e430e0d9e1ccd41928d8b906569e12b2845a2264",
         "bodySha256": "05dfaeeb5cb8301cfc838fc1e430e0d9e1ccd41928d8b906569e12b2845a2264",
-        "bodyChars": 6388
+        "bodyChars": 6388,
+        "translations": {}
       },
       "31": {
         "num": 31,
@@ -680,7 +755,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "6e5ccf8b36fb2ba004c4398975bc7855966c58bd99ed6d30193526f84bae3a51",
         "bodySha256": "6e5ccf8b36fb2ba004c4398975bc7855966c58bd99ed6d30193526f84bae3a51",
-        "bodyChars": 7392
+        "bodyChars": 7392,
+        "translations": {}
       },
       "32": {
         "num": 32,
@@ -701,7 +777,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "6b125845ef47c81f8d59ef403aa4b2c81002e47d6eca2082b106935edcae4bba",
         "bodySha256": "6b125845ef47c81f8d59ef403aa4b2c81002e47d6eca2082b106935edcae4bba",
-        "bodyChars": 4745
+        "bodyChars": 4745,
+        "translations": {}
       },
       "33": {
         "num": 33,
@@ -722,7 +799,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "85dc37e082c44c42b813a6170672ad144409680ac5586675c1618263301820e8",
         "bodySha256": "85dc37e082c44c42b813a6170672ad144409680ac5586675c1618263301820e8",
-        "bodyChars": 5452
+        "bodyChars": 5452,
+        "translations": {}
       },
       "34": {
         "num": 34,
@@ -743,7 +821,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "8e42f9a79bf46d149bf52367a322993e3b1f667a0382064fb09005695b00d7ef",
         "bodySha256": "8e42f9a79bf46d149bf52367a322993e3b1f667a0382064fb09005695b00d7ef",
-        "bodyChars": 6194
+        "bodyChars": 6194,
+        "translations": {}
       },
       "35": {
         "num": 35,
@@ -764,7 +843,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "3d3ac276f12db2010eb8af9c275bbdb7c56ddb4111ec63bd32c90f835edb361d",
         "bodySha256": "3d3ac276f12db2010eb8af9c275bbdb7c56ddb4111ec63bd32c90f835edb361d",
-        "bodyChars": 5409
+        "bodyChars": 5409,
+        "translations": {}
       },
       "36": {
         "num": 36,
@@ -785,7 +865,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "7804f0a3d57a6e15de9fe73b2b01f9a018f45bf9a8578f1b1e1dcf5dcb1181bd",
         "bodySha256": "7804f0a3d57a6e15de9fe73b2b01f9a018f45bf9a8578f1b1e1dcf5dcb1181bd",
-        "bodyChars": 5435
+        "bodyChars": 5435,
+        "translations": {}
       },
       "37": {
         "num": 37,
@@ -806,7 +887,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "71c7ee2e5eb35e2eb2ccd0aecb352adf4dfac62100088c096d54eef48a038225",
         "bodySha256": "71c7ee2e5eb35e2eb2ccd0aecb352adf4dfac62100088c096d54eef48a038225",
-        "bodyChars": 5263
+        "bodyChars": 5263,
+        "translations": {}
       },
       "38": {
         "num": 38,
@@ -827,7 +909,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "4531dd66e42c6999ed462d10adf268c15a8e5a9afe62b3102b595182ad642920",
         "bodySha256": "4531dd66e42c6999ed462d10adf268c15a8e5a9afe62b3102b595182ad642920",
-        "bodyChars": 2400
+        "bodyChars": 2400,
+        "translations": {}
       },
       "39": {
         "num": 39,
@@ -848,7 +931,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "b334d9bc3257900cb525508f273026cc6d7bb28b976369e820ac3272b80babed",
         "bodySha256": "b334d9bc3257900cb525508f273026cc6d7bb28b976369e820ac3272b80babed",
-        "bodyChars": 5458
+        "bodyChars": 5458,
+        "translations": {}
       },
       "40": {
         "num": 40,
@@ -869,7 +953,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "a89d0abe64666d302e384e18e06c5d18a41f5eebc1ffedfda26859df36203675",
         "bodySha256": "a89d0abe64666d302e384e18e06c5d18a41f5eebc1ffedfda26859df36203675",
-        "bodyChars": 3275
+        "bodyChars": 3275,
+        "translations": {}
       },
       "41": {
         "num": 41,
@@ -890,7 +975,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "5cf016cf8974c8cc4f19ff3ddc6f4d1a2e74dc8e7daee918f241d30b821332f2",
         "bodySha256": "5cf016cf8974c8cc4f19ff3ddc6f4d1a2e74dc8e7daee918f241d30b821332f2",
-        "bodyChars": 2867
+        "bodyChars": 2867,
+        "translations": {}
       },
       "42": {
         "num": 42,
@@ -911,7 +997,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "284448800f66813b68bf9b86f2f93911eb4d52c547490f4f5da087f6e6a95fa0",
         "bodySha256": "284448800f66813b68bf9b86f2f93911eb4d52c547490f4f5da087f6e6a95fa0",
-        "bodyChars": 3933
+        "bodyChars": 3933,
+        "translations": {}
       },
       "43": {
         "num": 43,
@@ -932,7 +1019,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "af9d9d0cf50a4a4577fd088b2a2770ce5e8db70f94fdbdda7d75eaa4ea176f40",
         "bodySha256": "af9d9d0cf50a4a4577fd088b2a2770ce5e8db70f94fdbdda7d75eaa4ea176f40",
-        "bodyChars": 4325
+        "bodyChars": 4325,
+        "translations": {}
       },
       "44": {
         "num": 44,
@@ -953,7 +1041,8 @@ const POST_LOG = {
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "b3e7a5bb45057794f84d68d0a4e35543318f8cd70aa638777175a37d3e40a667",
         "bodySha256": "b3e7a5bb45057794f84d68d0a4e35543318f8cd70aa638777175a37d3e40a667",
-        "bodyChars": 5367
+        "bodyChars": 5367,
+        "translations": {}
       }
     },
     "halo": {},

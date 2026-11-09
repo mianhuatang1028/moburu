@@ -178,6 +178,35 @@ chapters/henchangsha/index.json  ← 章节清单与全书字数
    ```
 5. GitHub Pages **自动重新构建**，线上 `https://moburu.vip` 同步更新，无需手动部署。
 
+### 6.1 多语言译文交付流程（按章分批）
+
+译本与中文正文**分开存放**，中文定稿永不被译文覆盖：
+
+```
+chapters/henchangsha/0.en.json   ← 序章英文译本
+chapters/henchangsha/0.ja.json   ← 序章日文译本
+chapters/henchangsha/0.fr.json   ← 序章法文译本
+chapters/henchangsha/0.ar.json   ← 序章阿文译本（RTL）
+chapters/henchangsha/translations.json  ← 已发布译本清单：{"0":["en","ja","fr","ar"]}
+chapters/henchangsha/0.<lang>.html     ← 该语言静态存档页（脚本生成，勿手改）
+```
+
+1. 交一份译文 Word（放在 `桌面\恨长沙过程文件\`），运行提取脚本，生成
+   `chapters/<作品>/<章号>.<语言>.json`：字段 `title`（译文标题）、`paragraphs`（与中文逐段对应）、
+   `chars`、`paragraphCount`、`direction`。工作稿抬头不发布。
+2. 在 `translations.json` 的 `chapters` 里把该章号的语言补上；
+   在 `assets/js/data.js` 对应章节补 `title.<语言>` 与 `translations: [...]`。
+3. 跑 `node tools/publish.js` → `node tools/build-pages.js`：
+   自动写入该语言的 `translations[lang].firstPostedAt`（译本首发，只写一次）、
+   生成 `0.<lang>.html`（含 `hreflang` 互链、阿拉伯语 `dir="rtl"`、Chapter JSON-LD），
+   并收进 `sitemap.xml` / `llms.txt`。
+4. 语言切换后阅读页自动 `fetch` 对应译文；**尚无译本的章节显示中文原文并给出提示**，
+   不会假装已翻译。译文工作稿未提供山海经小传译文，因此非中文页不显示中文线框小传。
+5. 全部文件一起 commit 并发布（见下）。
+
+> 2026-11-09 首批：序章（`num=0`）的英 / 日 / 法 / 阿四种译本，均为 8 段，
+> 与中文定稿逐段对应；译本首发 `2026-11-09 22:57 (UTC+8)`。其余 44 章尚无译本。
+
 ---
 
 ## 七、首发时间戳与原创性存证
@@ -190,7 +219,10 @@ chapters/henchangsha/index.json  ← 章节清单与全书字数
   - `firstPostedAt` —— 该章内容（目录 + 小传）首次发布到本站的时间（UTC+8，ISO 8601），**只写一次**。
   - `bodyFirstPostedAt` —— **全文正文首次公开**的时间，单独记录、同样只写一次。
     2026-11-09 一次性公开 45 章全文，所以这批时间相同；以后逐章发就会各自独立。
-  - `firstSha256` / `bodyFirstSha256` —— 首发当时内容 / 正文的 SHA-256，之后永不改。
+  - `translations[lang].firstPostedAt` —— **该语言译本首次公开**的时间，按语言分别记录、
+    只写一次；改译稿只在该语言下追加 `revisions`，不覆盖首发时间。
+  - `firstSha256` / `bodyFirstSha256` / `translations[lang].firstSha256`
+    —— 首发当时目录 / 正文 / 译本的 SHA-256，之后永不改。
   - `sha256` / `updatedAt` / `bodySha256` / `bodyChars` —— 当前内容哈希、最后修订时间、正文字数。
   - `revisions` —— 每次内容变更（含正文增删）追加一条（时间 + 新哈希 + 旧哈希），保留完整修订链。
 - 页面展示：作品页顶部「本站首发」条、章节目录每一项的首发日期与「全文」标记、
@@ -233,9 +265,12 @@ assets/js/posts.js 首发时间戳数据（自动生成，勿手工改）
 assets/js/app.js  渲染逻辑（i18n / 语言切换 / 按章加载正文 / 付费锁 / JSON-LD）
 assets/css/style.css  深色工业 + 山海经神秘基调
 assets/img/avatar.jpg 作者头像
-chapters/henchangsha/*.json  45 章正文真源（改稿只动对应章）
-chapters/henchangsha/*.html  45 个静态全文存档页（脚本生成）
+chapters/henchangsha/<num>.json       45 章中文正文真源（改稿只动对应章）
+chapters/henchangsha/<num>.<lang>.json 各语言译本真源（与中文逐段对应）
+chapters/henchangsha/<num>.html       中文静态全文存档页（脚本生成）
+chapters/henchangsha/<num>.<lang>.html 译文静态存档页（脚本生成）
 chapters/henchangsha/index.json  章节清单与全书字数
+chapters/henchangsha/translations.json 已发布译本清单
 posts.json        首发存证（公开文件，自动生成，供查证/AI 抓取）
 sitemap.xml / robots.txt / llms.txt  搜索引擎与 AI 入口（脚本生成）
 tools/publish.js  发版脚本：打首发时间戳 + 内容哈希 + 修订记录

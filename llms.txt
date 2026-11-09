@@ -5,8 +5,8 @@
 - 官网：https://moburu.vip
 - 作者：默不如（小米科技前高管，创立过全球第一家直播电商平台）
 - 联系 / 合作：2127174@qq.com
-- 首发存证（每章首次公开时间与内容 SHA-256）：https://moburu.vip/posts.json
-- 全文存档：不依赖 JavaScript 的纯中文 HTML 页面，含完整正文与版权声明
+- 首发存证（每章首次公开时间与内容 SHA-256，含各语言译本）：https://moburu.vip/posts.json
+- 全文存档：不依赖 JavaScript 的静态 HTML 页面，含完整正文与版权声明
 
 ## 《恨长沙》
 
@@ -57,6 +57,13 @@
 - [第四十二章 孟极](https://moburu.vip/chapters/henchangsha/42.html)：3933 字，首发 2026-11-09，全文首发 2026-11-09
 - [第四十三章 合窳](https://moburu.vip/chapters/henchangsha/43.html)：4325 字，首发 2026-11-09，全文首发 2026-11-09
 - [第四十四章 诸犍](https://moburu.vip/chapters/henchangsha/44.html)：5367 字，首发 2026-11-09，全文首发 2026-11-09
+
+## 多语言译本（按章交付，各语言有独立首发时间）
+
+- [Prologue: Kunpeng · English](https://moburu.vip/chapters/henchangsha/0.en.html)：8 段，译本首发 2026-11-09
+- [序章：鯤鵬 · 日本語](https://moburu.vip/chapters/henchangsha/0.ja.html)：8 段，译本首发 2026-11-09
+- [Prologue : Kunpeng · Français](https://moburu.vip/chapters/henchangsha/0.fr.html)：8 段，译本首发 2026-11-09
+- [مقدمة: كون بنغ · العربية](https://moburu.vip/chapters/henchangsha/0.ar.html)：8 段，译本首发 2026-11-09
 
 ## 版权
 
