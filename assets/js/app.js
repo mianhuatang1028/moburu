@@ -50,10 +50,58 @@ function chapterTitle(c) {
   return (c.title && c.title.en) || "";
 }
 
+/* 章节展示顺序：作品可用 chapterOrder（num 数组）自由重排叙事顺序。
+   未配置时按 chapters 数组原顺序（零回归）。num 始终不变：URL、神兽名、
+   正文、起点对应关系都不动，读者收藏的旧链接不会失效。 */
+function orderedChapters(w) {
+  var list = (w.chapters || []).slice();
+  if (!w.chapterOrder || !w.chapterOrder.length) return list;
+  var rank = {};
+  w.chapterOrder.forEach(function (n, i) { rank[n] = i; });
+  return list.sort(function (a, b) {
+    var ra = (rank[a.num] != null) ? rank[a.num] : 10000 + a.num;
+    var rb = (rank[b.num] != null) ? rank[b.num] : 10000 + b.num;
+    return ra - rb;
+  });
+}
+
 function esc(s) {
   return String(s == null ? "" : s)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;")
     .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+/* ---------- 首发时间戳 / 版权存证（读 posts.js，由 tools/publish.js 生成） ---------- */
+function postInfo(work, c) {
+  if (typeof POST_LOG === "undefined" || !POST_LOG.works) return null;
+  var g = POST_LOG.works[work.id];
+  return (g && g[String(c.num)]) || null;
+}
+/* "2026-11-09T21:27:27+08:00" -> "2026-11-09" 或 "2026-11-09 21:27" */
+function fmtStamp(s, withTime) {
+  if (!s) return "";
+  var m = String(s).match(/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})/);
+  return m ? (m[1] + (withTime ? " " + m[2] : "")) : String(s).slice(0, 10);
+}
+/* 作品最早首发 / 最后修订：取全部章节的极值 */
+function workFirstPosted(work) {
+  var first = "";
+  (work.chapters || []).forEach(function (c) {
+    var p = postInfo(work, c);
+    if (p && p.firstPostedAt && (!first || p.firstPostedAt < first)) first = p.firstPostedAt;
+  });
+  return first;
+}
+function workLastUpdated(work) {
+  var last = "";
+  (work.chapters || []).forEach(function (c) {
+    var p = postInfo(work, c);
+    if (p && p.updatedAt && p.updatedAt > last) last = p.updatedAt;
+  });
+  return last;
+}
+function langCode() {
+  return (LANG === "zh") ? "zh-CN" : (LANG === "en") ? "en" : (LANG === "ja") ? "ja" : (LANG === "fr") ? "fr" : (LANG === "ar") ? "ar" : "zh-CN";
 }
 
 /* ---------- 导航（注入 + 多语言 + 语言切换器） ---------- */
@@ -84,29 +132,70 @@ function renderFooter() {
   var y = new Date().getFullYear();
   el.innerHTML =
     '<div class="row">' +
-      '<div>' + esc(t("footerNote")) + '</div>' +
+      '<div>' + esc(t("footerNote")) +
+        ' <a class="prov-link" href="posts.json" target="_blank" rel="noopener">' + esc(t("provenance")) + '</a></div>' +
       '<div>© ' + y + ' ' + esc(SITE.author) + ' · ' + esc(t("footerRights")) + '</div>' +
     '</div>';
 }
 
 /* ---------- 注入 Book 结构化数据（AI / 搜索引擎友好） ---------- */
 function injectBookJsonLd(work) {
+  var old = document.getElementById("ld-book");
+  if (old && old.parentNode) old.parentNode.removeChild(old);
+  var first = workFirstPosted(work), last = workLastUpdated(work);
   var ld = {
     "@context": "https://schema.org",
     "@type": "Book",
     "name": tv(work.title),
     "author": { "@type": "Person", "name": work.author },
+    "copyrightHolder": { "@type": "Person", "name": work.author },
+    "copyrightYear": new Date().getFullYear(),
     "genre": tv(work.tags),
     "description": tv(work.summary),
     "url": location.href,
-    "sameAs": [work.qidianUrl],
+    "sameAs": work.qidianUrl ? [work.qidianUrl] : [],
     "publisher": { "@type": "Organization", "name": t("brand") + " Official" },
-    "inLanguage": (LANG === "zh") ? "zh-CN" : (LANG === "en") ? "en" : (LANG === "ja") ? "ja" : (LANG === "fr") ? "fr" : (LANG === "ar") ? "ar" : "zh-CN",
+    "inLanguage": langCode(),
     "bookFormat": "https://schema.org/EBook",
     "keywords": [tv(work.title), work.author].concat(tv(work.tags)).join(",")
   };
+  if (first) ld.datePublished = first;          // 全书最早首发时间
+  if (last) ld.dateModified = last;             // 全书最后修订时间
   var s = document.createElement("script");
   s.type = "application/ld+json";
+  s.id = "ld-book";
+  s.textContent = JSON.stringify(ld);
+  document.head.appendChild(s);
+}
+
+/* 章节级结构化数据：AI / 搜索引擎可检索到「本章首发时间」，也是原创性佐证 */
+function injectChapterJsonLd(work, c) {
+  var old = document.getElementById("ld-chapter");
+  if (old && old.parentNode) old.parentNode.removeChild(old);
+  var p = postInfo(work, c);
+  var ld = {
+    "@context": "https://schema.org",
+    "@type": "Chapter",
+    "name": chapterTitle(c),
+    "position": c.num,
+    "author": { "@type": "Person", "name": work.author },
+    "copyrightHolder": { "@type": "Person", "name": work.author },
+    "copyrightYear": new Date().getFullYear(),
+    "url": location.href,
+    "inLanguage": langCode(),
+    "isPartOf": {
+      "@type": "Book",
+      "name": tv(work.title),
+      "url": location.href.split("?")[0].replace(/reader\.html$/, "work.html") + "?id=" + work.id
+    }
+  };
+  if (p) {
+    ld.datePublished = p.firstPostedAt;
+    ld.dateModified = p.updatedAt || p.firstPostedAt;
+  }
+  var s = document.createElement("script");
+  s.type = "application/ld+json";
+  s.id = "ld-chapter";
   s.textContent = JSON.stringify(ld);
   document.head.appendChild(s);
 }
@@ -144,22 +233,37 @@ function renderWorkDetail(elId) {
   injectBookJsonLd(w);
 
   var tags = tv(w.tags).map(function (x) { return '<span class="tag">' + esc(x) + "</span>"; }).join("");
-  var lastNum = w.chapters && w.chapters.length ? w.chapters[w.chapters.length - 1].num : 0;
+  var ordered = orderedChapters(w);
+  var fp = workFirstPosted(w);
+  var provBar = fp
+    ? '<div class="provenance-bar">' + esc(t("firstPostedFull")) + '：' + esc(fmtStamp(fp, true)) +
+      ' (UTC+8) · © ' + new Date().getFullYear() + ' ' + esc(SITE.author) +
+      ' · ' + esc(t("footerRights")) +
+      ' <a href="posts.json" target="_blank" rel="noopener">' + esc(t("provenance")) + '</a></div>'
+    : '';
+  /* 「读最新章」始终指连载进度最大的章号，不受展示顺序重排影响 */
+  var lastNum = ordered.length ? Math.max.apply(null, ordered.map(function (c) { return c.num; })) : 0;
 
-  var chapters = (w.chapters || []).map(function (c) {
+  var chapters = ordered.map(function (c) {
     var locked = SHOW_MEMBER && c.locked && !MEMBER;
-    var cls = "ch-item" + (locked ? " locked" : (c.excerpt ? " has-excerpt" : ""));
+    var readable = w.fullText || c.excerpt;
+    var cls = "ch-item" + (locked ? " locked" : (readable ? " has-excerpt" : ""));
     var href = locked
       ? "pricing.html?work=" + esc(w.id) + "&ch=" + esc(c.num)
       : "reader.html?work=" + esc(w.id) + "&ch=" + esc(c.num);
     var go = locked
       ? '<span class="go lock">🔒 ' + esc(t("locked")) + '</span>'
-      : (c.excerpt ? '<span class="go">›</span>' : '<span class="go dim">…</span>');
+      : (readable ? '<span class="go">›</span>' : '<span class="go dim">…</span>');
+    var pi = postInfo(w, c);
+    var stamp = pi
+      ? ' · <span class="ch-stamp">' + esc(t("firstPosted")) + ' ' + esc(fmtStamp(pi.firstPostedAt)) + '</span>'
+      : '';
+    if (w.fullText) stamp += ' · <span class="ch-full">' + esc(t("fullTextBadge")) + '</span>';
     return '' +
       '<a class="' + cls + '" href="' + href + '">' +
         '<div class="beast">' + esc(beastName(c)) + '</div>' +
         '<div class="meta"><div class="t">' + esc(chapterTitle(c)) + '</div>' +
-        '<div class="b">' + (w.beastIndex ? (esc(t("chIndexSub").replace("。", "")) + ' · ' + esc(beastName(c))) : esc(chapterTitle(c))) + '</div></div>' +
+        '<div class="b">' + (w.beastIndex ? (esc(t("chIndexSub").replace("。", "")) + ' · ' + esc(beastName(c))) : esc(chapterTitle(c))) + stamp + '</div></div>' +
         go +
       '</a>';
   }).join("");
@@ -169,6 +273,7 @@ function renderWorkDetail(elId) {
       '<p class="crumb"><a href="works.html">‹ ' + esc(t("backWorks")) + '</a></p>' +
       '<h1 class="work-title">' + esc(tv(w.title)) +
         (w.officialFirst ? ' <span class="first-badge">' + esc(t("firstBadge")) + '</span>' : '') + '</h1>' +
+      provBar +
       '<p class="section-sub">' + esc(tv(w.category)) + ' · ' + esc(tv(w.status)) + '</p>' +
       '<p class="work-summary">' + esc(tv(w.summary)) + '</p>' +
       '<div class="tags" style="margin:16px 0 26px">' + tags + '</div>' +
@@ -185,6 +290,16 @@ function renderWorkDetail(elId) {
 }
 
 /* ---------- 章节阅读器 ---------- */
+/* 正文按章存放在 chapters/<作品>/<章号>.json，按需加载，避免全站一次下载 20 万字 */
+function chapterBodyUrl(w, c) {
+  return "chapters/" + encodeURIComponent(w.id) + "/" + c.num + ".json";
+}
+function renderParagraphs(list) {
+  return '<div class="content novel-text">' +
+    (list || []).map(function (p) {
+      return '<p>' + esc(p).replace(/\n/g, "<br>") + "</p>";
+    }).join("") + "</div>";
+}
 function renderReader(elId) {
   var params = new URLSearchParams(location.search);
   var wid = params.get("work") || (WORKS[0] && WORKS[0].id);
@@ -195,12 +310,31 @@ function renderReader(elId) {
   var c = (w.chapters || []).find(function (x) { return x.num === ch; });
   if (!c) { el.innerHTML = "<p>" + esc(t("updateSoon")) + "</p>"; return; }
 
+  injectChapterJsonLd(w, c);
   var locked = SHOW_MEMBER && c.locked && !MEMBER;
+  var pi = postInfo(w, c);
+  var stampBar = pi
+    ? '<div class="post-stamp"><span>' + esc(t("firstPostedFull")) + '：' +
+        esc(fmtStamp(pi.firstPostedAt, true)) + ' (UTC+8)</span>' +
+      (pi.bodyFirstPostedAt
+        ? '<span>' + esc(t("fullTextPosted")) + '：' + esc(fmtStamp(pi.bodyFirstPostedAt, true)) + '</span>' : '') +
+      ((pi.revisions && pi.revisions.length)
+        ? '<span>' + esc(t("lastUpdated")) + '：' + esc(fmtStamp(pi.updatedAt || pi.firstPostedAt, true)) + '</span>' : '') +
+      '<span>© ' + new Date().getFullYear() + ' ' + esc(SITE.author) + ' · ' + esc(t("footerRights")) + '</span></div>'
+    : '';
+  var bioBox = (c.bio && tv(c.bio)) ? '<div class="bio-box">' + esc(tv(c.bio)) + '</div>' : '';
+  var archive = w.fullText
+    ? '<div class="archive-link"><a href="chapters/' + esc(w.id) + '/' + esc(c.num) + '.html">' +
+        esc(t("archivePage")) + ' ›</a> · <a href="posts.json" target="_blank" rel="noopener">' +
+        esc(t("provenance")) + '</a></div>'
+    : '';
   var body;
   if (locked) {
     body = '<div class="content" style="color:var(--text-dim)">🔒 ' + esc(t("locked")) +
       '<br><br><a class="btn primary" href="pricing.html?work=' + esc(w.id) + '&ch=' + esc(c.num) + '">' +
       esc(t("becomeMember")) + '</a></div>';
+  } else if (w.fullText) {
+    body = '<div id="reader-body" class="content" style="color:var(--text-dim)">' + esc(t("loadingText")) + '</div>';
   } else if (c.excerpt) {
     body = '<div class="content">' + esc(tv(c.excerpt)) + '</div>' +
       '<div class="notice">' + esc(t("excerptNotice")) + '</div>';
@@ -214,9 +348,31 @@ function renderReader(elId) {
       '<p class="crumb"><a href="work.html?id=' + esc(w.id) + '">‹ ' + esc(tv(w.title)) + '</a></p>' +
       '<div class="beast-line">' + esc(beastName(c)) + '</div>' +
       '<h1 class="chapter-title">' + esc(chapterTitle(c)) + '</h1>' +
+      stampBar +
+      bioBox +
       body +
+      archive +
     '</div>';
   document.title = chapterTitle(c) + " - " + tv(w.title) + " - " + t("brand");
+
+  if (!locked && w.fullText && typeof fetch !== "function") {
+    var noFetch = document.getElementById("reader-body");
+    if (noFetch) noFetch.innerHTML = '<div class="notice">' + esc(t("textLoadFail")) + '</div>';
+  } else if (!locked && w.fullText) {
+    fetch(chapterBodyUrl(w, c))
+      .then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+      .then(function (data) {
+        var box = document.getElementById("reader-body");
+        if (!box) return;
+        if (!data.paragraphs || !data.paragraphs.length) throw new Error("empty");
+        box.outerHTML = renderParagraphs(data.paragraphs);
+      })
+      .catch(function () {
+        var box = document.getElementById("reader-body");
+        if (box) box.innerHTML = '<div class="notice">' + esc(t("textLoadFail")) + '</div>' +
+          (c.excerpt ? '<div class="content">' + esc(tv(c.excerpt)) + '</div>' : '');
+      });
+  }
 }
 
 /* ---------- 会员 / 付费端口（预留） ---------- */

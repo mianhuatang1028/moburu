@@ -320,3 +320,74 @@ html[dir="rtl"] .nav .links { order: 2; }
   .lang-btn { padding: 3px 7px; font-size: 11px; }
   .author-head .avatar { width: 84px; height: 84px; }
 }
+
+/* ---------- 首发时间戳 / 版权存证 ---------- */
+.provenance-bar {
+  margin: 10px 0 22px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  background: var(--bg-soft);
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.provenance-bar a { color: var(--gold); border-bottom: 1px dotted var(--gold-dim); }
+.prov-link {
+  color: var(--gold); font-size: 12px; margin-left: 8px;
+  white-space: nowrap; border-bottom: 1px dotted var(--gold-dim);
+}
+.ch-stamp { color: var(--text-dim); opacity: .85; white-space: nowrap; }
+.post-stamp {
+  display: flex; flex-wrap: wrap; gap: 6px 18px;
+  margin: 0 0 22px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-dim); font-size: 12px;
+}
+.post-stamp span:first-child { color: var(--gold); }
+.bio-box {
+  margin: 0 0 30px; padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--text-dim);
+  font-size: 14px; line-height: 1.9;
+}
+@media (max-width: 600px) {
+  .post-stamp { flex-direction: column; gap: 4px; }
+  .provenance-bar { font-size: 12px; }
+}
+
+/* ---------- 全本正文（按章加载） ---------- */
+.novel-text { white-space: normal; }
+.novel-text p {
+  margin: 0 0 1.05em;
+  text-indent: 2em;
+  line-height: 2;
+  font-size: 17px;
+  color: var(--text);
+  word-break: break-word;
+}
+.novel-text p:last-child { margin-bottom: 0; }
+.ch-full { color: var(--gold); white-space: nowrap; }
+.archive-link {
+  margin-top: 28px; padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 12px; color: var(--text-dim);
+}
+.archive-link a, .archive .post-stamp a, .archive .archive-nav a {
+  color: var(--gold); border-bottom: 1px dotted var(--gold-dim);
+}
+/* 纯中文静态存档页（不依赖 JS，供搜索引擎 / AI 抓取全文） */
+.archive { max-width: 780px; }
+.archive .archive-nav {
+  display: flex; justify-content: space-between; gap: 16px;
+  margin: 26px 0 0; padding-top: 16px;
+  border-top: 1px solid var(--line); font-size: 14px;
+}
+.archive .archive-foot {
+  margin-top: 34px; font-size: 12px;
+  line-height: 1.9; color: var(--text-dim);
+}
+@media (max-width: 600px) {
+  .novel-text p { font-size: 16px; line-height: 1.9; }
+}

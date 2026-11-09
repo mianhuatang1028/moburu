@@ -5,6 +5,15 @@
    - 新增作品：在 WORKS 追加对象即可（官网优先更新）。
    - 付费端口：作品 paywall、章节 locked 字段预留，当前默认免费，
      接入支付时只需在 reader / pricing 页对接真实收银台。
+
+   【分批更新 / 反复修订约定】（作者会分多次给 Word 稿，且会反复改）
+   - 每次只按「章号 num」合并对应章节的 excerpt 字段，绝不整表覆盖：
+     已有正文的章节没出现在新稿里 → 原样保留；出现 → 覆盖为新版；
+     新章号 → 追加。这样分批给稿不会丢内容。
+   - num 是章节的永久身份：URL(?ch=num)、起点对应关系、神兽名都跟着它。
+     调整叙事顺序请改作品的 chapterOrder（num 数组），**不要改 num**。
+     chapterOrder 未配置时按 chapters 数组原顺序显示（兼容旧数据）。
+   - 每次改动都走 git commit，改错了可随时回滚，不必怕「反复改」。
    ============================================================ */
 
 /* 支持的语言 */
@@ -42,6 +51,7 @@ const I18N = {
     footerRights: "保留所有权利。",
     langLabel: "语言",
     firstBadge: "官网首发",
+    firstPosted: "首发", firstPostedFull: "本站首发", lastUpdated: "最后修订", provenance: "首发存证", fullTextBadge: "全文", fullTextPosted: "全文首发", loadingText: "正文载入中…", textLoadFail: "正文加载失败，请刷新重试，或打开全文存档页。", archivePage: "全文存档页",
     readLatest: "读最新章",
     qidian: "起点正版",
     backWorks: "‹ 作品库",
@@ -92,6 +102,7 @@ const I18N = {
     footerRights: "All rights reserved.",
     langLabel: "Language",
     firstBadge: "Official First",
+    firstPosted: "First posted", firstPostedFull: "First published here", lastUpdated: "Last updated", provenance: "Publication record", fullTextBadge: "Full text", fullTextPosted: "Full text published", loadingText: "Loading chapter…", textLoadFail: "Could not load the chapter. Please refresh, or open the archive page.", archivePage: "Full-text archive",
     readLatest: "Read Latest",
     qidian: "Qidian (CN)",
     backWorks: "‹ Works",
@@ -142,6 +153,7 @@ const I18N = {
     footerRights: "全著作権所有。",
     langLabel: "言語",
     firstBadge: "公式最速",
+    firstPosted: "初公開", firstPostedFull: "本サイト初公開", lastUpdated: "最終更新", provenance: "公開記録", fullTextBadge: "全文", fullTextPosted: "全文初公開", loadingText: "本文を読み込み中…", textLoadFail: "本文を読み込めませんでした。再読み込みするか、アーカイブをご利用ください。", archivePage: "全文アーカイブ",
     readLatest: "最新話を読む",
     qidian: "起点（中国）",
     backWorks: "‹ 作品",
@@ -192,6 +204,7 @@ const I18N = {
     footerRights: "Tous droits réservés.",
     langLabel: "Langue",
     firstBadge: "Officiel en premier",
+    firstPosted: "Publié le", firstPostedFull: "Première publication ici", lastUpdated: "Dernière mise à jour", provenance: "Registre de publication", fullTextBadge: "Texte intégral", fullTextPosted: "Texte intégral publié", loadingText: "Chargement du chapitre…", textLoadFail: "Impossible de charger le chapitre. Actualisez ou ouvrez la page d'archive.", archivePage: "Archive du texte intégral",
     readLatest: "Lire le dernier",
     qidian: "Qidian (CN)",
     backWorks: "‹ Œuvres",
@@ -242,6 +255,7 @@ const I18N = {
     footerRights: "جميع الحقوق محفوظة.",
     langLabel: "اللغة",
     firstBadge: "الرسمي أولاً",
+    firstPosted: "نُشر أولاً", firstPostedFull: "أول نشر هنا", lastUpdated: "آخر تحديث", provenance: "سجل النشر", fullTextBadge: "النص الكامل", fullTextPosted: "نشر النص الكامل", loadingText: "جارٍ تحميل الفصل…", textLoadFail: "تعذّر تحميل الفصل. حدّث الصفحة أو افتح صفحة الأرشيف.", archivePage: "أرشيف النص الكامل",
     readLatest: "اقرأ الأحدث",
     qidian: "Qidian (CN)",
     backWorks: "‹ الأعمال",
@@ -303,6 +317,7 @@ const WORKS = [
     paywall: false,                 // 预留付费总开关
     officialFirst: true,
     beastIndex: true,               // 山海经神兽章节索引
+    fullText: true,                 // 全本正文已公开；按章从 chapters/ 加载
     cover: "恨",
     qidianUrl: "https://www.qidian.com/book/1042069180/",
     summary: {
@@ -320,42 +335,50 @@ const WORKS = [
       ar: ["صعود منتصف العمر", "واقعية تقنية", "وحوش أسطورية", "رومانسية حضرية"]
     },
     chapters: [
-      { num: 0,  name: "鲲鹏",  title: { zh: "引：鲲鹏", en: "Prologue: Kunpeng" } },
-      { num: 1,  name: "鸮",    title: { zh: "第一章 鸮", en: "Ch.1 Xiao" } },
-      { num: 2,  name: "灌灌",  title: { zh: "第二章 灌灌", en: "Ch.2 Guanguan" } },
-      { num: 3,  name: "混沌",  title: { zh: "第三章 混沌", en: "Ch.3 Hundun" } },
-      { num: 4,  name: "梼",    title: { zh: "第四章 梼", en: "Ch.4 Tao" } },
-      { num: 5,  name: "雕",    title: { zh: "第五章 雕", en: "Ch.5 Diao" } },
-      { num: 6,  name: "蛊",    title: { zh: "第六章 蛊", en: "Ch.6 Gu" } },
-      { num: 7,  name: "九婴",  title: { zh: "第七章 九婴", en: "Ch.7 Jiuying" } },
-      { num: 9,  name: "饕餮",  title: { zh: "第九章 饕餮", en: "Ch.9 Taotie" } },
-      { num: 10, name: "比翼鸟", title: { zh: "第十章 比翼鸟", en: "Ch.10 Biyi Bird" } },
-      { num: 11, name: "天狗",  title: { zh: "第十一章 天狗", en: "Ch.11 Tiangou" } },
-      { num: 12, name: "凰",    title: { zh: "第十二章 凰", en: "Ch.12 Huang" } },
-      { num: 13, name: "蜚",    title: { zh: "第十三章 蜚", en: "Ch.13 Fei" } },
-      { num: 14, name: "狰",    title: { zh: "第十四章 狰", en: "Ch.14 Zheng" } },
-      { num: 15, name: "朱厌",  title: { zh: "第十五章 朱厌", en: "Ch.15 Zhuyan" } },
-      { num: 16, name: "祸斗",  title: { zh: "第十六章 祸斗", en: "Ch.16 Huodou" } },
-      { num: 17, name: "英招",  title: { zh: "第十七章 英招", en: "Ch.17 Yingzhao" } },
-      { num: 18, name: "重明鸟", title: { zh: "第十八章 重明鸟", en: "Ch.18 Chongming" } },
-      { num: 19, name: "当康",  title: { zh: "第十九章 当康", en: "Ch.19 Dangkang" } },
-      { num: 20, name: "夫诸",  title: { zh: "第二十章 夫诸", en: "Ch.20 Fuzhu" } },
-      { num: 21, name: "陵鱼",  title: { zh: "第二十一章 陵鱼", en: "Ch.21 Lingyu" } },
-      { num: 22, name: "肥遗",  title: { zh: "第二十二章 肥遗", en: "Ch.22 Feiyi" } },
-      { num: 23, name: "鹿蜀",  title: { zh: "第二十三章 鹿蜀", en: "Ch.23 Lushu" } },
-      { num: 24, name: "赢鱼",  title: { zh: "第二十四章 赢鱼", en: "Ch.24 Yingyu" } },
-      { num: 25, name: "患",    title: { zh: "第二十五章 患", en: "Ch.25 Huan" } },
-      { num: 26, name: "毕方",  title: { zh: "第二十六章 毕方", en: "Ch.26 Bifang" } },
-      { num: 27, name: "陆吾",  title: { zh: "第二十七章 陆吾", en: "Ch.27 Luwu" } },
-      { num: 28, name: "九尾",  title: { zh: "第二十八章 九尾", en: "Ch.28 Nine-Tail" } },
-      { num: 29, name: "猰貐",  title: { zh: "第二十九章 猰貐", en: "Ch.29 Yayu" } },
-      { num: 32, name: "精卫",  title: { zh: "第三十二章 精卫", en: "Ch.32 Jingwei" } },
-      { num: 33, name: "茈鱼",  title: { zh: "第三十三章 茈鱼", en: "Ch.33 Ziyu" } },
-      { num: 34, name: "狡",    title: { zh: "第三十四章 狡", en: "Ch.34 Jiao" } },
-      {
-        num: 43,
-        name: "合窳",
-        title: { zh: "第四十三章 合窳", en: "Ch.43 Heyu" },
+      { num: 0, name: "鲲鹏", title: { zh: "引：鲲鹏", en: "Prologue: Kunpeng" }, bio: { zh: "“鲲鹏”——《庄子·逍遥游》里，北冥有鱼，化而为鸟，水击三千里，抟扶摇而上者九万里。同是一跃，有人往上，有人往下。正所谓一跃之间，升者为鹏，坠者无名。" } },
+      { num: 1, name: "鸮", title: { zh: "第一章 鸮", en: "Ch.1 Xiao" }, bio: { zh: "“鸮”——《山海经》里多以其形名鸟，昼伏夜出，闻其声者以为不祥。正所谓夜鸟初啼，长夜方始。" } },
+      { num: 2, name: "灌灌", title: { zh: "第二章 灌灌", en: "Ch.2 Guanguan" }, bio: { zh: "“灌灌”——《山海经·南山经》里，有鸟状如鸠，其音若呵，名曰灌灌，佩之不惑。正所谓佩之不惑，亦不受惑。" } },
+      { num: 3, name: "混沌", title: { zh: "第三章 混沌", en: "Ch.3 Hundun" }, bio: { zh: "“混沌”——《山海经·西次三经》里，天山有神，状如黄囊，六足四翼，浑敦无面目，是识歌舞。无面目看不清来路，正所谓浑敦无面，祸福不辨。" } },
+      { num: 4, name: "梼", title: { zh: "第四章 梼", en: "Ch.4 Tao" }, bio: { zh: "“梼”——古之四凶，梼杌难训，傲狠明德，撞了南墙也不回头。" } },
+      { num: 5, name: "雕", title: { zh: "第五章 雕", en: "Ch.5 Diao" }, bio: { zh: "“雕”——《山海经》里的猛禽，居高而视，盘旋不急，落爪只在一瞬。" } },
+      { num: 6, name: "蛊", title: { zh: "第六章 蛊", en: "Ch.6 Gu" }, bio: { zh: "“蛊”——《山海经》里言“食之无蛊”，蛊者，中人而不自知，日久乃发。正所谓中蛊不觉，觉时已深。" } },
+      { num: 7, name: "九婴", title: { zh: "第七章 九婴", en: "Ch.7 Jiuying" }, bio: { zh: "“九婴”——九首之怪，水火并作，一头一个主意，此呼彼不应。正所谓九首异向，一夜无眠。" } },
+      { num: 8, name: "穷奇", title: { zh: "第八章 穷奇", en: "Ch.8 Qiongqi" }, bio: { zh: "“穷奇”——《山海经·海内北经》里，状如虎而有翼，食人从首始。" } },
+      { num: 9, name: "饕餮", title: { zh: "第九章 饕餮", en: "Ch.9 Taotie" }, bio: { zh: "“饕餮”——《山海经·北次二经》里，羊身人面，目在腋下，虎齿人爪，贪食无厌，食之未尽，连自身也吞。正所谓欲无餍足，先噬其主。" } },
+      { num: 10, name: "比翼鸟", title: { zh: "第十章 比翼鸟", en: "Ch.10 Biyi Bird" }, bio: { zh: "“比翼鸟”——《山海经·西次三经》里，有鸟一翼一目，相得乃飞，名曰蛮蛮。正所谓比翼方飞，分则不举。" } },
+      { num: 11, name: "天狗", title: { zh: "第十一章 天狗", en: "Ch.11 Tiangou" }, bio: { zh: "“天狗”——《山海经·西次三经》里，阴山有兽，状如狸而白首，名曰天狗，其音如榴榴，可以御凶。御凶之兽，偏往凶处赶。正所谓闻声即往，不问吉凶。" } },
+      { num: 12, name: "凰", title: { zh: "第十二章 凰", en: "Ch.12 Huang" }, bio: { zh: "“凰”——《山海经》里凤鸾自歌自舞，非梧桐不栖，非醴泉不饮，自此后，梧桐便不是梧桐。" } },
+      { num: 13, name: "蜚", title: { zh: "第十三章 蜚", en: "Ch.13 Fei" }, bio: { zh: "“蜚”——《山海经·东次四经》里，状如牛而白首，一目蛇尾，行水则竭，行草则死，见则天下大疫。正所谓行处皆枯，人未觉疫。" } },
+      { num: 14, name: "狰", title: { zh: "第十四章 狰", en: "Ch.14 Zheng" }, bio: { zh: "“狰”——《山海经·西次三经》里，章峨之山有兽，状如赤豹，五尾一角，其音如击石。正所谓五尾一身，一角独抵。" } },
+      { num: 15, name: "朱厌", title: { zh: "第十五章 朱厌", en: "Ch.15 Zhuyan" }, bio: { zh: "“朱厌”——《山海经·西次二经》里，小次之山有兽，状如猿而白首赤足，见则大兵。正所谓白首赤足，兵起于辞。" } },
+      { num: 16, name: "祸斗", title: { zh: "第十六章 祸斗", en: "Ch.16 Huodou" }, bio: { zh: "“祸斗”——古之食火兽，所过之处火自内生，连栖身的屋也一并烧尽。正所谓食火者，终为火食。" } },
+      { num: 17, name: "英招", title: { zh: "第十七章 英招", en: "Ch.17 Yingzhao" }, bio: { zh: "“英招”——《山海经·西次三经》里，槐江之山，神英招司之，马身人面，虎文鸟翼，徇于四海，司帝之平圃。正所谓守圃者，先守分寸。" } },
+      { num: 18, name: "重明鸟", title: { zh: "第十八章 重明鸟", en: "Ch.18 Chongming" }, bio: { zh: "“重明鸟”——古之瑞鸟，目有双瞳，能搏逐猛兽，光照明烛。正所谓重瞳能视远，难视己心。" } },
+      { num: 19, name: "当康", title: { zh: "第十九章 当康", en: "Ch.19 Dangkang" }, bio: { zh: "“当康”——《山海经·东次四经》里，钦山有兽，状如豚而有牙，其名曰当康，其鸣自叫，见则天下大穰。正所谓见则大穰，丰年亦需人耕。" } },
+      { num: 20, name: "夫诸", title: { zh: "第二十章 夫诸", en: "Ch.20 Fuzhu" }, bio: { zh: "“夫诸”——《山海经·中次三经》里，敖岸之山有兽，状如白鹿而四角，名曰夫诸，见则其邑大水。正所谓白鹿四角，水在未见时。" } },
+      { num: 21, name: "陵鱼", title: { zh: "第二十一章 陵鱼", en: "Ch.21 Lingyu" }, bio: { zh: "“陵鱼”——《山海经·海内北经》里，陵鱼人面、手足、鱼身，在海中。一半在岸上，一半在水里，两边都站得住。正所谓人面鱼身，两处皆可栖。" } },
+      { num: 22, name: "肥遗", title: { zh: "第二十二章 肥遗", en: "Ch.22 Feiyi" }, bio: { zh: "“肥遗”——《山海经·北山经》里，浑夕之山有蛇，一首两身，名曰肥遗，见则其国大旱。正所谓一首两身，终归一途。" } },
+      { num: 23, name: "鹿蜀", title: { zh: "第二十三章 鹿蜀", en: "Ch.23 Lushu" }, bio: { zh: "“鹿蜀”——《山海经·南山经》里，杻阳之山有兽，状如马而白首，赤尾虎文，其音如谣，佩之宜子孙。正所谓佩之宜子孙，见之宜生疑。" } },
+      { num: 24, name: "赢鱼", title: { zh: "第二十四章 赢鱼", en: "Ch.24 Yingyu" }, bio: { zh: "“赢鱼”——《山海经·西次四经》里，邽山蒙水中多嬴鱼，鱼身而鸟翼，音如鸳鸯，见则其邑大水。两班人马，昔日旧部。正所谓同水而游，分翼而飞。" } },
+      { num: 25, name: "患", title: { zh: "第二十五章 患", en: "Ch.25 Huan" }, bio: { zh: "“患”——古以名兽，亦以名忧，患生于心，不自外来。正所谓当事者不疑，旁观者已明。" } },
+      { num: 26, name: "毕方", title: { zh: "第二十六章 毕方", en: "Ch.26 Bifang" }, bio: { zh: "“毕方”——《山海经·西次三经》里，章峨之山有鸟，状如鹤，一足，赤文青质而白喙，其鸣自叫，见则其邑有讹火。正所谓一足之鸟，落地无声。" } },
+      { num: 27, name: "陆吾", title: { zh: "第二十七章 陆吾", en: "Ch.27 Luwu" }, bio: { zh: "“陆吾”——《山海经·西次三经》里，昆仑之丘，神陆吾司之，虎身九尾，人面虎爪，司天之九部及帝之囿时。正所谓守门者，先受其门。" } },
+      { num: 28, name: "九尾", title: { zh: "第二十八章 九尾", en: "Ch.28 Nine-Tail" }, bio: { zh: "“九尾”——《山海经·南山经》里，青丘之山有兽，状如狐而九尾，其音如婴儿，食者不蛊。正所谓尾多则路多，路多则难辨。" } },
+      { num: 29, name: "猰貐", title: { zh: "第二十九章 猰貐", en: "Ch.29 Yayu" }, bio: { zh: "“猰貐”——《山海经·海内西经》里，蛇身人面，为贰负之臣所杀。正所谓旧身已死，新面方生。" } },
+      { num: 30, name: "诸怀", title: { zh: "第三十章 诸怀", en: "Ch.30 Zhuhuai" }, bio: { zh: "“诸怀”——《山海经·北山经》里，北岳之山有兽，状如牛而四角、人目、彘耳，其音如鸣雁，是食人。正所谓四角相对，各有其向。" } },
+      { num: 31, name: "妺", title: { zh: "第三十一章 妺", en: "Ch.31 Mo" }, bio: { zh: "“妺”——字从女从未，末也，尽也。正所谓最静处，最悬。" } },
+      { num: 32, name: "精卫", title: { zh: "第三十二章 精卫", en: "Ch.32 Jingwei" }, bio: { zh: "“精卫”——《山海经·北山经》里，炎帝少女溺于东海，化为鸟，文首白喙赤足，常衔西山之木石以堙于东海。正所谓一石一粒，深不见浅。" } },
+      { num: 33, name: "茈鱼", title: { zh: "第三十三章 茈鱼", en: "Ch.33 Ziyu" }, bio: { zh: "“茈鱼”——《山海经·东山经》里，泚水中多茈鱼，状如鲋，一首而十身。正所谓一首十身，事必分头。" } },
+      { num: 34, name: "狡", title: { zh: "第三十四章 狡", en: "Ch.34 Jiao" }, bio: { zh: "“狡”——《山海经·西次三经》里，玉山有兽，状如犬而豹文，其角如牛，名曰狡，其音如吠犬，见则其国大穰。正所谓犬而生角，看似温顺，实则难驯。" } },
+      { num: 35, name: "蜮", title: { zh: "第三十五章 蜮", en: "Ch.35 Yu" }, bio: { zh: "“蜮”——古传水中之虫，含沙射影，中者不知从何处来，但觉痛。正所谓影中者，不见其形。" } },
+      { num: 36, name: "赤鱬", title: { zh: "第三十六章 赤鱬", en: "Ch.36 Chiru" }, bio: { zh: "“赤鱬”——《山海经·南山经》里，青丘之山附近的英水出赤鱬，形状像鱼，却长着人的脸，叫声像鸳鸯。吃了它的肉可以不生疥疮。人面鱼身，音如鸳鸯，出于英水，游戏人间。" } },
+      { num: 37, name: "并封", title: { zh: "第三十七章 并封", en: "Ch.37 Bingfeng" }, bio: { zh: "“并封”——《山海经·海外西经》里，并封在巫咸东，其状如彘，前后皆有首，黑。两个头，一前一后，长在同一个身子上，一个要往东，一个要往西，谁也压不过谁，谁也离不开谁。正所谓双头共身，反向而生，你问一句我接一句，谁也不让，谁也不服，棋逢对手，将遇良才。" } },
+      { num: 38, name: "狙如", title: { zh: "第三十八章 狙如", en: "Ch.38 Juru" }, bio: { zh: "“狙如”——《山海经·中次十一经》里，倚帝之山有兽，状如鼣鼠，白耳白喙，名曰狙如，见则其国有大兵。正所谓白耳白喙，鼠身而藏，见则兵起，不鸣而先动。" } },
+      { num: 39, name: "天马", title: { zh: "第三十九章 天马", en: "Ch.39 Tianma" }, bio: { zh: "“天马”——《山海经·北山经》，马成之山有兽，状如白犬而黑头，见人则飞，其名曰天马。" } },
+      { num: 40, name: "媪", title: { zh: "第四十章 媪", en: "Ch.40 Ao" }, bio: { zh: "“媪”——《山海经·西山经》，玉山有兽名“媪”，状如犬而人面，见人则笑，其行如风。" } },
+      { num: 41, name: "犀渠", title: { zh: "第四十一章 犀渠", en: "Ch.41 Xiqu" }, bio: { zh: "“犀渠”——《山海经·中山经》里，釐山有兽，状如牛，苍身，其音如婴儿，是食人，名曰犀渠。正所谓苍身牛形，其音如婴，不筑己巢，占他兽之洞。" } },
+      { num: 42, name: "孟极", title: { zh: "第四十二章 孟极", en: "Ch.42 Mengji" }, bio: { zh: "“孟极”——《山海经·北山经》里，石者之山有兽，状如豹而文题白身，名曰孟极，是善伏，其鸣自呼。正所谓伏得再深，开口仍是自己的名字。" } },
+      { num: 43, name: "合窳", title: { zh: "第四十三章 合窳", en: "Ch.43 Heyu" }, bio: { zh: "“合窳”——《山海经·东山经》里，剡山有兽，其状如彘而人面，黄身而赤尾，其名曰合窳，见则天下大水。正所谓彘身人面，黄身赤尾，暗伏于野，见则大水。" },
         locked: false,              // 预留付费锁；当前免费
         excerpt: {
           zh:
@@ -369,7 +392,8 @@ const WORKS = [
             "\"Dyson uses 1.3 mm. I won't go that narrow. The narrow slit stabilizes the Coanda effect, but it demands high back-pressure that mixed-flow can't sustain. I'll open it to 1.8–2.0 mm — trade a little speed for volume. Ordinary readers want strong wind, not fast wind.\"\n\n" +
             "— excerpt from 'Hate Changsha', Ch.43 Heyu (official-first sample)"
         }
-      }
+      },
+      { num: 44, name: "诸犍", title: { zh: "第四十四章 诸犍", en: "Ch.44 Zhujian" }, bio: { zh: "“诸犍”——《山海经·北山经》里，单张之山有兽，其状如豹，而长尾，人首而牛耳，一目，名曰诸犍。善吒，行则衔其尾。正所谓豹身长尾，人首牛耳，一目独视，行则衔尾。诸犍只有一只眼睛，看左边就顾不了右边，看前头就顾不了后头；它走路的时候，必须咬着自己的尾巴，生怕首尾不能相顾。" } }
     ]
   },
   {

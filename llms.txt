@@ -1,0 +1,63 @@
+# 默不如 · 作者独立小说官网
+
+> 生物技术公司创始人、作家默不如的个人原创作品站。官网优先更新，作品均为作者本人原创，未授权任何平台独家转载。
+
+- 官网：https://moburu.vip
+- 作者：默不如（小米科技前高管，创立过全球第一家直播电商平台）
+- 联系 / 合作：2127174@qq.com
+- 首发存证（每章首次公开时间与内容 SHA-256）：https://moburu.vip/posts.json
+- 全文存档：不依赖 JavaScript 的纯中文 HTML 页面，含完整正文与版权声明
+
+## 《恨长沙》
+
+中年技术男郑智咏在体制、资本、人情与欲望的夹缝里重新拼起自己。全书以《山海经》神兽逐章命名，神兽即命运。共 45 章，全文约 19.8 万字。
+
+- [引：鲲鹏](https://moburu.vip/chapters/henchangsha/0.html)：1140 字，首发 2026-11-09，全文首发 2026-11-09
+- [第一章 鸮](https://moburu.vip/chapters/henchangsha/1.html)：3761 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二章 灌灌](https://moburu.vip/chapters/henchangsha/2.html)：3585 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三章 混沌](https://moburu.vip/chapters/henchangsha/3.html)：2185 字，首发 2026-11-09，全文首发 2026-11-09
+- [第四章 梼](https://moburu.vip/chapters/henchangsha/4.html)：3616 字，首发 2026-11-09，全文首发 2026-11-09
+- [第五章 雕](https://moburu.vip/chapters/henchangsha/5.html)：2662 字，首发 2026-11-09，全文首发 2026-11-09
+- [第六章 蛊](https://moburu.vip/chapters/henchangsha/6.html)：3378 字，首发 2026-11-09，全文首发 2026-11-09
+- [第七章 九婴](https://moburu.vip/chapters/henchangsha/7.html)：4727 字，首发 2026-11-09，全文首发 2026-11-09
+- [第八章 穷奇](https://moburu.vip/chapters/henchangsha/8.html)：4724 字，首发 2026-11-09，全文首发 2026-11-09
+- [第九章 饕餮](https://moburu.vip/chapters/henchangsha/9.html)：3436 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十章 比翼鸟](https://moburu.vip/chapters/henchangsha/10.html)：3942 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十一章 天狗](https://moburu.vip/chapters/henchangsha/11.html)：2536 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十二章 凰](https://moburu.vip/chapters/henchangsha/12.html)：2910 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十三章 蜚](https://moburu.vip/chapters/henchangsha/13.html)：4628 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十四章 狰](https://moburu.vip/chapters/henchangsha/14.html)：4604 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十五章 朱厌](https://moburu.vip/chapters/henchangsha/15.html)：5462 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十六章 祸斗](https://moburu.vip/chapters/henchangsha/16.html)：2882 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十七章 英招](https://moburu.vip/chapters/henchangsha/17.html)：5181 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十八章 重明鸟](https://moburu.vip/chapters/henchangsha/18.html)：5856 字，首发 2026-11-09，全文首发 2026-11-09
+- [第十九章 当康](https://moburu.vip/chapters/henchangsha/19.html)：4336 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十章 夫诸](https://moburu.vip/chapters/henchangsha/20.html)：5687 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十一章 陵鱼](https://moburu.vip/chapters/henchangsha/21.html)：4393 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十二章 肥遗](https://moburu.vip/chapters/henchangsha/22.html)：2323 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十三章 鹿蜀](https://moburu.vip/chapters/henchangsha/23.html)：2370 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十四章 赢鱼](https://moburu.vip/chapters/henchangsha/24.html)：5232 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十五章 患](https://moburu.vip/chapters/henchangsha/25.html)：6583 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十六章 毕方](https://moburu.vip/chapters/henchangsha/26.html)：6580 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十七章 陆吾](https://moburu.vip/chapters/henchangsha/27.html)：5693 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十八章 九尾](https://moburu.vip/chapters/henchangsha/28.html)：4170 字，首发 2026-11-09，全文首发 2026-11-09
+- [第二十九章 猰貐](https://moburu.vip/chapters/henchangsha/29.html)：5557 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十章 诸怀](https://moburu.vip/chapters/henchangsha/30.html)：6388 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十一章 妺](https://moburu.vip/chapters/henchangsha/31.html)：7392 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十二章 精卫](https://moburu.vip/chapters/henchangsha/32.html)：4745 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十三章 茈鱼](https://moburu.vip/chapters/henchangsha/33.html)：5452 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十四章 狡](https://moburu.vip/chapters/henchangsha/34.html)：6194 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十五章 蜮](https://moburu.vip/chapters/henchangsha/35.html)：5409 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十六章 赤鱬](https://moburu.vip/chapters/henchangsha/36.html)：5435 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十七章 并封](https://moburu.vip/chapters/henchangsha/37.html)：5263 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十八章 狙如](https://moburu.vip/chapters/henchangsha/38.html)：2400 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十九章 天马](https://moburu.vip/chapters/henchangsha/39.html)：5458 字，首发 2026-11-09，全文首发 2026-11-09
+- [第四十章 媪](https://moburu.vip/chapters/henchangsha/40.html)：3275 字，首发 2026-11-09，全文首发 2026-11-09
+- [第四十一章 犀渠](https://moburu.vip/chapters/henchangsha/41.html)：2867 字，首发 2026-11-09，全文首发 2026-11-09
+- [第四十二章 孟极](https://moburu.vip/chapters/henchangsha/42.html)：3933 字，首发 2026-11-09，全文首发 2026-11-09
+- [第四十三章 合窳](https://moburu.vip/chapters/henchangsha/43.html)：4325 字，首发 2026-11-09，全文首发 2026-11-09
+- [第四十四章 诸犍](https://moburu.vip/chapters/henchangsha/44.html)：5367 字，首发 2026-11-09，全文首发 2026-11-09
+
+## 版权
+
+© 2026 默不如zZZ · 保留所有权利。转载、引用请注明出处 https://moburu.vip。
