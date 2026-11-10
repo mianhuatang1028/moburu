@@ -218,7 +218,7 @@ h2 { font-size: 26px; margin: 0 0 8px; }
   background: linear-gradient(135deg, var(--gold), var(--gold-dim));
   color: #1a1408; font-size: 18px; font-weight: 700;
 }
-.ch-item .meta { flex: 1; }
+.ch-item .meta { flex: 1; min-width: 0; }   /* min-width:0 必须写：否则副标题里 nowrap 的徽章会把整行撑溢出，标题右侧被裁 */
 .ch-item .meta .t { font-size: 15px; }
 .ch-item .meta .b { font-size: 12px; color: var(--text-dim); }
 .ch-item .go { color: var(--gold); font-size: 13px; }
@@ -335,6 +335,17 @@ html[dir="rtl"] .nav .links { order: 2; }
   .lang-switch { gap: 5px; margin-left: 0; margin-top: 6px; width: 100%; justify-content: flex-start; }
   .lang-btn { width: 56px; padding: 6px 0; font-size: 12px; }
   .author-head .avatar { width: 84px; height: 84px; }
+  /* 章节列表：缩窄神兽块、腾出标题宽度；整行可点，箭头省掉 */
+  .ch-item { padding: 10px 12px; gap: 10px; align-items: flex-start; }
+  .ch-item .beast { width: 44px; height: 44px; font-size: 15px; }
+  .ch-item .meta .t { font-size: 14px; line-height: 1.45; overflow-wrap: anywhere; }
+  .ch-item .meta .b { font-size: 11px; line-height: 1.6; }
+  .ch-item .go { display: none; }
+  /* 阅读页：正文页不套 .wrap，原来直接贴屏幕边，补内边距；标题按屏宽自适应不折字 */
+  .reader { padding: 0 16px; }
+  .reader .chapter-title { font-size: clamp(21px, 6.2vw, 28px); line-height: 1.32; overflow-wrap: anywhere; }
+  .reader .beast-line { letter-spacing: 1px; margin-bottom: 16px; }
+  .work-title { font-size: 28px; }
 }
 
 /* ---------- 首发时间戳 / 版权存证 ---------- */
