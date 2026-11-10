@@ -2,8 +2,8 @@
   "work": "henchangsha",
   "title": "恨长沙",
   "author": "默不如",
-  "chapterCount": 47,
-  "totalChars": 205252,
+  "chapterCount": 48,
+  "totalChars": 208614,
   "chapters": [
     {
       "num": 0,
@@ -380,6 +380,14 @@
       "chars": 4060,
       "paragraphs": 57,
       "file": "46.json"
+    },
+    {
+      "num": 47,
+      "title": "第四十七章 寓",
+      "beast": "寓",
+      "chars": 3362,
+      "paragraphs": 22,
+      "file": "47.json"
     }
   ]
 }

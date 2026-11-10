@@ -479,7 +479,10 @@ a.ch-nav-btn:hover, a.ch-nav-btn:focus-visible {
 .ch-nav-k { font-style: normal; font-size: 12px; letter-spacing: .05em; color: var(--gold); }
 .ch-nav-t {
   display: block; font-size: 13.5px; color: var(--text);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  /* 章名一律完整显示：五语言里法/阿译名很长，省略号会把书名切掉，
+     改成换行，宁可按钮高一点也不藏字 */
+  white-space: normal; overflow-wrap: anywhere;
+  overflow: visible; text-overflow: clip; line-height: 1.55;
 }
 /* 用 end 而不是 right：阿拉伯语 RTL 下自动靠左，不用单独写覆盖规则 */
 .ch-nav-btn.next { text-align: right; text-align: end; }
