@@ -119,6 +119,21 @@ function personLd(name) {
   };
 }
 
+/* 山海经神兽图鉴卡片：图 + 小传。只在 chapters/<workId>/ 下的章节存档页使用，
+   所以图片路径固定为 ../../assets/img/beasts/。
+   图与语言无关，任何语言版本都显示同一张；某语言未译出小传时只放图，绝不回退中文。 */
+function beastPanel(num, altText, bioText) {
+  const file = String(num).padStart(2, '0') + '.webp';
+  const has = fs.existsSync(path.join(ROOT, 'assets/img/beasts', file));
+  const fig = has
+    ? '<figure class="beast-fig"><img src="../../assets/img/beasts/' + file +
+      '" alt="' + esc(altText || '') + '" width="800" height="1148" loading="lazy" decoding="async"></figure>'
+    : '';
+  if (!fig && !bioText) return '';
+  return '<div class="beast-panel">' + fig +
+    (bioText ? '<div class="beast-bio">' + esc(bioText) + '</div>' : '') + '</div>\n  ';
+}
+
 const POST = fs.existsSync(POSTS_JSON)
   ? JSON.parse(fs.readFileSync(POSTS_JSON, 'utf8')) : { works: {} };
 
@@ -215,8 +230,7 @@ ${langs.length ? hreflangLinks(workId, num, langs) : ''}<link rel="stylesheet" h
     ${p.revisions && p.revisions.length ? '<span>最后修订：' + esc(stamp(updated, true)) + '</span>' : ''}
     <span>© 2026 ${esc(SITE.author)} · 保留所有权利</span>
   </div>
-  ${bio ? '<div class="bio-box">' + esc(bio) + '</div>' : ''}
-  <article class="content novel-text lang-zh">
+  ${beastPanel(num, data.beast, bio)}<article class="content novel-text lang-zh">
 ${bodyHtml}
   </article>
   <div class="post-stamp">
@@ -250,9 +264,10 @@ ${otherLangHtml}
       const dirAttr = rtl ? ' dir="rtl"' : ' dir="ltr"';
       const tParas = t.paragraphs || [];
       const tBody = tParas.map(x => '<p>' + esc(x).replace(/\n/g, '<br>') + '</p>').join('\n');
-      /* 神兽名与山海经小传：只在该语言译本自己提供了译文时显示，绝不回退中文 */
+      /* 神兽名与山海经小传：只在该语言译本自己提供了译文时显示，绝不回退中文；
+         配图与语言无关，照常显示 */
       const tBeastLine = t.beast ? '<div class="beast-line">' + esc(t.beast) + '</div>\n  ' : '';
-      const tBioBox = t.bio ? '<div class="bio-box">' + esc(t.bio) + '</div>\n  ' : '';
+      const tBioBox = beastPanel(num, t.beast || data.beast, t.bio);
       /* 西文 / 阿拉伯语译文必须保留词间空格，不能像中文那样压缩空白 */
       const tDesc = (tParas[0] || '').trim().replace(/\s+/g, ' ').slice(0, 180);
       const tLd = {

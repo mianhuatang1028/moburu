@@ -43,7 +43,29 @@ function setLang(code) {
 }
 
 /* 取 UI 文案 */
-function t(key) { return (I18N[LANG] && I18N[LANG][key] != null) ? I18N[LANG][key] : (I18N.zh[key] || key); }
+/* 取当前语言的 UI 词条。支持点号路径（nav.home 这种嵌套键）。
+   回退链：当前语言 → 中文 → 空串。取不到时返回空串而不是键名，
+   否则页面会把 nav_home 这种内部键直接印在导航栏上。 */
+function _pick(pack, key) {
+  if (!pack) return null;
+  if (pack[key] != null) return pack[key];
+  if (key.indexOf(".") < 0) return null;
+  var cur = pack, parts = key.split(".");
+  for (var i = 0; i < parts.length; i++) {
+    if (cur == null) return null;
+    cur = cur[parts[i]];
+  }
+  return cur == null ? null : cur;
+}
+function t(key) {
+  var v = _pick(I18N[LANG], key);
+  if (v == null) v = _pick(I18N.zh, key);
+  if (v == null) {
+    if (typeof console !== "undefined" && console.warn) console.warn("[i18n] 缺少词条: " + key);
+    return "";
+  }
+  return v;
+}
 /* 取多语言内容字段（回退链：当前语言 → 中文原文，绝不回退英文，避免中英文混排） */
 function tv(obj) {
   if (obj == null) return "";
@@ -172,10 +194,10 @@ function renderNav() {
   var path = location.pathname.split("/").pop() || "index.html";
   function active(p) { return (path === p) ? " class=\"active\"" : ""; }
   var links =
-    '<a href="index.html"' + active("index.html") + '>' + t("nav_home") + '</a>' +
-    '<a href="works.html"' + active("works.html") + '>' + t("nav_works") + '</a>' +
-    '<a href="about.html"' + active("about.html") + '>' + t("nav_about") + '</a>' +
-    (SHOW_MEMBER ? '<a href="pricing.html"' + active("pricing.html") + '>' + t("nav_pricing") + '</a>' : '');
+    '<a href="index.html"' + active("index.html") + '>' + t("nav.home") + '</a>' +
+    '<a href="works.html"' + active("works.html") + '>' + t("nav.works") + '</a>' +
+    '<a href="about.html"' + active("about.html") + '>' + t("nav.about") + '</a>' +
+    (SHOW_MEMBER ? '<a href="pricing.html"' + active("pricing.html") + '>' + t("nav.pricing") + '</a>' : '');
   /* 语言切换器：五枚等宽胶囊，当前语言金底实心。
      title / aria-label 用完整语言名，缩写 EN、FR 也能被悬停和读屏说清。 */
   var sw = LANGS.map(function (l) {
@@ -340,7 +362,7 @@ function renderWorkDetail(elId) {
       stamp += ' · <span class="ch-tr">' + esc(t("translationBadge")) + '</span>';
     return '' +
       '<a class="' + cls + '" href="' + href + '">' +
-        '<div class="beast">' + esc(beastName(c)) + '</div>' +
+        '<div class="beast" data-num="' + esc(c.num) + '">' + esc(beastName(c)) + '</div>' +
         '<div class="meta"><div class="t">' + esc(chapterTitle(c)) + '</div>' +
         '<div class="b">' + (w.beastIndex ? (esc(t("chIndexSub").replace("。", "")) + ' · ' + esc(beastName(c))) : esc(chapterTitle(c))) + stamp + '</div></div>' +
         go +
@@ -367,10 +389,88 @@ function renderWorkDetail(elId) {
       '<div class="ch-list">' + chapters + '</div>' +
     '</div>';
   document.title = tv(w.title) + " - " + t("brand");
+  fitBeastLabels(el);
 }
 
-/* ---------- 章节阅读器 ---------- */
-/* 正文按章存放在 chapters/<作品>/<章号>.json，按需加载，避免全站一次下载 20 万字 */
+/* 章节列表左侧的金色方块里放的是各语言兽名：中文 2-3 字、罗马音 7-9 字母，
+   法/阿译名最长到 26 字符（L'Oiseau aux ailes jumelles）。方块尺寸固定，
+   必然有些名字塞不下 —— 这里量一次 18px 下的真实文字宽度，按比例缩字号；
+   缩到 9px 仍放不下的（极长译名）退回显示章号，保证任何语言都不会出现
+   「文字被方块切掉一半」的情况。 */
+/* 章节列表左侧的金色方块放的是各语言兽名：中文 2-3 字、罗马音 7-10 字母，
+   法/阿译名最长到 26 字符。方块尺寸固定必然有名字放不下 —— 做法是：
+   ① 先给整页方块算一个统一宽度（按最长的那条，夹在 52–76px 之间），保持左边缘对齐；
+   ② 每条再按自己的文字宽度单独缩字号，短的用满 18px、长的缩到刚好贴边；
+   ③ 18px 下超过 136px 的极长译名取首词（Neuf Nourrissons → Neuf），
+      首词仍放不下才退回两位章号。任何语言都不会出现文字被方块切掉。 */
+function fitBeastLabels(root) {
+  if (!root || !root.querySelectorAll) return;
+  var els = root.querySelectorAll(".ch-item .beast");
+  var n = els.length;
+  if (!n) return;
+  var BASE = 18, MIN = 9, MINW = 52, MAXW = 76, PAD = 8, SLACK = 1, LIMIT = 136;
+  var vw = (typeof window !== "undefined" && window.innerWidth) || 0;
+  if (vw > 720) MINW = 58;
+
+  /* 量尺：临时插一个同款方块纯量文字宽度，量完立刻删掉 */
+  var probe = document.createElement("div");
+  probe.className = "beast";
+  probe.setAttribute("aria-hidden", "true");
+  probe.style.cssText = "position:absolute;left:-9999px;top:0;width:auto;height:auto;" +
+    "visibility:hidden;display:inline-block;white-space:nowrap;padding:0;font-size:" + BASE + "px;";
+  root.appendChild(probe);
+  function measure(text) {
+    probe.textContent = text;
+    return probe.getBoundingClientRect().width;
+  }
+
+  var texts = [], widths = [], maxW = 0, i, el, label, w;
+  for (i = 0; i < n; i++) {
+    el = els[i];
+    label = el.getAttribute("data-label");
+    if (label === null) { label = el.textContent; el.setAttribute("data-label", label); }
+    w = measure(label);
+    if (w > LIMIT) {
+      var first = String(label).split(/\s+/)[0];
+      if (first && first !== label) { label = first; w = measure(label); }
+    }
+    if (w > LIMIT) {
+      var num = parseInt(el.getAttribute("data-num"), 10);
+      if (!isNaN(num)) { label = (num < 10 ? "0" : "") + num; w = measure(label); }
+    }
+    texts[i] = label;
+    widths[i] = w;
+    if (w > maxW) maxW = w;
+  }
+  root.removeChild(probe);
+  if (!maxW) return;
+
+  var boxW = Math.max(MINW, Math.min(MAXW, Math.ceil(maxW + PAD + SLACK)));
+  var inner = boxW - PAD - SLACK;   /* 留 1px：字号按 0.1 取整会有亚像素误差 */
+  for (i = 0; i < n; i++) {
+    el = els[i];
+    el.textContent = texts[i];
+    el.style.width = boxW + "px";
+    el.style.height = boxW + "px";
+    var fs = widths[i] <= inner ? BASE : Math.floor((BASE * inner / widths[i]) * 10) / 10;
+    el.style.fontSize = Math.max(MIN, Math.min(BASE, fs)) + "px";
+  }
+}
+
+/* 旋屏 / 改窗口宽度时方块会在 54px 与 44px 之间切换，字号要跟着重算一遍 */
+(function () {
+  if (typeof window === "undefined" || !window.addEventListener) return;  /* 假 DOM 环境（回归脚本）跳过 */
+  var timer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      var list = document.querySelector(".ch-list");
+      if (list && list.parentNode) fitBeastLabels(list.parentNode);
+    }, 180);
+  });
+})();
+
+/* ---------- 章节阅读器 ---------- *//* 正文按章存放在 chapters/<作品>/<章号>.json，按需加载，避免全站一次下载 20 万字 */
 function chapterBodyUrl(w, c) {
   var suffix = hasTranslation(c, LANG) ? "." + LANG : "";
   return "chapters/" + encodeURIComponent(w.id) + "/" + c.num + suffix + ".json";
@@ -408,9 +508,18 @@ function renderReader(elId) {
         ? '<span>' + esc(t("lastUpdated")) + '：' + esc(fmtStamp(pi.updatedAt || pi.firstPostedAt, true)) + '</span>' : '') +
       '<span>© ' + new Date().getFullYear() + ' ' + esc(authorDisplay()) + ' · ' + esc(t("footerRights")) + '</span></div>'
     : '';
-  /* 山海经神兽小传：严格取当前语言译本；该语言未译出时不回退中文，保持页面语言纯净 */
+  /* 山海经神兽：小传严格取当前语言译本；该语言未译出时不回退中文，保持页面语言纯净。
+     配图与语言无关，任何语言页面都显示同一张（BEAST_IMAGES 登记有图的章号）。 */
   var bioText = (c.bio && typeof c.bio === "object") ? (c.bio[LANG] || "") : "";
-  var bioBox = bioText ? '<div class="bio-box">' + esc(bioText) + '</div>' : '';
+  var beastFig = (BEAST_IMAGES.indexOf(c.num) >= 0)
+    ? '<figure class="beast-fig"><img src="assets/img/beasts/' +
+        (c.num < 10 ? "0" : "") + c.num + '.webp" alt="' + esc(beastName(c)) +
+        '" width="800" height="1148" loading="lazy" decoding="async"></figure>'
+    : "";
+  var bioBox = (beastFig || bioText)
+    ? '<div class="beast-panel">' + beastFig +
+      (bioText ? '<div class="beast-bio">' + esc(bioText) + '</div>' : '') + '</div>'
+    : "";
   var transNote = (LANG !== "zh" && !hasTranslation(c, LANG) && w.fullText)
     ? '<div class="trans-note">' + esc(t("translationMissing")) + '</div>' : '';
   var archiveFile = c.num + (hasTranslation(c, LANG) ? "." + LANG : "") + ".html";
