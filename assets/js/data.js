@@ -16,13 +16,16 @@
    - 每次改动都走 git commit，改错了可随时回滚，不必怕「反复改」。
    ============================================================ */
 
-/* 支持的语言 */
+/* 支持的语言
+   label = 按钮上显示的短标签（五枚胶囊等宽，长度不影响排版）
+   full  = 完整语言名，用于 title / aria-label（缩写 EN、FR 也能被读屏和悬停说清）
+   html  = <html lang> 取值 */
 const LANGS = [
-  { code: "zh", label: "中文" },
-  { code: "en", label: "EN" },
-  { code: "ja", label: "日本語" },
-  { code: "fr", label: "FR" },
-  { code: "ar", label: "العربية" }
+  { code: "zh", label: "中文",    full: "简体中文",  html: "zh-CN" },
+  { code: "en", label: "EN",      full: "English",  html: "en" },
+  { code: "ja", label: "日本語",   full: "日本語",    html: "ja" },
+  { code: "fr", label: "FR",      full: "Français", html: "fr" },
+  { code: "ar", label: "العربية", full: "العربية",   html: "ar" }
 ];
 
 /* 全站 UI 文案（按语言） */

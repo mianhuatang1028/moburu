@@ -2,10 +2,36 @@
    默不如小说官网 · 渲染逻辑（多语言 + 付费端口预留）
    ============================================================ */
 
-/* 当前语言（持久化到 localStorage） */
-var LANG = localStorage.getItem("moburu_lang") || localStorage.getItem("mobuyu_lang") || "zh";
+/* 首访语言推断：只有「读者从没手动点过语言按钮」时才按浏览器语言自动选。
+   手动点过 → localStorage 已写入 → 永久记住，不再被浏览器语言覆盖。
+   浏览器语言判断只看前两位（zh-CN / zh-TW / zh-Hant 都算中文），
+   站里没有的语言一律回到中文，不会出现空白页。 */
+function detectLang() {
+  var saved = localStorage.getItem("moburu_lang") || localStorage.getItem("mobuyu_lang");
+  if (saved) return saved;
+  var prefer = "";
+  if (typeof navigator !== "undefined") {
+    prefer = (navigator.languages && navigator.languages.length)
+      ? navigator.languages[0] : (navigator.language || "");
+  }
+  var p = String(prefer).toLowerCase().slice(0, 2);
+  var map = { zh: "zh", en: "en", ja: "ja", fr: "fr", ar: "ar" };
+  return map[p] || "zh";
+}
+
+/* 当前语言（持久化到 localStorage；首访按浏览器语言推断） */
+var LANG = detectLang();
 var MEMBER = false;        // 预留会员状态；接入支付/登录后由后端决定
 var SHOW_MEMBER = false;   // 付费入口总开关：false=全站隐藏会员/付费 UI；未来开放改 true 即可
+
+/* 进入页面立刻同步 <html lang> 与 RTL：自动识别到阿拉伯语时，若不同步 dir，
+   整个页面会按从左到右排版（正文、导航全反）。内联脚本只调 renderNav，
+   不会替我们做这一步，所以在这里先设一次。 */
+(function () {
+  var map = { zh: "zh-CN", en: "en", ja: "ja", fr: "fr", ar: "ar" };
+  document.documentElement.lang = map[LANG] || "zh-CN";
+  document.documentElement.dir = (LANG === "ar") ? "rtl" : "ltr";
+})();
 
 function setLang(code) {
   LANG = code;
@@ -150,14 +176,20 @@ function renderNav() {
     '<a href="works.html"' + active("works.html") + '>' + t("nav_works") + '</a>' +
     '<a href="about.html"' + active("about.html") + '>' + t("nav_about") + '</a>' +
     (SHOW_MEMBER ? '<a href="pricing.html"' + active("pricing.html") + '>' + t("nav_pricing") + '</a>' : '');
+  /* 语言切换器：五枚等宽胶囊，当前语言金底实心。
+     title / aria-label 用完整语言名，缩写 EN、FR 也能被悬停和读屏说清。 */
   var sw = LANGS.map(function (l) {
-    var on = (l.code === LANG) ? " style=\"color:var(--gold);border-color:var(--gold-dim)\"" : "";
-    return '<button class="lang-btn"' + on + ' onclick="setLang(\'' + l.code + '\')">' + l.label + '</button>';
+    var on = (l.code === LANG);
+    return '<button class="lang-btn' + (on ? ' is-on' : '') + '"' +
+      ' title="' + esc(l.full || l.label) + '"' +
+      ' aria-label="' + esc(l.full || l.label) + '"' +
+      (on ? ' aria-current="true"' : '') +
+      ' onclick="setLang(\'' + l.code + '\')">' + l.label + '</button>';
   }).join("");
   el.innerHTML =
     '<div class="brand">' + t("brand") + '</div>' +
     '<div class="links">' + links + '</div>' +
-    '<div class="lang-switch">' + sw + '</div>';
+    '<div class="lang-switch" role="group" aria-label="Language">' + sw + '</div>';
 }
 
 /* ---------- 页脚（注入 + 多语言） ---------- */
