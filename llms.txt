@@ -12,7 +12,7 @@
 
 > 官方国际书名 Lost in Changsha。书名中的「恨」意为「遗憾 / 失落」，不是「憎恨」。
 
-中年技术男郑智咏在体制、资本、人情与欲望的夹缝里重新拼起自己。全书以《山海经》神兽逐章命名，神兽即命运。共 46 章，全文约 20.1 万字。
+中年技术男郑智咏在体制、资本、人情与欲望的夹缝里重新拼起自己。全书以《山海经》神兽逐章命名，神兽即命运。共 47 章，全文约 20.5 万字。
 
 - [引：鲲鹏](https://moburu.vip/chapters/henchangsha/0.html)：1140 字，首发 2026-11-09，全文首发 2026-11-09
 - [第一章 鸮](https://moburu.vip/chapters/henchangsha/1.html)：3761 字，首发 2026-11-09，全文首发 2026-11-09
@@ -60,6 +60,7 @@
 - [第四十三章 合窳](https://moburu.vip/chapters/henchangsha/43.html)：4325 字，首发 2026-11-09，全文首发 2026-11-09
 - [第四十四章 诸犍](https://moburu.vip/chapters/henchangsha/44.html)：5367 字，首发 2026-11-09，全文首发 2026-11-09
 - [第四十五章 猲狙](https://moburu.vip/chapters/henchangsha/45.html)：3150 字，首发 2026-11-10，全文首发 2026-11-10
+- [第四十六章 狌狌](https://moburu.vip/chapters/henchangsha/46.html)：4060 字，首发 2026-11-10，全文首发 2026-11-10
 
 ## 多语言译本（按章交付，各语言有独立首发时间）
 
@@ -205,6 +206,12 @@
 - [Chapter Forty-Four: Zhujian · English](https://moburu.vip/chapters/henchangsha/44.en.html)：81 段，译本首发 2026-11-10
 - [Chapitre quarante-quatre : Zhujian · Français](https://moburu.vip/chapters/henchangsha/44.fr.html)：81 段，译本首发 2026-11-10
 - [الفصل الرابع والأربعون: تشوجيان · العربية](https://moburu.vip/chapters/henchangsha/44.ar.html)：81 段，译本首发 2026-11-10
+- [Chapter Forty-Five: Heju · English](https://moburu.vip/chapters/henchangsha/45.en.html)：28 段，译本首发 2026-11-10
+- [Chapitre quarante-cinq : Heju · Français](https://moburu.vip/chapters/henchangsha/45.fr.html)：28 段，译本首发 2026-11-10
+- [الفصل الخامس والأربعون: هيجو · العربية](https://moburu.vip/chapters/henchangsha/45.ar.html)：28 段，译本首发 2026-11-10
+- [Chapter Forty-Six: Xingxing · English](https://moburu.vip/chapters/henchangsha/46.en.html)：57 段，译本首发 2026-11-10
+- [Chapitre quarante-six : Xingxing · Français](https://moburu.vip/chapters/henchangsha/46.fr.html)：57 段，译本首发 2026-11-10
+- [الفصل السادس والأربعون: شينغشينغ · العربية](https://moburu.vip/chapters/henchangsha/46.ar.html)：57 段，译本首发 2026-11-10
 
 ## 版权
 
