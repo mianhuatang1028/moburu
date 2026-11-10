@@ -273,8 +273,10 @@ function renderWorkDetail(elId) {
   var tags = tv(w.tags).map(function (x) { return '<span class="tag">' + esc(x) + "</span>"; }).join("");
   var ordered = orderedChapters(w);
   var fp = workFirstPosted(w);
-  /* 译本按章交付，尚未全本翻译时明确告知读者，避免误以为页面出错 */
-  var trNotice = (LANG !== "zh" && w.fullText)
+  /* 译本按章交付：仅当当前语言仍有未译章节时才提示；该语言已全本则不显示，避免读者误以为尚未译完 */
+  var trMissing = (LANG !== "zh")
+    ? ordered.filter(function (c) { return !hasTranslation(c, LANG); }).length : 0;
+  var trNotice = (LANG !== "zh" && w.fullText && trMissing > 0)
     ? '<p class="trans-note">' + esc(t("translationProgress")) + '</p>' : '';
   var provBar = fp
     ? '<div class="provenance-bar">' + esc(t("firstPostedFull")) + '：' + esc(fmtStamp(fp, true)) +
