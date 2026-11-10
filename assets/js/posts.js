@@ -7,7 +7,7 @@ const POST_LOG = {
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-10T18:02:27+08:00",
+  "generatedAt": "2026-11-10T18:21:15+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -4189,8 +4189,8 @@ const POST_LOG = {
         "name": "猲狙",
         "firstPostedAt": "2026-11-10T14:38:37+08:00",
         "firstSha256": "ed4126643ac73a8090e021718a7c284e6f71f531dca006d09eb943dd00d6b932",
-        "sha256": "2aea46e9de91b1a861918e58a04ad3d7d4d987340443aa1287e9d8f3db5694ba",
-        "updatedAt": "2026-11-10T18:02:27+08:00",
+        "sha256": "5f61628b9efb1abe10c7c38aa2ba1e102e9aa2caea5ad0ae3c25daf05ab48478",
+        "updatedAt": "2026-11-10T18:21:15+08:00",
         "revisions": [
           {
             "at": "2026-11-10T18:02:27+08:00",
@@ -4198,11 +4198,18 @@ const POST_LOG = {
             "previousSha256": "ed4126643ac73a8090e021718a7c284e6f71f531dca006d09eb943dd00d6b932",
             "bodySha256": "bbb1a6597f357461a93b433aca07253785d0f9ed4b4d45335b5d234aa898c678",
             "bodyChars": 3150
+          },
+          {
+            "at": "2026-11-10T18:21:15+08:00",
+            "sha256": "5f61628b9efb1abe10c7c38aa2ba1e102e9aa2caea5ad0ae3c25daf05ab48478",
+            "previousSha256": "2aea46e9de91b1a861918e58a04ad3d7d4d987340443aa1287e9d8f3db5694ba",
+            "bodySha256": "32147e90de6be78df9faa27c5702f628c77d7d69ffceca5e0c58ea26b6f7f78d",
+            "bodyChars": 3150
           }
         ],
         "bodyFirstPostedAt": "2026-11-10T14:38:37+08:00",
         "bodyFirstSha256": "bbb1a6597f357461a93b433aca07253785d0f9ed4b4d45335b5d234aa898c678",
-        "bodySha256": "bbb1a6597f357461a93b433aca07253785d0f9ed4b4d45335b5d234aa898c678",
+        "bodySha256": "32147e90de6be78df9faa27c5702f628c77d7d69ffceca5e0c58ea26b6f7f78d",
         "bodyChars": 3150,
         "translations": {
           "en": {
@@ -4239,12 +4246,20 @@ const POST_LOG = {
         "name": "狌狌",
         "firstPostedAt": "2026-11-10T18:02:27+08:00",
         "firstSha256": "337264fe66262fa9ed525d93e511fabc6222d4d06ffcdfd3f517671411b36664",
-        "sha256": "337264fe66262fa9ed525d93e511fabc6222d4d06ffcdfd3f517671411b36664",
-        "updatedAt": "2026-11-10T18:02:27+08:00",
-        "revisions": [],
+        "sha256": "ea9c14902c1a7317f7f26e2eb892d6fc2338e564467b274075643af9779f5add",
+        "updatedAt": "2026-11-10T18:21:15+08:00",
+        "revisions": [
+          {
+            "at": "2026-11-10T18:21:15+08:00",
+            "sha256": "ea9c14902c1a7317f7f26e2eb892d6fc2338e564467b274075643af9779f5add",
+            "previousSha256": "337264fe66262fa9ed525d93e511fabc6222d4d06ffcdfd3f517671411b36664",
+            "bodySha256": "070ad1dce1f8932f70cdaa3753c553546817967bb7681f3a125e9c43a7899848",
+            "bodyChars": 4060
+          }
+        ],
         "bodyFirstPostedAt": "2026-11-10T18:02:27+08:00",
         "bodyFirstSha256": "0919f19be0d1f535462d500e1abb89ba78634e7bafe3f323e94574f82dfba388",
-        "bodySha256": "0919f19be0d1f535462d500e1abb89ba78634e7bafe3f323e94574f82dfba388",
+        "bodySha256": "070ad1dce1f8932f70cdaa3753c553546817967bb7681f3a125e9c43a7899848",
         "bodyChars": 4060,
         "translations": {
           "en": {
