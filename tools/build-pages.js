@@ -20,9 +20,23 @@
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const crypto = require('crypto');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://moburu.vip';
+
+/* 静态存档页的 CSS / JS 版本号：取文件内容 sha1 前 8 位。
+   内容不变版本号就不变（不会每次 build 都产生 188 个文件的 diff），
+   内容一改版本号自动变（读者不会吃到缓存里的旧样式）。 */
+function assetVer(rel) {
+  try {
+    return crypto.createHash('sha1')
+      .update(fs.readFileSync(path.join(ROOT, rel)))
+      .digest('hex').slice(0, 8);
+  } catch (e) { return '1'; }
+}
+const CSS_VER = assetVer('assets/css/style.css');
+const GUARD_VER = assetVer('assets/js/guard.js');
 const DATA_JS = path.join(ROOT, 'assets', 'js', 'data.js');
 const POSTS_JSON = path.join(ROOT, 'posts.json');
 
@@ -216,7 +230,8 @@ for (const workId of workDirs) {
 <meta name="author" content="${esc(SITE.author)}">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="${url}">
-${langs.length ? hreflangLinks(workId, num, langs) : ''}<link rel="stylesheet" href="../../assets/css/style.css">
+${langs.length ? hreflangLinks(workId, num, langs) : ''}<link rel="stylesheet" href="../../assets/css/style.css?v=${CSS_VER}">
+<script src="../../assets/js/guard.js?v=${GUARD_VER}" defer></script>
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 </head>
 <body class="archive-page">
@@ -306,7 +321,8 @@ ${otherLangHtml}
 <meta name="author" content="${esc(aLabel)}">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="${tUrl}">
-${hreflangLinks(workId, num, langs)}<link rel="stylesheet" href="../../assets/css/style.css">
+${hreflangLinks(workId, num, langs)}<link rel="stylesheet" href="../../assets/css/style.css?v=${CSS_VER}">
+<script src="../../assets/js/guard.js?v=${GUARD_VER}" defer></script>
 <script type="application/ld+json">${JSON.stringify(tLd)}</script>
 </head>
 <body class="archive-page">

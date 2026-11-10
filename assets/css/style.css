@@ -479,3 +479,47 @@ html[dir="rtl"] #nav .links a { margin-left: 0; margin-right: 20px; }
   .novel-text p { font-size: 16px; line-height: 1.9; }
   .trans-note { font-size: 12px; }
 }
+
+/* ============================================================
+   版权保护（配合 guard.js）
+   ============================================================ */
+/* 配图：禁拖拽、禁 iOS 长按菜单、禁选中 */
+img, .beast-fig {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.beast-fig img { pointer-events: none; }   /* 右键落在 figure 上也拿不到图 */
+
+/* 轻提示 */
+.guard-toast {
+  position: fixed; left: 50%; bottom: 28px;
+  transform: translate(-50%, 16px);
+  z-index: 9999;
+  display: block; max-width: min(88vw, 420px);
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: rgba(20, 22, 28, .96);
+  border: 1px solid var(--gold-dim);
+  color: var(--text);
+  font-size: 13px; line-height: 1.6;
+  opacity: 0; pointer-events: none;
+  transition: opacity .22s ease, transform .22s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+}
+.guard-toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+.guard-toast b { display: block; color: var(--gold); font-size: 13px; margin-bottom: 2px; }
+.guard-toast span { display: block; color: var(--text-dim); font-size: 12px; }
+
+/* 打印：正文不上纸，只留声明 */
+@media print {
+  #nav, #footer, .guard-toast, .novel-text, .beast-panel, .post-stamp,
+  .lang-links, .archive-link { display: none !important; }
+  /* 不写具体书名：三部件品共用这套样式，硬编码会印错 */
+  body::before {
+    content: "© 默不如 / Moburu · 本文受版权保护，请勿打印或转载 — https://moburu.vip";
+    display: block; padding: 12px 0;
+    font-size: 13px; color: #333; border-bottom: 1px solid #999;
+  }
+}
