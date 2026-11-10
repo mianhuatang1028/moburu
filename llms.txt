@@ -66,98 +66,142 @@
 - [序章：鯤鵬 · 日本語](https://moburu.vip/chapters/henchangsha/0.ja.html)：8 段，译本首发 2026-11-09
 - [Prologue : Kunpeng · Français](https://moburu.vip/chapters/henchangsha/0.fr.html)：8 段，译本首发 2026-11-09
 - [مقدمة: كون بنغ · العربية](https://moburu.vip/chapters/henchangsha/0.ar.html)：8 段，译本首发 2026-11-09
+- [Chapter One: Xiao · English](https://moburu.vip/chapters/henchangsha/1.en.html)：31 段，译本首发 2026-11-10
 - [第一章　鸮（ミミズク） · 日本語](https://moburu.vip/chapters/henchangsha/1.ja.html)：31 段，译本首发 2026-11-09
 - [Chapitre un : Le Hibou · Français](https://moburu.vip/chapters/henchangsha/1.fr.html)：31 段，译本首发 2026-11-10
 - [الفصل الأول: البومة · العربية](https://moburu.vip/chapters/henchangsha/1.ar.html)：31 段，译本首发 2026-11-10
+- [Chapter Two: Guanguan · English](https://moburu.vip/chapters/henchangsha/2.en.html)：46 段，译本首发 2026-11-10
 - [第二章　灌灌 · 日本語](https://moburu.vip/chapters/henchangsha/2.ja.html)：46 段，译本首发 2026-11-09
 - [Chapitre deux : Guanguan · Français](https://moburu.vip/chapters/henchangsha/2.fr.html)：46 段，译本首发 2026-11-10
 - [الفصل الثاني: غوانغوان · العربية](https://moburu.vip/chapters/henchangsha/2.ar.html)：46 段，译本首发 2026-11-10
+- [Chapter Three: Hundun · English](https://moburu.vip/chapters/henchangsha/3.en.html)：21 段，译本首发 2026-11-10
 - [第三章　混沌 · 日本語](https://moburu.vip/chapters/henchangsha/3.ja.html)：21 段，译本首发 2026-11-09
 - [Chapitre trois : Hundun · Français](https://moburu.vip/chapters/henchangsha/3.fr.html)：21 段，译本首发 2026-11-10
 - [الفصل الثالث: هوندون · العربية](https://moburu.vip/chapters/henchangsha/3.ar.html)：21 段，译本首发 2026-11-10
+- [Chapter Four: Tao · English](https://moburu.vip/chapters/henchangsha/4.en.html)：46 段，译本首发 2026-11-10
 - [第四章　梼 · 日本語](https://moburu.vip/chapters/henchangsha/4.ja.html)：46 段，译本首发 2026-11-09
 - [Chapitre quatre : Tao · Français](https://moburu.vip/chapters/henchangsha/4.fr.html)：46 段，译本首发 2026-11-10
 - [الفصل الرابع: تاو · العربية](https://moburu.vip/chapters/henchangsha/4.ar.html)：46 段，译本首发 2026-11-10
+- [Chapter Five: Diao · English](https://moburu.vip/chapters/henchangsha/5.en.html)：32 段，译本首发 2026-11-10
 - [第五章　雕 · 日本語](https://moburu.vip/chapters/henchangsha/5.ja.html)：32 段，译本首发 2026-11-09
 - [Chapitre cinq : L’Aigle · Français](https://moburu.vip/chapters/henchangsha/5.fr.html)：32 段，译本首发 2026-11-10
 - [الفصل الخامس: النسر · العربية](https://moburu.vip/chapters/henchangsha/5.ar.html)：32 段，译本首发 2026-11-10
+- [Chapter Six: Gu · English](https://moburu.vip/chapters/henchangsha/6.en.html)：49 段，译本首发 2026-11-10
 - [第六章　蠱（こ） · 日本語](https://moburu.vip/chapters/henchangsha/6.ja.html)：49 段，译本首发 2026-11-09
 - [Chapitre six : Le Gu · Français](https://moburu.vip/chapters/henchangsha/6.fr.html)：49 段，译本首发 2026-11-10
 - [الفصل السادس: الغو · العربية](https://moburu.vip/chapters/henchangsha/6.ar.html)：49 段，译本首发 2026-11-10
+- [Chapter Seven: Jiuying · English](https://moburu.vip/chapters/henchangsha/7.en.html)：52 段，译本首发 2026-11-10
 - [Chapitre sept : Neuf Nourrissons · Français](https://moburu.vip/chapters/henchangsha/7.fr.html)：52 段，译本首发 2026-11-10
 - [الفصل السابع: الرضّع التسعة · العربية](https://moburu.vip/chapters/henchangsha/7.ar.html)：52 段，译本首发 2026-11-10
+- [Chapter Eight: Qiongqi · English](https://moburu.vip/chapters/henchangsha/8.en.html)：66 段，译本首发 2026-11-10
 - [Chapitre huit : Qiongqi · Français](https://moburu.vip/chapters/henchangsha/8.fr.html)：66 段，译本首发 2026-11-10
 - [الفصل الثامن: تشيونغتشي · العربية](https://moburu.vip/chapters/henchangsha/8.ar.html)：66 段，译本首发 2026-11-10
+- [Chapter Nine: Taotie · English](https://moburu.vip/chapters/henchangsha/9.en.html)：64 段，译本首发 2026-11-10
 - [Chapitre neuf : Taotie · Français](https://moburu.vip/chapters/henchangsha/9.fr.html)：64 段，译本首发 2026-11-10
 - [الفصل التاسع: تاوتيه · العربية](https://moburu.vip/chapters/henchangsha/9.ar.html)：64 段，译本首发 2026-11-10
+- [Chapter Ten: Biyi Bird · English](https://moburu.vip/chapters/henchangsha/10.en.html)：67 段，译本首发 2026-11-10
 - [Chapitre dix : L’Oiseau aux ailes jumelles · Français](https://moburu.vip/chapters/henchangsha/10.fr.html)：67 段，译本首发 2026-11-10
 - [الفصل العاشر: طائر الجناحين المتلاصقين · العربية](https://moburu.vip/chapters/henchangsha/10.ar.html)：67 段，译本首发 2026-11-10
+- [Chapter Eleven: Tiangou · English](https://moburu.vip/chapters/henchangsha/11.en.html)：52 段，译本首发 2026-11-10
 - [Chapitre onze : Le Chien céleste · Français](https://moburu.vip/chapters/henchangsha/11.fr.html)：52 段，译本首发 2026-11-10
 - [الفصل الحادي عشر: الكلب السماوي · العربية](https://moburu.vip/chapters/henchangsha/11.ar.html)：52 段，译本首发 2026-11-10
+- [Chapter Twelve: Huang · English](https://moburu.vip/chapters/henchangsha/12.en.html)：53 段，译本首发 2026-11-10
 - [Chapitre douze : Le Phénix · Français](https://moburu.vip/chapters/henchangsha/12.fr.html)：53 段，译本首发 2026-11-10
 - [الفصل الثاني عشر: العنقاء · العربية](https://moburu.vip/chapters/henchangsha/12.ar.html)：53 段，译本首发 2026-11-10
+- [Chapter Thirteen: Fei · English](https://moburu.vip/chapters/henchangsha/13.en.html)：38 段，译本首发 2026-11-10
 - [Chapitre treize : Fei · Français](https://moburu.vip/chapters/henchangsha/13.fr.html)：38 段，译本首发 2026-11-10
 - [الفصل الثالث عشر: فِي · العربية](https://moburu.vip/chapters/henchangsha/13.ar.html)：38 段，译本首发 2026-11-10
+- [Chapter Fourteen: Zheng · English](https://moburu.vip/chapters/henchangsha/14.en.html)：36 段，译本首发 2026-11-10
 - [Chapitre quatorze : Zheng · Français](https://moburu.vip/chapters/henchangsha/14.fr.html)：36 段，译本首发 2026-11-10
 - [الفصل الرابع عشر: تشنغ · العربية](https://moburu.vip/chapters/henchangsha/14.ar.html)：36 段，译本首发 2026-11-10
+- [Chapter Fifteen: Zhuyan · English](https://moburu.vip/chapters/henchangsha/15.en.html)：54 段，译本首发 2026-11-10
 - [Chapitre quinze : Zhu Yan · Français](https://moburu.vip/chapters/henchangsha/15.fr.html)：54 段，译本首发 2026-11-10
 - [الفصل الخامس عشر: تشو يان · العربية](https://moburu.vip/chapters/henchangsha/15.ar.html)：54 段，译本首发 2026-11-10
+- [Chapter Sixteen: Huodou · English](https://moburu.vip/chapters/henchangsha/16.en.html)：41 段，译本首发 2026-11-10
 - [Chapitre seize : Huo Dou · Français](https://moburu.vip/chapters/henchangsha/16.fr.html)：41 段，译本首发 2026-11-10
 - [الفصل السادس عشر: هوو دوو · العربية](https://moburu.vip/chapters/henchangsha/16.ar.html)：41 段，译本首发 2026-11-10
+- [Chapter Seventeen: Yingzhao · English](https://moburu.vip/chapters/henchangsha/17.en.html)：77 段，译本首发 2026-11-10
 - [Chapitre dix-sept : Ying Zhao · Français](https://moburu.vip/chapters/henchangsha/17.fr.html)：77 段，译本首发 2026-11-10
 - [الفصل السابع عشر: ينغ تشاو · العربية](https://moburu.vip/chapters/henchangsha/17.ar.html)：77 段，译本首发 2026-11-10
+- [Chapter Eighteen: Chongming Bird · English](https://moburu.vip/chapters/henchangsha/18.en.html)：90 段，译本首发 2026-11-10
 - [Chapitre dix-huit : L’Oiseau Chongming · Français](https://moburu.vip/chapters/henchangsha/18.fr.html)：90 段，译本首发 2026-11-10
 - [الفصل الثامن عشر: طائر تشونغ مينغ · العربية](https://moburu.vip/chapters/henchangsha/18.ar.html)：90 段，译本首发 2026-11-10
+- [Chapter Nineteen: Dangkang · English](https://moburu.vip/chapters/henchangsha/19.en.html)：62 段，译本首发 2026-11-10
 - [Chapitre dix-neuf : Dang Kang · Français](https://moburu.vip/chapters/henchangsha/19.fr.html)：62 段，译本首发 2026-11-10
 - [الفصل التاسع عشر: دانغ كانغ · العربية](https://moburu.vip/chapters/henchangsha/19.ar.html)：62 段，译本首发 2026-11-10
+- [Chapter Twenty: Fuzhu · English](https://moburu.vip/chapters/henchangsha/20.en.html)：50 段，译本首发 2026-11-10
 - [Chapitre vingt : Fuzhu · Français](https://moburu.vip/chapters/henchangsha/20.fr.html)：50 段，译本首发 2026-11-10
 - [الفصل العشرون: فوتشو · العربية](https://moburu.vip/chapters/henchangsha/20.ar.html)：50 段，译本首发 2026-11-10
+- [Chapter Twenty-One: Lingyu · English](https://moburu.vip/chapters/henchangsha/21.en.html)：26 段，译本首发 2026-11-10
 - [Chapitre vingt et un : Le Poisson Ling · Français](https://moburu.vip/chapters/henchangsha/21.fr.html)：26 段，译本首发 2026-11-10
 - [الفصل الحادي والعشرون: سمكة لينغ · العربية](https://moburu.vip/chapters/henchangsha/21.ar.html)：26 段，译本首发 2026-11-10
+- [Chapter Twenty-Two: Feiyi · English](https://moburu.vip/chapters/henchangsha/22.en.html)：33 段，译本首发 2026-11-10
 - [Chapitre vingt-deux : Fei Yi · Français](https://moburu.vip/chapters/henchangsha/22.fr.html)：33 段，译本首发 2026-11-10
 - [الفصل الثاني والعشرون: فِي يي · العربية](https://moburu.vip/chapters/henchangsha/22.ar.html)：33 段，译本首发 2026-11-10
+- [Chapter Twenty-Three: Lushu · English](https://moburu.vip/chapters/henchangsha/23.en.html)：55 段，译本首发 2026-11-10
 - [Chapitre vingt-trois : Lu Shu · Français](https://moburu.vip/chapters/henchangsha/23.fr.html)：55 段，译本首发 2026-11-10
 - [الفصل الثالث والعشرون: لو شو · العربية](https://moburu.vip/chapters/henchangsha/23.ar.html)：55 段，译本首发 2026-11-10
+- [Chapter Twenty-Four: Yingyu · English](https://moburu.vip/chapters/henchangsha/24.en.html)：58 段，译本首发 2026-11-10
 - [Chapitre vingt-quatre : Le Poisson Ying · Français](https://moburu.vip/chapters/henchangsha/24.fr.html)：58 段，译本首发 2026-11-10
 - [الفصل الرابع والعشرون: سمكة ينغ · العربية](https://moburu.vip/chapters/henchangsha/24.ar.html)：58 段，译本首发 2026-11-10
+- [Chapter Twenty-Five: Huan · English](https://moburu.vip/chapters/henchangsha/25.en.html)：84 段，译本首发 2026-11-10
 - [Chapitre vingt-cinq : Huan · Français](https://moburu.vip/chapters/henchangsha/25.fr.html)：84 段，译本首发 2026-11-10
 - [الفصل الخامس والعشرون: هوان · العربية](https://moburu.vip/chapters/henchangsha/25.ar.html)：84 段，译本首发 2026-11-10
+- [Chapter Twenty-Six: Bifang · English](https://moburu.vip/chapters/henchangsha/26.en.html)：126 段，译本首发 2026-11-10
 - [Chapitre vingt-six : Bifang · Français](https://moburu.vip/chapters/henchangsha/26.fr.html)：126 段，译本首发 2026-11-10
 - [الفصل السادس والعشرون: بيفانغ · العربية](https://moburu.vip/chapters/henchangsha/26.ar.html)：126 段，译本首发 2026-11-10
+- [Chapter Twenty-Seven: Luwu · English](https://moburu.vip/chapters/henchangsha/27.en.html)：109 段，译本首发 2026-11-10
 - [Chapitre vingt-sept : Lu Wu · Français](https://moburu.vip/chapters/henchangsha/27.fr.html)：109 段，译本首发 2026-11-10
 - [الفصل السابع والعشرون: لو وو · العربية](https://moburu.vip/chapters/henchangsha/27.ar.html)：109 段，译本首发 2026-11-10
+- [Chapter Twenty-Eight: Jiuwei · English](https://moburu.vip/chapters/henchangsha/28.en.html)：80 段，译本首发 2026-11-10
 - [Chapitre vingt-huit : Le Renard à neuf queues · Français](https://moburu.vip/chapters/henchangsha/28.fr.html)：80 段，译本首发 2026-11-10
 - [الفصل الثامن والعشرون: الثعلب ذو الأذناب التسعة · العربية](https://moburu.vip/chapters/henchangsha/28.ar.html)：80 段，译本首发 2026-11-10
+- [Chapter Twenty-Nine: Yayu · English](https://moburu.vip/chapters/henchangsha/29.en.html)：69 段，译本首发 2026-11-10
 - [Chapitre vingt-neuf : Yayu · Français](https://moburu.vip/chapters/henchangsha/29.fr.html)：69 段，译本首发 2026-11-10
 - [الفصل التاسع والعشرون: ياويو · العربية](https://moburu.vip/chapters/henchangsha/29.ar.html)：69 段，译本首发 2026-11-10
+- [Chapter Thirty: Zhuhuai · English](https://moburu.vip/chapters/henchangsha/30.en.html)：112 段，译本首发 2026-11-10
 - [Chapitre trente : Zhu Huai · Français](https://moburu.vip/chapters/henchangsha/30.fr.html)：112 段，译本首发 2026-11-10
 - [الفصل الثلاثون: تشو هواي · العربية](https://moburu.vip/chapters/henchangsha/30.ar.html)：112 段，译本首发 2026-11-10
+- [Chapter Thirty-One: Mo · English](https://moburu.vip/chapters/henchangsha/31.en.html)：135 段，译本首发 2026-11-10
 - [Chapitre trente et un : Mo · Français](https://moburu.vip/chapters/henchangsha/31.fr.html)：138 段，译本首发 2026-11-10
 - [الفصل الحادي والثلاثون: مو · العربية](https://moburu.vip/chapters/henchangsha/31.ar.html)：138 段，译本首发 2026-11-10
+- [Chapter Thirty-Two: Jingwei · English](https://moburu.vip/chapters/henchangsha/32.en.html)：78 段，译本首发 2026-11-10
 - [Chapitre trente-deux : Jingwei · Français](https://moburu.vip/chapters/henchangsha/32.fr.html)：78 段，译本首发 2026-11-10
 - [الفصل الثاني والثلاثون: جينغوي · العربية](https://moburu.vip/chapters/henchangsha/32.ar.html)：78 段，译本首发 2026-11-10
+- [Chapter Thirty-Three: Ziyu · English](https://moburu.vip/chapters/henchangsha/33.en.html)：100 段，译本首发 2026-11-10
 - [Chapitre trente-trois : Le Poisson pourpre · Français](https://moburu.vip/chapters/henchangsha/33.fr.html)：100 段，译本首发 2026-11-10
 - [الفصل الثالث والثلاثون: السمكة الأرجوانية · العربية](https://moburu.vip/chapters/henchangsha/33.ar.html)：100 段，译本首发 2026-11-10
+- [Chapter Thirty-Four: Jiao · English](https://moburu.vip/chapters/henchangsha/34.en.html)：131 段，译本首发 2026-11-10
 - [Chapitre trente-quatre : Jiao · Français](https://moburu.vip/chapters/henchangsha/34.fr.html)：131 段，译本首发 2026-11-10
 - [الفصل الرابع والثلاثون: جياو · العربية](https://moburu.vip/chapters/henchangsha/34.ar.html)：131 段，译本首发 2026-11-10
+- [Chapter Thirty-Five: Yu · English](https://moburu.vip/chapters/henchangsha/35.en.html)：83 段，译本首发 2026-11-10
 - [Chapitre trente-cinq : Yu · Français](https://moburu.vip/chapters/henchangsha/35.fr.html)：83 段，译本首发 2026-11-10
 - [الفصل الخامس والثلاثون: يو · العربية](https://moburu.vip/chapters/henchangsha/35.ar.html)：83 段，译本首发 2026-11-10
+- [Chapter Thirty-Six: Chiru · English](https://moburu.vip/chapters/henchangsha/36.en.html)：134 段，译本首发 2026-11-10
 - [Chapitre trente-six : Le Poisson Ru rouge · Français](https://moburu.vip/chapters/henchangsha/36.fr.html)：134 段，译本首发 2026-11-10
 - [الفصل السادس والثلاثون: سمكة رو الحمراء · العربية](https://moburu.vip/chapters/henchangsha/36.ar.html)：134 段，译本首发 2026-11-10
+- [Chapter Thirty-Seven: Bingfeng · English](https://moburu.vip/chapters/henchangsha/37.en.html)：127 段，译本首发 2026-11-10
 - [Chapitre trente-sept : Bingfeng · Français](https://moburu.vip/chapters/henchangsha/37.fr.html)：127 段，译本首发 2026-11-10
 - [الفصل السابع والثلاثون: بينغفنغ · العربية](https://moburu.vip/chapters/henchangsha/37.ar.html)：127 段，译本首发 2026-11-10
+- [Chapter Thirty-Eight: Juru · English](https://moburu.vip/chapters/henchangsha/38.en.html)：59 段，译本首发 2026-11-10
 - [Chapitre trente-huit : Juru · Français](https://moburu.vip/chapters/henchangsha/38.fr.html)：59 段，译本首发 2026-11-10
 - [الفصل الثامن والثلاثون: جورو · العربية](https://moburu.vip/chapters/henchangsha/38.ar.html)：59 段，译本首发 2026-11-10
+- [Chapter Thirty-Nine: Tianma · English](https://moburu.vip/chapters/henchangsha/39.en.html)：88 段，译本首发 2026-11-10
 - [Chapitre trente-neuf : Le Cheval céleste · Français](https://moburu.vip/chapters/henchangsha/39.fr.html)：88 段，译本首发 2026-11-10
 - [الفصل التاسع والثلاثون: الحصان السماوي · العربية](https://moburu.vip/chapters/henchangsha/39.ar.html)：88 段，译本首发 2026-11-10
+- [Chapter Forty: Ao · English](https://moburu.vip/chapters/henchangsha/40.en.html)：63 段，译本首发 2026-11-10
 - [Chapitre quarante : Ao · Français](https://moburu.vip/chapters/henchangsha/40.fr.html)：63 段，译本首发 2026-11-10
 - [الفصل الأربعون: آو · العربية](https://moburu.vip/chapters/henchangsha/40.ar.html)：63 段，译本首发 2026-11-10
+- [Chapter Forty-One: Xiqu · English](https://moburu.vip/chapters/henchangsha/41.en.html)：37 段，译本首发 2026-11-10
 - [Chapitre quarante et un : Xiqu · Français](https://moburu.vip/chapters/henchangsha/41.fr.html)：37 段，译本首发 2026-11-10
 - [الفصل الحادي والأربعون: شيتشي · العربية](https://moburu.vip/chapters/henchangsha/41.ar.html)：37 段，译本首发 2026-11-10
+- [Chapter Forty-Two: Mengji · English](https://moburu.vip/chapters/henchangsha/42.en.html)：44 段，译本首发 2026-11-10
 - [Chapitre quarante-deux : Mengji · Français](https://moburu.vip/chapters/henchangsha/42.fr.html)：44 段，译本首发 2026-11-10
 - [الفصل الثاني والأربعون: منغجي · العربية](https://moburu.vip/chapters/henchangsha/42.ar.html)：44 段，译本首发 2026-11-10
+- [Chapter Forty-Three: Heyu · English](https://moburu.vip/chapters/henchangsha/43.en.html)：73 段，译本首发 2026-11-10
 - [Chapitre quarante-trois : Heyu · Français](https://moburu.vip/chapters/henchangsha/43.fr.html)：73 段，译本首发 2026-11-10
 - [الفصل الثالث والأربعون: هييو · العربية](https://moburu.vip/chapters/henchangsha/43.ar.html)：73 段，译本首发 2026-11-10
+- [Chapter Forty-Four: Zhujian · English](https://moburu.vip/chapters/henchangsha/44.en.html)：81 段，译本首发 2026-11-10
 - [Chapitre quarante-quatre : Zhujian · Français](https://moburu.vip/chapters/henchangsha/44.fr.html)：81 段，译本首发 2026-11-10
 - [الفصل الرابع والأربعون: تشوجيان · العربية](https://moburu.vip/chapters/henchangsha/44.ar.html)：81 段，译本首发 2026-11-10
 
