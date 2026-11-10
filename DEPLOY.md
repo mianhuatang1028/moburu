@@ -238,6 +238,14 @@ chapters/henchangsha/0.<lang>.html     ← 该语言静态存档页（脚本生�
 
 - **书名里的「恨」是「遗憾 / 失落」，不是「憎恨」**。早先填的 `Hate Changsha` / `كراهية تشانغشا` / `恨長沙（ハイトチャンシャ）` 都是误译，已全部改掉，**不要再回译**。
 - 中文页保留中文名，非中文页用拼音 `Moburu`；两种写法在结构化数据的 `name` / `alternateName` 里都保留，笔名释义写进 `Person.description`，供 AI 关联同一作者。
+- **作者是女性（2026-11-10 确认）**：5 语言作者介绍一律用阴性，绝不可写成 he / il / مؤسس / كاتب。
+  中文原文（作者自定）本身无性别词，保持不动；英文用 `she`；日语明示「女性創業者」；
+  法语用 `fondatrice / écrivaine / autrice / elle / ancienne cadre`；
+  阿语用 `مؤسِّسة / كاتبة / الكاتبة / أسّست / لا تزال رائدة / وتحب`。
+  `SITE.gender = "female"` 写进 `Person` 结构化数据（`app.js` 与 `tools/build-pages.js` 的 `personLd`），
+  `llms.txt` 也明示「女性作者 / female author」。
+  **小说正文里的 he / il / 他 是角色老郑或神兽，属于作品内容，不要跟着改。**
+  可复用校验：`桌面\恨长沙过程文件\官网_作者性别校验.py`、`官网_作者性别扫描.py`。
 - 书名统一从 `assets/js/data.js` 的 `WORKS[].title` 读取；静态存档页由 `tools/build-pages.js` 按语言取，**不要在生成器里硬编码中文书名**（旧版就犯过这个错，导致英文存档页 `<title>` 也带中文）。
 - 想换任一语言的书名 / 笔名写法：只改 `data.js`，然后 `node tools/publish.js` → `node tools/build-pages.js` → 一起提交发布。这两个脚本都不改正文，不会触发首发时间变化。
 

@@ -7,7 +7,7 @@ const POST_LOG = {
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-10T09:06:01+08:00",
+  "generatedAt": "2026-11-10T09:21:21+08:00",
   "works": {
     "henchangsha": {
       "0": {

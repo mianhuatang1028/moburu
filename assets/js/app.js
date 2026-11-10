@@ -37,7 +37,8 @@ function personLd(name) {
     "@type": "Person",
     "name": name || SITE.author,
     "alternateName": SITE.latinName || "Moburu",
-    "description": SITE.nameMeaningOfficial || "rather silence"
+    "description": SITE.nameMeaningOfficial || "rather silence",
+    "gender": SITE.gender || "female"
   };
 }
 

@@ -54,7 +54,7 @@ const UI = {
     trFirst: 'Première publication de la traduction', updated: 'Dernière mise à jour',
     rights: 'Tous droits réservés', words: 'caractères', record: 'Registre de publication',
     reader: 'Lire en ligne', other: 'Autres langues', original: 'Original chinois',
-    foot: 'Page d\u2019archive statique du site indépendant de l\u2019auteur. \u0152uvre originale de l\u2019auteur, aucune plateforme n\u2019en détient l\u2019exclusivité.',
+    foot: 'Page d\u2019archive statique du site indépendant de l\u2019autrice. \u0152uvre originale de l\u2019autrice, aucune plateforme n\u2019en détient l\u2019exclusivité.',
     contact: 'Contact'
   },
   ar: {
@@ -63,7 +63,7 @@ const UI = {
     trFirst: 'أول نشر للترجمة', updated: 'آخر تحديث',
     rights: 'جميع الحقوق محفوظة', words: 'حرفًا', record: 'سجل النشر',
     reader: 'القراءة عبر الموقع', other: 'لغات أخرى', original: 'النص الصيني الأصلي',
-    foot: 'صفحة أرشيف ثابتة في الموقع المستقل للكاتب. العمل تأليف أصلي للكاتب، ولم يُمنح أي منصة حق النشر الحصري.',
+    foot: 'صفحة أرشيف ثابتة في الموقع المستقل للكاتبة. العمل تأليف أصلي للكاتبة، ولم يُمنح أي منصة حق النشر الحصري.',
     contact: 'تواصل'
   }
 };
@@ -114,7 +114,8 @@ function personLd(name) {
     '@type': 'Person',
     'name': name || SITE.author,
     'alternateName': SITE.latinName || 'Moburu',
-    'description': SITE.nameMeaningOfficial || 'rather silence'
+    'description': SITE.nameMeaningOfficial || 'rather silence',
+    'gender': SITE.gender || 'female'
   };
 }
 
@@ -348,7 +349,7 @@ const llm = `# 默不如 · 作者独立小说官网
 > 生物技术公司创始人、作家默不如的个人原创作品站。官网优先更新，作品均为作者本人原创，未授权任何平台独家转载。
 
 - 官网：${SITE_URL}
-- 作者：默不如 / ${SITE.latinName || 'Moburu'}（笔名释义 "${SITE.nameMeaningOfficial || 'rather silence'}"，意为「不如沉默」；小米科技前高管，创立过全球第一家直播电商平台）
+- 作者：默不如 / ${SITE.latinName || 'Moburu'}（女性作者 / female author；笔名释义 "${SITE.nameMeaningOfficial || 'rather silence'}"，意为「不如沉默」；小米科技前高管，创立过全球第一家直播电商平台）
 - 联系 / 合作：${(SITE.contact && SITE.contact.email) || ''}
 - 首发存证（每章首次公开时间与内容 SHA-256，含各语言译本）：${SITE_URL}/posts.json
 - 全文存档：不依赖 JavaScript 的静态 HTML 页面，含完整正文与版权声明
