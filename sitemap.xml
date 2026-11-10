@@ -1,11 +1,336 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://moburu.vip/</loc><priority>1.0</priority></url>
-  <url><loc>https://moburu.vip/index.html</loc><priority>0.9</priority></url>
-  <url><loc>https://moburu.vip/works.html</loc><priority>0.9</priority></url>
-  <url><loc>https://moburu.vip/work.html?id=henchangsha</loc><priority>0.9</priority></url>
-  <url><loc>https://moburu.vip/about.html</loc><priority>0.6</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://moburu.vip/posts.json</loc><priority>0.5</priority></url>
+  <url>
+    <loc>https://moburu.vip/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/index.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/en/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/index.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ja/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/index.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/fr/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/index.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ar/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/index.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/works.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/works.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/works.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/works.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/en/works.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/works.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/works.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/works.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ja/works.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/works.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/works.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/works.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/fr/works.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/works.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/works.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/works.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ar/works.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/works.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/works.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/works.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/works.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/work.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/work.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/work.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/work.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/work.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/en/work.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/work.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/work.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/work.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/work.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ja/work.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/work.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/work.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/work.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/work.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/fr/work.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/work.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/work.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/work.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/work.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ar/work.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/work.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/work.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/work.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/work.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/reader.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/reader.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/en/reader.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/reader.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ja/reader.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/reader.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/fr/reader.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/reader.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ar/reader.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/reader.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/reader.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/about.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/about.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/en/about.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/about.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ja/about.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/about.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/fr/about.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/about.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ar/about.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/about.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/pricing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/pricing.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/en/pricing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/pricing.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ja/pricing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/pricing.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/fr/pricing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/pricing.html"/>
+  </url>
+  <url>
+    <loc>https://moburu.vip/ar/pricing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://moburu.vip/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://moburu.vip/en/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://moburu.vip/ja/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://moburu.vip/fr/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://moburu.vip/ar/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://moburu.vip/pricing.html"/>
+  </url>
   <url><loc>https://moburu.vip/chapters/henchangsha/0.html</loc><lastmod>2026-11-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://moburu.vip/chapters/henchangsha/0.en.html</loc><lastmod>2026-11-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://moburu.vip/chapters/henchangsha/0.ja.html</loc><lastmod>2026-11-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>

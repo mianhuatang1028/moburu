@@ -2,11 +2,24 @@
    默不如小说官网 · 渲染逻辑（多语言 + 付费端口预留）
    ============================================================ */
 
-/* 首访语言推断：只有「读者从没手动点过语言按钮」时才按浏览器语言自动选。
-   手动点过 → localStorage 已写入 → 永久记住，不再被浏览器语言覆盖。
+/* 路径前缀：语言子目录页（/en/ /ja/ /fr/ /ar/）里，chapters/ 与 assets/ 这类相对路径
+   会被解析成 /en/chapters/… 而 404。这类页面由构建脚本注入 window.__BASE="/"，
+   于是 R("chapters/…") 变成根绝对路径。根目录页面没有这个变量，行为与以前完全一致。 */
+var BASE = (typeof window !== "undefined" && typeof window.__BASE === "string") ? window.__BASE : "";
+function R(p) { return BASE + p; }
+
+/* 首访语言推断：
+   1. 语言子目录页（/en/index.html 等）由构建脚本注入 __PAGE_LANG，URL 说了算——
+      这样内容、分享卡片、页面语言三者永远一致；
+   2. 否则看 localStorage（读者手动点过语言就永久记住）；
+   3. 都没写过才按浏览器语言自动选。
    浏览器语言判断只看前两位（zh-CN / zh-TW / zh-Hant 都算中文），
    站里没有的语言一律回到中文，不会出现空白页。 */
 function detectLang() {
+  if (typeof window !== "undefined" && window.__PAGE_LANG) {
+    var forced = String(window.__PAGE_LANG).slice(0, 2);
+    if ({ zh: 1, en: 1, ja: 1, fr: 1, ar: 1 }[forced]) return forced;
+  }
   var saved = localStorage.getItem("moburu_lang") || localStorage.getItem("mobuyu_lang");
   if (saved) return saved;
   var prefer = "";
@@ -33,14 +46,48 @@ var SHOW_MEMBER = false;   // 付费入口总开关：false=全站隐藏会员/�
   document.documentElement.dir = (LANG === "ar") ? "rtl" : "ltr";
 })();
 
-function setLang(code) {
-  LANG = code;
-  localStorage.setItem("moburu_lang", code);
-  var langMap = { zh: "zh-CN", en: "en", ja: "ja", fr: "fr", ar: "ar" };
-  document.documentElement.lang = langMap[code] || "zh-CN";
-  document.documentElement.dir = (code === "ar") ? "rtl" : "ltr"; // 阿拉伯语右到左
-  if (window.__render) window.__render();   // 重渲染当前页
+/* 语言切换：写 localStorage（下次来访记住），并把语言写进 URL——
+   微信 / X / Facebook 的分享卡片是抓链接 HTML 的 og 标签生成的，抓取方不跑 JS、
+   也读不到 localStorage；只有 URL 本身带语言（/en/read.html），卡片才会是对的语言。
+   于是切语言 = 跳到同页的对应语言目录（页面结构一致，只差语言）。 */
+var LANG_HTML = { zh: "zh-CN", en: "en", ja: "ja", fr: "fr", ar: "ar" };
+function langHref(code) {
+  if (typeof location === "undefined") return "";
+  var p = location.pathname || "/";
+  var m = p.match(/^\/(en|ja|fr|ar)(\/.*)?$/);
+  var rest = m ? (m[2] || "/index.html") : p;
+  if (!rest || rest === "/") rest = "/index.html";
+  var target = (code === "zh") ? rest : "/" + code + rest;
+  return target + (location.search || "") + (location.hash || "");
 }
+function setLang(code) {
+  localStorage.setItem("moburu_lang", code);
+  if (typeof location !== "undefined" && /^https?:$/.test(location.protocol || "")) {
+    var target = langHref(code);
+    var now = location.pathname + (location.search || "") + (location.hash || "");
+    if (target && target !== now) {
+      try { sessionStorage.setItem("moburu_scroll", String(window.scrollY || 0)); } catch (e) {}
+      location.href = target;
+      return;
+    }
+  }
+  /* 兜底：直接改 URL 打不开的场合（file:// 预览等），仍按老办法原地重渲染 */
+  LANG = code;
+  document.documentElement.lang = LANG_HTML[code] || "zh-CN";
+  document.documentElement.dir = (code === "ar") ? "rtl" : "ltr";
+  if (window.__render) window.__render();
+}
+
+/* 切换语言后回到原来的阅读位置（语言胶囊在顶部，多数时候是 0，不影响） */
+(function () {
+  try {
+    var y = sessionStorage.getItem("moburu_scroll");
+    if (y === null) return;
+    sessionStorage.removeItem("moburu_scroll");
+    var n = parseInt(y, 10) || 0;
+    if (n > 0) setTimeout(function () { window.scrollTo(0, n); }, 120);
+  } catch (e) {}
+})();
 
 /* 取 UI 文案 */
 /* 取当前语言的 UI 词条。支持点号路径（nav.home 这种嵌套键）。
@@ -222,7 +269,7 @@ function renderFooter() {
   el.innerHTML =
     '<div class="wrap"><div class="row">' +
       '<div>' + esc(t("footerNote")) +
-        ' <a class="prov-link" href="posts.json" target="_blank" rel="noopener">' + esc(t("provenance")) + '</a></div>' +
+        ' <a class="prov-link" href="' + R("posts.json") + '" target="_blank" rel="noopener">' + esc(t("provenance")) + '</a></div>' +
       '<div>© ' + y + ' ' + esc(authorDisplay()) + ' · ' + esc(t("footerRights")) + '</div>' +
     '</div></div>';
 }
@@ -336,7 +383,7 @@ function renderWorkDetail(elId) {
     ? '<div class="provenance-bar">' + esc(t("firstPostedFull")) + '：' + esc(fmtStamp(fp, true)) +
       ' (UTC+8) · © ' + new Date().getFullYear() + ' ' + esc(authorDisplay()) +
       ' · ' + esc(t("footerRights")) +
-      ' <a href="posts.json" target="_blank" rel="noopener">' + esc(t("provenance")) + '</a></div>'
+      ' <a href="' + R("posts.json") + '" target="_blank" rel="noopener">' + esc(t("provenance")) + '</a></div>'
     : '';
   /* 「读最新章」始终指连载进度最大的章号，不受展示顺序重排影响 */
   var lastNum = ordered.length ? Math.max.apply(null, ordered.map(function (c) { return c.num; })) : 0;
@@ -473,7 +520,7 @@ function fitBeastLabels(root) {
 /* ---------- 章节阅读器 ---------- *//* 正文按章存放在 chapters/<作品>/<章号>.json，按需加载，避免全站一次下载 20 万字 */
 function chapterBodyUrl(w, c) {
   var suffix = hasTranslation(c, LANG) ? "." + LANG : "";
-  return "chapters/" + encodeURIComponent(w.id) + "/" + c.num + suffix + ".json";
+  return R("chapters/" + encodeURIComponent(w.id) + "/" + c.num + suffix + ".json");
 }
 function renderParagraphs(list) {
   return '<div class="content novel-text lang-' + LANG + '">' +
@@ -512,8 +559,8 @@ function renderReader(elId) {
      配图与语言无关，任何语言页面都显示同一张（BEAST_IMAGES 登记有图的章号）。 */
   var bioText = (c.bio && typeof c.bio === "object") ? (c.bio[LANG] || "") : "";
   var beastFig = (BEAST_IMAGES.indexOf(c.num) >= 0)
-    ? '<figure class="beast-fig"><img src="assets/img/beasts/' +
-        (c.num < 10 ? "0" : "") + c.num + '.webp" alt="' + esc(beastName(c)) +
+    ? '<figure class="beast-fig"><img src="' +
+        R("assets/img/beasts/" + (c.num < 10 ? "0" : "") + c.num + ".webp") + '" alt="' + esc(beastName(c)) +
         '" width="800" height="1148" loading="lazy" decoding="async"></figure>'
     : "";
   var bioBox = (beastFig || bioText)
@@ -525,15 +572,15 @@ function renderReader(elId) {
   var archiveFile = c.num + (hasTranslation(c, LANG) ? "." + LANG : "") + ".html";
   var langLinks = (c.translations && c.translations.length)
     ? '<div class="lang-links"><span>' + esc(t("otherLanguages")) + '：</span>' +
-        '<a href="chapters/' + esc(w.id) + '/' + esc(c.num) + '.html">' + esc(t("originalVersion")) + '</a>' +
+        '<a href="' + R("chapters/" + esc(w.id) + "/" + esc(c.num) + ".html") + '">' + esc(t("originalVersion")) + '</a>' +
         c.translations.map(function (l) {
-          return ' · <a href="chapters/' + esc(w.id) + '/' + esc(c.num) + '.' + esc(l) + '.html">' +
+          return ' · <a href="' + R("chapters/" + esc(w.id) + "/" + esc(c.num) + "." + esc(l) + ".html") + '">' +
             esc(langLabel(l)) + '</a>';
         }).join("") + '</div>'
     : '';
   var archive = w.fullText
-    ? '<div class="archive-link"><a href="chapters/' + esc(w.id) + '/' + esc(archiveFile) + '">' +
-        esc(t("archivePage")) + ' ›</a> · <a href="posts.json" target="_blank" rel="noopener">' +
+    ? '<div class="archive-link"><a href="' + R("chapters/" + esc(w.id) + "/" + esc(archiveFile)) + '">' +
+        esc(t("archivePage")) + ' ›</a> · <a href="' + R("posts.json") + '" target="_blank" rel="noopener">' +
         esc(t("provenance")) + '</a></div>' + langLinks
     : '';
   var body;
@@ -625,7 +672,7 @@ function renderAbout(elId) {
   el.innerHTML = '' +
     '<div class="wrap about">' +
       '<div class="author-head">' +
-        '<img class="avatar" src="assets/img/avatar.jpg" alt="' + esc(t("brand")) + '">' +
+        '<img class="avatar" src="' + R("assets/img/avatar.jpg") + '" alt="' + esc(t("brand")) + '">' +
         '<div class="author-meta">' +
           '<h1>' + esc(t("aboutTitle")) + '</h1>' +
           '<p class="author-tag">' + esc(t("tagline")) + '</p>' +
@@ -651,7 +698,7 @@ function renderHome(elId) {
   }).join("");
   el.innerHTML =
     '<section class="hero"><div class="wrap">' +
-      '<img class="hero-avatar" src="assets/img/avatar.jpg" alt="' + esc(t("brand")) + '">' +
+      '<img class="hero-avatar" src="' + R("assets/img/avatar.jpg") + '" alt="' + esc(t("brand")) + '">' +
       '<div class="badge">' + esc(t("heroBadge")) + '</div>' +
       '<h1>' + esc(t("heroH1a")) + ' <span class="accent">' + esc(t("heroH1b")) + '</span></h1>' +
       '<p class="tagline">' + esc(t("tagline")) + '</p>' +

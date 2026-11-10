@@ -1,0 +1,902 @@
+[
+ {
+  "loc": "https://moburu.vip/index.html",
+  "priority": "1.0",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/index.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/index.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/index.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/index.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/index.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/index.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/en/index.html",
+  "priority": "1.0",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/index.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/index.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/index.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/index.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/index.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/index.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ja/index.html",
+  "priority": "1.0",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/index.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/index.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/index.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/index.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/index.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/index.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/fr/index.html",
+  "priority": "1.0",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/index.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/index.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/index.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/index.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/index.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/index.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ar/index.html",
+  "priority": "1.0",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/index.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/index.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/index.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/index.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/index.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/index.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/works.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/works.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/works.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/works.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/works.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/works.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/works.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/en/works.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/works.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/works.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/works.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/works.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/works.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/works.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ja/works.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/works.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/works.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/works.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/works.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/works.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/works.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/fr/works.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/works.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/works.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/works.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/works.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/works.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/works.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ar/works.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/works.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/works.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/works.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/works.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/works.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/works.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/work.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/work.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/work.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/work.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/work.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/work.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/work.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/en/work.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/work.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/work.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/work.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/work.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/work.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/work.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ja/work.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/work.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/work.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/work.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/work.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/work.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/work.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/fr/work.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/work.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/work.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/work.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/work.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/work.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/work.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ar/work.html",
+  "priority": "0.9",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/work.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/work.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/work.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/work.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/work.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/work.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/reader.html",
+  "priority": "0.8",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/reader.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/reader.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/reader.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/reader.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/reader.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/reader.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/en/reader.html",
+  "priority": "0.8",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/reader.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/reader.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/reader.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/reader.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/reader.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/reader.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ja/reader.html",
+  "priority": "0.8",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/reader.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/reader.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/reader.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/reader.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/reader.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/reader.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/fr/reader.html",
+  "priority": "0.8",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/reader.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/reader.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/reader.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/reader.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/reader.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/reader.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ar/reader.html",
+  "priority": "0.8",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/reader.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/reader.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/reader.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/reader.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/reader.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/reader.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/about.html",
+  "priority": "0.6",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/about.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/about.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/about.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/about.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/about.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/about.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/en/about.html",
+  "priority": "0.6",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/about.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/about.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/about.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/about.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/about.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/about.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ja/about.html",
+  "priority": "0.6",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/about.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/about.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/about.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/about.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/about.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/about.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/fr/about.html",
+  "priority": "0.6",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/about.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/about.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/about.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/about.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/about.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/about.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ar/about.html",
+  "priority": "0.6",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/about.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/about.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/about.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/about.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/about.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/about.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/pricing.html",
+  "priority": "0.5",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/pricing.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/pricing.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/pricing.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/pricing.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/pricing.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/pricing.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/en/pricing.html",
+  "priority": "0.5",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/pricing.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/pricing.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/pricing.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/pricing.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/pricing.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/pricing.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ja/pricing.html",
+  "priority": "0.5",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/pricing.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/pricing.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/pricing.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/pricing.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/pricing.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/pricing.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/fr/pricing.html",
+  "priority": "0.5",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/pricing.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/pricing.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/pricing.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/pricing.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/pricing.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/pricing.html"
+   }
+  ]
+ },
+ {
+  "loc": "https://moburu.vip/ar/pricing.html",
+  "priority": "0.5",
+  "alternates": [
+   {
+    "hreflang": "zh-CN",
+    "href": "https://moburu.vip/pricing.html"
+   },
+   {
+    "hreflang": "en",
+    "href": "https://moburu.vip/en/pricing.html"
+   },
+   {
+    "hreflang": "ja",
+    "href": "https://moburu.vip/ja/pricing.html"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://moburu.vip/fr/pricing.html"
+   },
+   {
+    "hreflang": "ar",
+    "href": "https://moburu.vip/ar/pricing.html"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://moburu.vip/pricing.html"
+   }
+  ]
+ }
+]

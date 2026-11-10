@@ -25,6 +25,11 @@ const crypto = require('crypto');
 const ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://moburu.vip';
 
+/* 社交分享：微信 / X / Facebook 抓 og 标签生成卡片，抓取方不跑 JS，
+   所以每张静态页都要把标题、描述、图写死。图全站共用一张（无文字、跨语言通用）。 */
+const OG_IMAGE = SITE_URL + '/assets/img/og/og-cover.jpg';
+const OG_LOCALE = { zh: 'zh_CN', en: 'en_US', ja: 'ja_JP', fr: 'fr_FR', ar: 'ar_AR' };
+
 /* 静态存档页的 CSS / JS 版本号：取文件内容 sha1 前 8 位。
    内容不变版本号就不变（不会每次 build 都产生 188 个文件的 diff），
    内容一改版本号自动变（读者不会吃到缓存里的旧样式）。 */
@@ -230,6 +235,16 @@ for (const workId of workDirs) {
 <meta name="author" content="${esc(SITE.author)}">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="${url}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="默不如 · MOBURU">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="${esc(data.title)} - ${esc(idx.title)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${OG_IMAGE}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 ${langs.length ? hreflangLinks(workId, num, langs) : ''}<link rel="stylesheet" href="../../assets/css/style.css?v=${CSS_VER}">
 <script src="../../assets/js/guard.js?v=${GUARD_VER}" defer></script>
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
@@ -321,6 +336,16 @@ ${otherLangHtml}
 <meta name="author" content="${esc(aLabel)}">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="${tUrl}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MOBURU">
+<meta property="og:locale" content="${OG_LOCALE[lang]}">
+<meta property="og:title" content="${esc(t.title)} - ${esc(tBook)}">
+<meta property="og:description" content="${esc(tDesc)}">
+<meta property="og:url" content="${tUrl}">
+<meta property="og:image" content="${OG_IMAGE}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 ${hreflangLinks(workId, num, langs)}<link rel="stylesheet" href="../../assets/css/style.css?v=${CSS_VER}">
 <script src="../../assets/js/guard.js?v=${GUARD_VER}" defer></script>
 <script type="application/ld+json">${JSON.stringify(tLd)}</script>
@@ -360,13 +385,27 @@ ${langNav}
   }
 }
 
+/* 页面级 sitemap：由 tools/build-lang-pages.js 生成（6 页 × 5 语言，含 hreflang 互通）。
+   这里不再手写中文页列表，避免与那份清单重复。 */
 const staticUrls = [
-  ['/', '1.0'], ['/index.html', '0.9'], ['/works.html', '0.9'],
-  ['/work.html?id=henchangsha', '0.9'], ['/about.html', '0.6'], ['/posts.json', '0.5']
+  ['/posts.json', '0.5']
 ];
+const langPages = (function () {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(__dirname, 'pages-sitemap.json'), 'utf8'));
+  } catch (e) { return []; }
+})();
+const langBlocks = langPages.map(function (p) {
+  const alts = (p.alternates || []).map(function (a) {
+    return '    <xhtml:link rel="alternate" hreflang="' + a.hreflang + '" href="' + a.href + '"/>';
+  }).join('\n');
+  return '  <url>\n    <loc>' + p.loc + '</loc>\n    <changefreq>weekly</changefreq>\n' +
+    '    <priority>' + p.priority + '</priority>\n' + alts + '\n  </url>';
+});
 const sm = '<?xml version="1.0" encoding="UTF-8"?>\n' +
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' +
   staticUrls.map(u => '  <url><loc>' + SITE_URL + u[0].replace('&', '&amp;') + '</loc><priority>' + u[1] + '</priority></url>').join('\n') + '\n' +
+  langBlocks.join('\n') + '\n' +
   sitemap.join('\n') + '\n</urlset>\n';
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sm, 'utf8');
 fs.writeFileSync(path.join(ROOT, 'robots.txt'),
