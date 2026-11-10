@@ -220,11 +220,11 @@ function renderFooter() {
   if (!el) return;
   var y = new Date().getFullYear();
   el.innerHTML =
-    '<div class="row">' +
+    '<div class="wrap"><div class="row">' +
       '<div>' + esc(t("footerNote")) +
         ' <a class="prov-link" href="posts.json" target="_blank" rel="noopener">' + esc(t("provenance")) + '</a></div>' +
       '<div>© ' + y + ' ' + esc(authorDisplay()) + ' · ' + esc(t("footerRights")) + '</div>' +
-    '</div>';
+    '</div></div>';
 }
 
 /* ---------- 注入 Book 结构化数据（AI / 搜索引擎友好） ---------- */

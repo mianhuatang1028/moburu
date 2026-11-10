@@ -251,13 +251,15 @@ h2 { font-size: 26px; margin: 0 0 8px; }
 .about .big { font-size: 18px; color: var(--text); }
 
 /* ---------- 页脚 ---------- */
-.footer {
+/* 容器是 <div id="footer">，不是 class="footer"；内层 .wrap 与正文同一容器，
+   左边缘才能和正文对齐 */
+#footer {
   border-top: 1px solid var(--line);
   padding: 30px 0 50px;
   color: var(--text-dim);
   font-size: 13px;
 }
-.footer .row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+#footer .row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 
 /* ---------- 语言切换器（五枚等宽胶囊，进站第一眼就能看见） ---------- */
 .lang-switch { display: flex; gap: 8px; margin-left: 18px; align-items: center; flex-wrap: wrap; }
