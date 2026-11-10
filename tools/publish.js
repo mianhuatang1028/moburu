@@ -62,9 +62,23 @@ function bodyInfo(work, c) {
 /* 译本按章存于 chapters/<作品>/<章号>.<语言>.json；
    每种语言单独算哈希，用于独立记录「译本首发」并留下修订链。 */
 const TR_LANGS = ['en', 'ja', 'fr', 'ar'];
+/* 「译本首发」只认已公开发布的译本：以 translations.json 的登记为准。
+   译稿文件可以先落在本地（例如整本待上线的英文稿），但未登记就不算发布，
+   不能提前写进首发存证。登记表不存在时降级为扫描全部文件（兼容临时副本与回归测试）。
+   已经写入过的译本记录即使后来取消登记也会保留，不会被删除。 */
+function publishedLangs(work, c) {
+  const tf = path.join(ROOT, 'chapters', work.id, 'translations.json');
+  if (!fs.existsSync(tf)) return null;
+  try {
+    const tm = JSON.parse(fs.readFileSync(tf, 'utf8')).chapters || {};
+    return tm[String(c.num)] || [];
+  } catch (e) { return null; }
+}
 function translationInfo(work, c) {
   const out = {};
+  const allowed = publishedLangs(work, c);
   for (const lang of TR_LANGS) {
+    if (allowed && allowed.indexOf(lang) < 0) continue;
     const fp = path.join(ROOT, 'chapters', work.id, c.num + '.' + lang + '.json');
     if (!fs.existsSync(fp)) continue;
     try {

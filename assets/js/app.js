@@ -299,7 +299,9 @@ function renderWorkDetail(elId) {
       ? ' · <span class="ch-stamp">' + esc(t("firstPosted")) + ' ' + esc(fmtStamp(pi.firstPostedAt)) + '</span>'
       : '';
     if (w.fullText) stamp += ' · <span class="ch-full">' + esc(t("fullTextBadge")) + '</span>';
-    if (c.translations && c.translations.length)
+    /* 徽章只标「当前语言确实有译本」的章，避免日文/英文读者看到一堆自己读不了的译本标记；
+       中文页是全站概览，仍列出所有含译本的章节。 */
+    if (c.translations && c.translations.length && (LANG === "zh" || hasTranslation(c, LANG)))
       stamp += ' · <span class="ch-tr">' + esc(t("translationBadge")) + '</span>';
     return '' +
       '<a class="' + cls + '" href="' + href + '">' +
