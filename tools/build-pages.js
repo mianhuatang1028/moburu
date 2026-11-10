@@ -55,6 +55,8 @@ const UI = {
     trFirst: 'Translation first published', updated: 'Last updated',
     rights: 'All rights reserved', words: 'characters', record: 'Publication record',
     reader: 'Read online', other: 'Other languages', original: 'Chinese original',
+    chPrev: 'Previous chapter', chNext: 'Next chapter', chFirst: 'This is the first chapter', chLast: 'This is the last chapter',
+    chList: 'Contents', chNavAria: 'Chapter navigation',
     foot: 'Static archive page of the author\u2019s independent website. This work is the author\u2019s original creation and is not licensed exclusively to any platform.',
     contact: 'Contact'
   },
@@ -64,6 +66,8 @@ const UI = {
     trFirst: '翻訳初公開', updated: '最終更新',
     rights: '無断転載を禁じます', words: '字', record: '公開記録',
     reader: 'オンラインで読む', other: '他の言語版', original: '中国語原文',
+    chPrev: '前の章', chNext: '次の章', chFirst: '最初の章です', chLast: '最後の章です',
+    chList: '目次', chNavAria: '章の移動',
     foot: '作者独立公式サイトの静的アーカイブページです。本作は作者のオリジナル作品であり、いかなるプラットフォームにも独占掲載を許諾していません。',
     contact: '連絡先'
   },
@@ -73,6 +77,8 @@ const UI = {
     trFirst: 'Première publication de la traduction', updated: 'Dernière mise à jour',
     rights: 'Tous droits réservés', words: 'caractères', record: 'Registre de publication',
     reader: 'Lire en ligne', other: 'Autres langues', original: 'Original chinois',
+    chPrev: 'Chapitre précédent', chNext: 'Chapitre suivant', chFirst: 'Premier chapitre', chLast: 'Dernier chapitre',
+    chList: 'Sommaire', chNavAria: 'Navigation des chapitres',
     foot: 'Page d\u2019archive statique du site indépendant de l\u2019autrice. \u0152uvre originale de l\u2019autrice, aucune plateforme n\u2019en détient l\u2019exclusivité.',
     contact: 'Contact'
   },
@@ -82,6 +88,8 @@ const UI = {
     trFirst: 'أول نشر للترجمة', updated: 'آخر تحديث',
     rights: 'جميع الحقوق محفوظة', words: 'حرفًا', record: 'سجل النشر',
     reader: 'القراءة عبر الموقع', other: 'لغات أخرى', original: 'النص الصيني الأصلي',
+    chPrev: 'الفصل السابق', chNext: 'الفصل التالي', chFirst: 'هذا هو الفصل الأول', chLast: 'هذا هو الفصل الأخير',
+    chList: 'الفهرس', chNavAria: 'التنقل بين الفصول',
     foot: 'صفحة أرشيف ثابتة في الموقع المستقل للكاتبة. العمل تأليف أصلي للكاتبة، ولم يُمنح أي منصة حق النشر الحصري.',
     contact: 'تواصل'
   }
@@ -153,6 +161,27 @@ function beastPanel(num, altText, bioText) {
     (bioText ? '<div class="beast-bio">' + esc(bioText) + '</div>' : '') + '</div>\n  ';
 }
 
+/* 统一翻页条：阅读页 (app.js) 与本脚本生成的存档页共用同一套 class，
+   样式完全一致。prev/next 传 {href, label} 或 null（首章 / 末章）。
+   ul 需要 prev/next/first/last/list/listHref/navAria 字段。 */
+function chNavHtml(prev, next, ul) {
+  const cell = (o, dir) => {
+    const label = esc(dir === 'prev' ? ul.chPrev : ul.chNext);
+    const arrow = dir === 'prev' ? '\u2039' : '\u203A';
+    const head = '<em class="ch-nav-k"><span class="ch-nav-arrow">' + arrow + '</span> ' + label + '</em>';
+    const tail = '<span class="ch-nav-t">' +
+      esc(o ? o.label : (dir === 'prev' ? ul.chFirst : ul.chLast)) + '</span>';
+    return o
+      ? '<a class="ch-nav-btn ' + dir + '" href="' + esc(o.href) + '" rel="' + dir + '">' + head + tail + '</a>'
+      : '<span class="ch-nav-btn is-off ' + dir + '">' + head + tail + '</span>';
+  };
+  const mid = ul.chList
+    ? '<a class="ch-nav-btn ch-nav-mid" href="' + esc(ul.chListHref) + '">' + esc(ul.chList) + '</a>'
+    : '';
+  return '<nav class="ch-nav" aria-label="' + esc(ul.chNavAria) + '">' +
+    cell(prev, 'prev') + mid + cell(next, 'next') + '</nav>';
+}
+
 const POST = fs.existsSync(POSTS_JSON)
   ? JSON.parse(fs.readFileSync(POSTS_JSON, 'utf8')) : { works: {} };
 
@@ -217,8 +246,17 @@ for (const workId of workDirs) {
 
     const desc = paras.join('').replace(/\s/g, '').slice(0, 150);
     const bodyHtml = paras.map(x => '<p>' + esc(x).replace(/\n/g, '<br>') + '</p>').join('\n');
-    const prev = k > 0 ? '<a href="' + list[k - 1].num + '.html">‹ ' + esc(list[k - 1].title) + '</a>' : '<span></span>';
-    const next = k < list.length - 1 ? '<a href="' + list[k + 1].num + '.html">' + esc(list[k + 1].title) + ' ›</a>' : '<span></span>';
+    /* 翻页：按 index.json 的章节顺序取相邻章（num 是永久身份，不靠 num ± 1 推算）。
+       prev/next 同时留给下面的译本页复用。 */
+    const pMeta = k > 0 ? list[k - 1] : null;
+    const nMeta = k < list.length - 1 ? list[k + 1] : null;
+    const zhNav = chNavHtml(
+      pMeta ? { href: pMeta.num + '.html', label: pMeta.title } : null,
+      nMeta ? { href: nMeta.num + '.html', label: nMeta.title } : null,
+      {
+        chPrev: '上一章', chNext: '下一章', chFirst: '已是第一章', chLast: '已是最后一章',
+        chList: '作品目录', chListHref: '../../work.html?id=' + workId, chNavAria: '章节翻页'
+      });
     const otherLangHtml = langs.length
       ? '<div class="archive-nav lang-links"><span>其他语言版本：</span>' +
           langs.map(l => '<a href="' + num + '.' + l + '.html">' + esc(LABEL[l]) + '</a>').join(' · ') +
@@ -268,7 +306,7 @@ ${bodyHtml}
     <a href="../../posts.json">首发存证</a>
     <a href="${readerUrl}">在线阅读页</a>
   </div>
-  <div class="archive-nav">${prev}${next}</div>
+${zhNav}
 ${otherLangHtml}
   <p class="archive-foot">本页为作者独立官网的全文存档页，内容与 ${esc(zhBook)} 定稿一致。作品为作者个人原创，未授权任何平台独家转载。<br>笔名释义：${esc(nameMeaning('zh'))}<br>© 2026 ${esc(SITE.author)} · 保留所有权利。联系 / 合作：${esc((SITE.contact && SITE.contact.email) || '')}</p>
 </div>
@@ -321,6 +359,28 @@ ${otherLangHtml}
       /* 小传是「神兽即命运」的结构线索，纳入结构化摘要便于检索与 AI 理解 */
       if (t.bio) tLd.description += ' / ' + t.bio.replace(/\s+/g, ' ').slice(0, 120);
 
+      /* 译本页翻页：相邻章若也有本语言译本，就链到同语言页；
+         没有译本则回落到该章中文存档页，并在标题后注明「中文原文」，
+         与阅读页「无译本显示中文原文」的既有约定一致。 */
+      const langsOfNav = n => (transMap[String(n)] || [])
+        .filter(l => fs.existsSync(path.join(dir, n + '.' + l + '.json')));
+      const trTitle = n => {
+        try {
+          return JSON.parse(fs.readFileSync(path.join(dir, n + '.' + lang + '.json'), 'utf8')).title || '';
+        } catch (e) { return ''; }
+      };
+      const navItem = m => {
+        if (!m) return null;
+        if (langsOfNav(m.num).indexOf(lang) >= 0) {
+          return { href: m.num + '.' + lang + '.html', label: trTitle(m.num) || m.title };
+        }
+        return { href: m.num + '.html', label: m.title + ' · ' + u.original };
+      };
+      const tNav = chNavHtml(navItem(pMeta), navItem(nMeta), {
+        chPrev: u.chPrev, chNext: u.chNext, chFirst: u.chFirst, chLast: u.chLast,
+        chList: u.chList, chListHref: '../../work.html?id=' + workId, chNavAria: u.chNavAria
+      });
+
       const langNav = '<div class="archive-nav lang-links"><span>' + esc(u.other) + esc(u.colon) + '</span>' +
         '<a href="' + num + '.html">' + esc(u.original) + '</a>' +
         langs.filter(x => x !== lang).map(x =>
@@ -368,6 +428,7 @@ ${tBody}
     <a href="../../posts.json">${esc(u.record)}</a>
     <a href="${readerUrl}">${esc(u.reader)}</a>
   </div>
+${tNav}
 ${langNav}
   <p class="archive-foot">${esc(u.foot)}<br>${esc(nameMeaning(lang))}<br>© 2026 ${esc(aLabel)} · ${esc(u.rights)}. ${esc(u.contact)}${esc(u.colon)}${esc((SITE.contact && SITE.contact.email) || '')}</p>
 </div>

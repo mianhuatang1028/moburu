@@ -195,6 +195,62 @@ function orderedChapters(w) {
   });
 }
 
+/* 章节翻页：按展示顺序（orderedChapters）取相邻章，不用 num ± 1，
+   这样以后用 chapterOrder 调整叙事顺序时翻页也跟着对。 */
+function chapterNeighbors(w, c) {
+  var list = orderedChapters(w);
+  var i = -1;
+  for (var k = 0; k < list.length; k++) { if (list[k].num === c.num) { i = k; break; } }
+  return {
+    prev: (i > 0) ? list[i - 1] : null,
+    next: (i >= 0 && i < list.length - 1) ? list[i + 1] : null,
+    index: i,
+    total: list.length
+  };
+}
+
+/* 上一章 / 目录 / 下一章。首章、末章那段做成不可点的灰态，
+   让读者一眼知道到头了，而不是点了没反应。 */
+function renderChapterNav(w, c) {
+  var nb = chapterNeighbors(w, c);
+  if (nb.total < 2) return "";
+  var base = "reader.html?work=" + encodeURIComponent(w.id) + "&ch=";
+  function cell(x, dir) {
+    var label = esc(t(dir === "prev" ? "prevChapter" : "nextChapter"));
+    var arrow = dir === "prev" ? "‹" : "›";
+    var head = '<em class="ch-nav-k"><span class="ch-nav-arrow">' + arrow + '</span> ' + label + '</em>';
+    if (!x) {
+      return '<span class="ch-nav-btn is-off ' + dir + '">' + head +
+        '<span class="ch-nav-t">' + esc(t(dir === "prev" ? "firstChapter" : "lastChapter")) + '</span></span>';
+    }
+    return '<a class="ch-nav-btn ' + dir + '" href="' + base + x.num + '" rel="' + dir + '">' + head +
+      '<span class="ch-nav-t">' + esc(chapterTitle(x)) + '</span></a>';
+  }
+  return '<nav class="ch-nav" aria-label="' + esc(t("chapterNav")) + '">' +
+    cell(nb.prev, "prev") +
+    '<a class="ch-nav-btn ch-nav-mid" href="work.html?id=' + esc(w.id) + '">' + esc(t("chapterList")) + '</a>' +
+    cell(nb.next, "next") + '</nav>';
+}
+
+/* 键盘左右方向键翻章（阿拉伯语页面左右反过来）。
+   输入框里打字、按住修饰键时一律不拦。 */
+function bindChapterKeys() {
+  if (window.__chKeys || typeof document.addEventListener !== "function") return;
+  window.__chKeys = true;
+  document.addEventListener("keydown", function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+    var tag = (e.target && e.target.tagName) || "";
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+    var nav = document.querySelector(".ch-nav");
+    if (!nav) return;
+    var rtl = document.documentElement.dir === "rtl";
+    var goPrev = (e.key === "ArrowLeft") !== rtl;
+    var a = nav.querySelector(goPrev ? "a.prev" : "a.next");
+    if (a) { e.preventDefault(); location.href = a.getAttribute("href"); }
+  });
+}
+
 function esc(s) {
   return String(s == null ? "" : s)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;")
@@ -607,9 +663,11 @@ function renderReader(elId) {
       bioBox +
       transNote +
       body +
+      renderChapterNav(w, c) +
       archive +
     '</div>';
   document.title = chapterTitle(c) + " - " + tv(w.title) + " - " + t("brand");
+  bindChapterKeys();
 
   if (!locked && w.fullText && typeof fetch !== "function") {
     var noFetch = document.getElementById("reader-body");

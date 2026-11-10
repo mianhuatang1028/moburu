@@ -458,6 +458,49 @@ html[dir="rtl"] #nav .links a { margin-left: 0; margin-right: 20px; }
   margin-top: 34px; font-size: 12px;
   line-height: 1.9; color: var(--text-dim);
 }
+/* ---------- 章节翻页（阅读页 / 存档页共用） ---------- */
+.ch-nav {
+  display: flex; align-items: stretch; gap: 10px;
+  margin: 34px 0 0; padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.ch-nav-btn {
+  flex: 1 1 0; min-width: 0;
+  display: flex; flex-direction: column; gap: 5px;
+  padding: 12px 15px;
+  border: 1px solid var(--line); border-radius: 10px;
+  background: rgba(255, 255, 255, .025);
+  text-decoration: none; color: inherit;
+  transition: border-color .16s ease, background .16s ease;
+}
+a.ch-nav-btn:hover, a.ch-nav-btn:focus-visible {
+  border-color: var(--gold); background: rgba(255, 255, 255, .06);
+}
+.ch-nav-k { font-style: normal; font-size: 12px; letter-spacing: .05em; color: var(--gold); }
+.ch-nav-t {
+  display: block; font-size: 13.5px; color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+/* 用 end 而不是 right：阿拉伯语 RTL 下自动靠左，不用单独写覆盖规则 */
+.ch-nav-btn.next { text-align: right; text-align: end; }
+.ch-nav-btn.is-off { opacity: .45; }
+.ch-nav-btn.is-off .ch-nav-k,
+.ch-nav-btn.is-off .ch-nav-t { color: var(--text-dim); }
+.ch-nav-mid {
+  flex: 0 0 auto; align-items: center; justify-content: center;
+  padding: 12px 18px; font-size: 13px; color: var(--gold);
+  white-space: nowrap;
+}
+/* 阿拉伯语的箭头方向不用 CSS 处理：‹ › 属于 Unicode 双向镜像字符，
+   在 RTL 文字环境里浏览器会自动翻转，CSS 再翻一次反而会转回去 */
+@media (max-width: 560px) {
+  .ch-nav { gap: 8px; margin-top: 28px; padding-top: 18px; }
+  .ch-nav-btn { padding: 10px 11px; }
+  .ch-nav-k { font-size: 11px; }
+  .ch-nav-t { font-size: 12px; }
+  .ch-nav-mid { display: none; }
+}
+
 /* ---------- 多语言译文 ---------- */
 .trans-note {
   margin: 14px 0 20px; padding: 10px 14px;
@@ -517,7 +560,7 @@ img, .beast-fig {
 /* 打印：正文不上纸，只留声明 */
 @media print {
   #nav, #footer, .guard-toast, .novel-text, .beast-panel, .post-stamp,
-  .lang-links, .archive-link { display: none !important; }
+  .lang-links, .archive-link, .ch-nav { display: none !important; }
   /* 不写具体书名：三部件品共用这套样式，硬编码会印错 */
   body::before {
     content: "© 默不如 / Moburu · 本文受版权保护，请勿打印或转载 — https://moburu.vip";
