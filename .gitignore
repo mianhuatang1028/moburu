@@ -6,3 +6,6 @@
 
 # 早期推广用图（非官网资源）
 generated-images/
+
+# 浏览器自动化测试用的临时配置目录（非站点资源）
+__chrome_nav_prof/
