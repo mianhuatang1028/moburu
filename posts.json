@@ -5,7 +5,7 @@
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-11T18:37:02+08:00",
+  "generatedAt": "2026-11-11T20:02:53+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -837,8 +837,8 @@
         "name": "九婴",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "ca2d49f67ecf8d5d42e3364118ef618fd1bcc06cc25bfe1e79809cc0d9205159",
-        "sha256": "4a67c4107a810f574c91f02f6c3e9811b6af8e67a4a167d50dab635869e3a0e1",
-        "updatedAt": "2026-11-10T10:35:31+08:00",
+        "sha256": "500b493c2687ee33c96a191ce3458f12cc987736f41f37d8728ff69d58624f46",
+        "updatedAt": "2026-11-11T20:02:53+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -865,6 +865,13 @@
             "at": "2026-11-10T10:35:31+08:00",
             "sha256": "4a67c4107a810f574c91f02f6c3e9811b6af8e67a4a167d50dab635869e3a0e1",
             "previousSha256": "62eef96c49ba6e4e0a29bce3c68502bc8f695c3fd85b6483ca6f051156d55e8e",
+            "bodySha256": "9cdb83f14a18a04c665bce7fd4776f92bfbebc00db065ef1ffa19c411b1ce6fa",
+            "bodyChars": 4727
+          },
+          {
+            "at": "2026-11-11T20:02:53+08:00",
+            "sha256": "500b493c2687ee33c96a191ce3458f12cc987736f41f37d8728ff69d58624f46",
+            "previousSha256": "4a67c4107a810f574c91f02f6c3e9811b6af8e67a4a167d50dab635869e3a0e1",
             "bodySha256": "9cdb83f14a18a04c665bce7fd4776f92bfbebc00db065ef1ffa19c411b1ce6fa",
             "bodyChars": 4727
           }
@@ -913,6 +920,15 @@
             "chars": 16145,
             "paragraphs": 52,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-11T20:02:53+08:00",
+            "firstSha256": "4bcb314b576ea9dd24aa51f2b250837f8b8b67983cc99b4f133bf9229ef59787",
+            "sha256": "4bcb314b576ea9dd24aa51f2b250837f8b8b67983cc99b4f133bf9229ef59787",
+            "updatedAt": "2026-11-11T20:02:53+08:00",
+            "chars": 6862,
+            "paragraphs": 53,
+            "revisions": []
           }
         }
       },
@@ -921,8 +937,8 @@
         "name": "穷奇",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "1a40f9d08d3a81261bc30e364c7366d9ca3689c240e370c406df273a026af856",
-        "sha256": "d1156aae5890ffa358663f22fb67e7d9840f5d16db9e0f85ab245049514c33d7",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "5dd1b10312cb7c9d7b1831d0b663d81988080ca767ab16eecc4b3521c310cdd0",
+        "updatedAt": "2026-11-11T20:02:53+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -956,6 +972,13 @@
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "d1156aae5890ffa358663f22fb67e7d9840f5d16db9e0f85ab245049514c33d7",
             "previousSha256": "11f861373d2acfd5931bd84af5464d75ba3cb52ea5c6b189ea7e5ad94aa40fe9",
+            "bodySha256": "c0b115a039d2b347a051433e2375894368ffdb4976825233dd5dc947ba5f8937",
+            "bodyChars": 4724
+          },
+          {
+            "at": "2026-11-11T20:02:53+08:00",
+            "sha256": "5dd1b10312cb7c9d7b1831d0b663d81988080ca767ab16eecc4b3521c310cdd0",
+            "previousSha256": "d1156aae5890ffa358663f22fb67e7d9840f5d16db9e0f85ab245049514c33d7",
             "bodySha256": "c0b115a039d2b347a051433e2375894368ffdb4976825233dd5dc947ba5f8937",
             "bodyChars": 4724
           }
@@ -1010,6 +1033,15 @@
             "chars": 15678,
             "paragraphs": 66,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-11T20:02:53+08:00",
+            "firstSha256": "7091cfef7c3f2b76b4adefdc4d146fc531f83245db8ec47765ba0624ae9e3ab6",
+            "sha256": "7091cfef7c3f2b76b4adefdc4d146fc531f83245db8ec47765ba0624ae9e3ab6",
+            "updatedAt": "2026-11-11T20:02:53+08:00",
+            "chars": 6782,
+            "paragraphs": 66,
+            "revisions": []
           }
         }
       },
@@ -1018,8 +1050,8 @@
         "name": "饕餮",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "616fba4e43bd91ec95eddae2f4fea6a37e895ba0df6c03c2ea470453484183b4",
-        "sha256": "f742c4eef5ca9c1dadf3f3c717b3dc699c8ab82b6718b42b275b345b1e6fff24",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "2eefaf3dcf9bdf26137a3ca9b34cdd68e224378e41fbfe36370d852ef19bb777",
+        "updatedAt": "2026-11-11T20:02:53+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1053,6 +1085,13 @@
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "f742c4eef5ca9c1dadf3f3c717b3dc699c8ab82b6718b42b275b345b1e6fff24",
             "previousSha256": "838c230c17d17f3ff816923301e9c293cedf316c4054aa4917af936420648aea",
+            "bodySha256": "c5f0d7bd51d494d33cc1843becfd71af283b47f69596981e482634c3f9f4f558",
+            "bodyChars": 3436
+          },
+          {
+            "at": "2026-11-11T20:02:53+08:00",
+            "sha256": "2eefaf3dcf9bdf26137a3ca9b34cdd68e224378e41fbfe36370d852ef19bb777",
+            "previousSha256": "f742c4eef5ca9c1dadf3f3c717b3dc699c8ab82b6718b42b275b345b1e6fff24",
             "bodySha256": "c5f0d7bd51d494d33cc1843becfd71af283b47f69596981e482634c3f9f4f558",
             "bodyChars": 3436
           }
@@ -1107,6 +1146,15 @@
             "chars": 11996,
             "paragraphs": 64,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-11T20:02:53+08:00",
+            "firstSha256": "04d3f3fb1a5988d5e099b7da024aca7e99813bc70a6c1ff427125622aca2f3de",
+            "sha256": "04d3f3fb1a5988d5e099b7da024aca7e99813bc70a6c1ff427125622aca2f3de",
+            "updatedAt": "2026-11-11T20:02:53+08:00",
+            "chars": 5287,
+            "paragraphs": 64,
+            "revisions": []
           }
         }
       },
@@ -1115,8 +1163,8 @@
         "name": "比翼鸟",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "fafc9592d099711c653de874f5d9c017086d10ca3bda7ca8d4df79ce3b39e910",
-        "sha256": "e58cf9df1c8e0468627dc14e825be5f5a80c2e7d69d66337e38ed158c71f4619",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "097bc78a19d2142827fe398d4d47b16c0e9082fbf5c90b84400a2b2b2fb38110",
+        "updatedAt": "2026-11-11T20:02:53+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1150,6 +1198,13 @@
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "e58cf9df1c8e0468627dc14e825be5f5a80c2e7d69d66337e38ed158c71f4619",
             "previousSha256": "3477ac6cc6c011c2dbde5b7d8aa511a537d1bd18d6508581f54e721dd2e4d92d",
+            "bodySha256": "f353dd293c82218968c2f4410c15152196fcc02550996a5aafed1f9e10c64182",
+            "bodyChars": 3942
+          },
+          {
+            "at": "2026-11-11T20:02:53+08:00",
+            "sha256": "097bc78a19d2142827fe398d4d47b16c0e9082fbf5c90b84400a2b2b2fb38110",
+            "previousSha256": "e58cf9df1c8e0468627dc14e825be5f5a80c2e7d69d66337e38ed158c71f4619",
             "bodySha256": "f353dd293c82218968c2f4410c15152196fcc02550996a5aafed1f9e10c64182",
             "bodyChars": 3942
           }
@@ -1204,6 +1259,15 @@
             "chars": 13203,
             "paragraphs": 67,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-11T20:02:53+08:00",
+            "firstSha256": "fd4699580a6b19a82ee3b3304f32c97cbdb87e65baf609879ec7b89c88fb27d5",
+            "sha256": "fd4699580a6b19a82ee3b3304f32c97cbdb87e65baf609879ec7b89c88fb27d5",
+            "updatedAt": "2026-11-11T20:02:53+08:00",
+            "chars": 5856,
+            "paragraphs": 67,
+            "revisions": []
           }
         }
       },
@@ -1212,8 +1276,8 @@
         "name": "天狗",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "ac6f0ab578f3db367e9607c811c57310e565bfb2fefac86ffaa5232c1479496b",
-        "sha256": "d74e1d55317f3daa3dd620459f97657b9ea525849a0eac0e2a842501c9bbb864",
-        "updatedAt": "2026-11-10T10:35:31+08:00",
+        "sha256": "e53db772f01d2049888bb1b34a94dcf921d7140566302e96662e06a371408463",
+        "updatedAt": "2026-11-11T20:02:53+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1240,6 +1304,13 @@
             "at": "2026-11-10T10:35:31+08:00",
             "sha256": "d74e1d55317f3daa3dd620459f97657b9ea525849a0eac0e2a842501c9bbb864",
             "previousSha256": "a5ad4e540bfe0c6c48bbc7936d5e74c81e7b032ad837ece5e7d6ae8d7c3c3557",
+            "bodySha256": "fed770bf67c9fca72456c33a4728a9ddac31df39408e7a2293aae4f2ea9a69c1",
+            "bodyChars": 2536
+          },
+          {
+            "at": "2026-11-11T20:02:53+08:00",
+            "sha256": "e53db772f01d2049888bb1b34a94dcf921d7140566302e96662e06a371408463",
+            "previousSha256": "d74e1d55317f3daa3dd620459f97657b9ea525849a0eac0e2a842501c9bbb864",
             "bodySha256": "fed770bf67c9fca72456c33a4728a9ddac31df39408e7a2293aae4f2ea9a69c1",
             "bodyChars": 2536
           }
@@ -1288,6 +1359,15 @@
             "chars": 8360,
             "paragraphs": 52,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-11T20:02:53+08:00",
+            "firstSha256": "3c1377dd514e9b40bc31001d0dc68c41aa4e03b46d8b4e9a350f4b90e9cde4a3",
+            "sha256": "3c1377dd514e9b40bc31001d0dc68c41aa4e03b46d8b4e9a350f4b90e9cde4a3",
+            "updatedAt": "2026-11-11T20:02:53+08:00",
+            "chars": 3744,
+            "paragraphs": 52,
+            "revisions": []
           }
         }
       },
@@ -1296,8 +1376,8 @@
         "name": "凰",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "77ff5033c4de802a6239e58029c0055a1f4b2f4aa6c347d1e683b075de63100b",
-        "sha256": "a5dfd4f15654eabf75d8549080cff66c36a99b912087f7f35bc5bf3eebd9f433",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "38138f35995f4996974536004f04115f85777bed85ed3933842bef633b10374b",
+        "updatedAt": "2026-11-11T20:02:53+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1331,6 +1411,13 @@
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "a5dfd4f15654eabf75d8549080cff66c36a99b912087f7f35bc5bf3eebd9f433",
             "previousSha256": "3befd21f512cd99c5c7818c63285635bbead4c632be91bd0553d0abd88180f79",
+            "bodySha256": "431b832d4ce570a459a8d8b03282c156320fcb47c15c9f353a9699396754cda5",
+            "bodyChars": 2910
+          },
+          {
+            "at": "2026-11-11T20:02:53+08:00",
+            "sha256": "38138f35995f4996974536004f04115f85777bed85ed3933842bef633b10374b",
+            "previousSha256": "a5dfd4f15654eabf75d8549080cff66c36a99b912087f7f35bc5bf3eebd9f433",
             "bodySha256": "431b832d4ce570a459a8d8b03282c156320fcb47c15c9f353a9699396754cda5",
             "bodyChars": 2910
           }
@@ -1384,6 +1471,15 @@
             "updatedAt": "2026-11-10T09:40:11+08:00",
             "chars": 9786,
             "paragraphs": 53,
+            "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-11T20:02:53+08:00",
+            "firstSha256": "4d5260e9befcbb8fd67d69f5be09169d9b720ac3d2efb506606fdedd30900bee",
+            "sha256": "4d5260e9befcbb8fd67d69f5be09169d9b720ac3d2efb506606fdedd30900bee",
+            "updatedAt": "2026-11-11T20:02:53+08:00",
+            "chars": 4130,
+            "paragraphs": 54,
             "revisions": []
           }
         }
