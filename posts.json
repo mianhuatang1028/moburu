@@ -5,7 +5,7 @@
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-11T18:21:37+08:00",
+  "generatedAt": "2026-11-11T18:37:02+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -4432,13 +4432,21 @@
         "name": "獓𤟎",
         "firstPostedAt": "2026-11-11T18:21:37+08:00",
         "firstSha256": "83422b52f1d8994965073e0c9b954f7a88133fa3af379c71ed9fbaf110c571d6",
-        "sha256": "83422b52f1d8994965073e0c9b954f7a88133fa3af379c71ed9fbaf110c571d6",
-        "updatedAt": "2026-11-11T18:21:37+08:00",
-        "revisions": [],
+        "sha256": "ea25952825ce86c509aa01483b47fbb2fb1f180979a28710628d82844f8c27a8",
+        "updatedAt": "2026-11-11T18:37:02+08:00",
+        "revisions": [
+          {
+            "at": "2026-11-11T18:37:02+08:00",
+            "sha256": "ea25952825ce86c509aa01483b47fbb2fb1f180979a28710628d82844f8c27a8",
+            "previousSha256": "83422b52f1d8994965073e0c9b954f7a88133fa3af379c71ed9fbaf110c571d6",
+            "bodySha256": "729476351ad60795dbd2542114ef8ff064699f12204cde4baffdaf7e49f1d452",
+            "bodyChars": 3817
+          }
+        ],
         "bodyFirstPostedAt": "2026-11-11T18:21:37+08:00",
         "bodyFirstSha256": "6bcd83fbb8b883d66922c0d5a0db811a42ebb840a961e179fadb7d97caa5f12d",
-        "bodySha256": "6bcd83fbb8b883d66922c0d5a0db811a42ebb840a961e179fadb7d97caa5f12d",
-        "bodyChars": 3815,
+        "bodySha256": "729476351ad60795dbd2542114ef8ff064699f12204cde4baffdaf7e49f1d452",
+        "bodyChars": 3817,
         "translations": {
           "en": {
             "firstPostedAt": "2026-11-11T18:21:37+08:00",
