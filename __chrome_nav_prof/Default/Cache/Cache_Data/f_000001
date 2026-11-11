@@ -1,0 +1,573 @@
+/* ============================================================
+   默不如小说官网 · 样式
+   基调：墨黑工业底 + 合窳黄 / 赤尾红强调，沉稳、硬核、神秘
+   ============================================================ */
+
+:root {
+  --bg: #0e0f13;
+  --bg-soft: #16181f;
+  --bg-card: #1c1f29;
+  --line: #2a2e3a;
+  --text: #e7e4dc;
+  --text-dim: #9aa0ad;
+  --gold: #e8b84b;   /* 合窳黄 */
+  --red: #c0392b;    /* 赤尾红 */
+  --gold-dim: #b9923a;
+  --maxw: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { color: #ffd56b; }
+
+/* ---------- 顶部导航 ---------- */
+#nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 24px;
+  background: rgba(14, 15, 19, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+#nav .brand {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+#nav .brand span { color: var(--gold); }
+#nav .links a {
+  margin-left: 20px;
+  color: var(--text-dim);
+  font-size: 14px;
+  transition: color .2s;
+}
+#nav .links a:hover, #nav .links a.active { color: var(--gold); }
+
+/* ---------- 容器 ---------- */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+section { padding: 56px 0; }
+h1, h2, h3 { font-weight: 700; line-height: 1.25; }
+h2 { font-size: 26px; margin: 0 0 8px; }
+.section-sub { color: var(--text-dim); margin: 0 0 28px; }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 90px 0 70px;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(1200px 400px at 80% -10%, rgba(232,184,75,0.10), transparent 60%),
+    radial-gradient(900px 360px at 0% 110%, rgba(192,57,43,0.10), transparent 55%);
+}
+.hero .badge {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: 52px;
+  margin: 0 0 14px;
+  letter-spacing: 4px;
+}
+.hero h1 .accent { color: var(--gold); }
+.hero .tagline { font-size: 19px; color: var(--text); max-width: 720px; }
+.hero .slogan {
+  margin-top: 18px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+.hero .cta { margin-top: 30px; }
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  background: transparent;
+  transition: all .2s;
+  margin-right: 12px;
+}
+.btn:hover { background: var(--gold); color: #1a1408; }
+.btn.primary { background: var(--gold); color: #1a1408; }
+.btn.primary:hover { background: #ffd56b; }
+
+/* ---------- 作品卡片网格 ---------- */
+.grid {
+  display: grid;
+  /* min(100%, 300px)：320px 小屏下可用宽度不到 300px，写死 300 会把卡片顶出屏幕 */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 22px;
+}
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .2s, border-color .2s;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--gold-dim); }
+.card .cover {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 16px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 2px;
+  color: var(--bg);
+  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+  position: relative;
+}
+.card .cover .seal {
+  position: absolute; right: 12px; bottom: 10px;
+  font-size: 12px; color: rgba(0,0,0,.55); letter-spacing: 1px;
+}
+.card .body { padding: 18px; }
+.card .body h3 { margin: 0 0 6px; font-size: 20px; }
+.card .body .cat { font-size: 12px; color: var(--text-dim); margin-bottom: 10px; }
+.card .body p { font-size: 13px; color: var(--text-dim); margin: 0 0 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #11131a;
+  border: 1px solid var(--line);
+  color: var(--text-dim);
+}
+.first-badge {
+  font-size: 11px; color: var(--red); border: 1px solid var(--red);
+  padding: 2px 8px; border-radius: 999px; margin-left: 8px;
+  /* 徽章随文字撑开、整体换行，绝不折成两行后在行内被裁掉 */
+  display: inline-block; vertical-align: middle;
+  white-space: nowrap; max-width: 100%;
+}
+
+/* ---------- IP 理念 ---------- */
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.pillar {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+}
+.pillar .n { color: var(--gold); font-size: 14px; letter-spacing: 2px; }
+.pillar h3 { margin: 10px 0 8px; font-size: 18px; }
+.pillar p { margin: 0; color: var(--text-dim); font-size: 14px; }
+
+/* ---------- 粉丝群 ---------- */
+.pool {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.pool h2 { margin: 0 0 6px; }
+.pool p { margin: 0; color: var(--text-dim); }
+.pool .channels { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+.channel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* ---------- 章节列表 ---------- */
+.ch-list { display: grid; gap: 8px; }
+.ch-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-soft);
+}
+.ch-item .beast {
+  width: 58px; height: 58px; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+  color: #1a1408; font-size: 18px; font-weight: 700;
+  /* 方块里是各语言兽名：中文 2-3 字、罗马音 7-9 字母、法阿译名可到 26 字符。
+     固定方块装不下，字号由 fitBeastLabels() 按实测宽度逐条下调；
+     这里禁止折行、不收 letter-spacing，避免任何一侧被方块切掉。 */
+  padding: 0 2px;
+  white-space: nowrap;
+  letter-spacing: 0;
+  line-height: 1;
+}
+.ch-item .meta { flex: 1; min-width: 0; }   /* min-width:0 必须写：否则副标题里 nowrap 的徽章会把整行撑溢出，标题右侧被裁 */
+.ch-item .meta .t { font-size: 15px; }
+.ch-item .meta .b { font-size: 12px; color: var(--text-dim); }
+.ch-item .go { color: var(--gold); font-size: 13px; }
+.ch-item.has-excerpt { border-color: var(--gold-dim); }
+
+/* ---------- 阅读器 ---------- */
+.reader { max-width: 760px; margin: 0 auto; }
+.reader .chapter-title { font-size: 30px; margin: 30px 0 6px; }
+.reader .beast-line { color: var(--gold); letter-spacing: 2px; margin-bottom: 24px; }
+.reader .content { font-size: 17px; line-height: 2; white-space: pre-wrap; color: var(--text); }
+.reader .notice {
+  margin-top: 30px; padding: 14px 18px;
+  border-left: 3px solid var(--gold); background: var(--bg-soft);
+  color: var(--text-dim); font-size: 14px;
+}
+
+/* ---------- 关于 ---------- */
+.about p { color: var(--text-dim); max-width: 760px; }
+.about .big { font-size: 18px; color: var(--text); }
+
+/* ---------- 页脚 ---------- */
+/* 容器是 <div id="footer">，不是 class="footer"；内层 .wrap 与正文同一容器，
+   左边缘才能和正文对齐 */
+#footer {
+  border-top: 1px solid var(--line);
+  padding: 30px 0 50px;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+#footer .row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- 语言切换器（五枚等宽胶囊，进站第一眼就能看见） ---------- */
+.lang-switch { display: flex; gap: 8px; margin-left: 18px; align-items: center; flex-wrap: wrap; }
+.lang-btn {
+  width: 80px;                  /* 固定宽度：五种语言名长短不一，等宽后整排才齐 */
+  padding: 8px 0; line-height: 1.15;
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 13px; font-weight: 500; font-family: inherit;
+  text-align: center; white-space: nowrap;
+  cursor: pointer;
+  transition: background .18s, color .18s, border-color .18s;
+}
+.lang-btn:hover { color: var(--gold); border-color: var(--gold); background: rgba(232,184,75,.10); }
+/* 当前语言：金底实心，一眼看出「我现在在哪个语言」 */
+.lang-btn.is-on { background: var(--gold); border-color: var(--gold); color: #1a1408; }
+.lang-btn.is-on:hover { background: #ffd56b; color: #1a1408; }
+/* 阿拉伯语界面下切换器靠右，与 RTL 阅读方向一致 */
+html[dir="rtl"] .lang-switch { margin-left: 0; margin-right: 18px; }
+
+/* ---------- 面包屑 / 作品详情 ---------- */
+.crumb { color: var(--text-dim); font-size: 13px; margin: 0 0 18px; }
+.work-title { font-size: 38px; margin: 6px 0; }
+.work-summary { max-width: 760px; font-size: 17px; color: var(--text); }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+.ch-h { margin-top: 10px; }
+
+/* ---------- 付费锁 ---------- */
+.ch-item.locked { border-color: var(--red); opacity: .92; }
+.ch-item .go.lock { color: var(--red); }
+.ch-item .go.dim { color: var(--text-dim); }
+
+/* ---------- 会员 / 付费端口（预留） ---------- */
+.pricing .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 28px 0; }
+.plan {
+  background: var(--bg-card); border: 1px solid var(--line);
+  border-radius: 12px; padding: 26px; text-align: center;
+}
+.plan h3 { margin: 0 0 10px; font-size: 20px; }
+.plan .price { font-size: 26px; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+.plan .plan-d { color: var(--text-dim); font-size: 14px; min-height: 44px; margin-bottom: 18px; }
+.plan-btn { width: 100%; }
+.pricing-note { color: var(--text-dim); font-size: 13px; border-top: 1px solid var(--line); padding-top: 18px; }
+
+/* ---------- 头像 / 作者形象 ---------- */
+.hero-avatar {
+  width: 92px; height: 92px; border-radius: 50%;
+  object-fit: cover; object-position: center 18%;
+  border: 2px solid var(--gold);
+  box-shadow: 0 6px 22px rgba(232,184,75,0.18);
+  margin-bottom: 22px;
+  display: block;
+}
+.author-head {
+  display: flex; align-items: center; gap: 22px;
+  margin-bottom: 26px; flex-wrap: wrap;
+}
+.author-head .avatar {
+  width: 110px; height: 110px; border-radius: 50%;
+  object-fit: cover; object-position: center 18%;
+  border: 2px solid var(--gold);
+  box-shadow: 0 6px 22px rgba(232,184,75,0.18);
+  flex: none;
+}
+.author-head .author-meta h1 { margin: 0 0 8px; font-size: 30px; }
+.author-head .author-tag {
+  margin: 0; color: var(--gold); font-size: 15px; letter-spacing: .5px;
+}
+/* 笔名释义（各语言一句，随语言切换） */
+.author-head .author-meaning {
+  margin: 8px 0 0; color: var(--text-dim); font-size: 13px; line-height: 1.7;
+}
+/* 阿拉伯语下，头像与文字排布保持自然（文字本身已 RTL） */
+html[dir="rtl"] .author-head { flex-direction: row-reverse; }
+html[dir="rtl"] #nav .links a { margin-left: 0; margin-right: 20px; }
+/* 不要把 links 的 order 往后挪：语言组宽 100% 本身就会独占一行，
+   再调 order 会让阿语的导航链接掉到第三行，和中文/英文版面不一致 */
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 720px) {
+  .hero h1 { font-size: 36px; }
+  .hero-avatar { width: 72px; height: 72px; }
+  .pillars { grid-template-columns: 1fr; }
+  #nav .links a { margin-left: 12px; font-size: 13px; }
+  .lang-switch { gap: 5px; margin-left: 0; margin-top: 6px; width: 100%; justify-content: flex-start; }
+  /* RTL 下原本还留着 margin-right:18px，配 width:100% 会把整页撑出 18px 横向滚动 */
+  html[dir="rtl"] .lang-switch { margin-right: 0; }
+  .lang-btn { width: 56px; padding: 6px 0; font-size: 12px; }
+  .author-head .avatar { width: 84px; height: 84px; }
+  /* 付费套餐：手机上改单列，避免三栏卡在 390px 里互相挤压溢出 */
+  .pricing .plans { grid-template-columns: 1fr; gap: 14px; }
+  /* 章节列表：缩窄神兽块、腾出标题宽度；整行可点，箭头省掉 */
+  .ch-item { padding: 10px 12px; gap: 10px; align-items: flex-start; }
+  .ch-item .beast { width: 52px; height: 52px; font-size: 15px; }
+  .ch-item .meta .t { font-size: 14px; line-height: 1.45; overflow-wrap: anywhere; }
+  .ch-item .meta .b { font-size: 11px; line-height: 1.6; }
+  .ch-item .go { display: none; }
+  /* 阅读页：正文页不套 .wrap，原来直接贴屏幕边，补内边距；标题按屏宽自适应不折字 */
+  .reader { padding: 0 16px; }
+  .reader .chapter-title { font-size: clamp(21px, 6.2vw, 28px); line-height: 1.32; overflow-wrap: anywhere; }
+  .reader .beast-line { letter-spacing: 1px; margin-bottom: 16px; }
+  .work-title { font-size: 28px; }
+}
+
+/* ---------- 首发时间戳 / 版权存证 ---------- */
+.provenance-bar {
+  margin: 10px 0 22px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  background: var(--bg-soft);
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.provenance-bar a { color: var(--gold); border-bottom: 1px dotted var(--gold-dim); }
+.prov-link {
+  color: var(--gold); font-size: 12px; margin-left: 8px;
+  white-space: nowrap; border-bottom: 1px dotted var(--gold-dim);
+}
+.ch-stamp { color: var(--text-dim); opacity: .85; white-space: nowrap; }
+.post-stamp {
+  display: flex; flex-wrap: wrap; gap: 6px 18px;
+  margin: 0 0 22px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-dim); font-size: 12px;
+}
+.post-stamp span:first-child { color: var(--gold); }
+/* ---------- 山海经神兽图鉴（配图 + 小传） ----------
+   图与语言无关，所有语言版本共用；竖向布局：图居中小传在下，手机端一样适用。
+   图本身是墨黑底暗金线描，与站点同一套色，只加一层极淡金边收住边缘。 */
+.beast-panel {
+  margin: 0 0 34px; padding: 22px 20px 18px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  text-align: center;
+}
+.beast-fig { margin: 0 auto 18px; width: 264px; max-width: 100%; }
+.beast-fig img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid rgba(185, 146, 58, .34);
+  background: #000;
+}
+.beast-bio {
+  color: var(--text-dim); font-size: 14px; line-height: 1.95;
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .beast-panel { padding: 16px 14px 14px; margin-bottom: 26px; }
+  .beast-fig { width: 232px; margin-bottom: 14px; }
+  .beast-bio { font-size: 13.5px; line-height: 1.9; }
+}
+
+.bio-box {
+  margin: 0 0 30px; padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--text-dim);
+  font-size: 14px; line-height: 1.9;
+}
+@media (max-width: 600px) {
+  .post-stamp { flex-direction: column; gap: 4px; }
+  .provenance-bar { font-size: 12px; }
+}
+
+/* ---------- 全本正文（按章加载） ---------- */
+.novel-text { white-space: normal; }
+.novel-text p {
+  margin: 0 0 1.05em;
+  text-indent: 2em;
+  line-height: 2;
+  font-size: 17px;
+  color: var(--text);
+  word-break: break-word;
+}
+.novel-text p:last-child { margin-bottom: 0; }
+.ch-full { color: var(--gold); white-space: nowrap; }
+.archive-link {
+  margin-top: 28px; padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 12px; color: var(--text-dim);
+}
+.archive-link a, .archive .post-stamp a, .archive .archive-nav a {
+  color: var(--gold); border-bottom: 1px dotted var(--gold-dim);
+}
+/* 纯中文静态存档页（不依赖 JS，供搜索引擎 / AI 抓取全文） */
+.archive { max-width: 780px; }
+.archive .archive-nav {
+  display: flex; justify-content: space-between; gap: 16px;
+  margin: 26px 0 0; padding-top: 16px;
+  border-top: 1px solid var(--line); font-size: 14px;
+}
+.archive .archive-foot {
+  margin-top: 34px; font-size: 12px;
+  line-height: 1.9; color: var(--text-dim);
+}
+/* ---------- 章节翻页（阅读页 / 存档页共用） ---------- */
+.ch-nav {
+  display: flex; align-items: stretch; gap: 10px;
+  margin: 34px 0 0; padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.ch-nav-btn {
+  flex: 1 1 0; min-width: 0;
+  display: flex; flex-direction: column; gap: 5px;
+  padding: 12px 15px;
+  border: 1px solid var(--line); border-radius: 10px;
+  background: rgba(255, 255, 255, .025);
+  text-decoration: none; color: inherit;
+  transition: border-color .16s ease, background .16s ease;
+}
+a.ch-nav-btn:hover, a.ch-nav-btn:focus-visible {
+  border-color: var(--gold); background: rgba(255, 255, 255, .06);
+}
+.ch-nav-k { font-style: normal; font-size: 12px; letter-spacing: .05em; color: var(--gold); }
+.ch-nav-t {
+  display: block; font-size: 13.5px; color: var(--text);
+  /* 章名一律完整显示：五语言里法/阿译名很长，省略号会把书名切掉，
+     改成换行，宁可按钮高一点也不藏字 */
+  white-space: normal; overflow-wrap: anywhere;
+  overflow: visible; text-overflow: clip; line-height: 1.55;
+}
+/* 用 end 而不是 right：阿拉伯语 RTL 下自动靠左，不用单独写覆盖规则 */
+.ch-nav-btn.next { text-align: right; text-align: end; }
+.ch-nav-btn.is-off { opacity: .45; }
+.ch-nav-btn.is-off .ch-nav-k,
+.ch-nav-btn.is-off .ch-nav-t { color: var(--text-dim); }
+.ch-nav-mid {
+  flex: 0 0 auto; align-items: center; justify-content: center;
+  padding: 12px 18px; font-size: 13px; color: var(--gold);
+  white-space: nowrap;
+}
+/* 阿拉伯语的箭头方向不用 CSS 处理：‹ › 属于 Unicode 双向镜像字符，
+   在 RTL 文字环境里浏览器会自动翻转，CSS 再翻一次反而会转回去 */
+@media (max-width: 560px) {
+  .ch-nav { gap: 8px; margin-top: 28px; padding-top: 18px; }
+  .ch-nav-btn { padding: 10px 11px; }
+  .ch-nav-k { font-size: 11px; }
+  .ch-nav-t { font-size: 12px; }
+  .ch-nav-mid { display: none; }
+}
+
+/* ---------- 多语言译文 ---------- */
+.trans-note {
+  margin: 14px 0 20px; padding: 10px 14px;
+  border-left: 3px solid var(--gold-dim);
+  background: rgba(255, 255, 255, .035);
+  font-size: 13px; line-height: 1.8; color: var(--text-dim);
+}
+[dir="rtl"] .trans-note { border-left: 0; border-right: 3px solid var(--gold-dim); text-align: right; }
+.ch-tr { color: var(--gold); white-space: nowrap; }
+.lang-links {
+  margin-top: 10px; font-size: 12px;
+  line-height: 2; color: var(--text-dim);
+}
+.lang-links a { color: var(--gold); border-bottom: 1px dotted var(--gold-dim); }
+/* 西文 / 阿拉伯语段落不做中文式首行缩进；日文用一字下げ */
+.novel-text.lang-en p, .novel-text.lang-fr p, .novel-text.lang-ar p { text-indent: 0; line-height: 1.95; }
+.novel-text.lang-ja p { text-indent: 1em; }
+[dir="rtl"] .novel-text p { text-align: right; }
+[dir="rtl"] .lang-links { text-align: right; }
+@media (max-width: 600px) {
+  .novel-text p { font-size: 16px; line-height: 1.9; }
+  .trans-note { font-size: 12px; }
+}
+
+/* ============================================================
+   版权保护（配合 guard.js）
+   ============================================================ */
+/* 配图：禁拖拽、禁 iOS 长按菜单、禁选中 */
+img, .beast-fig {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.beast-fig img { pointer-events: none; }   /* 右键落在 figure 上也拿不到图 */
+
+/* 轻提示 */
+.guard-toast {
+  position: fixed; left: 50%; bottom: 28px;
+  transform: translate(-50%, 16px);
+  z-index: 9999;
+  display: block; max-width: min(88vw, 420px);
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: rgba(20, 22, 28, .96);
+  border: 1px solid var(--gold-dim);
+  color: var(--text);
+  font-size: 13px; line-height: 1.6;
+  opacity: 0; pointer-events: none;
+  transition: opacity .22s ease, transform .22s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+}
+.guard-toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+.guard-toast b { display: block; color: var(--gold); font-size: 13px; margin-bottom: 2px; }
+.guard-toast span { display: block; color: var(--text-dim); font-size: 12px; }
+
+/* 打印：正文不上纸，只留声明 */
+@media print {
+  #nav, #footer, .guard-toast, .novel-text, .beast-panel, .post-stamp,
+  .lang-links, .archive-link, .ch-nav { display: none !important; }
+  /* 不写具体书名：三部件品共用这套样式，硬编码会印错 */
+  body::before {
+    content: "© 默不如 / Moburu · 本文受版权保护，请勿打印或转载 — https://moburu.vip";
+    display: block; padding: 12px 0;
+    font-size: 13px; color: #333; border-bottom: 1px solid #999;
+  }
+}

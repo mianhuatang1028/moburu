@@ -7,7 +7,7 @@ const POST_LOG = {
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-11T12:24:09+08:00",
+  "generatedAt": "2026-11-11T15:45:19+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -4338,40 +4338,69 @@ const POST_LOG = {
         "name": "猼訑",
         "firstPostedAt": "2026-11-11T12:24:09+08:00",
         "firstSha256": "7b7ef827c40ee05128c521dbdd2edc3759cd7eb695bb299b752dd2db2ca88afa",
-        "sha256": "7b7ef827c40ee05128c521dbdd2edc3759cd7eb695bb299b752dd2db2ca88afa",
-        "updatedAt": "2026-11-11T12:24:09+08:00",
-        "revisions": [],
+        "sha256": "c63f0d0f05707d170a6af2f18e6ba978ca675879b74078af4f5d768e4253c2fe",
+        "updatedAt": "2026-11-11T15:45:19+08:00",
+        "revisions": [
+          {
+            "at": "2026-11-11T15:45:19+08:00",
+            "sha256": "c63f0d0f05707d170a6af2f18e6ba978ca675879b74078af4f5d768e4253c2fe",
+            "previousSha256": "7b7ef827c40ee05128c521dbdd2edc3759cd7eb695bb299b752dd2db2ca88afa",
+            "bodySha256": "73b2d3a16529a4f538cf64014ea79cb6d92678eadf27a34b9bc97f528ffd2e8a",
+            "bodyChars": 5691
+          }
+        ],
         "bodyFirstPostedAt": "2026-11-11T12:24:09+08:00",
         "bodyFirstSha256": "3edb021acf22fde00eb8bb5fa770b6c5a6a62a980790265178f70a5464ae8b4b",
-        "bodySha256": "3edb021acf22fde00eb8bb5fa770b6c5a6a62a980790265178f70a5464ae8b4b",
-        "bodyChars": 3253,
+        "bodySha256": "73b2d3a16529a4f538cf64014ea79cb6d92678eadf27a34b9bc97f528ffd2e8a",
+        "bodyChars": 5691,
         "translations": {
           "en": {
             "firstPostedAt": "2026-11-11T12:24:09+08:00",
             "firstSha256": "29c9a16e7d5868cc13c67e6c508e1be0c529da20bbe0640f4c606b2231683948",
-            "sha256": "29c9a16e7d5868cc13c67e6c508e1be0c529da20bbe0640f4c606b2231683948",
-            "updatedAt": "2026-11-11T12:24:09+08:00",
-            "chars": 12093,
-            "paragraphs": 20,
-            "revisions": []
+            "sha256": "3396ed703ec2872ba5cdc4265b1450bfa7e1d5fbb4d91a1a74226081898bccd5",
+            "updatedAt": "2026-11-11T15:45:19+08:00",
+            "chars": 21388,
+            "paragraphs": 32,
+            "revisions": [
+              {
+                "at": "2026-11-11T15:45:19+08:00",
+                "sha256": "3396ed703ec2872ba5cdc4265b1450bfa7e1d5fbb4d91a1a74226081898bccd5",
+                "previousSha256": "29c9a16e7d5868cc13c67e6c508e1be0c529da20bbe0640f4c606b2231683948",
+                "chars": 21388
+              }
+            ]
           },
           "fr": {
             "firstPostedAt": "2026-11-11T12:24:09+08:00",
             "firstSha256": "51911dc2796d99933fd18b1a9356586717b52cd4040ba58ab26bac89ba0b5d48",
-            "sha256": "51911dc2796d99933fd18b1a9356586717b52cd4040ba58ab26bac89ba0b5d48",
-            "updatedAt": "2026-11-11T12:24:09+08:00",
-            "chars": 13110,
-            "paragraphs": 20,
-            "revisions": []
+            "sha256": "528830c8f26202cdd405a9ba9b3b13b95aa9f1d87f07da2429ec094de78332fe",
+            "updatedAt": "2026-11-11T15:45:19+08:00",
+            "chars": 22712,
+            "paragraphs": 32,
+            "revisions": [
+              {
+                "at": "2026-11-11T15:45:19+08:00",
+                "sha256": "528830c8f26202cdd405a9ba9b3b13b95aa9f1d87f07da2429ec094de78332fe",
+                "previousSha256": "51911dc2796d99933fd18b1a9356586717b52cd4040ba58ab26bac89ba0b5d48",
+                "chars": 22712
+              }
+            ]
           },
           "ar": {
             "firstPostedAt": "2026-11-11T12:24:09+08:00",
             "firstSha256": "9590f537135b34788172dc2b77fd62033aa0ceadb7cdebed420c7524d88cc11a",
-            "sha256": "9590f537135b34788172dc2b77fd62033aa0ceadb7cdebed420c7524d88cc11a",
-            "updatedAt": "2026-11-11T12:24:09+08:00",
-            "chars": 9657,
-            "paragraphs": 20,
-            "revisions": []
+            "sha256": "a1a765ea023b5f04de7a4811c0fa6462cdd12139d598211c8a6b6d21c6fef43f",
+            "updatedAt": "2026-11-11T15:45:19+08:00",
+            "chars": 16319,
+            "paragraphs": 32,
+            "revisions": [
+              {
+                "at": "2026-11-11T15:45:19+08:00",
+                "sha256": "a1a765ea023b5f04de7a4811c0fa6462cdd12139d598211c8a6b6d21c6fef43f",
+                "previousSha256": "9590f537135b34788172dc2b77fd62033aa0ceadb7cdebed420c7524d88cc11a",
+                "chars": 16319
+              }
+            ]
           }
         }
       }
