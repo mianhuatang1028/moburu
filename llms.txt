@@ -12,7 +12,7 @@
 
 > 官方国际书名 Lost in Changsha。书名中的「恨」意为「遗憾 / 失落」，不是「憎恨」。
 
-中年技术男郑智咏在体制、资本、人情与欲望的夹缝里重新拼起自己。全书以《山海经》神兽逐章命名，神兽即命运。共 50 章，全文约 21.8 万字。
+中年技术男郑智咏在体制、资本、人情与欲望的夹缝里重新拼起自己。全书以《山海经》神兽逐章命名，神兽即命运。共 51 章，全文约 22.2 万字。
 
 - [引：鲲鹏](https://moburu.vip/chapters/henchangsha/0.html)：1140 字，首发 2026-11-09，全文首发 2026-11-09
 - [第一章 鸮](https://moburu.vip/chapters/henchangsha/1.html)：3761 字，首发 2026-11-09，全文首发 2026-11-09
@@ -64,6 +64,7 @@
 - [第四十七章 寓](https://moburu.vip/chapters/henchangsha/47.html)：3362 字，首发 2026-11-11，全文首发 2026-11-11
 - [第四十八章 猼訑](https://moburu.vip/chapters/henchangsha/48.html)：5692 字，首发 2026-11-11，全文首发 2026-11-11
 - [第四十九章 獓𤟎](https://moburu.vip/chapters/henchangsha/49.html)：3817 字，首发 2026-11-11，全文首发 2026-11-11
+- [第五十章 獙獙](https://moburu.vip/chapters/henchangsha/50.html)：3654 字，首发 2026-11-11，全文首发 2026-11-11
 
 ## 多语言译本（按章交付，各语言有独立首发时间）
 
@@ -230,6 +231,9 @@
 - [Chapter Forty-Nine: Aoye · English](https://moburu.vip/chapters/henchangsha/49.en.html)：undefined 段，译本首发 2026-11-11
 - [Chapitre quarante-neuf : Aoye · Français](https://moburu.vip/chapters/henchangsha/49.fr.html)：undefined 段，译本首发 2026-11-11
 - [الفصل التاسع والأربعون: آوييه · العربية](https://moburu.vip/chapters/henchangsha/49.ar.html)：undefined 段，译本首发 2026-11-11
+- [Chapter Fifty: Bibi · English](https://moburu.vip/chapters/henchangsha/50.en.html)：45 段，译本首发 2026-11-11
+- [Chapitre cinquante : Le Bibi · Français](https://moburu.vip/chapters/henchangsha/50.fr.html)：45 段，译本首发 2026-11-11
+- [الفصل الخمسون: بيبِي · العربية](https://moburu.vip/chapters/henchangsha/50.ar.html)：45 段，译本首发 2026-11-11
 
 ## 版权
 
