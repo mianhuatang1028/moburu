@@ -45,7 +45,7 @@
 - [第二十八章 九尾](https://moburu.vip/chapters/henchangsha/28.html)：4170 字，首发 2026-11-09，全文首发 2026-11-09
 - [第二十九章 猰貐](https://moburu.vip/chapters/henchangsha/29.html)：5557 字，首发 2026-11-09，全文首发 2026-11-09
 - [第三十章 诸怀](https://moburu.vip/chapters/henchangsha/30.html)：6388 字，首发 2026-11-09，全文首发 2026-11-09
-- [第三十一章 妺](https://moburu.vip/chapters/henchangsha/31.html)：7432 字，首发 2026-11-09，全文首发 2026-11-09
+- [第三十一章 妺](https://moburu.vip/chapters/henchangsha/31.html)：7233 字，首发 2026-11-09，全文首发 2026-11-09
 - [第三十二章 精卫](https://moburu.vip/chapters/henchangsha/32.html)：4858 字，首发 2026-11-09，全文首发 2026-11-09
 - [第三十三章 茈鱼](https://moburu.vip/chapters/henchangsha/33.html)：5623 字，首发 2026-11-09，全文首发 2026-11-09
 - [第三十四章 狡](https://moburu.vip/chapters/henchangsha/34.html)：6259 字，首发 2026-11-09，全文首发 2026-11-09
@@ -186,15 +186,19 @@
 - [Chapitre vingt-huit : Le Renard à neuf queues · Français](https://moburu.vip/chapters/henchangsha/28.fr.html)：80 段，译本首发 2026-11-10
 - [الفصل الثامن والعشرون: الثعلب ذو الأذناب التسعة · العربية](https://moburu.vip/chapters/henchangsha/28.ar.html)：80 段，译本首发 2026-11-10
 - [Chapter Twenty-Nine: Yayu · English](https://moburu.vip/chapters/henchangsha/29.en.html)：69 段，译本首发 2026-11-10
+- [第二十九章　猰貐 · 日本語](https://moburu.vip/chapters/henchangsha/29.ja.html)：69 段，译本首发 2026-11-13
 - [Chapitre vingt-neuf : Yayu · Français](https://moburu.vip/chapters/henchangsha/29.fr.html)：69 段，译本首发 2026-11-10
 - [الفصل التاسع والعشرون: ياويو · العربية](https://moburu.vip/chapters/henchangsha/29.ar.html)：69 段，译本首发 2026-11-10
 - [Chapter Thirty: Zhuhuai · English](https://moburu.vip/chapters/henchangsha/30.en.html)：112 段，译本首发 2026-11-10
+- [第三十章　諸懷 · 日本語](https://moburu.vip/chapters/henchangsha/30.ja.html)：112 段，译本首发 2026-11-13
 - [Chapitre trente : Zhu Huai · Français](https://moburu.vip/chapters/henchangsha/30.fr.html)：112 段，译本首发 2026-11-10
 - [الفصل الثلاثون: تشو هواي · العربية](https://moburu.vip/chapters/henchangsha/30.ar.html)：112 段，译本首发 2026-11-10
 - [Chapter Thirty-One: Mo · English](https://moburu.vip/chapters/henchangsha/31.en.html)：129 段，译本首发 2026-11-10
-- [Chapitre trente et un : Mo · Français](https://moburu.vip/chapters/henchangsha/31.fr.html)：132 段，译本首发 2026-11-10
-- [الفصل الحادي والثلاثون: مو · العربية](https://moburu.vip/chapters/henchangsha/31.ar.html)：132 段，译本首发 2026-11-10
+- [第三十一章　妺 · 日本語](https://moburu.vip/chapters/henchangsha/31.ja.html)：129 段，译本首发 2026-11-13
+- [Chapitre trente et un : Mo · Français](https://moburu.vip/chapters/henchangsha/31.fr.html)：129 段，译本首发 2026-11-10
+- [الفصل الحادي والثلاثون: مو · العربية](https://moburu.vip/chapters/henchangsha/31.ar.html)：129 段，译本首发 2026-11-10
 - [Chapter Thirty-Two: Jingwei · English](https://moburu.vip/chapters/henchangsha/32.en.html)：78 段，译本首发 2026-11-10
+- [第三十二章　精衛 · 日本語](https://moburu.vip/chapters/henchangsha/32.ja.html)：78 段，译本首发 2026-11-13
 - [Chapitre trente-deux : Jingwei · Français](https://moburu.vip/chapters/henchangsha/32.fr.html)：78 段，译本首发 2026-11-10
 - [الفصل الثاني والثلاثون: جينغوي · العربية](https://moburu.vip/chapters/henchangsha/32.ar.html)：78 段，译本首发 2026-11-10
 - [Chapter Thirty-Three: Ziyu · English](https://moburu.vip/chapters/henchangsha/33.en.html)：100 段，译本首发 2026-11-10
