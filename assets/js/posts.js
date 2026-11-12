@@ -7,7 +7,7 @@ const POST_LOG = {
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-12T16:39:19+08:00",
+  "generatedAt": "2026-11-12T21:23:18+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -1491,8 +1491,8 @@ const POST_LOG = {
         "name": "蜚",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "11c762cc2b070f6c86532da11852ea622d17b204df80a07f7e5382d4c84dffa2",
-        "sha256": "2a2648c79f46902ce0f4d2e1bce3c786a0dc12c25519314d2c7aa543a78dfaf5",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "70003a0f1bd1c2465a7f78f4a541ac70aa515b258a31c12ae77f3a1218da47f1",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1519,6 +1519,13 @@ const POST_LOG = {
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "2a2648c79f46902ce0f4d2e1bce3c786a0dc12c25519314d2c7aa543a78dfaf5",
             "previousSha256": "67f29f247800a457dabf3fa04bd9c1f5527ad1c1a19fb7f6ac9b79db1cd73b92",
+            "bodySha256": "cf722f79564b3efd61b13f24964b1c334738a80c2f70c0df7d633fccd57542d3",
+            "bodyChars": 4628
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "70003a0f1bd1c2465a7f78f4a541ac70aa515b258a31c12ae77f3a1218da47f1",
+            "previousSha256": "2a2648c79f46902ce0f4d2e1bce3c786a0dc12c25519314d2c7aa543a78dfaf5",
             "bodySha256": "cf722f79564b3efd61b13f24964b1c334738a80c2f70c0df7d633fccd57542d3",
             "bodyChars": 4628
           }
@@ -1567,6 +1574,15 @@ const POST_LOG = {
             "chars": 15962,
             "paragraphs": 38,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "2f35188d0f67ee15275981236a189a8912c46b36e8e24e70356a1a315a19e71a",
+            "sha256": "2f35188d0f67ee15275981236a189a8912c46b36e8e24e70356a1a315a19e71a",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 6354,
+            "paragraphs": 38,
+            "revisions": []
           }
         }
       },
@@ -1575,8 +1591,8 @@ const POST_LOG = {
         "name": "狰",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "9af680c6b4d361739ec0b6172def53a38fe4f0e694e49dde17246c901149554c",
-        "sha256": "69220b975e78ec7de93eea0b1839ed4040dcebc8181df99fdd5f7c22e552740a",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "d187f3ab24106cf284ed1cfabea877eedaf0d472b1f3dfdd63f8c20c7358d019",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1603,6 +1619,13 @@ const POST_LOG = {
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "69220b975e78ec7de93eea0b1839ed4040dcebc8181df99fdd5f7c22e552740a",
             "previousSha256": "7f9504684f3ef2cefee17a8e7d78f9672cf9a155fd291f52d4ffa3b6873946dc",
+            "bodySha256": "2010a23649227a3dc070d036546dcad6be25481452c79b15daa022e0800e25f0",
+            "bodyChars": 4604
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "d187f3ab24106cf284ed1cfabea877eedaf0d472b1f3dfdd63f8c20c7358d019",
+            "previousSha256": "69220b975e78ec7de93eea0b1839ed4040dcebc8181df99fdd5f7c22e552740a",
             "bodySha256": "2010a23649227a3dc070d036546dcad6be25481452c79b15daa022e0800e25f0",
             "bodyChars": 4604
           }
@@ -1651,6 +1674,15 @@ const POST_LOG = {
             "chars": 15683,
             "paragraphs": 36,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "2f260212b737eb8dc6f6423a6c06ec26d87fcf42150974a411110d485a1e3bde",
+            "sha256": "2f260212b737eb8dc6f6423a6c06ec26d87fcf42150974a411110d485a1e3bde",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 6162,
+            "paragraphs": 36,
+            "revisions": []
           }
         }
       },
@@ -1659,8 +1691,8 @@ const POST_LOG = {
         "name": "朱厌",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "8d79c5e2d0c76a2e55035b120df40bd988c5ff6de186fb33c39edb9d4cdd28ca",
-        "sha256": "833fb4fe41825b0761ac46949c0c6aff1eed2f79b33852c7b75e5af17a931340",
-        "updatedAt": "2026-11-10T10:35:31+08:00",
+        "sha256": "dac2ee5d8db3c3c469dd88eb494cfe5b567a5d400f4aea7bbc93a301c8ac91a4",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1687,6 +1719,13 @@ const POST_LOG = {
             "at": "2026-11-10T10:35:31+08:00",
             "sha256": "833fb4fe41825b0761ac46949c0c6aff1eed2f79b33852c7b75e5af17a931340",
             "previousSha256": "0125a6228fcc32b460950cfb79513543a3f3fb45c6c5ab482328c07c53308139",
+            "bodySha256": "e528b34354d67890fd640b6559a6efba6b4f2b2749ec335d3a1181dfbdeea488",
+            "bodyChars": 5462
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "dac2ee5d8db3c3c469dd88eb494cfe5b567a5d400f4aea7bbc93a301c8ac91a4",
+            "previousSha256": "833fb4fe41825b0761ac46949c0c6aff1eed2f79b33852c7b75e5af17a931340",
             "bodySha256": "e528b34354d67890fd640b6559a6efba6b4f2b2749ec335d3a1181dfbdeea488",
             "bodyChars": 5462
           }
@@ -1735,6 +1774,15 @@ const POST_LOG = {
             "chars": 18390,
             "paragraphs": 54,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "ac41743cf622c1a1b1aa71b687daf6372a831f3482b09d029e7f4cbf7bcfb493",
+            "sha256": "ac41743cf622c1a1b1aa71b687daf6372a831f3482b09d029e7f4cbf7bcfb493",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 7646,
+            "paragraphs": 54,
+            "revisions": []
           }
         }
       },
@@ -1743,8 +1791,8 @@ const POST_LOG = {
         "name": "祸斗",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "02e9800ad8390b07690ff5c77a137f4162f4a060c8300617a3da19a24efd51d2",
-        "sha256": "fb997112b6d2750a5f568394dfbd81e0dadd0f4e49f72f70c96638de32711fe7",
-        "updatedAt": "2026-11-10T10:35:31+08:00",
+        "sha256": "e7446b888836492bbf5e3493c69e252d5c486760c1a52e81220b182afad91600",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1771,6 +1819,13 @@ const POST_LOG = {
             "at": "2026-11-10T10:35:31+08:00",
             "sha256": "fb997112b6d2750a5f568394dfbd81e0dadd0f4e49f72f70c96638de32711fe7",
             "previousSha256": "acbeafcf6200613179e3ad1feeef783ee6c59a26f1ae9dd1f9f4e9099ba402ac",
+            "bodySha256": "dc10e85d7213d59b26a54531646b0b4ea94f4eb4f2992d1a271b002df646f15b",
+            "bodyChars": 2882
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "e7446b888836492bbf5e3493c69e252d5c486760c1a52e81220b182afad91600",
+            "previousSha256": "fb997112b6d2750a5f568394dfbd81e0dadd0f4e49f72f70c96638de32711fe7",
             "bodySha256": "dc10e85d7213d59b26a54531646b0b4ea94f4eb4f2992d1a271b002df646f15b",
             "bodyChars": 2882
           }
@@ -1819,6 +1874,15 @@ const POST_LOG = {
             "chars": 9286,
             "paragraphs": 41,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "3ef3a9f99c4debed15e2514272314aa0bc8381c1b9cdad98382498b6cca44c54",
+            "sha256": "3ef3a9f99c4debed15e2514272314aa0bc8381c1b9cdad98382498b6cca44c54",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 4156,
+            "paragraphs": 42,
+            "revisions": []
           }
         }
       },
@@ -1827,8 +1891,8 @@ const POST_LOG = {
         "name": "英招",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "42bf0853cade974cb6bf742872bca3f3285163120d555436d1c168787690fb40",
-        "sha256": "b3059cf48aa7b878ed40be5802182f5039fd634e3f3fb3604d7d643a17735021",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "da32e30f702ce3f632fc657fbb14b288ce6dcf544ff6e1a7eeacf057bf6ba9fb",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1862,6 +1926,13 @@ const POST_LOG = {
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "b3059cf48aa7b878ed40be5802182f5039fd634e3f3fb3604d7d643a17735021",
             "previousSha256": "ee9f447d4fd7ca6623b7d2821fce1f133d2e61a0990b89b7d2b9c05708091679",
+            "bodySha256": "e23b71148bd1dcefe9812b9da4869eeac48f9640871a700303cd416b2efcd1fe",
+            "bodyChars": 5181
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "da32e30f702ce3f632fc657fbb14b288ce6dcf544ff6e1a7eeacf057bf6ba9fb",
+            "previousSha256": "b3059cf48aa7b878ed40be5802182f5039fd634e3f3fb3604d7d643a17735021",
             "bodySha256": "e23b71148bd1dcefe9812b9da4869eeac48f9640871a700303cd416b2efcd1fe",
             "bodyChars": 5181
           }
@@ -1916,6 +1987,15 @@ const POST_LOG = {
             "chars": 17959,
             "paragraphs": 77,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "e0767d422a62abc50598a9c4f0bd1d7b881a5f964ba12c5adf44edfad5d42e24",
+            "sha256": "e0767d422a62abc50598a9c4f0bd1d7b881a5f964ba12c5adf44edfad5d42e24",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 7067,
+            "paragraphs": 77,
+            "revisions": []
           }
         }
       },
@@ -1924,8 +2004,8 @@ const POST_LOG = {
         "name": "重明鸟",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "ef0a046886ca573b15ba6b399ed3e30a3eede075122c6435c9b8c15177fcf867",
-        "sha256": "58f5326d41541d16c21bcf4dfc99421ede17b009c533cb56b7629dd6caf1318f",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "86dc184b9224989617b301ec8052393204608128d06b62fbf314c6aea0e172f0",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -1959,6 +2039,13 @@ const POST_LOG = {
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "58f5326d41541d16c21bcf4dfc99421ede17b009c533cb56b7629dd6caf1318f",
             "previousSha256": "382affea3cab470b2edc68fcefc09d74f5f0ed240582e0defa8639336efb9dfb",
+            "bodySha256": "334f9612b3205431af36dd7fad6d735cb4afbef2ac3e9804490f7a1bea635925",
+            "bodyChars": 5856
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "86dc184b9224989617b301ec8052393204608128d06b62fbf314c6aea0e172f0",
+            "previousSha256": "58f5326d41541d16c21bcf4dfc99421ede17b009c533cb56b7629dd6caf1318f",
             "bodySha256": "334f9612b3205431af36dd7fad6d735cb4afbef2ac3e9804490f7a1bea635925",
             "bodyChars": 5856
           }
@@ -2013,6 +2100,15 @@ const POST_LOG = {
             "chars": 19841,
             "paragraphs": 90,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "86c7bb7d3179c519a4b6bcf0e9259254ec8f8ed43363ce159f8d3d37d0d7b619",
+            "sha256": "86c7bb7d3179c519a4b6bcf0e9259254ec8f8ed43363ce159f8d3d37d0d7b619",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 7939,
+            "paragraphs": 90,
+            "revisions": []
           }
         }
       },
@@ -2021,8 +2117,8 @@ const POST_LOG = {
         "name": "当康",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "b8780e78b906a896a61df5f946ebf0bc18923f0a2690aaf9da8d8791988a5e74",
-        "sha256": "519edb39c8b78c139a3838ec59041f88d2ba6e95535fabbf2d774a664ae47e1f",
-        "updatedAt": "2026-11-10T09:40:11+08:00",
+        "sha256": "a6ec96b9564487aa3d8436cf804ec75b6763b63c67fdf10766c9a2242957ee4c",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2042,6 +2138,13 @@ const POST_LOG = {
             "at": "2026-11-10T09:40:11+08:00",
             "sha256": "519edb39c8b78c139a3838ec59041f88d2ba6e95535fabbf2d774a664ae47e1f",
             "previousSha256": "1920459bdf7df9b3b0cbc60d8e80a24b3cc2974d8f6d4adf8c7cd4a255efe945",
+            "bodySha256": "04830d9b7081ed314875815c895f859fabe20bd903b91c75aaaa6e1d853a0e57",
+            "bodyChars": 4336
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "a6ec96b9564487aa3d8436cf804ec75b6763b63c67fdf10766c9a2242957ee4c",
+            "previousSha256": "519edb39c8b78c139a3838ec59041f88d2ba6e95535fabbf2d774a664ae47e1f",
             "bodySha256": "04830d9b7081ed314875815c895f859fabe20bd903b91c75aaaa6e1d853a0e57",
             "bodyChars": 4336
           }
@@ -2084,6 +2187,15 @@ const POST_LOG = {
             "chars": 14929,
             "paragraphs": 62,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "aa51a8864004596c81a94e4cf9a0ad4f24a220803f089289e87bc03882d795b7",
+            "sha256": "aa51a8864004596c81a94e4cf9a0ad4f24a220803f089289e87bc03882d795b7",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 6207,
+            "paragraphs": 62,
+            "revisions": []
           }
         }
       },
@@ -2092,8 +2204,8 @@ const POST_LOG = {
         "name": "夫诸",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "b86f17a20eca97e1a8ea7deec6b7f8fa11696b9835e3594fa89962f403881b8f",
-        "sha256": "a9d0505b4cc238b79bd69f1ad7fff79dfea01c5c9e00d5bc96a69c2a12d5a184",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "46bbdd284cecafbada76d9e28d4a1c222d372b680fdd0a22d91413427bbb75ee",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2120,6 +2232,13 @@ const POST_LOG = {
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "a9d0505b4cc238b79bd69f1ad7fff79dfea01c5c9e00d5bc96a69c2a12d5a184",
             "previousSha256": "c193f8e805a529ec708416a60d63c3252c1365954c69f9205831c202a81192ff",
+            "bodySha256": "0fdfb49ae5fe1d4a8c58c0fbed64b4f1959b1f13cb377c57fd6419a198be4e78",
+            "bodyChars": 5687
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "46bbdd284cecafbada76d9e28d4a1c222d372b680fdd0a22d91413427bbb75ee",
+            "previousSha256": "a9d0505b4cc238b79bd69f1ad7fff79dfea01c5c9e00d5bc96a69c2a12d5a184",
             "bodySha256": "0fdfb49ae5fe1d4a8c58c0fbed64b4f1959b1f13cb377c57fd6419a198be4e78",
             "bodyChars": 5687
           }
@@ -2162,6 +2281,15 @@ const POST_LOG = {
             "chars": 20088,
             "paragraphs": 50,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "75b22b41b3dc2d1891751a032c31e80db2be31f921c4e14e3373f2fbc6b766e4",
+            "sha256": "75b22b41b3dc2d1891751a032c31e80db2be31f921c4e14e3373f2fbc6b766e4",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 7603,
+            "paragraphs": 50,
+            "revisions": []
           }
         }
       },
@@ -2170,8 +2298,8 @@ const POST_LOG = {
         "name": "陵鱼",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "28cb97891217b550372262e945968977aa1f8b586bb7ac6c11c2db2ad1290ec2",
-        "sha256": "ba1bf58a3da72b97da427a9d6863c78577d774ddcd462ee7543f3dd5f19e6a43",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "d6c6c8a68c9f902eed05c7218c2b0c0e1e60b6edd56ccbeda8812d456cb285df",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2205,6 +2333,13 @@ const POST_LOG = {
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "ba1bf58a3da72b97da427a9d6863c78577d774ddcd462ee7543f3dd5f19e6a43",
             "previousSha256": "1f0252eef364d5aa9350a1ba2f256a8b0b20d2284f6c1875ab3b5b7c61427e5f",
+            "bodySha256": "923089ccfe9a4bd69abbd42db3cdbfdbd3d68155899d48f5bd15024d0d537969",
+            "bodyChars": 4393
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "d6c6c8a68c9f902eed05c7218c2b0c0e1e60b6edd56ccbeda8812d456cb285df",
+            "previousSha256": "ba1bf58a3da72b97da427a9d6863c78577d774ddcd462ee7543f3dd5f19e6a43",
             "bodySha256": "923089ccfe9a4bd69abbd42db3cdbfdbd3d68155899d48f5bd15024d0d537969",
             "bodyChars": 4393
           }
@@ -2253,6 +2388,15 @@ const POST_LOG = {
             "chars": 16034,
             "paragraphs": 26,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "c1ba938073c5b86b5479a2a7130213eb6ddfdefd95c7ae3126868466cc145f1b",
+            "sha256": "c1ba938073c5b86b5479a2a7130213eb6ddfdefd95c7ae3126868466cc145f1b",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 6080,
+            "paragraphs": 26,
+            "revisions": []
           }
         }
       },
@@ -2261,8 +2405,8 @@ const POST_LOG = {
         "name": "肥遗",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "683904437f008fdac43d5f73e3df3369ba7855135a5ab37fa7a1bb36d365ef35",
-        "sha256": "7496a8a64d7d1ad5e6b9b05e5005fbb89e16f5bd5a4f68358439136c1fff3447",
-        "updatedAt": "2026-11-10T09:40:11+08:00",
+        "sha256": "0ee783afe0745c46245fcb3edd4fd83b18708509f918533b671166039188da16",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2282,6 +2426,13 @@ const POST_LOG = {
             "at": "2026-11-10T09:40:11+08:00",
             "sha256": "7496a8a64d7d1ad5e6b9b05e5005fbb89e16f5bd5a4f68358439136c1fff3447",
             "previousSha256": "2d6bf4ddd10fb034b568eb4f1b026ab6497e2ed56b1c80a0327992cab84edca8",
+            "bodySha256": "9a182877f05d244cab59837d91b3a36de71d8061ce8e04ac8f70434d25bbbaf7",
+            "bodyChars": 2323
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "0ee783afe0745c46245fcb3edd4fd83b18708509f918533b671166039188da16",
+            "previousSha256": "7496a8a64d7d1ad5e6b9b05e5005fbb89e16f5bd5a4f68358439136c1fff3447",
             "bodySha256": "9a182877f05d244cab59837d91b3a36de71d8061ce8e04ac8f70434d25bbbaf7",
             "bodyChars": 2323
           }
@@ -2324,6 +2475,15 @@ const POST_LOG = {
             "chars": 8172,
             "paragraphs": 33,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "9afbdae6c39eca8a6c3b700150625bafcd956e008e4eba3bf0d61ac13aad42d9",
+            "sha256": "9afbdae6c39eca8a6c3b700150625bafcd956e008e4eba3bf0d61ac13aad42d9",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 3260,
+            "paragraphs": 33,
+            "revisions": []
           }
         }
       },
@@ -2332,8 +2492,8 @@ const POST_LOG = {
         "name": "鹿蜀",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "6609689d3e1b3451fab6debf3402e7da45f3c5dfcf00c82971dd4e9c3af1a454",
-        "sha256": "6831f3abd280ae3efbffadcc06d4b8adf58e4ae81da64115467c8f3d03fc531a",
-        "updatedAt": "2026-11-10T10:35:31+08:00",
+        "sha256": "883d8d93501a3425d6361381fe4816e0443eba0f9fe97e17c8b5f351b4451910",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2360,6 +2520,13 @@ const POST_LOG = {
             "at": "2026-11-10T10:35:31+08:00",
             "sha256": "6831f3abd280ae3efbffadcc06d4b8adf58e4ae81da64115467c8f3d03fc531a",
             "previousSha256": "49b55769c74a6e52a6408033c85830445f2b05c19bef9216ccf68037678e4bed",
+            "bodySha256": "2a812cee79e84f05ee6b113b2e03cf05879e7c34085bb34df1f7617e1cfd640b",
+            "bodyChars": 2370
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "883d8d93501a3425d6361381fe4816e0443eba0f9fe97e17c8b5f351b4451910",
+            "previousSha256": "6831f3abd280ae3efbffadcc06d4b8adf58e4ae81da64115467c8f3d03fc531a",
             "bodySha256": "2a812cee79e84f05ee6b113b2e03cf05879e7c34085bb34df1f7617e1cfd640b",
             "bodyChars": 2370
           }
@@ -2408,6 +2575,15 @@ const POST_LOG = {
             "chars": 8269,
             "paragraphs": 55,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "0a5af04d1a185ec612b594f19a3e9a4607d0a2fbe49297f254ee36de2a7af036",
+            "sha256": "0a5af04d1a185ec612b594f19a3e9a4607d0a2fbe49297f254ee36de2a7af036",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 3330,
+            "paragraphs": 55,
+            "revisions": []
           }
         }
       },
@@ -2416,8 +2592,8 @@ const POST_LOG = {
         "name": "赢鱼",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "087a843cc4923fc9342f2fdbad6bf996d807d2f6ff215a34d91f3049ddfa540c",
-        "sha256": "4489ec6d8460453e976d8e61315e60d95dcaa66bebd6524be7530aad2540d14f",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "07c14da54f042da600f9388fd9b9e886b19cf55201589eb7f64e68629437a998",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2451,6 +2627,13 @@ const POST_LOG = {
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "4489ec6d8460453e976d8e61315e60d95dcaa66bebd6524be7530aad2540d14f",
             "previousSha256": "ec1d5bd821d185697003aaad913d7f821ae2b60efd38228acdd5eb5dbe275fe2",
+            "bodySha256": "bc36a47a773e0617a59a9ba8ef80cb847e7d21d692128a971d233e9e6e1571bf",
+            "bodyChars": 5232
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "07c14da54f042da600f9388fd9b9e886b19cf55201589eb7f64e68629437a998",
+            "previousSha256": "4489ec6d8460453e976d8e61315e60d95dcaa66bebd6524be7530aad2540d14f",
             "bodySha256": "bc36a47a773e0617a59a9ba8ef80cb847e7d21d692128a971d233e9e6e1571bf",
             "bodyChars": 5232
           }
@@ -2505,6 +2688,15 @@ const POST_LOG = {
             "chars": 19278,
             "paragraphs": 58,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "87895200c453f77f1ed48c23049feb332cb8bc1120c3274a27325d7289b36708",
+            "sha256": "87895200c453f77f1ed48c23049feb332cb8bc1120c3274a27325d7289b36708",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 7475,
+            "paragraphs": 58,
+            "revisions": []
           }
         }
       },
@@ -2513,8 +2705,8 @@ const POST_LOG = {
         "name": "患",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "588978c658770fe6b0c8fb230f4826a27e9b10a1fba00f25d8a3c17a21baef2e",
-        "sha256": "c476a0455c77a64cb9e82deed09b608b7bb930c6e56a6d437bffe6c9310cfe40",
-        "updatedAt": "2026-11-10T10:35:31+08:00",
+        "sha256": "4710b4ba1454e1b838d662d84a71a475535ba1459fa47ad63c96202f8b4122e7",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2541,6 +2733,13 @@ const POST_LOG = {
             "at": "2026-11-10T10:35:31+08:00",
             "sha256": "c476a0455c77a64cb9e82deed09b608b7bb930c6e56a6d437bffe6c9310cfe40",
             "previousSha256": "15ae5c2cd7f08c3da14e17625ebeaa60cdf154602a69c9df4463f804162af952",
+            "bodySha256": "00db7ba4cd133f9342db73ad76d6437fb072b202ae8778423a7d5c890aa52a7c",
+            "bodyChars": 6583
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "4710b4ba1454e1b838d662d84a71a475535ba1459fa47ad63c96202f8b4122e7",
+            "previousSha256": "c476a0455c77a64cb9e82deed09b608b7bb930c6e56a6d437bffe6c9310cfe40",
             "bodySha256": "00db7ba4cd133f9342db73ad76d6437fb072b202ae8778423a7d5c890aa52a7c",
             "bodyChars": 6583
           }
@@ -2589,6 +2788,15 @@ const POST_LOG = {
             "chars": 23480,
             "paragraphs": 84,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "a220ea16986fe1cbb9b5585806e8a81863a2b66b3598c097ecdd195b105cf723",
+            "sha256": "a220ea16986fe1cbb9b5585806e8a81863a2b66b3598c097ecdd195b105cf723",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 8971,
+            "paragraphs": 84,
+            "revisions": []
           }
         }
       },
@@ -2597,8 +2805,8 @@ const POST_LOG = {
         "name": "毕方",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "5b555105a2479d26c5ff444ca9bf8273b2a1717fa2596a3197536e463ab972c8",
-        "sha256": "30e1e61f827128a360199965bd42d0d23bd4701eb55e3025bf9f083ec927716a",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "bb2cf2b2a5a4492c9793d00ef9b6f6974dede3c8c3c2485297047aed2e21b137",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2632,6 +2840,13 @@ const POST_LOG = {
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "30e1e61f827128a360199965bd42d0d23bd4701eb55e3025bf9f083ec927716a",
             "previousSha256": "4a6b88bd933098323e99ef960cbba02a2a8baef54e050441dc39a5b895fc3f3e",
+            "bodySha256": "9d235fcde3259d0726929cd82ef67f4e7a7e45f8ef88834d98c33c5d364b321d",
+            "bodyChars": 6580
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "bb2cf2b2a5a4492c9793d00ef9b6f6974dede3c8c3c2485297047aed2e21b137",
+            "previousSha256": "30e1e61f827128a360199965bd42d0d23bd4701eb55e3025bf9f083ec927716a",
             "bodySha256": "9d235fcde3259d0726929cd82ef67f4e7a7e45f8ef88834d98c33c5d364b321d",
             "bodyChars": 6580
           }
@@ -2686,6 +2901,15 @@ const POST_LOG = {
             "chars": 25113,
             "paragraphs": 126,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "589ee26bd5e831236bac666bc166235754d6cba907b0cb0e609a32f13683f2f4",
+            "sha256": "589ee26bd5e831236bac666bc166235754d6cba907b0cb0e609a32f13683f2f4",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 9702,
+            "paragraphs": 126,
+            "revisions": []
           }
         }
       },
@@ -2694,8 +2918,8 @@ const POST_LOG = {
         "name": "陆吾",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "3e3a5a02d7884a40817c5229c9cd869b71ec913fdeab3f1c589e7d7f42165dae",
-        "sha256": "c36abfa4faeaee95aee2f2d8be96d199344f3b785b43bf45fd415d25a265f851",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "c2f1cd641e3452254ea2cba9654c5210186af6da285788e2f62191137fb0a730",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2729,6 +2953,13 @@ const POST_LOG = {
             "at": "2026-11-10T11:06:47+08:00",
             "sha256": "c36abfa4faeaee95aee2f2d8be96d199344f3b785b43bf45fd415d25a265f851",
             "previousSha256": "95aaf2f47a3534f377a89272488eb0c2ef7d23270b06c8bf0898a227fa4a5329",
+            "bodySha256": "f80ac75507d613e7423299033fb6eb33f7e675d434b72f94a9ea0ca83678a01b",
+            "bodyChars": 5693
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "c2f1cd641e3452254ea2cba9654c5210186af6da285788e2f62191137fb0a730",
+            "previousSha256": "c36abfa4faeaee95aee2f2d8be96d199344f3b785b43bf45fd415d25a265f851",
             "bodySha256": "f80ac75507d613e7423299033fb6eb33f7e675d434b72f94a9ea0ca83678a01b",
             "bodyChars": 5693
           }
@@ -2783,6 +3014,15 @@ const POST_LOG = {
             "chars": 22594,
             "paragraphs": 109,
             "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "90b2bf4e1bf80fc47bcf0e0915b0ebac37a02e0fbf1e3ca4b1cd8fded3f049a4",
+            "sha256": "90b2bf4e1bf80fc47bcf0e0915b0ebac37a02e0fbf1e3ca4b1cd8fded3f049a4",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 8691,
+            "paragraphs": 109,
+            "revisions": []
           }
         }
       },
@@ -2791,8 +3031,8 @@ const POST_LOG = {
         "name": "九尾",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "980885368425ba59997731fb71b0e4ad88e273ff29ee63ce87f1039a4e8a4992",
-        "sha256": "07693c95b568f4c03bf7728601b5dc14b097eaf65ce57ea7548e4346d1a75c1e",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "87d0087662f723ea39498c01788ba9b7a3a8a7e01845fbcb02e28c812f8bcbc8",
+        "updatedAt": "2026-11-12T21:23:18+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2819,6 +3059,13 @@ const POST_LOG = {
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "07693c95b568f4c03bf7728601b5dc14b097eaf65ce57ea7548e4346d1a75c1e",
             "previousSha256": "c09e35dd65669874dc955ea8e8671f7074b31c7028afb1ea8d695d81b02e3c97",
+            "bodySha256": "75723cefd124efbdd76d7aa98712836c8fb2fc6a8d0e5db97e4a7e9f8283178e",
+            "bodyChars": 4170
+          },
+          {
+            "at": "2026-11-12T21:23:18+08:00",
+            "sha256": "87d0087662f723ea39498c01788ba9b7a3a8a7e01845fbcb02e28c812f8bcbc8",
+            "previousSha256": "07693c95b568f4c03bf7728601b5dc14b097eaf65ce57ea7548e4346d1a75c1e",
             "bodySha256": "75723cefd124efbdd76d7aa98712836c8fb2fc6a8d0e5db97e4a7e9f8283178e",
             "bodyChars": 4170
           }
@@ -2859,6 +3106,15 @@ const POST_LOG = {
             "sha256": "c52498aa0eba5dfe051430539a4f55afc354920deb6d1ddae9655f54654bf501",
             "updatedAt": "2026-11-10T09:40:11+08:00",
             "chars": 15973,
+            "paragraphs": 80,
+            "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-12T21:23:18+08:00",
+            "firstSha256": "38057bdd39c4bb8a1bbaf28c389b8590a97aed1a9971e0d06c57a6b2aa4a2b36",
+            "sha256": "38057bdd39c4bb8a1bbaf28c389b8590a97aed1a9971e0d06c57a6b2aa4a2b36",
+            "updatedAt": "2026-11-12T21:23:18+08:00",
+            "chars": 6237,
             "paragraphs": 80,
             "revisions": []
           }
