@@ -10,7 +10,7 @@
    - 每次只按「章号 num」合并对应章节的 excerpt 字段，绝不整表覆盖：
      已有正文的章节没出现在新稿里 → 原样保留；出现 → 覆盖为新版；
      新章号 → 追加。这样分批给稿不会丢内容。
-   - num 是章节的永久身份：URL(?ch=num)、起点对应关系、神兽名都跟着它。
+   - num 是章节的永久身份：URL(?ch=num)、章节对应关系、神兽名都跟着它。
      调整叙事顺序请改作品的 chapterOrder（num 数组），**不要改 num**。
      chapterOrder 未配置时按 chapters 数组原顺序显示（兼容旧数据）。
    - 每次改动都走 git commit，改错了可随时回滚，不必怕「反复改」。
@@ -67,7 +67,6 @@ const I18N = {
     firstPosted: "首发", firstPostedFull: "本站首发", lastUpdated: "最后修订", provenance: "首发存证", fullTextBadge: "全文", fullTextPosted: "全文首发", loadingText: "正文载入中…", textLoadFail: "正文加载失败，请刷新重试，或打开全文存档页。", archivePage: "全文存档页",
     translationBadge: "译本", translationFirst: "译本首发", translationMissing: "本章尚无此语言译本，以下为中文原文。", translationProgress: "译本正在逐章更新，尚无译本的章节暂显示中文原文。", otherLanguages: "其他语言版本", originalVersion: "中文原文", translationArchive: "译本存档页", prevChapter: "上一章", nextChapter: "下一章", chapterList: "作品目录", firstChapter: "已是第一章", lastChapter: "已是最后一章", chapterNav: "章节翻页",
     readLatest: "读最新章",
-    qidian: "起点正版",
     backWorks: "‹ 作品库",
     chIndex: "章节 · 山海经神兽索引",
     chIndexSub: "全书每章以一个《山海经》神兽命名，神兽即命运隐喻。",
@@ -119,7 +118,6 @@ const I18N = {
     firstPosted: "First posted", firstPostedFull: "First published here", lastUpdated: "Last updated", provenance: "Publication record", fullTextBadge: "Full text", fullTextPosted: "Full text published", loadingText: "Loading chapter…", textLoadFail: "Could not load the chapter. Please refresh, or open the archive page.", archivePage: "Full-text archive",
     translationBadge: "Translation", translationFirst: "Translation first published", translationMissing: "This chapter is not yet available in this language. The Chinese original is shown below.", translationProgress: "Translations are being added chapter by chapter. Chapters without a translation show the Chinese original.", otherLanguages: "Other languages", originalVersion: "Chinese original", translationArchive: "Translation archive", prevChapter: "Previous chapter", nextChapter: "Next chapter", chapterList: "Contents", firstChapter: "This is the first chapter", lastChapter: "This is the last chapter", chapterNav: "Chapter navigation",
     readLatest: "Read Latest",
-    qidian: "Qidian (CN)",
     backWorks: "‹ Works",
     chIndex: "Chapters · Beast Index",
     chIndexSub: "Each chapter is named after a mythical beast — the beast is fate.",
@@ -171,7 +169,6 @@ const I18N = {
     firstPosted: "初公開", firstPostedFull: "本サイト初公開", lastUpdated: "最終更新", provenance: "公開記録", fullTextBadge: "全文", fullTextPosted: "全文初公開", loadingText: "本文を読み込み中…", textLoadFail: "本文を読み込めませんでした。再読み込みするか、アーカイブをご利用ください。", archivePage: "全文アーカイブ",
     translationBadge: "翻訳", translationFirst: "翻訳初公開", translationMissing: "この章はまだこの言語に翻訳されていません。以下は中国語の原文です。", translationProgress: "翻訳は章ごとに公開しています。訳本のない章は中国語の原文を表示します。", otherLanguages: "他の言語版", originalVersion: "中国語原文", translationArchive: "翻訳アーカイブ", prevChapter: "前の章", nextChapter: "次の章", chapterList: "目次", firstChapter: "最初の章です", lastChapter: "最後の章です", chapterNav: "章の移動",
     readLatest: "最新話を読む",
-    qidian: "起点（中国）",
     backWorks: "‹ 作品",
     chIndex: "章・山海経神獣索引",
     chIndexSub: "各章は『山海経』の神獣の名で綴られ、神獣は運命そのもの。",
@@ -223,7 +220,6 @@ const I18N = {
     firstPosted: "Publié le", firstPostedFull: "Première publication ici", lastUpdated: "Dernière mise à jour", provenance: "Registre de publication", fullTextBadge: "Texte intégral", fullTextPosted: "Texte intégral publié", loadingText: "Chargement du chapitre…", textLoadFail: "Impossible de charger le chapitre. Actualisez ou ouvrez la page d'archive.", archivePage: "Archive du texte intégral",
     translationBadge: "Traduction", translationFirst: "Première publication de la traduction", translationMissing: "Ce chapitre n'est pas encore traduit dans cette langue. L'original chinois figure ci-dessous.", translationProgress: "Les traductions sont publiées chapitre par chapitre. Les chapitres non encore traduits affichent l'original chinois.", otherLanguages: "Autres langues", originalVersion: "Original chinois", translationArchive: "Archive de la traduction", prevChapter: "Chapitre précédent", nextChapter: "Chapitre suivant", chapterList: "Sommaire", firstChapter: "Premier chapitre", lastChapter: "Dernier chapitre", chapterNav: "Navigation des chapitres",
     readLatest: "Lire le dernier",
-    qidian: "Qidian (CN)",
     backWorks: "‹ Œuvres",
     chIndex: "Chapitres · Index des bêtes",
     chIndexSub: "Chaque chapitre est nommé d'après une bête mythique — la bête est le destin.",
@@ -275,7 +271,6 @@ const I18N = {
     firstPosted: "نُشر أولاً", firstPostedFull: "أول نشر هنا", lastUpdated: "آخر تحديث", provenance: "سجل النشر", fullTextBadge: "النص الكامل", fullTextPosted: "نشر النص الكامل", loadingText: "جارٍ تحميل الفصل…", textLoadFail: "تعذّر تحميل الفصل. حدّث الصفحة أو افتح صفحة الأرشيف.", archivePage: "أرشيف النص الكامل",
     translationBadge: "ترجمة", translationFirst: "أول نشر للترجمة", translationMissing: "لم يُترجم هذا الفصل إلى هذه اللغة بعد. النص الصيني الأصلي أدناه.", translationProgress: "تُنشر الترجمات فصلًا بفصل. وتعرض الفصول التي لم تُترجم بعد النص الصيني الأصلي.", otherLanguages: "لغات أخرى", originalVersion: "النص الصيني الأصلي", translationArchive: "أرشيف الترجمة", prevChapter: "الفصل السابق", nextChapter: "الفصل التالي", chapterList: "الفهرس", firstChapter: "هذا هو الفصل الأول", lastChapter: "هذا هو الفصل الأخير", chapterNav: "التنقل بين الفصول",
     readLatest: "اقرأ الأحدث",
-    qidian: "Qidian (CN)",
     backWorks: "‹ الأعمال",
     chIndex: "الفصول · فهرس الوحوش",
     chIndexSub: "كل فصل يحمل اسم وحش أسطوري — الوحش هو القدر。",
@@ -360,7 +355,6 @@ const WORKS = [
     beastIndex: true,               // 山海经神兽章节索引
     fullText: true,                 // 全本正文已公开；按章从 chapters/ 加载
     cover: "恨",
-    qidianUrl: "https://www.qidian.com/book/1042069180/",
     summary: {
       zh: "一个叫郑智咏的中年技术男，出轨后失去一切，负债累累，在体制、资本、人情和欲望的夹缝里，一步一步，把自己重新拼起来，直到再次拥有了自己的事业和四个美女恋人。",
       en: "Zheng Zhiyong, a middle-aged engineer, loses everything after an affair and sinks into debt. Caught between the system, capital, people and desire, he rebuilds himself step by step — until he regains his career and the affection of four women.",
@@ -453,7 +447,6 @@ const WORKS = [
     year: 2026,
     paywall: false,
     officialFirst: true,
-    qidianUrl: "",
     cover: "光",
     summary: {
       zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
@@ -476,7 +469,6 @@ const WORKS = [
     year: 2026,
     paywall: false,
     officialFirst: true,
-    qidianUrl: "",
     cover: "牧",
     summary: {
       zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",

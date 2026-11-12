@@ -182,7 +182,7 @@ function chapterTitle(c) {
 
 /* 章节展示顺序：作品可用 chapterOrder（num 数组）自由重排叙事顺序。
    未配置时按 chapters 数组原顺序（零回归）。num 始终不变：URL、神兽名、
-   正文、起点对应关系都不动，读者收藏的旧链接不会失效。 */
+   正文、章节对应关系都不动，读者收藏的旧链接不会失效。 */
 function orderedChapters(w) {
   var list = (w.chapters || []).slice();
   if (!w.chapterOrder || !w.chapterOrder.length) return list;
@@ -346,7 +346,6 @@ function injectBookJsonLd(work) {
     "genre": tv(work.tags),
     "description": tv(work.summary),
     "url": location.href,
-    "sameAs": work.qidianUrl ? [work.qidianUrl] : [],
     "publisher": { "@type": "Organization", "name": t("brand") + (LANG === "zh" ? " 官网" : " Official") },
     "inLanguage": langCode(),
     "bookFormat": "https://schema.org/EBook",
@@ -484,7 +483,6 @@ function renderWorkDetail(elId) {
       '<div class="tags" style="margin:16px 0 26px">' + tags + '</div>' +
       '<div class="actions">' +
         '<a class="btn primary" href="reader.html?work=' + esc(w.id) + '&ch=' + esc(lastNum) + '">' + esc(t("readLatest")) + '</a>' +
-        (w.qidianUrl ? '<a class="btn" href="' + esc(w.qidianUrl) + '" target="_blank" rel="noopener">' + esc(t("qidian")) + '</a>' : '') +
         (w.paywall && SHOW_MEMBER ? '<a class="btn" href="pricing.html?work=' + esc(w.id) + '">' + esc(t("becomeMember")) + '</a>' : '') +
       '</div>' +
       '<h2 class="ch-h">' + esc(w.beastIndex ? t("chIndex") : t("chCatalog")) + '</h2>' +
@@ -650,8 +648,7 @@ function renderReader(elId) {
     body = '<div class="content">' + esc(tv(c.excerpt)) + '</div>' +
       '<div class="notice">' + esc(t("excerptNotice")) + '</div>';
   } else {
-    body = '<div class="content" style="color:var(--text-dim)">' + esc(t("updateSoon")) +
-      ' ' + (w.qidianUrl ? '<a href="' + esc(w.qidianUrl) + '" target="_blank" rel="noopener">' + esc(t("qidian")) + '</a>' : esc(t("qidian"))) + '</div>';
+    body = '<div class="content" style="color:var(--text-dim)">' + esc(t("updateSoon")) + '</div>';
   }
 
   el.innerHTML = '' +

@@ -5,7 +5,7 @@
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-11T23:42:25+08:00",
+  "generatedAt": "2026-11-12T16:39:19+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -2090,8 +2090,8 @@
         "name": "夫诸",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "b86f17a20eca97e1a8ea7deec6b7f8fa11696b9835e3594fa89962f403881b8f",
-        "sha256": "c193f8e805a529ec708416a60d63c3252c1365954c69f9205831c202a81192ff",
-        "updatedAt": "2026-11-10T09:40:11+08:00",
+        "sha256": "a9d0505b4cc238b79bd69f1ad7fff79dfea01c5c9e00d5bc96a69c2a12d5a184",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2113,11 +2113,18 @@
             "previousSha256": "aa3e838eae036fd7a63bb8b7cfdf97e6c47dff932d91ad1b237e25d80dadb1a3",
             "bodySha256": "584c1b3b8ec46ca8dae6dd4a79cfd5421cbfdb00b6b982cd6a3387b3b8478ea5",
             "bodyChars": 5687
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "a9d0505b4cc238b79bd69f1ad7fff79dfea01c5c9e00d5bc96a69c2a12d5a184",
+            "previousSha256": "c193f8e805a529ec708416a60d63c3252c1365954c69f9205831c202a81192ff",
+            "bodySha256": "0fdfb49ae5fe1d4a8c58c0fbed64b4f1959b1f13cb377c57fd6419a198be4e78",
+            "bodyChars": 5687
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "584c1b3b8ec46ca8dae6dd4a79cfd5421cbfdb00b6b982cd6a3387b3b8478ea5",
-        "bodySha256": "584c1b3b8ec46ca8dae6dd4a79cfd5421cbfdb00b6b982cd6a3387b3b8478ea5",
+        "bodySha256": "0fdfb49ae5fe1d4a8c58c0fbed64b4f1959b1f13cb377c57fd6419a198be4e78",
         "bodyChars": 5687,
         "translations": {
           "fr": {
@@ -2782,8 +2789,8 @@
         "name": "九尾",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "980885368425ba59997731fb71b0e4ad88e273ff29ee63ce87f1039a4e8a4992",
-        "sha256": "c09e35dd65669874dc955ea8e8671f7074b31c7028afb1ea8d695d81b02e3c97",
-        "updatedAt": "2026-11-10T09:40:11+08:00",
+        "sha256": "07693c95b568f4c03bf7728601b5dc14b097eaf65ce57ea7548e4346d1a75c1e",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -2805,11 +2812,18 @@
             "previousSha256": "6f6b086ca53ac571b190f289355c6a24edce72730f24d419d3f674bcf00f5d41",
             "bodySha256": "09ad38585069e64fb772fe5d2e465077f23aca9b0590b4a8c727ce5d001ff96b",
             "bodyChars": 4170
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "07693c95b568f4c03bf7728601b5dc14b097eaf65ce57ea7548e4346d1a75c1e",
+            "previousSha256": "c09e35dd65669874dc955ea8e8671f7074b31c7028afb1ea8d695d81b02e3c97",
+            "bodySha256": "75723cefd124efbdd76d7aa98712836c8fb2fc6a8d0e5db97e4a7e9f8283178e",
+            "bodyChars": 4170
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "09ad38585069e64fb772fe5d2e465077f23aca9b0590b4a8c727ce5d001ff96b",
-        "bodySha256": "09ad38585069e64fb772fe5d2e465077f23aca9b0590b4a8c727ce5d001ff96b",
+        "bodySha256": "75723cefd124efbdd76d7aa98712836c8fb2fc6a8d0e5db97e4a7e9f8283178e",
         "bodyChars": 4170,
         "translations": {
           "fr": {
@@ -3028,8 +3042,8 @@
         "name": "妺",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "8aa57b56790217f8fa838fed45d120a991333b2f842a1bbe471729e71917faa3",
-        "sha256": "d3252315ebfc012601f719a4b3f30853fc2d18587684488206859ab1ac9b8021",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "1e2526bd86929559eb658279b1fc3a59ce9bd0c8eeda437d3fe32546108ddea1",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3065,20 +3079,27 @@
             "previousSha256": "f9851858b6455149541ed6ab18b5d67c61dc3d8e37e3c25cae978f3ccd2c0ca8",
             "bodySha256": "6e5ccf8b36fb2ba004c4398975bc7855966c58bd99ed6d30193526f84bae3a51",
             "bodyChars": 7392
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "1e2526bd86929559eb658279b1fc3a59ce9bd0c8eeda437d3fe32546108ddea1",
+            "previousSha256": "d3252315ebfc012601f719a4b3f30853fc2d18587684488206859ab1ac9b8021",
+            "bodySha256": "bf9c7d988f13062e38acb3f68f01f3d62253d516003d961951e427270d90f6ca",
+            "bodyChars": 7432
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "6e5ccf8b36fb2ba004c4398975bc7855966c58bd99ed6d30193526f84bae3a51",
-        "bodySha256": "6e5ccf8b36fb2ba004c4398975bc7855966c58bd99ed6d30193526f84bae3a51",
-        "bodyChars": 7392,
+        "bodySha256": "bf9c7d988f13062e38acb3f68f01f3d62253d516003d961951e427270d90f6ca",
+        "bodyChars": 7432,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "2a5653935082961dd4ec7fdceee1e4571cef84f769f0f8458295cefd832f5a93",
-            "sha256": "f6572ff65da978d4722b04d422507a22ea581587f51a774c8788623ca0efdde1",
-            "updatedAt": "2026-11-10T11:06:47+08:00",
-            "chars": 27907,
-            "paragraphs": 138,
+            "sha256": "2ceceaa82c031ba42a031a58336c6b6e2a7493b36e71dab80e46301584a631de",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 27921,
+            "paragraphs": 132,
             "revisions": [
               {
                 "at": "2026-11-10T09:40:11+08:00",
@@ -3097,26 +3118,46 @@
                 "sha256": "f6572ff65da978d4722b04d422507a22ea581587f51a774c8788623ca0efdde1",
                 "previousSha256": "34f21ab24255eaade5987a0508c1dc583e90e7a0ef2cf60af7d441190fe3262a",
                 "chars": 27907
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "2ceceaa82c031ba42a031a58336c6b6e2a7493b36e71dab80e46301584a631de",
+                "previousSha256": "f6572ff65da978d4722b04d422507a22ea581587f51a774c8788623ca0efdde1",
+                "chars": 27921
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "24ad4f4f178284611b26f40d7d9c89626bff7970a880b71e569d5de775d008f4",
-            "sha256": "24ad4f4f178284611b26f40d7d9c89626bff7970a880b71e569d5de775d008f4",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 18428,
-            "paragraphs": 138,
-            "revisions": []
+            "sha256": "dc470024b2b3005b698937151921264ddc115fb810a303e5ce94faa989724f3a",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 18499,
+            "paragraphs": 132,
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "dc470024b2b3005b698937151921264ddc115fb810a303e5ce94faa989724f3a",
+                "previousSha256": "24ad4f4f178284611b26f40d7d9c89626bff7970a880b71e569d5de775d008f4",
+                "chars": 18499
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "cdad50a672898c76e13f4c37872cba01532bfd4758f2137e8587446a71cfa9e0",
-            "sha256": "cdad50a672898c76e13f4c37872cba01532bfd4758f2137e8587446a71cfa9e0",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 26784,
-            "paragraphs": 135,
-            "revisions": []
+            "sha256": "cd6ee7cd7f5c97039cf9ea85fc0cc2becfcf2020c277b5631a16ae9e6a3abfcc",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 26748,
+            "paragraphs": 129,
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "cd6ee7cd7f5c97039cf9ea85fc0cc2becfcf2020c277b5631a16ae9e6a3abfcc",
+                "previousSha256": "cdad50a672898c76e13f4c37872cba01532bfd4758f2137e8587446a71cfa9e0",
+                "chars": 26748
+              }
+            ]
           }
         }
       },
@@ -3125,8 +3166,8 @@
         "name": "精卫",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "6e970ec0f03f9b7fd600217173ca7b2c9b2cbdfbf896c36774a88d9336db288a",
-        "sha256": "7ce75e91e9257b1f2c77a9093a53f0b32eb2ee88d88ada2789a0d12c32eeea90",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "e81bdc757b309c5dd8e3277b896d1ce0766f698e891a9937de365f407f1a966e",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3162,19 +3203,26 @@
             "previousSha256": "15b30e0cf90ce9bfe492d6d1db019d2a58bdc4b7838dce679bd597156c7c109e",
             "bodySha256": "6b125845ef47c81f8d59ef403aa4b2c81002e47d6eca2082b106935edcae4bba",
             "bodyChars": 4745
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "e81bdc757b309c5dd8e3277b896d1ce0766f698e891a9937de365f407f1a966e",
+            "previousSha256": "7ce75e91e9257b1f2c77a9093a53f0b32eb2ee88d88ada2789a0d12c32eeea90",
+            "bodySha256": "c8888eb67c49558e5ffda43510bb367fb161595cedf52a28de44fed223857872",
+            "bodyChars": 4858
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "6b125845ef47c81f8d59ef403aa4b2c81002e47d6eca2082b106935edcae4bba",
-        "bodySha256": "6b125845ef47c81f8d59ef403aa4b2c81002e47d6eca2082b106935edcae4bba",
-        "bodyChars": 4745,
+        "bodySha256": "c8888eb67c49558e5ffda43510bb367fb161595cedf52a28de44fed223857872",
+        "bodyChars": 4858,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "e986c02b490a5974c2aea27e42413abf722d9832a1fdd3f65882764c95c82bec",
-            "sha256": "ba0c4dded3fc73058abfd4e29202602758829bc64d6bee5bc6062a1a2ea3a419",
-            "updatedAt": "2026-11-10T11:06:47+08:00",
-            "chars": 18247,
+            "sha256": "8db60682fb55f2d644e262e3d67b8e9e0f6848144af3b79edb464b76bb80bdfa",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 18302,
             "paragraphs": 78,
             "revisions": [
               {
@@ -3194,26 +3242,46 @@
                 "sha256": "ba0c4dded3fc73058abfd4e29202602758829bc64d6bee5bc6062a1a2ea3a419",
                 "previousSha256": "5881e68ef49030589dfa50e54475ccd5aa497ab9dbc20e55206dcd88ccb0cf3c",
                 "chars": 18247
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "8db60682fb55f2d644e262e3d67b8e9e0f6848144af3b79edb464b76bb80bdfa",
+                "previousSha256": "ba0c4dded3fc73058abfd4e29202602758829bc64d6bee5bc6062a1a2ea3a419",
+                "chars": 18302
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "a82edf37ea1b427cce4449146c04d68c072fa8d9a40c92e6753cdd3fc34c0980",
-            "sha256": "a82edf37ea1b427cce4449146c04d68c072fa8d9a40c92e6753cdd3fc34c0980",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 12412,
+            "sha256": "adb1a514198f5817c5c88bee5913d921120ef8cfc17dd973591c22463b6cbbc8",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 12453,
             "paragraphs": 78,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "adb1a514198f5817c5c88bee5913d921120ef8cfc17dd973591c22463b6cbbc8",
+                "previousSha256": "a82edf37ea1b427cce4449146c04d68c072fa8d9a40c92e6753cdd3fc34c0980",
+                "chars": 12453
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "43b37225329ca5a64fc221ea784692a70c07d5539805153a66b7a29ef63c310e",
-            "sha256": "43b37225329ca5a64fc221ea784692a70c07d5539805153a66b7a29ef63c310e",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 18234,
+            "sha256": "f3c6133243d4f4bbb9fe1cba523a9a39941a9abaa03801b9a0f0ac841c14c597",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 18277,
             "paragraphs": 78,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "f3c6133243d4f4bbb9fe1cba523a9a39941a9abaa03801b9a0f0ac841c14c597",
+                "previousSha256": "43b37225329ca5a64fc221ea784692a70c07d5539805153a66b7a29ef63c310e",
+                "chars": 18277
+              }
+            ]
           }
         }
       },
@@ -3222,8 +3290,8 @@
         "name": "茈鱼",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "f2f0235654dc506512d55d1c00284ead0ada171a422ece20d01f296f41ba63bd",
-        "sha256": "65367a07b1bc5573259008df3e852d1d938238020a621beab52807b5bc756b44",
-        "updatedAt": "2026-11-10T09:40:11+08:00",
+        "sha256": "653d50e917b6b1b362589889835798f759147a13c0f1218c7060730fd3ea1856",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3245,19 +3313,26 @@
             "previousSha256": "7dfc90b805f435206374fae791502165551ac265af49b51dc3d8a55637b4a6a3",
             "bodySha256": "85dc37e082c44c42b813a6170672ad144409680ac5586675c1618263301820e8",
             "bodyChars": 5452
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "653d50e917b6b1b362589889835798f759147a13c0f1218c7060730fd3ea1856",
+            "previousSha256": "65367a07b1bc5573259008df3e852d1d938238020a621beab52807b5bc756b44",
+            "bodySha256": "95803e83bb709c19658c2ce61b5d1f91e2a99afac7dffe1150870df4b414cb3c",
+            "bodyChars": 5623
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "85dc37e082c44c42b813a6170672ad144409680ac5586675c1618263301820e8",
-        "bodySha256": "85dc37e082c44c42b813a6170672ad144409680ac5586675c1618263301820e8",
-        "bodyChars": 5452,
+        "bodySha256": "95803e83bb709c19658c2ce61b5d1f91e2a99afac7dffe1150870df4b414cb3c",
+        "bodyChars": 5623,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "10f91b73b49e57e4c7b3d32fc4b66ce6acf23b9ae2a420626c3c22d07d10ebbe",
-            "sha256": "b66f01ceca2c63510a4beefc98f9f49aef529563283411d0dbb40ed85ca4d654",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 20426,
+            "sha256": "e7bdec51efd3abdff57abe3ad9468d7998608ed6c956238b71ebd60cd373d388",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 20567,
             "paragraphs": 100,
             "revisions": [
               {
@@ -3265,26 +3340,46 @@
                 "sha256": "b66f01ceca2c63510a4beefc98f9f49aef529563283411d0dbb40ed85ca4d654",
                 "previousSha256": "10f91b73b49e57e4c7b3d32fc4b66ce6acf23b9ae2a420626c3c22d07d10ebbe",
                 "chars": 20426
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "e7bdec51efd3abdff57abe3ad9468d7998608ed6c956238b71ebd60cd373d388",
+                "previousSha256": "b66f01ceca2c63510a4beefc98f9f49aef529563283411d0dbb40ed85ca4d654",
+                "chars": 20567
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "905c1d98bebd65f7dbb72429d995fd2bd34d25d8a659edb03c1fa46025060c24",
-            "sha256": "905c1d98bebd65f7dbb72429d995fd2bd34d25d8a659edb03c1fa46025060c24",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 14031,
+            "sha256": "f1a67fcf232f663376844c5d8cf78f89f9e6242421207dae101ba178c9b01fa7",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 14127,
             "paragraphs": 100,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "f1a67fcf232f663376844c5d8cf78f89f9e6242421207dae101ba178c9b01fa7",
+                "previousSha256": "905c1d98bebd65f7dbb72429d995fd2bd34d25d8a659edb03c1fa46025060c24",
+                "chars": 14127
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "cf48a4419d45cbb645f9b7b0b004b50da7ffa37a4f17fe8cb5757a9547a09e2e",
-            "sha256": "cf48a4419d45cbb645f9b7b0b004b50da7ffa37a4f17fe8cb5757a9547a09e2e",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 20691,
+            "sha256": "f5804032a909e42a0d6e9f9ea3a067bc6a43f5b185ff2b6bcab82dc19898bfce",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 20837,
             "paragraphs": 100,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "f5804032a909e42a0d6e9f9ea3a067bc6a43f5b185ff2b6bcab82dc19898bfce",
+                "previousSha256": "cf48a4419d45cbb645f9b7b0b004b50da7ffa37a4f17fe8cb5757a9547a09e2e",
+                "chars": 20837
+              }
+            ]
           }
         }
       },
@@ -3293,8 +3388,8 @@
         "name": "狡",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "b2cf4dd56d68097bae327515caaf0b59427303958d9ebe608c4d30da497cd1b9",
-        "sha256": "e20d8f4cd6761da7b4d9f70fcb293616a625cf92e24fa07f1adb4ca949f4b87f",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "0140dd9c2bcc1e0c75036c650bd82e695e997d0ef182063b39ff4f8aac573ff9",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3330,19 +3425,26 @@
             "previousSha256": "f037f00caca91a1d737828ade11a643ac4d2ba84a8fe5dcab0420b5a39468201",
             "bodySha256": "8e42f9a79bf46d149bf52367a322993e3b1f667a0382064fb09005695b00d7ef",
             "bodyChars": 6194
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "0140dd9c2bcc1e0c75036c650bd82e695e997d0ef182063b39ff4f8aac573ff9",
+            "previousSha256": "e20d8f4cd6761da7b4d9f70fcb293616a625cf92e24fa07f1adb4ca949f4b87f",
+            "bodySha256": "b190aec8eb4c21a994a62ed29a7a1bad7f9e637ae8504e49af9c53dad94cdee7",
+            "bodyChars": 6259
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "8e42f9a79bf46d149bf52367a322993e3b1f667a0382064fb09005695b00d7ef",
-        "bodySha256": "8e42f9a79bf46d149bf52367a322993e3b1f667a0382064fb09005695b00d7ef",
-        "bodyChars": 6194,
+        "bodySha256": "b190aec8eb4c21a994a62ed29a7a1bad7f9e637ae8504e49af9c53dad94cdee7",
+        "bodyChars": 6259,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "873bf951b8375c7481e20c69e844686444accf04e5c1d7c8ee5b2e41747c4852",
-            "sha256": "44a0afbb07e4416995b8afa4887279df60487b9ad2eb02c9a2dff36c09b1bcfe",
-            "updatedAt": "2026-11-10T11:06:47+08:00",
-            "chars": 23316,
+            "sha256": "303d5f3ab719de4638c6a470636d927221c12d4a34d61f1ad09eb8a09abf97ce",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 23293,
             "paragraphs": 131,
             "revisions": [
               {
@@ -3362,26 +3464,46 @@
                 "sha256": "44a0afbb07e4416995b8afa4887279df60487b9ad2eb02c9a2dff36c09b1bcfe",
                 "previousSha256": "14054edfcf91038c42c8de1ee5b89190b00c7da5f168c2600326e2f78e2a5555",
                 "chars": 23316
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "303d5f3ab719de4638c6a470636d927221c12d4a34d61f1ad09eb8a09abf97ce",
+                "previousSha256": "44a0afbb07e4416995b8afa4887279df60487b9ad2eb02c9a2dff36c09b1bcfe",
+                "chars": 23293
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "4d89be438d47c39de6ac971093b793089d90e7d1bfc51d50e7ec729f30dc73f8",
-            "sha256": "4d89be438d47c39de6ac971093b793089d90e7d1bfc51d50e7ec729f30dc73f8",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 17179,
+            "sha256": "ef58df1032cdc7b0fab0ecc2ffd52325c94299ecda565266fa3bcbc2306cd01f",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 17155,
             "paragraphs": 131,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "ef58df1032cdc7b0fab0ecc2ffd52325c94299ecda565266fa3bcbc2306cd01f",
+                "previousSha256": "4d89be438d47c39de6ac971093b793089d90e7d1bfc51d50e7ec729f30dc73f8",
+                "chars": 17155
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "484c3445a3267183ac99a2f92d20a837f621228d189cbdc4f058fb9d135f7187",
-            "sha256": "484c3445a3267183ac99a2f92d20a837f621228d189cbdc4f058fb9d135f7187",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 23049,
+            "sha256": "263771c918914fba2412a0a086fbf896614d2647efd1f946a138a330d177fa84",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 23024,
             "paragraphs": 131,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "263771c918914fba2412a0a086fbf896614d2647efd1f946a138a330d177fa84",
+                "previousSha256": "484c3445a3267183ac99a2f92d20a837f621228d189cbdc4f058fb9d135f7187",
+                "chars": 23024
+              }
+            ]
           }
         }
       },
@@ -3390,8 +3512,8 @@
         "name": "蜮",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "877daa834ea3bd257f25d0b6c09cfeaed2ee83bf1d5802d45ee81a1c0feee275",
-        "sha256": "5b1da060d5fc17613e7581f8f82b66d8e8bc398c985b37e7055ab44e3ea7df21",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "e84baa95ab90b9828fbef26459d6d42ebf1ce7ad6550d20a89f4b37f6257fb7a",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3427,19 +3549,26 @@
             "previousSha256": "c999bfc9dc1c3edb5f72581cce675fe2f6736b06b93fe57dce145b8f0802efa6",
             "bodySha256": "3d3ac276f12db2010eb8af9c275bbdb7c56ddb4111ec63bd32c90f835edb361d",
             "bodyChars": 5409
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "e84baa95ab90b9828fbef26459d6d42ebf1ce7ad6550d20a89f4b37f6257fb7a",
+            "previousSha256": "5b1da060d5fc17613e7581f8f82b66d8e8bc398c985b37e7055ab44e3ea7df21",
+            "bodySha256": "4ffd070fc77b009bdc98ec25366f61345d19ec92ffddcce3cfe51fdaabd8fc79",
+            "bodyChars": 5599
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "3d3ac276f12db2010eb8af9c275bbdb7c56ddb4111ec63bd32c90f835edb361d",
-        "bodySha256": "3d3ac276f12db2010eb8af9c275bbdb7c56ddb4111ec63bd32c90f835edb361d",
-        "bodyChars": 5409,
+        "bodySha256": "4ffd070fc77b009bdc98ec25366f61345d19ec92ffddcce3cfe51fdaabd8fc79",
+        "bodyChars": 5599,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "1815cc53fcf571e4b2ffdd1eb222619df5110a63c33db1ff3a51f6f88e9fec0f",
-            "sha256": "f4068166e11e141a4dbab55af3f03669f2a07fdd9134d7bd7c207bc59752700a",
-            "updatedAt": "2026-11-10T11:06:47+08:00",
-            "chars": 19035,
+            "sha256": "8e42b6270e566095c2b35ca605876d960c354e76fe8635163bc41722d3f60901",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 19120,
             "paragraphs": 83,
             "revisions": [
               {
@@ -3459,26 +3588,46 @@
                 "sha256": "f4068166e11e141a4dbab55af3f03669f2a07fdd9134d7bd7c207bc59752700a",
                 "previousSha256": "3a0b62e9991b80a400dfdb73aac02a8a236c10d4f75c7edbc401f5d155a062e6",
                 "chars": 19035
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "8e42b6270e566095c2b35ca605876d960c354e76fe8635163bc41722d3f60901",
+                "previousSha256": "f4068166e11e141a4dbab55af3f03669f2a07fdd9134d7bd7c207bc59752700a",
+                "chars": 19120
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "3cf24eb7a7fdd297b7256fd7241a568f9e5a7ef9529dfa658c62481dd81af00e",
-            "sha256": "3cf24eb7a7fdd297b7256fd7241a568f9e5a7ef9529dfa658c62481dd81af00e",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 15463,
+            "sha256": "4fc6b3b3ad384d9586e2de3c165c178c06e68ac94975c001ea0dcbe083b3ccfb",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 15501,
             "paragraphs": 83,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "4fc6b3b3ad384d9586e2de3c165c178c06e68ac94975c001ea0dcbe083b3ccfb",
+                "previousSha256": "3cf24eb7a7fdd297b7256fd7241a568f9e5a7ef9529dfa658c62481dd81af00e",
+                "chars": 15501
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "c0e07e08f87326f08b54047249cdb884cabc43594c384828dd60f15e88f6659d",
-            "sha256": "c0e07e08f87326f08b54047249cdb884cabc43594c384828dd60f15e88f6659d",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 20640,
+            "sha256": "2a753d8970500e3c910b25884969036cf2f2e66a528ccdde45b3a20d6dd4f600",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 20659,
             "paragraphs": 83,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "2a753d8970500e3c910b25884969036cf2f2e66a528ccdde45b3a20d6dd4f600",
+                "previousSha256": "c0e07e08f87326f08b54047249cdb884cabc43594c384828dd60f15e88f6659d",
+                "chars": 20659
+              }
+            ]
           }
         }
       },
@@ -3487,8 +3636,8 @@
         "name": "赤鱬",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "3c20ccf0a739c8cf27d8a03681f4f825a74288b0dcb8d9faa40a41ee27dfc8f7",
-        "sha256": "536801619c399c2031a62a9deb62ca9f3147270d2474cd6589fdeee35bfef79c",
-        "updatedAt": "2026-11-10T09:40:11+08:00",
+        "sha256": "8bb3c65d5c92a5f7c09d694b16f996e9b180a75cf7c171fa39ae9e55acb1bf25",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3510,18 +3659,25 @@
             "previousSha256": "b94342e98d9c6764cde6b365287a0413a952f364d5ccaf8717337cf05750f58d",
             "bodySha256": "7804f0a3d57a6e15de9fe73b2b01f9a018f45bf9a8578f1b1e1dcf5dcb1181bd",
             "bodyChars": 5435
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "8bb3c65d5c92a5f7c09d694b16f996e9b180a75cf7c171fa39ae9e55acb1bf25",
+            "previousSha256": "536801619c399c2031a62a9deb62ca9f3147270d2474cd6589fdeee35bfef79c",
+            "bodySha256": "ba33a4f1729a83e5c1fb736e9052bbfef551a3dd8601540a962c5038a2da0ac8",
+            "bodyChars": 5504
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "7804f0a3d57a6e15de9fe73b2b01f9a018f45bf9a8578f1b1e1dcf5dcb1181bd",
-        "bodySha256": "7804f0a3d57a6e15de9fe73b2b01f9a018f45bf9a8578f1b1e1dcf5dcb1181bd",
-        "bodyChars": 5435,
+        "bodySha256": "ba33a4f1729a83e5c1fb736e9052bbfef551a3dd8601540a962c5038a2da0ac8",
+        "bodyChars": 5504,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "5693eb43f715dc8b0860883673d0b232ee36bfcdf443472c02730d87f9f06eba",
-            "sha256": "57a454c6aea45f488ed807ec7ea01d24aa5dda4ddb76a8246fe700abc94a3e35",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
+            "sha256": "e22b838cb0e854340d4aa865d9b41047ab79e405dbbd6f0ce45e5976192cd7af",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
             "chars": 19383,
             "paragraphs": 134,
             "revisions": [
@@ -3530,26 +3686,46 @@
                 "sha256": "57a454c6aea45f488ed807ec7ea01d24aa5dda4ddb76a8246fe700abc94a3e35",
                 "previousSha256": "5693eb43f715dc8b0860883673d0b232ee36bfcdf443472c02730d87f9f06eba",
                 "chars": 19383
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "e22b838cb0e854340d4aa865d9b41047ab79e405dbbd6f0ce45e5976192cd7af",
+                "previousSha256": "57a454c6aea45f488ed807ec7ea01d24aa5dda4ddb76a8246fe700abc94a3e35",
+                "chars": 19383
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "583568ced508f383101923d4ca2569c9b6335f93b48b983de03a44601e780326",
-            "sha256": "583568ced508f383101923d4ca2569c9b6335f93b48b983de03a44601e780326",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 15711,
+            "sha256": "0e01ce50c848725c30bec5dc6f7aa369d6d94b380a8a5fb259c32a724e25b9f4",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 15713,
             "paragraphs": 134,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "0e01ce50c848725c30bec5dc6f7aa369d6d94b380a8a5fb259c32a724e25b9f4",
+                "previousSha256": "583568ced508f383101923d4ca2569c9b6335f93b48b983de03a44601e780326",
+                "chars": 15713
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "50f1d2a94f233c3de63456b53985e0aaca0c525e728f3dcbdde540afee1ac1ff",
-            "sha256": "50f1d2a94f233c3de63456b53985e0aaca0c525e728f3dcbdde540afee1ac1ff",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 20664,
+            "sha256": "5d65f8ea9df1c0bd5749b17500d0afa4fb7433c1f6596b98ea18c5af161eb25c",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 20666,
             "paragraphs": 134,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "5d65f8ea9df1c0bd5749b17500d0afa4fb7433c1f6596b98ea18c5af161eb25c",
+                "previousSha256": "50f1d2a94f233c3de63456b53985e0aaca0c525e728f3dcbdde540afee1ac1ff",
+                "chars": 20666
+              }
+            ]
           }
         }
       },
@@ -3558,8 +3734,8 @@
         "name": "并封",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "b57770b3504bf4ba8409e635ea76b46f824ef190d2790f729342e56042f26d9e",
-        "sha256": "e524374fa3e3eb1b1fabcdb9adcb51b62474df2ddd27f2fda60712e0e675c185",
-        "updatedAt": "2026-11-10T10:35:31+08:00",
+        "sha256": "50d359d466a8dea1103a7ea7f8917a66c2ecc6cdc5fc821f0d70c31047d40221",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3588,12 +3764,19 @@
             "previousSha256": "2bf2a030d002b2f9a118f6dc3772331e662080cfbda296a08a442e9f0add2d7d",
             "bodySha256": "71c7ee2e5eb35e2eb2ccd0aecb352adf4dfac62100088c096d54eef48a038225",
             "bodyChars": 5263
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "50d359d466a8dea1103a7ea7f8917a66c2ecc6cdc5fc821f0d70c31047d40221",
+            "previousSha256": "e524374fa3e3eb1b1fabcdb9adcb51b62474df2ddd27f2fda60712e0e675c185",
+            "bodySha256": "e04817e93a943e800cfa5e0ab8edf69e25de390ea451a6dd6c2e23b947a7db7a",
+            "bodyChars": 5346
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "71c7ee2e5eb35e2eb2ccd0aecb352adf4dfac62100088c096d54eef48a038225",
-        "bodySha256": "71c7ee2e5eb35e2eb2ccd0aecb352adf4dfac62100088c096d54eef48a038225",
-        "bodyChars": 5263,
+        "bodySha256": "e04817e93a943e800cfa5e0ab8edf69e25de390ea451a6dd6c2e23b947a7db7a",
+        "bodyChars": 5346,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
@@ -3642,8 +3825,8 @@
         "name": "狙如",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "78476a3f715f5d5db2aa464355e2ab2c60f47238a2e995100e7d94d74b04a9b7",
-        "sha256": "ddeeb51a5d0199be814ea47d67b699aca058030ca9a2fc3230269afeb95ec7e1",
-        "updatedAt": "2026-11-10T10:35:31+08:00",
+        "sha256": "19f23151568d6686330dcedbba3bde79a4d47d00a64469494d9781fdad58ee92",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3672,19 +3855,26 @@
             "previousSha256": "4bbd0be6a6717c65315afffbd9f2fc1f92d7e394e1bbb2ff9c4861aedcf8541d",
             "bodySha256": "4531dd66e42c6999ed462d10adf268c15a8e5a9afe62b3102b595182ad642920",
             "bodyChars": 2400
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "19f23151568d6686330dcedbba3bde79a4d47d00a64469494d9781fdad58ee92",
+            "previousSha256": "ddeeb51a5d0199be814ea47d67b699aca058030ca9a2fc3230269afeb95ec7e1",
+            "bodySha256": "d1de1f81e2c0d7e208953e05cf1ab27a797a523745bbae889c5f81ba504c5f96",
+            "bodyChars": 2462
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "4531dd66e42c6999ed462d10adf268c15a8e5a9afe62b3102b595182ad642920",
-        "bodySha256": "4531dd66e42c6999ed462d10adf268c15a8e5a9afe62b3102b595182ad642920",
-        "bodyChars": 2400,
+        "bodySha256": "d1de1f81e2c0d7e208953e05cf1ab27a797a523745bbae889c5f81ba504c5f96",
+        "bodyChars": 2462,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "314e7ae02a0d7263434a1873e7cc10f8d5f5027628ee19cc15aee2df5de38809",
-            "sha256": "e03360f04ddf4c6d46a4441c211b710361509bb2cb98d660ee2136a1286ca6fc",
-            "updatedAt": "2026-11-10T10:35:31+08:00",
-            "chars": 9420,
+            "sha256": "6145453d33952d2a7cda168590d50d6a988bb23cc9c238671b8e7479a79af082",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 9414,
             "paragraphs": 59,
             "revisions": [
               {
@@ -3698,26 +3888,46 @@
                 "sha256": "e03360f04ddf4c6d46a4441c211b710361509bb2cb98d660ee2136a1286ca6fc",
                 "previousSha256": "cf7818fa5f5d57e516faa3f132bccd5570af3dccd77c73233e1d360e0ce42214",
                 "chars": 9420
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "6145453d33952d2a7cda168590d50d6a988bb23cc9c238671b8e7479a79af082",
+                "previousSha256": "e03360f04ddf4c6d46a4441c211b710361509bb2cb98d660ee2136a1286ca6fc",
+                "chars": 9414
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "e3496c4ad2fd7b06ae7bc4bb83524c69b3f0ea4325117e8144583b7703abc703",
-            "sha256": "e3496c4ad2fd7b06ae7bc4bb83524c69b3f0ea4325117e8144583b7703abc703",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 7129,
+            "sha256": "62c1df780cd4088c9afed6d31bdaa4aa7de39cb63dc3fab88c49da4dc0aaccba",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 7120,
             "paragraphs": 59,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "62c1df780cd4088c9afed6d31bdaa4aa7de39cb63dc3fab88c49da4dc0aaccba",
+                "previousSha256": "e3496c4ad2fd7b06ae7bc4bb83524c69b3f0ea4325117e8144583b7703abc703",
+                "chars": 7120
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "61fc9253f3e4a290db46e7c87975a2050f4e432fbd8f2f2976c0012d26d374bb",
-            "sha256": "61fc9253f3e4a290db46e7c87975a2050f4e432fbd8f2f2976c0012d26d374bb",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 9339,
+            "sha256": "dbc5dc77e63e84bc633fa48cb53e1827ff3079799a2631c5b1f7d0855f8e3581",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 9335,
             "paragraphs": 59,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "dbc5dc77e63e84bc633fa48cb53e1827ff3079799a2631c5b1f7d0855f8e3581",
+                "previousSha256": "61fc9253f3e4a290db46e7c87975a2050f4e432fbd8f2f2976c0012d26d374bb",
+                "chars": 9335
+              }
+            ]
           }
         }
       },
@@ -3726,8 +3936,8 @@
         "name": "天马",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "89210348481f486ba231ca7b94e8ace6783924669d8209d27afd4bf1f0ac34f9",
-        "sha256": "01cec9a461cfec51f45a9c34d08a8ba26f0f65f030a44c77d355a92a3652f81d",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "8d47ed8a4603297d5bdc567125aa8f65577739ad7e5feaa017b6ae13d3d126fc",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3763,19 +3973,26 @@
             "previousSha256": "cade2c3161f996ebf498fa5321790f792a3f4f318a1b96109e47c266c80f2255",
             "bodySha256": "b334d9bc3257900cb525508f273026cc6d7bb28b976369e820ac3272b80babed",
             "bodyChars": 5458
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "8d47ed8a4603297d5bdc567125aa8f65577739ad7e5feaa017b6ae13d3d126fc",
+            "previousSha256": "01cec9a461cfec51f45a9c34d08a8ba26f0f65f030a44c77d355a92a3652f81d",
+            "bodySha256": "7a46a5766d92959406c1ccbd06111946758b03de5289a912ed2112cbf562df03",
+            "bodyChars": 5500
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "b334d9bc3257900cb525508f273026cc6d7bb28b976369e820ac3272b80babed",
-        "bodySha256": "b334d9bc3257900cb525508f273026cc6d7bb28b976369e820ac3272b80babed",
-        "bodyChars": 5458,
+        "bodySha256": "7a46a5766d92959406c1ccbd06111946758b03de5289a912ed2112cbf562df03",
+        "bodyChars": 5500,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "f4d566b197568a68cbeb566b592018c424afd1cb97af9181084e4f888e1eabf6",
-            "sha256": "1aa68c3fba7213e24905eefab018b7d459228c11a21b5505ab1adf7040bf5da6",
-            "updatedAt": "2026-11-10T11:06:47+08:00",
-            "chars": 20144,
+            "sha256": "8c0e15c74ceb7f93ab4b8e2b268746b729ce354ab8f5c2abef64fae83c59b36e",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 20143,
             "paragraphs": 88,
             "revisions": [
               {
@@ -3795,26 +4012,46 @@
                 "sha256": "1aa68c3fba7213e24905eefab018b7d459228c11a21b5505ab1adf7040bf5da6",
                 "previousSha256": "e6aee6d87ba52c6d13097c03ec56fdc0a9b704f0c21827b7d642eded8b69b7b1",
                 "chars": 20144
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "8c0e15c74ceb7f93ab4b8e2b268746b729ce354ab8f5c2abef64fae83c59b36e",
+                "previousSha256": "1aa68c3fba7213e24905eefab018b7d459228c11a21b5505ab1adf7040bf5da6",
+                "chars": 20143
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "474984a5687aa7311381d056ee57af6ffb3aa564071dbf7ea4af3039107f3af9",
-            "sha256": "474984a5687aa7311381d056ee57af6ffb3aa564071dbf7ea4af3039107f3af9",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
+            "sha256": "2bc7abdce82f2b97c63bd4bd19f5742ec615f3141e219a47f7cfbcd14df1234d",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
             "chars": 15796,
             "paragraphs": 88,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "2bc7abdce82f2b97c63bd4bd19f5742ec615f3141e219a47f7cfbcd14df1234d",
+                "previousSha256": "474984a5687aa7311381d056ee57af6ffb3aa564071dbf7ea4af3039107f3af9",
+                "chars": 15796
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "d7972a2b2c4c3670494635191f4a93ea88a10e3986ef4a326c86c85c0f976f24",
-            "sha256": "d7972a2b2c4c3670494635191f4a93ea88a10e3986ef4a326c86c85c0f976f24",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 21326,
+            "sha256": "95e1dcb48e924a8b0b047d5428eeef62ebc86282dc60ab60d90295bb1261d7a0",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 21327,
             "paragraphs": 88,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "95e1dcb48e924a8b0b047d5428eeef62ebc86282dc60ab60d90295bb1261d7a0",
+                "previousSha256": "d7972a2b2c4c3670494635191f4a93ea88a10e3986ef4a326c86c85c0f976f24",
+                "chars": 21327
+              }
+            ]
           }
         }
       },
@@ -3823,8 +4060,8 @@
         "name": "媪",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "d03fd65f93c00bb8e4aa3ef3fb66dfc0f0f2a1af76bd6f5a3a76ff131dc138ae",
-        "sha256": "64be8d03f6d9c6e36d4bef1b9f5baaf3e2337e548016c45632a27f49508c78f1",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "612db59dada06660734b64a7391a262254d7e3eadd7f05eed7895437095a97f4",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3860,12 +4097,19 @@
             "previousSha256": "b996492e14a160b1bf4c4386ce5e7ef83bbfafd6fcecf5324c7a4468b91d3a46",
             "bodySha256": "a89d0abe64666d302e384e18e06c5d18a41f5eebc1ffedfda26859df36203675",
             "bodyChars": 3275
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "612db59dada06660734b64a7391a262254d7e3eadd7f05eed7895437095a97f4",
+            "previousSha256": "64be8d03f6d9c6e36d4bef1b9f5baaf3e2337e548016c45632a27f49508c78f1",
+            "bodySha256": "008e5d4fbb3a8088146ea09bb6a3b8fed01d9ccbcd9ebf3eeb9c5ef4fe4ee1f8",
+            "bodyChars": 3367
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "a89d0abe64666d302e384e18e06c5d18a41f5eebc1ffedfda26859df36203675",
-        "bodySha256": "a89d0abe64666d302e384e18e06c5d18a41f5eebc1ffedfda26859df36203675",
-        "bodyChars": 3275,
+        "bodySha256": "008e5d4fbb3a8088146ea09bb6a3b8fed01d9ccbcd9ebf3eeb9c5ef4fe4ee1f8",
+        "bodyChars": 3367,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
@@ -3920,8 +4164,8 @@
         "name": "犀渠",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "93c896ff095b204ebd656f914c3c8428a5078ca51199c0e73469502f6819f4d4",
-        "sha256": "c48f3dbbdd68beafeb4baab6c0e89f57d1800221177e7bdfe5cc44744f6b2970",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "f911eae252b429b3310917d85696a8d0a74bec7b30582bd0827d735427790a92",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3950,20 +4194,27 @@
             "previousSha256": "8b33f7f7292eda1dab7d6a8d2a066ff1508ac6e10f46d728b129ccb1baeef5aa",
             "bodySha256": "5cf016cf8974c8cc4f19ff3ddc6f4d1a2e74dc8e7daee918f241d30b821332f2",
             "bodyChars": 2867
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "f911eae252b429b3310917d85696a8d0a74bec7b30582bd0827d735427790a92",
+            "previousSha256": "c48f3dbbdd68beafeb4baab6c0e89f57d1800221177e7bdfe5cc44744f6b2970",
+            "bodySha256": "98d8562faaded1e86868e87344b9b6ca97f93ec12a8fcf51b7a930e4cd53b29d",
+            "bodyChars": 2876
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "5cf016cf8974c8cc4f19ff3ddc6f4d1a2e74dc8e7daee918f241d30b821332f2",
-        "bodySha256": "5cf016cf8974c8cc4f19ff3ddc6f4d1a2e74dc8e7daee918f241d30b821332f2",
-        "bodyChars": 2867,
+        "bodySha256": "98d8562faaded1e86868e87344b9b6ca97f93ec12a8fcf51b7a930e4cd53b29d",
+        "bodyChars": 2876,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "d42c51e2de1f3b6650969be1a30ee55a36f0758f18e3fa14a7757d597bdf3c83",
-            "sha256": "a4b4016d048cf59687cf20c134638fd960e109a08e542006423ca80cad0d18cc",
-            "updatedAt": "2026-11-10T11:06:47+08:00",
-            "chars": 10839,
-            "paragraphs": 37,
+            "sha256": "b7ffd42ae666aad63b77da3a7c8d76ec701451fac4e5839efd63a96bb7ac483e",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 10818,
+            "paragraphs": 36,
             "revisions": [
               {
                 "at": "2026-11-10T09:40:11+08:00",
@@ -3976,26 +4227,46 @@
                 "sha256": "a4b4016d048cf59687cf20c134638fd960e109a08e542006423ca80cad0d18cc",
                 "previousSha256": "35d9514c5a88beb1032598048c92fc41efaaecc336d10e599c34580222caa168",
                 "chars": 10839
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "b7ffd42ae666aad63b77da3a7c8d76ec701451fac4e5839efd63a96bb7ac483e",
+                "previousSha256": "a4b4016d048cf59687cf20c134638fd960e109a08e542006423ca80cad0d18cc",
+                "chars": 10818
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "5852345b54e7a845f63a89778632d29a1dac72c228aaced7452f447b21cc9f41",
-            "sha256": "5852345b54e7a845f63a89778632d29a1dac72c228aaced7452f447b21cc9f41",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 7709,
-            "paragraphs": 37,
-            "revisions": []
+            "sha256": "c025ee5308e8ac0b730a3e912be67705fe0ed596e969193ce5ab3e9dbaeb0697",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 7682,
+            "paragraphs": 36,
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "c025ee5308e8ac0b730a3e912be67705fe0ed596e969193ce5ab3e9dbaeb0697",
+                "previousSha256": "5852345b54e7a845f63a89778632d29a1dac72c228aaced7452f447b21cc9f41",
+                "chars": 7682
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "5a97d9ab17577ffa346edde5f4e261b5cfed5ad7427fbe6d2a9d26a205b5af44",
-            "sha256": "5a97d9ab17577ffa346edde5f4e261b5cfed5ad7427fbe6d2a9d26a205b5af44",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 10998,
-            "paragraphs": 37,
-            "revisions": []
+            "sha256": "7e642413705210c9ca85f879bde705bbad5e00ac75036415576b58d2414fe0b0",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 10992,
+            "paragraphs": 36,
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "7e642413705210c9ca85f879bde705bbad5e00ac75036415576b58d2414fe0b0",
+                "previousSha256": "5a97d9ab17577ffa346edde5f4e261b5cfed5ad7427fbe6d2a9d26a205b5af44",
+                "chars": 10992
+              }
+            ]
           }
         }
       },
@@ -4004,8 +4275,8 @@
         "name": "孟极",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "2e2336635753329bb9da5604388d2d213dd2bf8e30719e7d77b280c2c81d219e",
-        "sha256": "03b6226bc153257369c63a19b8cbee04bb5484b87461e2d7f2719a7bbd9d35fb",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "40db737fa5a994d8b85eea3076350664e3865e3f6272b67a735753041c4b7971",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -4034,19 +4305,26 @@
             "previousSha256": "8ba9a70b3a3079cded508c0105c5504302ae6751df533b89a0fc73c042d912c2",
             "bodySha256": "284448800f66813b68bf9b86f2f93911eb4d52c547490f4f5da087f6e6a95fa0",
             "bodyChars": 3933
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "40db737fa5a994d8b85eea3076350664e3865e3f6272b67a735753041c4b7971",
+            "previousSha256": "03b6226bc153257369c63a19b8cbee04bb5484b87461e2d7f2719a7bbd9d35fb",
+            "bodySha256": "bd23a8445844d9301b7a542dfd605b3661729a0486ebdbceb1c53b48965970db",
+            "bodyChars": 4073
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "284448800f66813b68bf9b86f2f93911eb4d52c547490f4f5da087f6e6a95fa0",
-        "bodySha256": "284448800f66813b68bf9b86f2f93911eb4d52c547490f4f5da087f6e6a95fa0",
-        "bodyChars": 3933,
+        "bodySha256": "bd23a8445844d9301b7a542dfd605b3661729a0486ebdbceb1c53b48965970db",
+        "bodyChars": 4073,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "c6922fbfb61076c338e8a88ac6d07e7044372dbdd13b7c1ff148d23750bcfa10",
-            "sha256": "4e705837491f3a020f21ee5f4d4c49693e81626a28bc7d0a44950671d0fc868c",
-            "updatedAt": "2026-11-10T11:06:47+08:00",
-            "chars": 14970,
+            "sha256": "49465d685c7692455ecf7f996219bb3104cf9441978194defa880d231d184ba8",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 15076,
             "paragraphs": 44,
             "revisions": [
               {
@@ -4060,26 +4338,46 @@
                 "sha256": "4e705837491f3a020f21ee5f4d4c49693e81626a28bc7d0a44950671d0fc868c",
                 "previousSha256": "64978e188cde62e6562d01e7335f824f936062a67c77e5e0e145f323dd083b8b",
                 "chars": 14970
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "49465d685c7692455ecf7f996219bb3104cf9441978194defa880d231d184ba8",
+                "previousSha256": "4e705837491f3a020f21ee5f4d4c49693e81626a28bc7d0a44950671d0fc868c",
+                "chars": 15076
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "ea57292205e6e2314957bd761fc4c16c4f6639a978e5b09267787bc2b4b8d92d",
-            "sha256": "ea57292205e6e2314957bd761fc4c16c4f6639a978e5b09267787bc2b4b8d92d",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 11786,
+            "sha256": "7afb8bc43b44b126295f6bdc6f0ccfee747ac7cbc7546eea2ca84c77e80ea0a4",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 11860,
             "paragraphs": 44,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "7afb8bc43b44b126295f6bdc6f0ccfee747ac7cbc7546eea2ca84c77e80ea0a4",
+                "previousSha256": "ea57292205e6e2314957bd761fc4c16c4f6639a978e5b09267787bc2b4b8d92d",
+                "chars": 11860
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "e506739b6b062fa031bca5faebf6d276fa41a95f6bfe555c944389651aa101b7",
-            "sha256": "e506739b6b062fa031bca5faebf6d276fa41a95f6bfe555c944389651aa101b7",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 16085,
+            "sha256": "cd6c66d1b14cad097c9c54ec90353fe97c22ec220566ca8ce7c3f9a378429dd5",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 16215,
             "paragraphs": 44,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "cd6c66d1b14cad097c9c54ec90353fe97c22ec220566ca8ce7c3f9a378429dd5",
+                "previousSha256": "e506739b6b062fa031bca5faebf6d276fa41a95f6bfe555c944389651aa101b7",
+                "chars": 16215
+              }
+            ]
           }
         }
       },
@@ -4088,8 +4386,8 @@
         "name": "合窳",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "85b6fefab0c02ccb0d26b84e2607ff8f25368afcba2a998522439b0ac5145e11",
-        "sha256": "4c277a5a2ee9ef7d46dade37ac06487e4ecf634227c59ce05019d64d4b4820fb",
-        "updatedAt": "2026-11-10T10:35:31+08:00",
+        "sha256": "2ea1f942fab6387a23ad83efa5e13987627bf99f131de8175a2d21ac7af9870c",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -4132,19 +4430,26 @@
             "previousSha256": "981f7d8a83cee610ff1b2177c442ecd080e326dfe2f0670ee3e620bf4e4d0c09",
             "bodySha256": "af9d9d0cf50a4a4577fd088b2a2770ce5e8db70f94fdbdda7d75eaa4ea176f40",
             "bodyChars": 4325
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "2ea1f942fab6387a23ad83efa5e13987627bf99f131de8175a2d21ac7af9870c",
+            "previousSha256": "4c277a5a2ee9ef7d46dade37ac06487e4ecf634227c59ce05019d64d4b4820fb",
+            "bodySha256": "76b249f7f152806692fb26119515fe1bf15c29516aac63f0950102b769270904",
+            "bodyChars": 4363
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "af9d9d0cf50a4a4577fd088b2a2770ce5e8db70f94fdbdda7d75eaa4ea176f40",
-        "bodySha256": "af9d9d0cf50a4a4577fd088b2a2770ce5e8db70f94fdbdda7d75eaa4ea176f40",
-        "bodyChars": 4325,
+        "bodySha256": "76b249f7f152806692fb26119515fe1bf15c29516aac63f0950102b769270904",
+        "bodyChars": 4363,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "16c20f8713911f17b288d5d9db9487001484ee6630ab9683b5016754be7d3f10",
-            "sha256": "31971bb7cca53c594bd4e5a01434aedbadc27908269b725702e565e1c22155d2",
-            "updatedAt": "2026-11-10T10:35:31+08:00",
-            "chars": 15802,
+            "sha256": "8f199daff59d62e599cb78fb2aca78ba4547c930baf4e335d10a9f823651e5b0",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 15836,
             "paragraphs": 73,
             "revisions": [
               {
@@ -4158,26 +4463,46 @@
                 "sha256": "31971bb7cca53c594bd4e5a01434aedbadc27908269b725702e565e1c22155d2",
                 "previousSha256": "f925bda4b55a9696e53204b7daa842e99d07d1dcb9e5eb9efe610d2d0add6756",
                 "chars": 15802
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "8f199daff59d62e599cb78fb2aca78ba4547c930baf4e335d10a9f823651e5b0",
+                "previousSha256": "31971bb7cca53c594bd4e5a01434aedbadc27908269b725702e565e1c22155d2",
+                "chars": 15836
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "0d8d70560890c92f3989419d07e1093718fd2e71795321bef8df1d4ac40aea76",
-            "sha256": "0d8d70560890c92f3989419d07e1093718fd2e71795321bef8df1d4ac40aea76",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 12390,
+            "sha256": "1765668f2798f08f702fed91ae6eb8ae56bef07d03f5fb1d34c02249842bb3b5",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 12417,
             "paragraphs": 73,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "1765668f2798f08f702fed91ae6eb8ae56bef07d03f5fb1d34c02249842bb3b5",
+                "previousSha256": "0d8d70560890c92f3989419d07e1093718fd2e71795321bef8df1d4ac40aea76",
+                "chars": 12417
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "542ab54daad1cdb0dc3c9320e792b685834cb3532c1e40348c677bb26324e898",
-            "sha256": "542ab54daad1cdb0dc3c9320e792b685834cb3532c1e40348c677bb26324e898",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 17160,
+            "sha256": "0da8fb6ab66041ae6535c6171acb5ce7280e94f8c13e5d96dc4699547378503a",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 17176,
             "paragraphs": 73,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "0da8fb6ab66041ae6535c6171acb5ce7280e94f8c13e5d96dc4699547378503a",
+                "previousSha256": "542ab54daad1cdb0dc3c9320e792b685834cb3532c1e40348c677bb26324e898",
+                "chars": 17176
+              }
+            ]
           }
         }
       },
@@ -4186,8 +4511,8 @@
         "name": "诸犍",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "c87e7646c937a224b66279d560eab9859ff4b64570322fff82963ca6339bc757",
-        "sha256": "effef20e3d34751d62a392dfb1d4221637ca87c606906e915f07e23c3cbc8b87",
-        "updatedAt": "2026-11-10T11:06:47+08:00",
+        "sha256": "d3f1b4138d30159d21ad7649eaf37520a07160db55719a1e7a87fd5055d3c28b",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -4223,19 +4548,26 @@
             "previousSha256": "99efc7d223edc4a467de448cd6c10d8da60d2798df571a00985745360cb05b1d",
             "bodySha256": "b3e7a5bb45057794f84d68d0a4e35543318f8cd70aa638777175a37d3e40a667",
             "bodyChars": 5367
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "d3f1b4138d30159d21ad7649eaf37520a07160db55719a1e7a87fd5055d3c28b",
+            "previousSha256": "effef20e3d34751d62a392dfb1d4221637ca87c606906e915f07e23c3cbc8b87",
+            "bodySha256": "b5ab2308a005504be00a12a7190ba8dc959c0ed40c98ca04b9db1e8b5d4fdfba",
+            "bodyChars": 5534
           }
         ],
         "bodyFirstPostedAt": "2026-11-09T21:43:57+08:00",
         "bodyFirstSha256": "b3e7a5bb45057794f84d68d0a4e35543318f8cd70aa638777175a37d3e40a667",
-        "bodySha256": "b3e7a5bb45057794f84d68d0a4e35543318f8cd70aa638777175a37d3e40a667",
-        "bodyChars": 5367,
+        "bodySha256": "b5ab2308a005504be00a12a7190ba8dc959c0ed40c98ca04b9db1e8b5d4fdfba",
+        "bodyChars": 5534,
         "translations": {
           "fr": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "ffb4b00004f3a0d223417115675abe8403d971cfc134538e02e29604634e2368",
-            "sha256": "9af614e9a10e4650305ca2ae3e49667270e87ecf4962481fc04f3f944c4d94f4",
-            "updatedAt": "2026-11-10T11:06:47+08:00",
-            "chars": 19668,
+            "sha256": "e3d49320034a8a8e39cc3978b4c451fc2eea2599121b3ccc9cf7037b342670b1",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 19947,
             "paragraphs": 81,
             "revisions": [
               {
@@ -4255,26 +4587,46 @@
                 "sha256": "9af614e9a10e4650305ca2ae3e49667270e87ecf4962481fc04f3f944c4d94f4",
                 "previousSha256": "dbdaa20f9997d14ccc229b47261f8e08012da010fdd7f33d80eff3469c8584f5",
                 "chars": 19668
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "e3d49320034a8a8e39cc3978b4c451fc2eea2599121b3ccc9cf7037b342670b1",
+                "previousSha256": "9af614e9a10e4650305ca2ae3e49667270e87ecf4962481fc04f3f944c4d94f4",
+                "chars": 19947
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T08:58:14+08:00",
             "firstSha256": "fef915ce81de0e1723b541f8b92b6168ac92c41edba55a759fcef9d432dc53ee",
-            "sha256": "fef915ce81de0e1723b541f8b92b6168ac92c41edba55a759fcef9d432dc53ee",
-            "updatedAt": "2026-11-10T08:58:14+08:00",
-            "chars": 13988,
+            "sha256": "32cf551cadd8c56d1f52bc4dd0ca79d3749bb94b00c6918846e7870b8d67b4bc",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 14181,
             "paragraphs": 81,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "32cf551cadd8c56d1f52bc4dd0ca79d3749bb94b00c6918846e7870b8d67b4bc",
+                "previousSha256": "fef915ce81de0e1723b541f8b92b6168ac92c41edba55a759fcef9d432dc53ee",
+                "chars": 14181
+              }
+            ]
           },
           "en": {
             "firstPostedAt": "2026-11-10T09:40:11+08:00",
             "firstSha256": "ceeeb05d2fbc8a8cc20f9160eb6481b2743d568fed15b341bb23c91f228ba60e",
-            "sha256": "ceeeb05d2fbc8a8cc20f9160eb6481b2743d568fed15b341bb23c91f228ba60e",
-            "updatedAt": "2026-11-10T09:40:11+08:00",
-            "chars": 20655,
+            "sha256": "8e9f4c55132fe342638afb61cb160703b769c84d8e73e50ac4b8541340ee1536",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 20976,
             "paragraphs": 81,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "8e9f4c55132fe342638afb61cb160703b769c84d8e73e50ac4b8541340ee1536",
+                "previousSha256": "ceeeb05d2fbc8a8cc20f9160eb6481b2743d568fed15b341bb23c91f228ba60e",
+                "chars": 20976
+              }
+            ]
           }
         }
       },
@@ -4283,8 +4635,8 @@
         "name": "猲狙",
         "firstPostedAt": "2026-11-10T14:38:37+08:00",
         "firstSha256": "ed4126643ac73a8090e021718a7c284e6f71f531dca006d09eb943dd00d6b932",
-        "sha256": "5f61628b9efb1abe10c7c38aa2ba1e102e9aa2caea5ad0ae3c25daf05ab48478",
-        "updatedAt": "2026-11-10T18:21:15+08:00",
+        "sha256": "b3981b36f6cf2ce5607fac2e3211d435ad000d36e13009f3d344e5807a3659b3",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-10T18:02:27+08:00",
@@ -4299,39 +4651,67 @@
             "previousSha256": "2aea46e9de91b1a861918e58a04ad3d7d4d987340443aa1287e9d8f3db5694ba",
             "bodySha256": "32147e90de6be78df9faa27c5702f628c77d7d69ffceca5e0c58ea26b6f7f78d",
             "bodyChars": 3150
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "b3981b36f6cf2ce5607fac2e3211d435ad000d36e13009f3d344e5807a3659b3",
+            "previousSha256": "5f61628b9efb1abe10c7c38aa2ba1e102e9aa2caea5ad0ae3c25daf05ab48478",
+            "bodySha256": "ff81962257bb4662c9e494595d8316ce2095a8ef498d6ba2bc841ec735246b41",
+            "bodyChars": 3270
           }
         ],
         "bodyFirstPostedAt": "2026-11-10T14:38:37+08:00",
         "bodyFirstSha256": "bbb1a6597f357461a93b433aca07253785d0f9ed4b4d45335b5d234aa898c678",
-        "bodySha256": "32147e90de6be78df9faa27c5702f628c77d7d69ffceca5e0c58ea26b6f7f78d",
-        "bodyChars": 3150,
+        "bodySha256": "ff81962257bb4662c9e494595d8316ce2095a8ef498d6ba2bc841ec735246b41",
+        "bodyChars": 3270,
         "translations": {
           "en": {
             "firstPostedAt": "2026-11-10T18:02:27+08:00",
             "firstSha256": "83cb2c55af6bd61f4e39a7e781e13066c8be870e7146bf412ac1b392bbe3517e",
-            "sha256": "83cb2c55af6bd61f4e39a7e781e13066c8be870e7146bf412ac1b392bbe3517e",
-            "updatedAt": "2026-11-10T18:02:27+08:00",
-            "chars": 12081,
+            "sha256": "8d7350ffe1b97b58f5ea4ee528c4d54d11bf11e30c863d10e41ae6d6f4de66ca",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 12078,
             "paragraphs": 28,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "8d7350ffe1b97b58f5ea4ee528c4d54d11bf11e30c863d10e41ae6d6f4de66ca",
+                "previousSha256": "83cb2c55af6bd61f4e39a7e781e13066c8be870e7146bf412ac1b392bbe3517e",
+                "chars": 12078
+              }
+            ]
           },
           "fr": {
             "firstPostedAt": "2026-11-10T18:02:27+08:00",
             "firstSha256": "6ae9339dc2c8f5b6f8d3f16471c97d6f7a336c7b18814db23f43874cc48720f2",
-            "sha256": "6ae9339dc2c8f5b6f8d3f16471c97d6f7a336c7b18814db23f43874cc48720f2",
-            "updatedAt": "2026-11-10T18:02:27+08:00",
-            "chars": 13071,
+            "sha256": "4bce4d7c2b412e915c5ec79d8278cacdc2a770f72da39d7cc5586feae283546e",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 13072,
             "paragraphs": 28,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "4bce4d7c2b412e915c5ec79d8278cacdc2a770f72da39d7cc5586feae283546e",
+                "previousSha256": "6ae9339dc2c8f5b6f8d3f16471c97d6f7a336c7b18814db23f43874cc48720f2",
+                "chars": 13072
+              }
+            ]
           },
           "ar": {
             "firstPostedAt": "2026-11-10T18:02:27+08:00",
             "firstSha256": "8c16523ebc603dc97f1144a55eb9f6f34f7ab0eca7ca4f4dae315512ca86c370",
-            "sha256": "8c16523ebc603dc97f1144a55eb9f6f34f7ab0eca7ca4f4dae315512ca86c370",
-            "updatedAt": "2026-11-10T18:02:27+08:00",
-            "chars": 8719,
+            "sha256": "6235b8093ee8b8708603cfa13f402c2046a3afc872beacf65f5f5e14c063fd86",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 8721,
             "paragraphs": 28,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "6235b8093ee8b8708603cfa13f402c2046a3afc872beacf65f5f5e14c063fd86",
+                "previousSha256": "8c16523ebc603dc97f1144a55eb9f6f34f7ab0eca7ca4f4dae315512ca86c370",
+                "chars": 8721
+              }
+            ]
           }
         }
       },
@@ -4340,8 +4720,8 @@
         "name": "狌狌",
         "firstPostedAt": "2026-11-10T18:02:27+08:00",
         "firstSha256": "337264fe66262fa9ed525d93e511fabc6222d4d06ffcdfd3f517671411b36664",
-        "sha256": "ea9c14902c1a7317f7f26e2eb892d6fc2338e564467b274075643af9779f5add",
-        "updatedAt": "2026-11-10T18:21:15+08:00",
+        "sha256": "f7d923e267684c139c775e1fe049eedaa789e76411e18fc8dee997fa133f8c24",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-10T18:21:15+08:00",
@@ -4349,12 +4729,19 @@
             "previousSha256": "337264fe66262fa9ed525d93e511fabc6222d4d06ffcdfd3f517671411b36664",
             "bodySha256": "070ad1dce1f8932f70cdaa3753c553546817967bb7681f3a125e9c43a7899848",
             "bodyChars": 4060
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "f7d923e267684c139c775e1fe049eedaa789e76411e18fc8dee997fa133f8c24",
+            "previousSha256": "ea9c14902c1a7317f7f26e2eb892d6fc2338e564467b274075643af9779f5add",
+            "bodySha256": "685b94d2a79f6a1db46d21a68c798ef173b1a7f39fdbc3a14c52e6c4f811ae2e",
+            "bodyChars": 4132
           }
         ],
         "bodyFirstPostedAt": "2026-11-10T18:02:27+08:00",
         "bodyFirstSha256": "0919f19be0d1f535462d500e1abb89ba78634e7bafe3f323e94574f82dfba388",
-        "bodySha256": "070ad1dce1f8932f70cdaa3753c553546817967bb7681f3a125e9c43a7899848",
-        "bodyChars": 4060,
+        "bodySha256": "685b94d2a79f6a1db46d21a68c798ef173b1a7f39fdbc3a14c52e6c4f811ae2e",
+        "bodyChars": 4132,
         "translations": {
           "en": {
             "firstPostedAt": "2026-11-10T18:02:27+08:00",
@@ -4390,40 +4777,69 @@
         "name": "寓",
         "firstPostedAt": "2026-11-11T00:55:01+08:00",
         "firstSha256": "43f9f71d8c25a6a5c0c0283cc8952b77f46a79919088655b005b49306ec03cbf",
-        "sha256": "43f9f71d8c25a6a5c0c0283cc8952b77f46a79919088655b005b49306ec03cbf",
-        "updatedAt": "2026-11-11T00:55:01+08:00",
-        "revisions": [],
+        "sha256": "acd92603f21cc2a5f94635572c590ec1958a4ec1ca92620ce5a260143f9ba7d7",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "revisions": [
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "acd92603f21cc2a5f94635572c590ec1958a4ec1ca92620ce5a260143f9ba7d7",
+            "previousSha256": "43f9f71d8c25a6a5c0c0283cc8952b77f46a79919088655b005b49306ec03cbf",
+            "bodySha256": "d6378c63e528257dba023f659134326bc3a4d61892011e051a4a4790641cd369",
+            "bodyChars": 3358
+          }
+        ],
         "bodyFirstPostedAt": "2026-11-11T00:55:01+08:00",
         "bodyFirstSha256": "fad7d74fd62dda614c973f29e2c58eb481471d4a0502699c846b9acd9f2ba86f",
-        "bodySha256": "fad7d74fd62dda614c973f29e2c58eb481471d4a0502699c846b9acd9f2ba86f",
-        "bodyChars": 3362,
+        "bodySha256": "d6378c63e528257dba023f659134326bc3a4d61892011e051a4a4790641cd369",
+        "bodyChars": 3358,
         "translations": {
           "en": {
             "firstPostedAt": "2026-11-11T00:55:01+08:00",
             "firstSha256": "ae61e8b3139b3aeff45a7322f6c233924a80ea195715af44b9335cfa9e8f9861",
-            "sha256": "ae61e8b3139b3aeff45a7322f6c233924a80ea195715af44b9335cfa9e8f9861",
-            "updatedAt": "2026-11-11T00:55:01+08:00",
-            "chars": 12327,
+            "sha256": "5c3f9a5d05571102c86e8867175da44ec2e81bc5220e40dbdd4f6c6517e51ab0",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 12324,
             "paragraphs": 22,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "5c3f9a5d05571102c86e8867175da44ec2e81bc5220e40dbdd4f6c6517e51ab0",
+                "previousSha256": "ae61e8b3139b3aeff45a7322f6c233924a80ea195715af44b9335cfa9e8f9861",
+                "chars": 12324
+              }
+            ]
           },
           "fr": {
             "firstPostedAt": "2026-11-11T00:55:01+08:00",
             "firstSha256": "be511dca44d21f57bc1a92e51a90cd07bd15f2376905613583e39105d5c94f50",
-            "sha256": "be511dca44d21f57bc1a92e51a90cd07bd15f2376905613583e39105d5c94f50",
-            "updatedAt": "2026-11-11T00:55:01+08:00",
-            "chars": 13753,
+            "sha256": "e283a318da5c0e61ecb2c56cd1b4cb101205f57c13ce08d292a3144384cedbdd",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 13751,
             "paragraphs": 22,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "e283a318da5c0e61ecb2c56cd1b4cb101205f57c13ce08d292a3144384cedbdd",
+                "previousSha256": "be511dca44d21f57bc1a92e51a90cd07bd15f2376905613583e39105d5c94f50",
+                "chars": 13751
+              }
+            ]
           },
           "ar": {
             "firstPostedAt": "2026-11-11T00:55:01+08:00",
             "firstSha256": "9d96dbf06fc8a8ded88979043b09e478bc5fb5448806bf04cb9e99138c96b5fd",
-            "sha256": "9d96dbf06fc8a8ded88979043b09e478bc5fb5448806bf04cb9e99138c96b5fd",
-            "updatedAt": "2026-11-11T00:55:01+08:00",
-            "chars": 9750,
+            "sha256": "c3944d2b757eee81f3c92506188d6b83fe48a47671e862cb69e95add868b3744",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 9748,
             "paragraphs": 22,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "c3944d2b757eee81f3c92506188d6b83fe48a47671e862cb69e95add868b3744",
+                "previousSha256": "9d96dbf06fc8a8ded88979043b09e478bc5fb5448806bf04cb9e99138c96b5fd",
+                "chars": 9748
+              }
+            ]
           }
         }
       },
@@ -4432,8 +4848,8 @@
         "name": "猼訑",
         "firstPostedAt": "2026-11-11T12:24:09+08:00",
         "firstSha256": "7b7ef827c40ee05128c521dbdd2edc3759cd7eb695bb299b752dd2db2ca88afa",
-        "sha256": "e93ad40cf9b4e12e23d7106dc6c1263a10ac2544891990276e783e5cd4a8fd0a",
-        "updatedAt": "2026-11-11T18:21:37+08:00",
+        "sha256": "22610faf2e6c4f7f288f5d9fe747616dccc2999e963381bf321371c72c299352",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-11T15:45:19+08:00",
@@ -4448,19 +4864,26 @@
             "previousSha256": "c63f0d0f05707d170a6af2f18e6ba978ca675879b74078af4f5d768e4253c2fe",
             "bodySha256": "03bd92d8628c36f9ba4d4816638963b3ffdc2fe6bdbb8b66a40c5525ea3927da",
             "bodyChars": 5692
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "22610faf2e6c4f7f288f5d9fe747616dccc2999e963381bf321371c72c299352",
+            "previousSha256": "e93ad40cf9b4e12e23d7106dc6c1263a10ac2544891990276e783e5cd4a8fd0a",
+            "bodySha256": "e6f154b2da171149fe98f764a30dd21cd4cdc6fe391c7a3c1ce26fbf4f79e807",
+            "bodyChars": 5733
           }
         ],
         "bodyFirstPostedAt": "2026-11-11T12:24:09+08:00",
         "bodyFirstSha256": "3edb021acf22fde00eb8bb5fa770b6c5a6a62a980790265178f70a5464ae8b4b",
-        "bodySha256": "03bd92d8628c36f9ba4d4816638963b3ffdc2fe6bdbb8b66a40c5525ea3927da",
-        "bodyChars": 5692,
+        "bodySha256": "e6f154b2da171149fe98f764a30dd21cd4cdc6fe391c7a3c1ce26fbf4f79e807",
+        "bodyChars": 5733,
         "translations": {
           "en": {
             "firstPostedAt": "2026-11-11T12:24:09+08:00",
             "firstSha256": "29c9a16e7d5868cc13c67e6c508e1be0c529da20bbe0640f4c606b2231683948",
-            "sha256": "afe3b79a705324942b1c0269eb940c5b08d605aa478760ca184b1deffbdf7c60",
-            "updatedAt": "2026-11-11T18:21:37+08:00",
-            "chars": 21392,
+            "sha256": "c9ffffefecf2f425b2a08cddee5f0ebb1cf4b8bf536a543fb935c2ee7d80c75b",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 21572,
             "paragraphs": 32,
             "revisions": [
               {
@@ -4474,15 +4897,21 @@
                 "sha256": "afe3b79a705324942b1c0269eb940c5b08d605aa478760ca184b1deffbdf7c60",
                 "previousSha256": "3396ed703ec2872ba5cdc4265b1450bfa7e1d5fbb4d91a1a74226081898bccd5",
                 "chars": 21392
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "c9ffffefecf2f425b2a08cddee5f0ebb1cf4b8bf536a543fb935c2ee7d80c75b",
+                "previousSha256": "afe3b79a705324942b1c0269eb940c5b08d605aa478760ca184b1deffbdf7c60",
+                "chars": 21572
               }
             ]
           },
           "fr": {
             "firstPostedAt": "2026-11-11T12:24:09+08:00",
             "firstSha256": "51911dc2796d99933fd18b1a9356586717b52cd4040ba58ab26bac89ba0b5d48",
-            "sha256": "e5c3ddc9759d1ed6c4afe9218f5c1b273c81faf747880276768fe7d1d6b7aa5b",
-            "updatedAt": "2026-11-11T18:21:37+08:00",
-            "chars": 22713,
+            "sha256": "102f520ed3ff10a665a1b9c13e0a0b237fdf4b7bad38ea1e0fadda188975d80a",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 22890,
             "paragraphs": 32,
             "revisions": [
               {
@@ -4496,15 +4925,21 @@
                 "sha256": "e5c3ddc9759d1ed6c4afe9218f5c1b273c81faf747880276768fe7d1d6b7aa5b",
                 "previousSha256": "528830c8f26202cdd405a9ba9b3b13b95aa9f1d87f07da2429ec094de78332fe",
                 "chars": 22713
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "102f520ed3ff10a665a1b9c13e0a0b237fdf4b7bad38ea1e0fadda188975d80a",
+                "previousSha256": "e5c3ddc9759d1ed6c4afe9218f5c1b273c81faf747880276768fe7d1d6b7aa5b",
+                "chars": 22890
               }
             ]
           },
           "ar": {
             "firstPostedAt": "2026-11-11T12:24:09+08:00",
             "firstSha256": "9590f537135b34788172dc2b77fd62033aa0ceadb7cdebed420c7524d88cc11a",
-            "sha256": "c0d1aca56519ab1bd2b5816aa1d787a329416183f0ce0a54de3693fe9e073dc7",
-            "updatedAt": "2026-11-11T18:21:37+08:00",
-            "chars": 16323,
+            "sha256": "8fcac2bcec65ef49f8fd94e4e1e99e2cae9d5500916e2759ab22ab3318cad2bd",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 16445,
             "paragraphs": 32,
             "revisions": [
               {
@@ -4518,6 +4953,12 @@
                 "sha256": "c0d1aca56519ab1bd2b5816aa1d787a329416183f0ce0a54de3693fe9e073dc7",
                 "previousSha256": "a1a765ea023b5f04de7a4811c0fa6462cdd12139d598211c8a6b6d21c6fef43f",
                 "chars": 16323
+              },
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "8fcac2bcec65ef49f8fd94e4e1e99e2cae9d5500916e2759ab22ab3318cad2bd",
+                "previousSha256": "c0d1aca56519ab1bd2b5816aa1d787a329416183f0ce0a54de3693fe9e073dc7",
+                "chars": 16445
               }
             ]
           }
@@ -4528,8 +4969,8 @@
         "name": "獓𤟎",
         "firstPostedAt": "2026-11-11T18:21:37+08:00",
         "firstSha256": "83422b52f1d8994965073e0c9b954f7a88133fa3af379c71ed9fbaf110c571d6",
-        "sha256": "ea25952825ce86c509aa01483b47fbb2fb1f180979a28710628d82844f8c27a8",
-        "updatedAt": "2026-11-11T18:37:02+08:00",
+        "sha256": "2841936f28112cd66a215cec2f6fd3f61990ba5f148f173f453a11aeffb65d4c",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-11T18:37:02+08:00",
@@ -4537,39 +4978,67 @@
             "previousSha256": "83422b52f1d8994965073e0c9b954f7a88133fa3af379c71ed9fbaf110c571d6",
             "bodySha256": "729476351ad60795dbd2542114ef8ff064699f12204cde4baffdaf7e49f1d452",
             "bodyChars": 3817
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "2841936f28112cd66a215cec2f6fd3f61990ba5f148f173f453a11aeffb65d4c",
+            "previousSha256": "ea25952825ce86c509aa01483b47fbb2fb1f180979a28710628d82844f8c27a8",
+            "bodySha256": "d2ec8184efd76a72817cd5f4da5dd11609e61b0f3b35d5dc8e94c51b7ff1e1f4",
+            "bodyChars": 3806
           }
         ],
         "bodyFirstPostedAt": "2026-11-11T18:21:37+08:00",
         "bodyFirstSha256": "6bcd83fbb8b883d66922c0d5a0db811a42ebb840a961e179fadb7d97caa5f12d",
-        "bodySha256": "729476351ad60795dbd2542114ef8ff064699f12204cde4baffdaf7e49f1d452",
-        "bodyChars": 3817,
+        "bodySha256": "d2ec8184efd76a72817cd5f4da5dd11609e61b0f3b35d5dc8e94c51b7ff1e1f4",
+        "bodyChars": 3806,
         "translations": {
           "en": {
             "firstPostedAt": "2026-11-11T18:21:37+08:00",
             "firstSha256": "d5d3141e2a180118a6dcd02998d61a97bad2b866b09f5de6774919385a7841b3",
-            "sha256": "d5d3141e2a180118a6dcd02998d61a97bad2b866b09f5de6774919385a7841b3",
-            "updatedAt": "2026-11-11T18:21:37+08:00",
-            "chars": 14046,
+            "sha256": "f3e5cee79b4a3bd94cb34d6c558e9d83eb8149213b693bcab9d2f926e1cdd2a8",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 14066,
             "paragraphs": 41,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "f3e5cee79b4a3bd94cb34d6c558e9d83eb8149213b693bcab9d2f926e1cdd2a8",
+                "previousSha256": "d5d3141e2a180118a6dcd02998d61a97bad2b866b09f5de6774919385a7841b3",
+                "chars": 14066
+              }
+            ]
           },
           "fr": {
             "firstPostedAt": "2026-11-11T18:21:37+08:00",
             "firstSha256": "e5cf0f411ab7f6113b522e318f95c1d46f60de0e357dc57e9749dd4fa47cce2a",
-            "sha256": "e5cf0f411ab7f6113b522e318f95c1d46f60de0e357dc57e9749dd4fa47cce2a",
-            "updatedAt": "2026-11-11T18:21:37+08:00",
-            "chars": 15207,
+            "sha256": "a059ca40f14ba7134415c485820ad284a5c9c23b06aafd7ba659dfffdf0cde32",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 15228,
             "paragraphs": 41,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "a059ca40f14ba7134415c485820ad284a5c9c23b06aafd7ba659dfffdf0cde32",
+                "previousSha256": "e5cf0f411ab7f6113b522e318f95c1d46f60de0e357dc57e9749dd4fa47cce2a",
+                "chars": 15228
+              }
+            ]
           },
           "ar": {
             "firstPostedAt": "2026-11-11T18:21:37+08:00",
             "firstSha256": "03b43cb72f235fdc4ad6e486f920675100abe3c031a0f33958f1b5f1726d3319",
-            "sha256": "03b43cb72f235fdc4ad6e486f920675100abe3c031a0f33958f1b5f1726d3319",
-            "updatedAt": "2026-11-11T18:21:37+08:00",
-            "chars": 10798,
+            "sha256": "771041ff566d05785cb376eea31dff639b1af04a43ef4187673c729071f01bef",
+            "updatedAt": "2026-11-12T16:39:19+08:00",
+            "chars": 10810,
             "paragraphs": 41,
-            "revisions": []
+            "revisions": [
+              {
+                "at": "2026-11-12T16:39:19+08:00",
+                "sha256": "771041ff566d05785cb376eea31dff639b1af04a43ef4187673c729071f01bef",
+                "previousSha256": "03b43cb72f235fdc4ad6e486f920675100abe3c031a0f33958f1b5f1726d3319",
+                "chars": 10810
+              }
+            ]
           }
         }
       },
@@ -4578,8 +5047,8 @@
         "name": "獙獙",
         "firstPostedAt": "2026-11-11T23:25:56+08:00",
         "firstSha256": "8eee32f4e853b908a018896e63563b810ced4248b4a08c2efc0753bac6e269aa",
-        "sha256": "506a59c2de4b24642bc300712e6c13bb970fe6ec55c68aa4c46d5bbd6470da80",
-        "updatedAt": "2026-11-11T23:42:25+08:00",
+        "sha256": "9172b07bae4b8eae415ec1eabbe7aeb3962519d725aab1b79092d62b8c9295e2",
+        "updatedAt": "2026-11-12T16:39:19+08:00",
         "revisions": [
           {
             "at": "2026-11-11T23:32:19+08:00",
@@ -4592,6 +5061,13 @@
             "at": "2026-11-11T23:42:25+08:00",
             "sha256": "506a59c2de4b24642bc300712e6c13bb970fe6ec55c68aa4c46d5bbd6470da80",
             "previousSha256": "666f1ff7bc2dfe79cdc36fb72dc20afcf89f7655bcb00a6682c8ca9a8ecd79dd",
+            "bodySha256": "b5f745d0a4a3de95d515eccd6c96ed32423abd6588f2dd60c48d073d2e629abf",
+            "bodyChars": 3651
+          },
+          {
+            "at": "2026-11-12T16:39:19+08:00",
+            "sha256": "9172b07bae4b8eae415ec1eabbe7aeb3962519d725aab1b79092d62b8c9295e2",
+            "previousSha256": "506a59c2de4b24642bc300712e6c13bb970fe6ec55c68aa4c46d5bbd6470da80",
             "bodySha256": "b5f745d0a4a3de95d515eccd6c96ed32423abd6588f2dd60c48d073d2e629abf",
             "bodyChars": 3651
           }
