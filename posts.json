@@ -5,7 +5,7 @@
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-12T21:23:18+08:00",
+  "generatedAt": "2026-11-13T00:31:08+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -5303,8 +5303,8 @@
         "name": "獙獙",
         "firstPostedAt": "2026-11-11T23:25:56+08:00",
         "firstSha256": "8eee32f4e853b908a018896e63563b810ced4248b4a08c2efc0753bac6e269aa",
-        "sha256": "9172b07bae4b8eae415ec1eabbe7aeb3962519d725aab1b79092d62b8c9295e2",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "5431efb9643e03d0488e7eee66c68cabd33edfe3dc554c69f710f76066121307",
+        "updatedAt": "2026-11-13T00:31:08+08:00",
         "revisions": [
           {
             "at": "2026-11-11T23:32:19+08:00",
@@ -5326,12 +5326,19 @@
             "previousSha256": "506a59c2de4b24642bc300712e6c13bb970fe6ec55c68aa4c46d5bbd6470da80",
             "bodySha256": "b5f745d0a4a3de95d515eccd6c96ed32423abd6588f2dd60c48d073d2e629abf",
             "bodyChars": 3651
+          },
+          {
+            "at": "2026-11-13T00:31:08+08:00",
+            "sha256": "5431efb9643e03d0488e7eee66c68cabd33edfe3dc554c69f710f76066121307",
+            "previousSha256": "9172b07bae4b8eae415ec1eabbe7aeb3962519d725aab1b79092d62b8c9295e2",
+            "bodySha256": "cb88d9391ae3d91378441d65bd919db60c5ce99b2a9e1fbe7abefa729d80babd",
+            "bodyChars": 3650
           }
         ],
         "bodyFirstPostedAt": "2026-11-11T23:25:56+08:00",
         "bodyFirstSha256": "7db063ea9050de2f8f23a7adaded14a0aa78178327e216e99966af91ec81b125",
-        "bodySha256": "b5f745d0a4a3de95d515eccd6c96ed32423abd6588f2dd60c48d073d2e629abf",
-        "bodyChars": 3651,
+        "bodySha256": "cb88d9391ae3d91378441d65bd919db60c5ce99b2a9e1fbe7abefa729d80babd",
+        "bodyChars": 3650,
         "translations": {
           "en": {
             "firstPostedAt": "2026-11-11T23:25:56+08:00",
@@ -5380,6 +5387,48 @@
                 "chars": 9826
               }
             ]
+          }
+        }
+      },
+      "51": {
+        "num": 51,
+        "name": "化蛇",
+        "firstPostedAt": "2026-11-13T00:31:08+08:00",
+        "firstSha256": "a2680bd68ef1aee383f778b8447b406d37678fbc6e7ecfc1f1925c66d21ebce3",
+        "sha256": "a2680bd68ef1aee383f778b8447b406d37678fbc6e7ecfc1f1925c66d21ebce3",
+        "updatedAt": "2026-11-13T00:31:08+08:00",
+        "revisions": [],
+        "bodyFirstPostedAt": "2026-11-13T00:31:08+08:00",
+        "bodyFirstSha256": "16a6cb55b92dae9ed59529eebf8bbf93509b4ac97214e7a7b0da219a70f23be2",
+        "bodySha256": "16a6cb55b92dae9ed59529eebf8bbf93509b4ac97214e7a7b0da219a70f23be2",
+        "bodyChars": 3734,
+        "translations": {
+          "en": {
+            "firstPostedAt": "2026-11-13T00:31:08+08:00",
+            "firstSha256": "9c98193101e2107338f3241c2b1bcb173f2ffdcfd92a7bec0f981b1bc047317f",
+            "sha256": "9c98193101e2107338f3241c2b1bcb173f2ffdcfd92a7bec0f981b1bc047317f",
+            "updatedAt": "2026-11-13T00:31:08+08:00",
+            "chars": 13704,
+            "paragraphs": 47,
+            "revisions": []
+          },
+          "fr": {
+            "firstPostedAt": "2026-11-13T00:31:08+08:00",
+            "firstSha256": "e51a23a43ec5d0d5306cb5176c0d0feccf7d0cd4931329a3f2e6f93ccc58d4bc",
+            "sha256": "e51a23a43ec5d0d5306cb5176c0d0feccf7d0cd4931329a3f2e6f93ccc58d4bc",
+            "updatedAt": "2026-11-13T00:31:08+08:00",
+            "chars": 14489,
+            "paragraphs": 47,
+            "revisions": []
+          },
+          "ar": {
+            "firstPostedAt": "2026-11-13T00:31:08+08:00",
+            "firstSha256": "939996b8684c78e5ef604ec390642c93de141109f7e5153c2df9c2e86c8997d8",
+            "sha256": "939996b8684c78e5ef604ec390642c93de141109f7e5153c2df9c2e86c8997d8",
+            "updatedAt": "2026-11-13T00:31:08+08:00",
+            "chars": 10399,
+            "paragraphs": 47,
+            "revisions": []
           }
         }
       }

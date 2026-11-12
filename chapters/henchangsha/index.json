@@ -2,8 +2,8 @@
  "work": "henchangsha",
  "title": "恨长沙",
  "author": "默不如",
- "chapterCount": 51,
- "totalChars": 223273,
+ "chapterCount": 52,
+ "totalChars": 227006,
  "chapters": [
   {
    "num": 0,
@@ -409,9 +409,17 @@
    "num": 50,
    "title": "第五十章 獙獙",
    "beast": "獙獙",
-   "chars": 3651,
+   "chars": 3650,
    "paragraphs": 45,
    "file": "50.json"
+  },
+  {
+   "num": 51,
+   "title": "第五十一章 化蛇",
+   "beast": "化蛇",
+   "chars": 3734,
+   "paragraphs": 47,
+   "file": "51.json"
   }
  ]
 }
