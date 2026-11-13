@@ -308,7 +308,7 @@ html[dir="rtl"] .lang-switch { margin-left: 0; margin-right: 18px; }
 
 /* ---------- 头像 / 作者形象 ---------- */
 .hero-avatar {
-  width: 92px; height: 92px; border-radius: 50%;
+  width: 128px; height: 128px; border-radius: 50%;
   object-fit: cover; object-position: center 18%;
   border: 2px solid var(--gold);
   box-shadow: 0 6px 22px rgba(232,184,75,0.18);
@@ -343,7 +343,7 @@ html[dir="rtl"] #nav .links a { margin-left: 0; margin-right: 20px; }
 /* ---------- 响应式 ---------- */
 @media (max-width: 720px) {
   .hero h1 { font-size: 36px; }
-  .hero-avatar { width: 72px; height: 72px; }
+  .hero-avatar { width: 96px; height: 96px; }
   .pillars { grid-template-columns: 1fr; }
   #nav .links a { margin-left: 12px; font-size: 13px; }
   .lang-switch { gap: 5px; margin-left: 0; margin-top: 6px; width: 100%; justify-content: flex-start; }
