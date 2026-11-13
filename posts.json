@@ -5,7 +5,7 @@
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-13T00:42:51+08:00",
+  "generatedAt": "2026-11-13T20:25:20+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -3622,8 +3622,8 @@
         "name": "茈鱼",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "f2f0235654dc506512d55d1c00284ead0ada171a422ece20d01f296f41ba63bd",
-        "sha256": "653d50e917b6b1b362589889835798f759147a13c0f1218c7060730fd3ea1856",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "ebe0f018b7f8341b9466cd73bdca222a78176578e2128c3ee24b2cd14ad72639",
+        "updatedAt": "2026-11-13T20:25:20+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3650,6 +3650,13 @@
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "653d50e917b6b1b362589889835798f759147a13c0f1218c7060730fd3ea1856",
             "previousSha256": "65367a07b1bc5573259008df3e852d1d938238020a621beab52807b5bc756b44",
+            "bodySha256": "95803e83bb709c19658c2ce61b5d1f91e2a99afac7dffe1150870df4b414cb3c",
+            "bodyChars": 5623
+          },
+          {
+            "at": "2026-11-13T20:25:20+08:00",
+            "sha256": "ebe0f018b7f8341b9466cd73bdca222a78176578e2128c3ee24b2cd14ad72639",
+            "previousSha256": "653d50e917b6b1b362589889835798f759147a13c0f1218c7060730fd3ea1856",
             "bodySha256": "95803e83bb709c19658c2ce61b5d1f91e2a99afac7dffe1150870df4b414cb3c",
             "bodyChars": 5623
           }
@@ -3712,6 +3719,15 @@
                 "chars": 20837
               }
             ]
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-13T20:25:20+08:00",
+            "firstSha256": "a3e71bfc177aadf5668d85f0c97845643828c9ad01fe7d94a313785a5f3253bb",
+            "sha256": "a3e71bfc177aadf5668d85f0c97845643828c9ad01fe7d94a313785a5f3253bb",
+            "updatedAt": "2026-11-13T20:25:20+08:00",
+            "chars": 7853,
+            "paragraphs": 100,
+            "revisions": []
           }
         }
       },
@@ -3720,8 +3736,8 @@
         "name": "狡",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "b2cf4dd56d68097bae327515caaf0b59427303958d9ebe608c4d30da497cd1b9",
-        "sha256": "0140dd9c2bcc1e0c75036c650bd82e695e997d0ef182063b39ff4f8aac573ff9",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "cd36123c394993c9281f8003872bc2543086705f672237d6610d0921398a63d5",
+        "updatedAt": "2026-11-13T20:25:20+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3762,6 +3778,13 @@
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "0140dd9c2bcc1e0c75036c650bd82e695e997d0ef182063b39ff4f8aac573ff9",
             "previousSha256": "e20d8f4cd6761da7b4d9f70fcb293616a625cf92e24fa07f1adb4ca949f4b87f",
+            "bodySha256": "b190aec8eb4c21a994a62ed29a7a1bad7f9e637ae8504e49af9c53dad94cdee7",
+            "bodyChars": 6259
+          },
+          {
+            "at": "2026-11-13T20:25:20+08:00",
+            "sha256": "cd36123c394993c9281f8003872bc2543086705f672237d6610d0921398a63d5",
+            "previousSha256": "0140dd9c2bcc1e0c75036c650bd82e695e997d0ef182063b39ff4f8aac573ff9",
             "bodySha256": "b190aec8eb4c21a994a62ed29a7a1bad7f9e637ae8504e49af9c53dad94cdee7",
             "bodyChars": 6259
           }
@@ -3836,6 +3859,15 @@
                 "chars": 23024
               }
             ]
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-13T20:25:20+08:00",
+            "firstSha256": "245beeb6a5163ae0f10fd9c358052863cec33afbbaea4c17d131e99e5db15f4e",
+            "sha256": "245beeb6a5163ae0f10fd9c358052863cec33afbbaea4c17d131e99e5db15f4e",
+            "updatedAt": "2026-11-13T20:25:20+08:00",
+            "chars": 9102,
+            "paragraphs": 131,
+            "revisions": []
           }
         }
       },
@@ -3844,8 +3876,8 @@
         "name": "蜮",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "877daa834ea3bd257f25d0b6c09cfeaed2ee83bf1d5802d45ee81a1c0feee275",
-        "sha256": "e84baa95ab90b9828fbef26459d6d42ebf1ce7ad6550d20a89f4b37f6257fb7a",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "31da3fcacd0043e009b19e50d440c74d9f9eaf05909a22e0b59029fcc526b27f",
+        "updatedAt": "2026-11-13T20:25:20+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -3886,6 +3918,13 @@
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "e84baa95ab90b9828fbef26459d6d42ebf1ce7ad6550d20a89f4b37f6257fb7a",
             "previousSha256": "5b1da060d5fc17613e7581f8f82b66d8e8bc398c985b37e7055ab44e3ea7df21",
+            "bodySha256": "4ffd070fc77b009bdc98ec25366f61345d19ec92ffddcce3cfe51fdaabd8fc79",
+            "bodyChars": 5599
+          },
+          {
+            "at": "2026-11-13T20:25:20+08:00",
+            "sha256": "31da3fcacd0043e009b19e50d440c74d9f9eaf05909a22e0b59029fcc526b27f",
+            "previousSha256": "e84baa95ab90b9828fbef26459d6d42ebf1ce7ad6550d20a89f4b37f6257fb7a",
             "bodySha256": "4ffd070fc77b009bdc98ec25366f61345d19ec92ffddcce3cfe51fdaabd8fc79",
             "bodyChars": 5599
           }
@@ -3960,6 +3999,15 @@
                 "chars": 20659
               }
             ]
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-13T20:25:20+08:00",
+            "firstSha256": "3762a28e6eb27f30b82e2c96c3d833e4477d6812873ab8857545269af9824a44",
+            "sha256": "3762a28e6eb27f30b82e2c96c3d833e4477d6812873ab8857545269af9824a44",
+            "updatedAt": "2026-11-13T20:25:20+08:00",
+            "chars": 7702,
+            "paragraphs": 82,
+            "revisions": []
           }
         }
       },
