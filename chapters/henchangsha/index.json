@@ -2,8 +2,8 @@
  "work": "henchangsha",
  "title": "恨长沙",
  "author": "默不如",
- "chapterCount": 52,
- "totalChars": 226807,
+ "chapterCount": 53,
+ "totalChars": 233269,
  "chapters": [
   {
    "num": 0,
@@ -420,6 +420,14 @@
    "chars": 3734,
    "paragraphs": 47,
    "file": "51.json"
+  },
+  {
+   "num": 52,
+   "title": "第五十二章 嚣",
+   "beast": "嚣",
+   "chars": 6462,
+   "paragraphs": 104,
+   "file": "52.json"
   }
  ]
 }
