@@ -466,7 +466,7 @@ const WORKS = [
   {
     id: "tokyolimited",
     /* 写作顺序第 3 部：作者 2026-11-15 新增《东京限定》。 */
-    title: { zh: "东京限定", en: "Tokyo Only", ja: "東京限定", fr: "Tokyo seulement", ar: "طوكيو فقط" },
+    title: { zh: "东京限定", en: "SMU 4 Tyoko", ja: "東京限定", fr: "Tokyo seulement", ar: "طوكيو فقط" },
     author: "默不如zZZ",
     category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
     status: { zh: "即将上线 · 免费", en: "Coming soon · Free", ja: "近日公開 · 無料", fr: "Bientôt · Gratuit", ar: "قريباً · مجاني" },
@@ -489,7 +489,7 @@ const WORKS = [
   {
     id: "shepherd",
     /* 写作顺序第 4 部：《牧者之歌》。2026-11-15 曾被误改名，已恢复原名。 */
-    title: { zh: "牧者之歌", en: "Song of the Shepherd", ja: "羊飼いの歌", fr: "Chant du Berger", ar: "أغنية الراعي" },
+    title: { zh: "牧者之歌", en: "The Herders", ja: "羊飼いの歌", fr: "Chant du Berger", ar: "أغنية الراعي" },
     author: "默不如zZZ",
     category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
     status: { zh: "即将上线 · 免费", en: "Coming soon · Free", ja: "近日公開 · 無料", fr: "Bientôt · Gratuit", ar: "قريباً · مجاني" },
@@ -512,7 +512,7 @@ const WORKS = [
   {
     id: "maiduo",
     /* 写作顺序第 5 部：作者 2026-11-15 新增《寻找麦朵》。 */
-    title: { zh: "寻找麦朵", en: "Looking for Maiduo", ja: "麦朵を探して", fr: "À la recherche de Maiduo", ar: "البحث عن مايدو" },
+    title: { zh: "寻找麦朵", en: "Finding Myduo", ja: "麦朵を探して", fr: "À la recherche de Maiduo", ar: "البحث عن مايدو" },
     author: "默不如zZZ",
     category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
     status: { zh: "即将上线 · 免费", en: "Coming soon · Free", ja: "近日公開 · 無料", fr: "Bientôt · Gratuit", ar: "قريباً · مجاني" },

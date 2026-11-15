@@ -86,7 +86,7 @@ const COPY = {
     },
     works: {
       title: 'Works · Moburu',
-      desc: 'Every novel by Moburu — Lost in Changsha, Halo, Tokyo Only, Song of the Shepherd, Looking for Maiduo. Five works in the order she plans to write them, published here first.',
+      desc: 'Every novel by Moburu — Lost in Changsha, Halo, SMU 4 Tyoko, The Herders, Finding Myduo. Five works in the order she plans to write them, published here first.',
       alt: 'Works by Moburu'
     },
     work: {
