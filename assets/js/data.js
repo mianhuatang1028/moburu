@@ -356,11 +356,11 @@ const WORKS = [
     fullText: true,                 // 全本正文已公开；按章从 chapters/ 加载
     cover: "恨",
     summary: {
-      zh: "军工题材，一步写尽人性复杂、残酷商战，在爱情和利益中抉择的小说，人生沉浮从不意味着所有人都必须走向堕落。恰恰相反，每个生命都终将找到值得自己守护的东西。",
-      en: "A military-industry novel that, in a single sweep, lays bare the complexity of human nature, the cruelty of business warfare, and the choosing between love and interest. The rises and falls of a life never mean that everyone must fall into depravity. Quite the contrary — every life will, in the end, find something worth protecting.",
-      ja: "軍事産業を題材に、人間の複雑さ、苛烈な商戦、愛と利益の狭間で迫られる選択を、一気に描き切る小説。人生の浮き沈みは、誰もが堕落へ向かわねばならぬことを意味しない。それどころか、どの命もやがて、自ら守るに値するものに必ず辿り着く。",
-      fr: "Un roman de l’industrie militaire qui, d’un seul trait, épuise la complexité de la nature humaine, la cruauté des guerres d’affaires et le choix entre l’amour et l’intérêt. Les hauts et les bas d’une vie ne signifient jamais que chacun doive sombrer dans la déchéance. Au contraire : toute existence finira par trouver quelque chose qui mérite d’être protégé.",
-      ar: "رواية عن الصناعة العسكرية، تكتب في خطوة واحدة تعقيد النفس البشرية وقسوة الحروب التجارية، والاختيار بين الحب والمصلحة. تقلبات الحياة لا تعني أن على الجميع أن يمضوا إلى الانحطاط؛ بل على العكس تمامًا، كل حياة ستجد في النهاية ما يستحق أن تحميه."
+      zh: "军工题材，一部写尽人性复杂、残酷商战，在爱情和利益中抉择的小说，人生沉浮从不意味着所有人都必须走向堕落。恰恰相反，每个生命都终将找到值得自己守护的东西。",
+      en: "A military-industry novel that lays bare the complexity of human nature, the cruelty of business warfare, and the choosing between love and interest. The rises and falls of a life never mean that everyone must fall into depravity. Quite the contrary — every life will, in the end, find something worth protecting.",
+      ja: "軍事産業を題材に、人間の複雑さ、苛烈な商戦、愛と利益の狭間で迫られる選択を描き切る小説。人生の浮き沈みは、誰もが堕落へ向かわねばならぬことを意味しない。それどころか、どの命もやがて、自ら守るに値するものに必ず辿り着く。",
+      fr: "Un roman de l’industrie militaire qui épuise la complexité de la nature humaine, la cruauté des guerres d’affaires et le choix entre l’amour et l’intérêt. Les hauts et les bas d’une vie ne signifient jamais que chacun doive sombrer dans la déchéance. Au contraire : toute existence finira par trouver quelque chose qui mérite d’être protégé.",
+      ar: "رواية عن الصناعة العسكرية، تكتب تعقيد النفس البشرية وقسوة الحروب التجارية، والاختيار بين الحب والمصلحة. تقلبات الحياة لا تعني أن على الجميع أن يمضوا إلى الانحطاط؛ بل على العكس تمامًا، كل حياة ستجد في النهاية ما يستحق أن تحميه."
     },
     tags: {
       zh: ["中年逆袭", "军工写实", "山海经叙事", "都市情感"],
@@ -442,14 +442,16 @@ const WORKS = [
   },
   {
     id: "halo",
-    title: { zh: "光环", en: "Halo", ja: "光環", fr: "Halo", ar: "هالة" },
+    /* 坑位一：作者 2026-11-15 定名《东京限定》。id 沿用 halo 作为内部永久标识，
+       改 id 会牵动 posts.json 存证键与历史 URL，故只换显示名。 */
+    title: { zh: "东京限定", en: "Tokyo Only", ja: "東京限定", fr: "Tokyo seulement", ar: "طوكيو فقط" },
     author: "默不如zZZ",
     category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
     status: { zh: "即将上线 · 免费", en: "Coming soon · Free", ja: "近日公開 · 無料", fr: "Bientôt · Gratuit", ar: "قريباً · مجاني" },
     year: 2026,
     paywall: false,
     officialFirst: true,
-    cover: "光",
+    cover: "东",
     summary: {
       zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
       en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",
@@ -464,14 +466,15 @@ const WORKS = [
   },
   {
     id: "shepherd",
-    title: { zh: "牧者之歌", en: "Song of the Shepherd", ja: "羊飼いの歌", fr: "Chant du Berger", ar: "أغنية الراعي" },
+    /* 坑位二：作者 2026-11-15 定名《寻找麦朵》。id 沿用 shepherd 作为内部永久标识。 */
+    title: { zh: "寻找麦朵", en: "Looking for Maiduo", ja: "麦朵を探して", fr: "À la recherche de Maiduo", ar: "البحث عن مايدو" },
     author: "默不如zZZ",
     category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
     status: { zh: "即将上线 · 免费", en: "Coming soon · Free", ja: "近日公開 · 無料", fr: "Bientôt · Gratuit", ar: "قريباً · مجاني" },
     year: 2026,
     paywall: false,
     officialFirst: true,
-    cover: "牧",
+    cover: "寻",
     summary: {
       zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
       en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",

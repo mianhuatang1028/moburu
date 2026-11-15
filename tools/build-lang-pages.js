@@ -54,7 +54,7 @@ const COPY = {
     },
     works: {
       title: '作品目录 - 默不如 | Works',
-      desc: '默不如作品目录——恨长沙、光环、牧者之歌，全本在线，官网优先更新，持续连载。',
+      desc: '默不如作品目录——恨长沙、东京限定、寻找麦朵，全本在线，官网优先更新，持续连载。',
       alt: '默不如作品目录'
     },
     work: {
@@ -86,7 +86,7 @@ const COPY = {
     },
     works: {
       title: 'Works · Moburu',
-      desc: 'Every novel by Moburu — Lost in Changsha, Halo, The Shepherd’s Song. Free to read in full, published here first.',
+      desc: 'Every novel by Moburu — Lost in Changsha, Tokyo Only, Looking for Maiduo. Free to read in full, published here first.',
       alt: 'Works by Moburu'
     },
     work: {
@@ -118,7 +118,7 @@ const COPY = {
     },
     works: {
       title: '作品一覧 · Moburu',
-      desc: 'Moburu の全作品——『長沙に迷う』『光環』『羊飼いの歌』。全文公開、公式サイトが最速更新。',
+      desc: 'Moburu の全作品——『長沙に迷う』『東京限定』『麦朵を探して』。全文公開、公式サイトが最速更新。',
       alt: 'Moburu の作品一覧'
     },
     work: {
@@ -150,7 +150,7 @@ const COPY = {
     },
     works: {
       title: 'Œuvres · Moburu',
-      desc: 'Toutes les œuvres de Moburu — Perdu à Changsha, Halo, Le Chant du pasteur. À lire intégralement, publiées ici en premier.',
+      desc: 'Toutes les œuvres de Moburu — Perdu à Changsha, Tokyo seulement, À la recherche de Maiduo. À lire intégralement, publiées ici en premier.',
       alt: 'Les œuvres de Moburu'
     },
     work: {
@@ -182,7 +182,7 @@ const COPY = {
     },
     works: {
       title: 'الأعمال · موبورو',
-      desc: 'جميع أعمال موبورو — «ضائع في تشانغشا»، «هالة»، «أغنية الراعي». تُقرأ كاملة، وتُنشر هنا أولًا.',
+      desc: 'جميع أعمال موبورو — «ضائع في تشانغشا»، «طوكيو فقط»، «البحث عن مايدو». تُقرأ كاملة، وتُنشر هنا أولًا.',
       alt: 'أعمال موبورو'
     },
     work: {
