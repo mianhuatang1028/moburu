@@ -49,12 +49,12 @@ const COPY = {
   zh: {
     index: {
       title: '默不如 · 小说宇宙 | MOBURU Fiction Universe',
-      desc: '默不如小说官网——军工写实、山海经叙事、中年逆袭。作者默不如的独立小说宇宙，三部作品全本在线，官网优先更新。',
+      desc: '默不如小说官网——军工写实、山海经叙事、中年逆袭。作者默不如的独立小说宇宙，五部作品按写作计划列示，官网优先更新。',
       alt: '默不如 · MOBURU 官网'
     },
     works: {
       title: '作品目录 - 默不如 | Works',
-      desc: '默不如作品目录——恨长沙、东京限定、寻找麦朵，全本在线，官网优先更新，持续连载。',
+      desc: '默不如作品目录——恨长沙、光环、东京限定、牧者之歌、寻找麦朵，五部作品按写作计划排序，官网优先更新。',
       alt: '默不如作品目录'
     },
     work: {
@@ -81,12 +81,12 @@ const COPY = {
   en: {
     index: {
       title: 'Moburu · Fiction Universe',
-      desc: 'The official site of Moburu — hard-tech realism, Classic of Mountains and Seas mythology, a midlife comeback. Three novels, free to read in full, published here first.',
+      desc: 'The official site of Moburu — hard-tech realism, Classic of Mountains and Seas mythology, a midlife comeback. Five works in the order she plans to write them, published here first.',
       alt: 'Moburu — official site'
     },
     works: {
       title: 'Works · Moburu',
-      desc: 'Every novel by Moburu — Lost in Changsha, Tokyo Only, Looking for Maiduo. Free to read in full, published here first.',
+      desc: 'Every novel by Moburu — Lost in Changsha, Halo, Tokyo Only, Song of the Shepherd, Looking for Maiduo. Five works in the order she plans to write them, published here first.',
       alt: 'Works by Moburu'
     },
     work: {
@@ -113,12 +113,12 @@ const COPY = {
   ja: {
     index: {
       title: 'Moburu（ムブル）· 小説の世界',
-      desc: 'Moburu 公式サイト——リアルな技術描写、山海経の物語、中年からの逆転。三作品を全文公開、公式サイトが最速更新。',
+      desc: 'Moburu 公式サイト——リアルな技術描写、山海経の物語、中年からの逆転。執筆予定順に五作品、公式サイトが最速更新。',
       alt: 'Moburu 公式サイト'
     },
     works: {
       title: '作品一覧 · Moburu',
-      desc: 'Moburu の全作品——『長沙に迷う』『東京限定』『麦朵を探して』。全文公開、公式サイトが最速更新。',
+      desc: 'Moburu の全作品——『長沙に迷う』『光環』『東京限定』『羊飼いの歌』『麦朵を探して』。執筆予定順に五作品、公式サイトが最速更新。',
       alt: 'Moburu の作品一覧'
     },
     work: {
@@ -145,12 +145,12 @@ const COPY = {
   fr: {
     index: {
       title: 'Moburu · Univers romanesque',
-      desc: 'Le site officiel de Moburu — réalisme technique, mythologie du Classique des montagnes et des mers, reconquête de la maturité. Trois romans à lire intégralement, publiés ici en premier.',
+      desc: 'Le site officiel de Moburu — réalisme technique, mythologie du Classique des montagnes et des mers, reconquête de la maturité. Cinq œuvres dans l’ordre d’écriture prévu, publiées ici en premier.',
       alt: 'Moburu — site officiel'
     },
     works: {
       title: 'Œuvres · Moburu',
-      desc: 'Toutes les œuvres de Moburu — Perdu à Changsha, Tokyo seulement, À la recherche de Maiduo. À lire intégralement, publiées ici en premier.',
+      desc: 'Toutes les œuvres de Moburu — Perdu à Changsha, Halo, Tokyo seulement, Chant du Berger, À la recherche de Maiduo. Cinq œuvres dans l’ordre d’écriture prévu, publiées ici en premier.',
       alt: 'Les œuvres de Moburu'
     },
     work: {
@@ -177,12 +177,12 @@ const COPY = {
   ar: {
     index: {
       title: 'موبورو · عالم الرواية',
-      desc: 'الموقع الرسمي لموبورو — واقعية تقنية، وأساطير «كتاب الجبال والبحار»، وصعود من منتصف العمر. ثلاث روايات تُقرأ كاملة، وتُنشر هنا أولًا.',
+      desc: 'الموقع الرسمي لموبورو — واقعية تقنية، وأساطير «كتاب الجبال والبحار»، وصعود من منتصف العمر. خمسة أعمال بترتيب خطة الكتابة، تُنشر هنا أولًا.',
       alt: 'موبورو — الموقع الرسمي'
     },
     works: {
       title: 'الأعمال · موبورو',
-      desc: 'جميع أعمال موبورو — «ضائع في تشانغشا»، «طوكيو فقط»، «البحث عن مايدو». تُقرأ كاملة، وتُنشر هنا أولًا.',
+      desc: 'جميع أعمال موبورو — «ضائع في تشانغشا»، «هالة»، «طوكيو فقط»، «أغنية الراعي»، «البحث عن مايدو». خمسة أعمال بترتيب خطة الكتابة، تُنشر هنا أولًا.',
       alt: 'أعمال موبورو'
     },
     work: {

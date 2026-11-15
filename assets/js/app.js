@@ -772,6 +772,6 @@ function renderHome(elId) {
       '<a class="btn primary" href="about.html">' + esc(t("poolCta")) + '</a>' +
       '</div>' +
     '</div></section>';
-  renderWorksGrid('home-works');   // 首页作品矩阵（三部并列）
+  renderWorksGrid('home-works');   // 首页作品矩阵（五部按写作顺序）
   document.title = t("brand") + " · " + t("tagline");
 }

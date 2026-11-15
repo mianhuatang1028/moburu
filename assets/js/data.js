@@ -442,8 +442,30 @@ const WORKS = [
   },
   {
     id: "halo",
-    /* 坑位一：作者 2026-11-15 定名《东京限定》。id 沿用 halo 作为内部永久标识，
-       改 id 会牵动 posts.json 存证键与历史 URL，故只换显示名。 */
+    /* 写作顺序第 2 部：《光环》。2026-11-15 曾被误改名，已恢复原名。 */
+    title: { zh: "光环", en: "Halo", ja: "光環", fr: "Halo", ar: "هالة" },
+    author: "默不如zZZ",
+    category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
+    status: { zh: "即将上线 · 免费", en: "Coming soon · Free", ja: "近日公開 · 無料", fr: "Bientôt · Gratuit", ar: "قريباً · مجاني" },
+    year: 2026,
+    paywall: false,
+    officialFirst: true,
+    cover: "光",
+    summary: {
+      zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
+      en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",
+      ja: "Moburuの新作。公式サイト最速更新、乞うご期待。「Moburuフィクション・ユニバース」で新たな物語が始まる。",
+      fr: "Une nouvelle œuvre de Moburu — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction Moburu.",
+      ar: "عمل جديد من Moburu — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم Moburu الخيالي."
+    },
+    tags: { zh: ["默不如宇宙", "敬请期待"], en: ["Moburu Universe", "Coming Soon"], ja: ["Moburu宇宙", "乞うご期待"], fr: ["Univers Moburu", "À venir"], ar: ["عالم Moburu", "قريباً"] },
+    chapters: [
+      { num: 0, name: "序", title: { zh: "序", en: "Prologue" } }
+    ]
+  },
+  {
+    id: "tokyolimited",
+    /* 写作顺序第 3 部：作者 2026-11-15 新增《东京限定》。 */
     title: { zh: "东京限定", en: "Tokyo Only", ja: "東京限定", fr: "Tokyo seulement", ar: "طوكيو فقط" },
     author: "默不如zZZ",
     category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
@@ -466,7 +488,30 @@ const WORKS = [
   },
   {
     id: "shepherd",
-    /* 坑位二：作者 2026-11-15 定名《寻找麦朵》。id 沿用 shepherd 作为内部永久标识。 */
+    /* 写作顺序第 4 部：《牧者之歌》。2026-11-15 曾被误改名，已恢复原名。 */
+    title: { zh: "牧者之歌", en: "Song of the Shepherd", ja: "羊飼いの歌", fr: "Chant du Berger", ar: "أغنية الراعي" },
+    author: "默不如zZZ",
+    category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
+    status: { zh: "即将上线 · 免费", en: "Coming soon · Free", ja: "近日公開 · 無料", fr: "Bientôt · Gratuit", ar: "قريباً · مجاني" },
+    year: 2026,
+    paywall: false,
+    officialFirst: true,
+    cover: "牧",
+    summary: {
+      zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
+      en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",
+      ja: "Moburuの新作。公式サイト最速更新、乞うご期待。「Moburuフィクション・ユニバース」で新たな物語が始まる。",
+      fr: "Une nouvelle œuvre de Moburu — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction Moburu.",
+      ar: "عمل جديد من Moburu — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم Moburu الخيالي."
+    },
+    tags: { zh: ["默不如宇宙", "敬请期待"], en: ["Moburu Universe", "Coming Soon"], ja: ["Moburu宇宙", "乞うご期待"], fr: ["Univers Moburu", "À venir"], ar: ["عالم Moburu", "قريباً"] },
+    chapters: [
+      { num: 0, name: "序", title: { zh: "序", en: "Prologue" } }
+    ]
+  },
+  {
+    id: "maiduo",
+    /* 写作顺序第 5 部：作者 2026-11-15 新增《寻找麦朵》。 */
     title: { zh: "寻找麦朵", en: "Looking for Maiduo", ja: "麦朵を探して", fr: "À la recherche de Maiduo", ar: "البحث عن مايدو" },
     author: "默不如zZZ",
     category: { zh: "默不如 · 新作", en: "Moburu · New", ja: "Moburu · 新作", fr: "Moburu · Nouveau", ar: "Moburu · جديد" },
