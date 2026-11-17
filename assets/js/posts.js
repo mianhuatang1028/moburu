@@ -7,7 +7,7 @@ const POST_LOG = {
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-18T00:27:48+08:00",
+  "generatedAt": "2026-11-18T00:55:16+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -4610,8 +4610,8 @@ const POST_LOG = {
         "name": "犀渠",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "93c896ff095b204ebd656f914c3c8428a5078ca51199c0e73469502f6819f4d4",
-        "sha256": "f911eae252b429b3310917d85696a8d0a74bec7b30582bd0827d735427790a92",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "446c2aab21a514940391c2b49784318c466f64b21c31bb0df539195b4123987e",
+        "updatedAt": "2026-11-18T00:55:16+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -4645,6 +4645,13 @@ const POST_LOG = {
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "f911eae252b429b3310917d85696a8d0a74bec7b30582bd0827d735427790a92",
             "previousSha256": "c48f3dbbdd68beafeb4baab6c0e89f57d1800221177e7bdfe5cc44744f6b2970",
+            "bodySha256": "98d8562faaded1e86868e87344b9b6ca97f93ec12a8fcf51b7a930e4cd53b29d",
+            "bodyChars": 2876
+          },
+          {
+            "at": "2026-11-18T00:55:16+08:00",
+            "sha256": "446c2aab21a514940391c2b49784318c466f64b21c31bb0df539195b4123987e",
+            "previousSha256": "f911eae252b429b3310917d85696a8d0a74bec7b30582bd0827d735427790a92",
             "bodySha256": "98d8562faaded1e86868e87344b9b6ca97f93ec12a8fcf51b7a930e4cd53b29d",
             "bodyChars": 2876
           }
@@ -4713,6 +4720,15 @@ const POST_LOG = {
                 "chars": 10992
               }
             ]
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-18T00:55:16+08:00",
+            "firstSha256": "28b452f12f536391f993ff823d20a7bd1cf1a8d93bd9792a8105d5a459da7928",
+            "sha256": "28b452f12f536391f993ff823d20a7bd1cf1a8d93bd9792a8105d5a459da7928",
+            "updatedAt": "2026-11-18T00:55:16+08:00",
+            "chars": 4644,
+            "paragraphs": 36,
+            "revisions": []
           }
         }
       },
@@ -4721,8 +4737,8 @@ const POST_LOG = {
         "name": "孟极",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "2e2336635753329bb9da5604388d2d213dd2bf8e30719e7d77b280c2c81d219e",
-        "sha256": "40db737fa5a994d8b85eea3076350664e3865e3f6272b67a735753041c4b7971",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "aef66067a99d426d969b92401f295169c912dcace6ba8d5de613369e0092d64f",
+        "updatedAt": "2026-11-18T00:55:16+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -4756,6 +4772,13 @@ const POST_LOG = {
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "40db737fa5a994d8b85eea3076350664e3865e3f6272b67a735753041c4b7971",
             "previousSha256": "03b6226bc153257369c63a19b8cbee04bb5484b87461e2d7f2719a7bbd9d35fb",
+            "bodySha256": "bd23a8445844d9301b7a542dfd605b3661729a0486ebdbceb1c53b48965970db",
+            "bodyChars": 4073
+          },
+          {
+            "at": "2026-11-18T00:55:16+08:00",
+            "sha256": "aef66067a99d426d969b92401f295169c912dcace6ba8d5de613369e0092d64f",
+            "previousSha256": "40db737fa5a994d8b85eea3076350664e3865e3f6272b67a735753041c4b7971",
             "bodySha256": "bd23a8445844d9301b7a542dfd605b3661729a0486ebdbceb1c53b48965970db",
             "bodyChars": 4073
           }
@@ -4824,6 +4847,15 @@ const POST_LOG = {
                 "chars": 16215
               }
             ]
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-18T00:55:16+08:00",
+            "firstSha256": "b427243fcdf48c7d998049645a6602331e105963271e4d5e84af9a6e08f881d8",
+            "sha256": "b427243fcdf48c7d998049645a6602331e105963271e4d5e84af9a6e08f881d8",
+            "updatedAt": "2026-11-18T00:55:16+08:00",
+            "chars": 6899,
+            "paragraphs": 44,
+            "revisions": []
           }
         }
       },
@@ -4832,8 +4864,8 @@ const POST_LOG = {
         "name": "合窳",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "85b6fefab0c02ccb0d26b84e2607ff8f25368afcba2a998522439b0ac5145e11",
-        "sha256": "2ea1f942fab6387a23ad83efa5e13987627bf99f131de8175a2d21ac7af9870c",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "8b6f0753b66c041d424a9950feacc209190a88ab3d81f87a7f5f3a169dde0bb3",
+        "updatedAt": "2026-11-18T00:55:16+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -4881,6 +4913,13 @@ const POST_LOG = {
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "2ea1f942fab6387a23ad83efa5e13987627bf99f131de8175a2d21ac7af9870c",
             "previousSha256": "4c277a5a2ee9ef7d46dade37ac06487e4ecf634227c59ce05019d64d4b4820fb",
+            "bodySha256": "76b249f7f152806692fb26119515fe1bf15c29516aac63f0950102b769270904",
+            "bodyChars": 4363
+          },
+          {
+            "at": "2026-11-18T00:55:16+08:00",
+            "sha256": "8b6f0753b66c041d424a9950feacc209190a88ab3d81f87a7f5f3a169dde0bb3",
+            "previousSha256": "2ea1f942fab6387a23ad83efa5e13987627bf99f131de8175a2d21ac7af9870c",
             "bodySha256": "76b249f7f152806692fb26119515fe1bf15c29516aac63f0950102b769270904",
             "bodyChars": 4363
           }
@@ -4949,6 +4988,15 @@ const POST_LOG = {
                 "chars": 17176
               }
             ]
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-18T00:55:16+08:00",
+            "firstSha256": "1dce337122921f427529310ed6160dd34efe658a329e0db1b49e90d87f2742c4",
+            "sha256": "1dce337122921f427529310ed6160dd34efe658a329e0db1b49e90d87f2742c4",
+            "updatedAt": "2026-11-18T00:55:16+08:00",
+            "chars": 6899,
+            "paragraphs": 73,
+            "revisions": []
           }
         }
       },
@@ -4957,8 +5005,8 @@ const POST_LOG = {
         "name": "诸犍",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "c87e7646c937a224b66279d560eab9859ff4b64570322fff82963ca6339bc757",
-        "sha256": "d3f1b4138d30159d21ad7649eaf37520a07160db55719a1e7a87fd5055d3c28b",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "2300b0d07f991c3342aa9eceeaf9690abe94d4b751d07842f1c4a35150d5e904",
+        "updatedAt": "2026-11-18T00:55:16+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -4999,6 +5047,13 @@ const POST_LOG = {
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "d3f1b4138d30159d21ad7649eaf37520a07160db55719a1e7a87fd5055d3c28b",
             "previousSha256": "effef20e3d34751d62a392dfb1d4221637ca87c606906e915f07e23c3cbc8b87",
+            "bodySha256": "b5ab2308a005504be00a12a7190ba8dc959c0ed40c98ca04b9db1e8b5d4fdfba",
+            "bodyChars": 5534
+          },
+          {
+            "at": "2026-11-18T00:55:16+08:00",
+            "sha256": "2300b0d07f991c3342aa9eceeaf9690abe94d4b751d07842f1c4a35150d5e904",
+            "previousSha256": "d3f1b4138d30159d21ad7649eaf37520a07160db55719a1e7a87fd5055d3c28b",
             "bodySha256": "b5ab2308a005504be00a12a7190ba8dc959c0ed40c98ca04b9db1e8b5d4fdfba",
             "bodyChars": 5534
           }
@@ -5073,6 +5128,15 @@ const POST_LOG = {
                 "chars": 20976
               }
             ]
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-18T00:55:16+08:00",
+            "firstSha256": "e3485da9b633f21ddd5e10dd7f9b27093dac503d7868d1c0101dbef76f81ba3b",
+            "sha256": "e3485da9b633f21ddd5e10dd7f9b27093dac503d7868d1c0101dbef76f81ba3b",
+            "updatedAt": "2026-11-18T00:55:16+08:00",
+            "chars": 8826,
+            "paragraphs": 81,
+            "revisions": []
           }
         }
       },
@@ -5081,8 +5145,8 @@ const POST_LOG = {
         "name": "猲狙",
         "firstPostedAt": "2026-11-10T14:38:37+08:00",
         "firstSha256": "ed4126643ac73a8090e021718a7c284e6f71f531dca006d09eb943dd00d6b932",
-        "sha256": "b3981b36f6cf2ce5607fac2e3211d435ad000d36e13009f3d344e5807a3659b3",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "a4fcbdf00c4844458b379f4db8220e52aa5e5a7363dd982bb8506b391a7989a0",
+        "updatedAt": "2026-11-18T00:55:16+08:00",
         "revisions": [
           {
             "at": "2026-11-10T18:02:27+08:00",
@@ -5102,6 +5166,13 @@ const POST_LOG = {
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "b3981b36f6cf2ce5607fac2e3211d435ad000d36e13009f3d344e5807a3659b3",
             "previousSha256": "5f61628b9efb1abe10c7c38aa2ba1e102e9aa2caea5ad0ae3c25daf05ab48478",
+            "bodySha256": "ff81962257bb4662c9e494595d8316ce2095a8ef498d6ba2bc841ec735246b41",
+            "bodyChars": 3270
+          },
+          {
+            "at": "2026-11-18T00:55:16+08:00",
+            "sha256": "a4fcbdf00c4844458b379f4db8220e52aa5e5a7363dd982bb8506b391a7989a0",
+            "previousSha256": "b3981b36f6cf2ce5607fac2e3211d435ad000d36e13009f3d344e5807a3659b3",
             "bodySha256": "ff81962257bb4662c9e494595d8316ce2095a8ef498d6ba2bc841ec735246b41",
             "bodyChars": 3270
           }
@@ -5158,6 +5229,15 @@ const POST_LOG = {
                 "chars": 8721
               }
             ]
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-18T00:55:16+08:00",
+            "firstSha256": "e406493f0cd0cc2c2c4c4a4f976554c45b2833f88f266474ba342161c11fc4ee",
+            "sha256": "e406493f0cd0cc2c2c4c4a4f976554c45b2833f88f266474ba342161c11fc4ee",
+            "updatedAt": "2026-11-18T00:55:16+08:00",
+            "chars": 5290,
+            "paragraphs": 28,
+            "revisions": []
           }
         }
       },
