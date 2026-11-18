@@ -5,7 +5,7 @@
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-18T01:10:48+08:00",
+  "generatedAt": "2026-11-18T09:09:37+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -4016,8 +4016,8 @@
         "name": "赤鱬",
         "firstPostedAt": "2026-11-09T21:27:27+08:00",
         "firstSha256": "3c20ccf0a739c8cf27d8a03681f4f825a74288b0dcb8d9faa40a41ee27dfc8f7",
-        "sha256": "8bb3c65d5c92a5f7c09d694b16f996e9b180a75cf7c171fa39ae9e55acb1bf25",
-        "updatedAt": "2026-11-12T16:39:19+08:00",
+        "sha256": "2bbac5d8a9562cc70ca3e30ac9327e0e31576484d8c7a22f071180f7dd60be8f",
+        "updatedAt": "2026-11-18T09:09:37+08:00",
         "revisions": [
           {
             "at": "2026-11-09T21:43:57+08:00",
@@ -4044,6 +4044,13 @@
             "at": "2026-11-12T16:39:19+08:00",
             "sha256": "8bb3c65d5c92a5f7c09d694b16f996e9b180a75cf7c171fa39ae9e55acb1bf25",
             "previousSha256": "536801619c399c2031a62a9deb62ca9f3147270d2474cd6589fdeee35bfef79c",
+            "bodySha256": "ba33a4f1729a83e5c1fb736e9052bbfef551a3dd8601540a962c5038a2da0ac8",
+            "bodyChars": 5504
+          },
+          {
+            "at": "2026-11-18T09:09:37+08:00",
+            "sha256": "2bbac5d8a9562cc70ca3e30ac9327e0e31576484d8c7a22f071180f7dd60be8f",
+            "previousSha256": "8bb3c65d5c92a5f7c09d694b16f996e9b180a75cf7c171fa39ae9e55acb1bf25",
             "bodySha256": "ba33a4f1729a83e5c1fb736e9052bbfef551a3dd8601540a962c5038a2da0ac8",
             "bodyChars": 5504
           }
@@ -4106,6 +4113,15 @@
                 "chars": 20666
               }
             ]
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-18T09:09:37+08:00",
+            "firstSha256": "8d0872c5ae1ac190bdd381489ef5e865e563ee19c781b7af7d1e53b7301c3a42",
+            "sha256": "8d0872c5ae1ac190bdd381489ef5e865e563ee19c781b7af7d1e53b7301c3a42",
+            "updatedAt": "2026-11-18T09:09:37+08:00",
+            "chars": 9156,
+            "paragraphs": 134,
+            "revisions": []
           }
         }
       },
