@@ -452,11 +452,11 @@ const WORKS = [
     officialFirst: true,
     cover: "光",
     summary: {
-      zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
-      en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",
-      ja: "Moburuの新作。公式サイト最速更新、乞うご期待。「Moburuフィクション・ユニバース」で新たな物語が始まる。",
-      fr: "Une nouvelle œuvre de Moburu — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction Moburu.",
-      ar: "عمل جديد من Moburu — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم Moburu الخيالي."
+      zh: "现实主义题材，瑞典心理学家的心理学著作《不是你失败，是有人太坏》中特定人群的现实演绎。几个追问：有着名校光环，就一定人品纯善么？在追求事业成功的过程中，应始终保持向善么？如果没有向善和初心，成功还有意义否？",
+      en: "Realism. A fictional exploration of the real lives of a particular group, drawn from the Swedish psychologist’s book on psychology, “It’s Not That You Failed — It’s That Someone Else Is Too Cruel.” Several questions: Does a prestigious-school halo guarantee a person’s goodness? In the pursuit of career success, should one always hold fast to kindness? Without kindness and one’s original purpose, is success still meaningful?",
+      ja: "現実主義。スウェーデンの心理学者による心理学著作『失敗したのはお前ではない、誰かがひどすぎたのだ』に描かれた特定の層の人々の現実を演繹した作品。いくつかの問い：名門校の光環があれば、人柄は必ず清らかで善なのか？キャリアの成功を追う過程で、いつも善であり続けるべきなのか？善さと初心がなければ、成功はなお意味を持つのか？",
+      fr: "Réalisme. Une transposition romanesque de la réalité d’un groupe particulier, tirée de l’ouvrage de psychologie d’un psychologue suédois, « Ce n’est pas toi qui as échoué, c’est quelqu’un d’autre qui est trop méchant ». Plusieurs questions : le prestige d’une grande école garantit-il la bonté d’une personne ? Dans la poursuite de la réussite professionnelle, doit-on toujours rester fidèle au bien ? Sans bonté ni innocence première, la réussite a-t-elle encore un sens ?",
+      ar: "واقعية. عمل روائي يجسّد واقع فئة معينة، مستلهم من كتاب في علم النفس لعالم نفسي سويدي بعنوان «لم تفشل أنت، بل كان شخص آخر شريرًا للغاية». عدة أسئلة: هل تضمن هالة المدرسة المرموقة طيب الخلق؟ وهل يجب أن يظل المرء مائلًا إلى الخير طوال سعيه إلى النجاح المهني؟ وبغير الخير والنية الأولى، هل للنجاح من معنى؟"
     },
     tags: { zh: ["默不如宇宙", "敬请期待"], en: ["Moburu Universe", "Coming Soon"], ja: ["Moburu宇宙", "乞うご期待"], fr: ["Univers Moburu", "À venir"], ar: ["عالم Moburu", "قريباً"] },
     chapters: [
@@ -475,11 +475,11 @@ const WORKS = [
     officialFirst: true,
     cover: "东",
     summary: {
-      zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
-      en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",
-      ja: "Moburuの新作。公式サイト最速更新、乞うご期待。「Moburuフィクション・ユニバース」で新たな物語が始まる。",
-      fr: "Une nouvelle œuvre de Moburu — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction Moburu.",
-      ar: "عمل جديد من Moburu — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم Moburu الخيالي."
+      zh: "科幻题材，2050年，发生在日本东京。人造子宫生育的人造人和普通人的后代在同一世界上共生共荣的故事。",
+      en: "Science fiction. Tokyo, Japan, 2050 — a story of artificial humans born from artificial wombs and the descendants of ordinary people living and thriving together in one world.",
+      ja: "SF。2050年、日本・東京が舞台。人工子宮から生まれた人造人間と、普通の人々の子孫たちが、同じ世界で共に生き、共に栄える物語。",
+      fr: "Science-fiction. En 2050, à Tokyo, au Japon — l’histoire d’êtres humains artificiels nés d’utérus artificiels et des descendants de gens ordinaires, vivant et prospérant ensemble dans un même monde.",
+      ar: "خيال علمي. في عام 2050، في طوكيو باليابان — قصة بشرٍ اصطناعيين وُلدوا من أرحام صناعية، وأحفاد أناسٍ عاديين، يتعايشون ويزدهرون معًا في عالم واحد."
     },
     tags: { zh: ["默不如宇宙", "敬请期待"], en: ["Moburu Universe", "Coming Soon"], ja: ["Moburu宇宙", "乞うご期待"], fr: ["Univers Moburu", "À venir"], ar: ["عالم Moburu", "قريباً"] },
     chapters: [
@@ -498,11 +498,11 @@ const WORKS = [
     officialFirst: true,
     cover: "牧",
     summary: {
-      zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
-      en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",
-      ja: "Moburuの新作。公式サイト最速更新、乞うご期待。「Moburuフィクション・ユニバース」で新たな物語が始まる。",
-      fr: "Une nouvelle œuvre de Moburu — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction Moburu.",
-      ar: "عمل جديد من Moburu — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم Moburu الخيالي."
+      zh: "科幻题材。地球之外，谁在观察人类？",
+      en: "Science fiction. Beyond the Earth — who is watching humanity?",
+      ja: "SF。地球の外で、誰が人間を見つめているのか？",
+      fr: "Science-fiction. Au-delà de la Terre — qui observe l’humanité ?",
+      ar: "خيال علمي. وراء الأرض — مَن يُراقب البشرية؟"
     },
     tags: { zh: ["默不如宇宙", "敬请期待"], en: ["Moburu Universe", "Coming Soon"], ja: ["Moburu宇宙", "乞うご期待"], fr: ["Univers Moburu", "À venir"], ar: ["عالم Moburu", "قريباً"] },
     chapters: [
@@ -521,11 +521,11 @@ const WORKS = [
     officialFirst: true,
     cover: "寻",
     summary: {
-      zh: "默不如全新作品，官网优先更新，敬请期待。在「默不如小说宇宙」中开启新的故事线。",
-      en: "A new work by Moburu — official-first updates, coming soon. A new storyline in the Moburu fiction universe.",
-      ja: "Moburuの新作。公式サイト最速更新、乞うご期待。「Moburuフィクション・ユニバース」で新たな物語が始まる。",
-      fr: "Une nouvelle œuvre de Moburu — mises à jour officielles en premier, à venir. Une nouvelle intrigue dans l'univers de fiction Moburu.",
-      ar: "عمل جديد من Moburu — تحديثات رسمية أولاً، قريباً. خط قصة جديد في عالم Moburu الخيالي."
+      zh: "62岁的500强企业富豪陆游，试图寻找自己失散22年的孩子。这是个没有预算也没有路径的故事，只有一张22年前的照片，他招募了4个年轻人来做这件事。",
+      en: "Lu You, a 62-year-old billionaire behind a Fortune 500 company, sets out to find the child he lost 22 years ago. It’s a story with no budget and no roadmap — only a single photograph from 22 years earlier. He recruits four young people to help.",
+      ja: "62歳のフォーチュン500企業の富豪・陆游（ル・ヨウ）が、22年前に離れ離れになったわが子を探そうとする。予算も道筋もない話だ。手がかりは22年前の写真1枚のみ。彼は4人の若者を募り、この探索にあたらせる。",
+      fr: "Lu You, un milliardaire de 62 ans à la tête d’une entreprise du Fortune 500, tente de retrouver l’enfant qu’il a perdu il y a 22 ans. Une histoire sans budget ni itinéraire : une seule photographie, vieille de 22 ans. Il recrute quatre jeunes gens pour l’aider.",
+      ar: "لو يو، رجل أعمال ثري في الثانية والستين من عمره خلف شركة من شركات «فورتشن 500»، يحاول العثور على طفله الذي فقده قبل 22 عامًا. إنها قصة بلا ميزانية وبلا طريق، لا يملك سوى صورة واحدة من قبل 22 عامًا. يجنّد أربعة شبان للقيام بهذه المهمة."
     },
     tags: { zh: ["默不如宇宙", "敬请期待"], en: ["Moburu Universe", "Coming Soon"], ja: ["Moburu宇宙", "乞うご期待"], fr: ["Univers Moburu", "À venir"], ar: ["عالم Moburu", "قريباً"] },
     chapters: [
