@@ -2,8 +2,8 @@
  "work": "henchangsha",
  "title": "恨长沙",
  "author": "默不如",
- "chapterCount": 53,
- "totalChars": 232818,
+ "chapterCount": 54,
+ "totalChars": 238650,
  "chapters": [
   {
    "num": 0,
@@ -428,6 +428,14 @@
    "chars": 6011,
    "paragraphs": 99,
    "file": "52.json"
+  },
+  {
+   "num": 53,
+   "title": "第五十三章 狸力",
+   "beast": "狸力",
+   "chars": 5832,
+   "paragraphs": 69,
+   "file": "53.json"
   }
  ]
 }
