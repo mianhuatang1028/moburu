@@ -7,7 +7,7 @@ const POST_LOG = {
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-18T23:54:31+08:00",
+  "generatedAt": "2026-11-19T00:23:10+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -5942,14 +5942,59 @@ const POST_LOG = {
         "name": "狸力",
         "firstPostedAt": "2026-11-18T23:54:31+08:00",
         "firstSha256": "ee1f2c141b4c250e6f445f6291979b2bb04d4ae5657707b85a1d37d0e1557662",
-        "sha256": "ee1f2c141b4c250e6f445f6291979b2bb04d4ae5657707b85a1d37d0e1557662",
-        "updatedAt": "2026-11-18T23:54:31+08:00",
-        "revisions": [],
+        "sha256": "109cf3364b3fe0ffc07e9995c306a4b73ae318d3a6da2669e52154cc05d58f0e",
+        "updatedAt": "2026-11-19T00:23:10+08:00",
+        "revisions": [
+          {
+            "at": "2026-11-19T00:23:10+08:00",
+            "sha256": "109cf3364b3fe0ffc07e9995c306a4b73ae318d3a6da2669e52154cc05d58f0e",
+            "previousSha256": "ee1f2c141b4c250e6f445f6291979b2bb04d4ae5657707b85a1d37d0e1557662",
+            "bodySha256": "64cc9dee9bf216ce333be5e3a184432be4d9d680282a954f9a975a9dd8aa06a3",
+            "bodyChars": 5832
+          }
+        ],
         "bodyFirstPostedAt": "2026-11-18T23:54:31+08:00",
         "bodyFirstSha256": "64cc9dee9bf216ce333be5e3a184432be4d9d680282a954f9a975a9dd8aa06a3",
         "bodySha256": "64cc9dee9bf216ce333be5e3a184432be4d9d680282a954f9a975a9dd8aa06a3",
         "bodyChars": 5832,
-        "translations": {}
+        "translations": {
+          "en": {
+            "firstPostedAt": "2026-11-19T00:23:10+08:00",
+            "firstSha256": "40ef96390578f419206c05ab7bbd4941319bed3a3dab17762c3b71d6aa7fd5ea",
+            "sha256": "40ef96390578f419206c05ab7bbd4941319bed3a3dab17762c3b71d6aa7fd5ea",
+            "updatedAt": "2026-11-19T00:23:10+08:00",
+            "chars": 22659,
+            "paragraphs": 69,
+            "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-19T00:23:10+08:00",
+            "firstSha256": "ee7e0965dfe78d19fafe4c3ba2d710851154e75027cb257e2035e199920b3f94",
+            "sha256": "ee7e0965dfe78d19fafe4c3ba2d710851154e75027cb257e2035e199920b3f94",
+            "updatedAt": "2026-11-19T00:23:10+08:00",
+            "chars": 8793,
+            "paragraphs": 69,
+            "revisions": []
+          },
+          "fr": {
+            "firstPostedAt": "2026-11-19T00:23:10+08:00",
+            "firstSha256": "eac78fef1482ec63bd91585282d7440d1ceb9fb239fd7dcc176832ad93c3c077",
+            "sha256": "eac78fef1482ec63bd91585282d7440d1ceb9fb239fd7dcc176832ad93c3c077",
+            "updatedAt": "2026-11-19T00:23:10+08:00",
+            "chars": 25628,
+            "paragraphs": 69,
+            "revisions": []
+          },
+          "ar": {
+            "firstPostedAt": "2026-11-19T00:23:10+08:00",
+            "firstSha256": "ebbd599ef4e8015cbe7da5f375948aa7852b893865964b53fe84e96938fc306b",
+            "sha256": "ebbd599ef4e8015cbe7da5f375948aa7852b893865964b53fe84e96938fc306b",
+            "updatedAt": "2026-11-19T00:23:10+08:00",
+            "chars": 18914,
+            "paragraphs": 69,
+            "revisions": []
+          }
+        }
       }
     },
     "halo": {},
