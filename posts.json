@@ -5,7 +5,7 @@
   "rules": "firstPostedAt（章节目录）、bodyFirstPostedAt（中文全文）、translations[lang].firstPostedAt（各语言译本）各自只在首次出现时写入，之后永不覆盖；内容变更只追加 revisions 与 updatedAt。sha256 含中文正文与各语言译本哈希。",
   "verification": "本文件与 assets/js/posts.js 随每次发布一并提交到公开 GitHub 仓库。git commit 时间、GitHub Pages 部署记录、搜索引擎收录与网络存档（如 Wayback Machine）共同构成第三方可核验的时间证据；sha256 为发布当时章节内容的哈希。",
   "copyright": "© 2026 默不如zZZ. All rights reserved. / 保留所有权利。",
-  "generatedAt": "2026-11-19T00:23:10+08:00",
+  "generatedAt": "2026-11-19T17:46:43+08:00",
   "works": {
     "henchangsha": {
       "0": {
@@ -5990,6 +5990,57 @@
             "updatedAt": "2026-11-19T00:23:10+08:00",
             "chars": 18914,
             "paragraphs": 69,
+            "revisions": []
+          }
+        }
+      },
+      "54": {
+        "num": 54,
+        "name": "儵鱼",
+        "firstPostedAt": "2026-11-19T17:46:43+08:00",
+        "firstSha256": "f73a69a9875f6130aaa5595a2f5f38a64329f50dfc97de1021c11311263a1dea",
+        "sha256": "f73a69a9875f6130aaa5595a2f5f38a64329f50dfc97de1021c11311263a1dea",
+        "updatedAt": "2026-11-19T17:46:43+08:00",
+        "revisions": [],
+        "bodyFirstPostedAt": "2026-11-19T17:46:43+08:00",
+        "bodyFirstSha256": "36c319b07a4568de866ee162e310ea617fb8227e8d01b26e463cfbb0a1f1f25f",
+        "bodySha256": "36c319b07a4568de866ee162e310ea617fb8227e8d01b26e463cfbb0a1f1f25f",
+        "bodyChars": 4624,
+        "translations": {
+          "en": {
+            "firstPostedAt": "2026-11-19T17:46:43+08:00",
+            "firstSha256": "8e2daaa4636c1e5a105ee5c84e37f8055963afa484380e87ed1bc6a9369ff9af",
+            "sha256": "8e2daaa4636c1e5a105ee5c84e37f8055963afa484380e87ed1bc6a9369ff9af",
+            "updatedAt": "2026-11-19T17:46:43+08:00",
+            "chars": 17413,
+            "paragraphs": 82,
+            "revisions": []
+          },
+          "ja": {
+            "firstPostedAt": "2026-11-19T17:46:43+08:00",
+            "firstSha256": "b0a642ae5eb862b7c9b4d25fd418939ec302379765a0e7fa5dad4c6f06349350",
+            "sha256": "b0a642ae5eb862b7c9b4d25fd418939ec302379765a0e7fa5dad4c6f06349350",
+            "updatedAt": "2026-11-19T17:46:43+08:00",
+            "chars": 7225,
+            "paragraphs": 82,
+            "revisions": []
+          },
+          "fr": {
+            "firstPostedAt": "2026-11-19T17:46:43+08:00",
+            "firstSha256": "3da389ebe1cc5b4944ccf5da7fb2c1a7fa46364b64a6dadf13c7a76f2ca8574e",
+            "sha256": "3da389ebe1cc5b4944ccf5da7fb2c1a7fa46364b64a6dadf13c7a76f2ca8574e",
+            "updatedAt": "2026-11-19T17:46:43+08:00",
+            "chars": 19531,
+            "paragraphs": 82,
+            "revisions": []
+          },
+          "ar": {
+            "firstPostedAt": "2026-11-19T17:46:43+08:00",
+            "firstSha256": "6662ed22e4dd65c0d9225c0902c26c2dd126094b72894f8c33999164a0c76c2f",
+            "sha256": "6662ed22e4dd65c0d9225c0902c26c2dd126094b72894f8c33999164a0c76c2f",
+            "updatedAt": "2026-11-19T17:46:43+08:00",
+            "chars": 15412,
+            "paragraphs": 82,
             "revisions": []
           }
         }
