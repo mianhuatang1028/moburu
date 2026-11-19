@@ -2,8 +2,8 @@
  "work": "henchangsha",
  "title": "恨长沙",
  "author": "默不如",
- "chapterCount": 56,
- "totalChars": 248741,
+ "chapterCount": 57,
+ "totalChars": 255308,
  "chapters": [
   {
    "num": 0,
@@ -452,6 +452,14 @@
    "chars": 5469,
    "paragraphs": 81,
    "file": "55.json"
+  },
+  {
+   "num": 56,
+   "title": "第五十六章 讙",
+   "beast": "讙",
+   "chars": 6567,
+   "paragraphs": 80,
+   "file": "56.json"
   }
  ]
 }
