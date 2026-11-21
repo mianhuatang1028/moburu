@@ -2,8 +2,8 @@
  "work": "henchangsha",
  "title": "恨长沙",
  "author": "默不如",
- "chapterCount": 57,
- "totalChars": 255308,
+ "chapterCount": 58,
+ "totalChars": 260908,
  "chapters": [
   {
    "num": 0,
@@ -460,6 +460,14 @@
    "chars": 6567,
    "paragraphs": 80,
    "file": "56.json"
+  },
+  {
+   "num": 57,
+   "title": "第五十七章 鸣蛇",
+   "beast": "鸣蛇",
+   "chars": 5600,
+   "paragraphs": 89,
+   "file": "57.json"
   }
  ]
 }
